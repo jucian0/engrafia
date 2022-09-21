@@ -30,6 +30,9 @@
         "{options.outputPath}"
       ],
       "options": {
+        "format": [
+          "esm"
+        ],
         "outputPath": "dist/packages/engrafia",
         "tsConfig": "packages/engrafia/tsconfig.lib.json",
         "packageJson": "packages/engrafia/package.json",
@@ -46,6 +49,9 @@
       ],
       "options": {
         "watch": true,
+        "format": [
+          "esm"
+        ],
         "outputPath": "dist/packages/engrafia",
         "tsConfig": "packages/engrafia/tsconfig.lib.json",
         "packageJson": "packages/engrafia/package.json",

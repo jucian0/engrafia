@@ -38,7 +38,7 @@ async function getMdxFilesIndex(dir: string) {
     }
   );
 
-  console.log(tree);
+  console.log(tree, '<<<<<<<<<<<<<<<<<<');
 
   if (tree.name === 'src') {
     const pagesNode = tree.children?.find((x) => x.name === 'pages');
