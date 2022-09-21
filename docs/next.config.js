@@ -6,6 +6,7 @@ const compose = require('compose-function');
 const composed = compose(engrafia, withNx);
 
 module.exports = composed({
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   nx: {
     svgr: false,
   },

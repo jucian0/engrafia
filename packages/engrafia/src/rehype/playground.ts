@@ -11,7 +11,6 @@ const isPlayground = (name: string) => {
 
 const addComponentsProps = (scopes: string[]) => (node: any, idx: number) => {
   const name = componentName(node.value);
-  console.log(node);
   const tagOpen = new RegExp(`^\\<${name}`);
   const formatted = formatter(toString(node));
   const code = formatted.slice(1, Infinity);
@@ -34,6 +33,8 @@ export const injectCodeToPlayground =
     // const name = componentName(node.value);
     // return isPlayground(name);
     // });
+
+    console.log(tree);
 
     const importNodes = tree.children.filter((n: any) => n.type === 'import');
     const exportNodes = tree.children.filter((n: any) => n.type === 'export');
