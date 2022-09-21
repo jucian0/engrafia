@@ -3,13 +3,20 @@ import fs from 'fs';
 import dirTree from 'directory-tree';
 import getFrontMatter from 'front-matter';
 import path from 'path';
-import { debounce, formatRelativePath, formatTitle } from './utils';
+import {
+  debounce,
+  formatRelativePath,
+  formatTitle,
+  resolveRoot,
+} from './utils';
 
 export const writeMdxIndex = debounce((dir: string) => {
+  const root = resolveRoot(dir);
+
   return getMdxFilesIndex(dir)
     .then((index) => {
       return fs.promises.writeFile(
-        'sidebar.json',
+        `${root}/sidebar.json`,
         JSON.stringify(index, null, 4)
       );
     })
@@ -22,7 +29,7 @@ export const writeMdxIndex = debounce((dir: string) => {
 async function getMdxFilesIndex(dir: string) {
   const pagesPath = await getPagesPath(dir);
   const tree = dirTree(
-    process.cwd() + '/' + pagesPath,
+    dir + '/' + pagesPath,
     { normalizePath: true, extensions: /\.mdx?/ },
     (node: any) => {
       const pathName = node.path;
@@ -38,8 +45,6 @@ async function getMdxFilesIndex(dir: string) {
     }
   );
 
-  console.log(tree, '<<<<<<<<<<<<<<<<<<');
-
   if (tree.name === 'src') {
     const pagesNode = tree.children?.find((x) => x.name === 'pages');
     return pagesNode as dirTree.DirectoryTree<any>;
@@ -48,13 +53,15 @@ async function getMdxFilesIndex(dir: string) {
 }
 
 async function getPagesPath(dir: string) {
-  var [err, stats] = await to(fs.promises.stat(`${dir}/pages`));
+  const root = resolveRoot(dir);
+
+  var [err, stats] = await to(fs.promises.stat(`${root}/pages`));
   if (!err && stats?.isDirectory()) {
     return 'pages';
   }
-  var [err, stats] = await to(fs.promises.stat(`${dir}/src/pages`));
+  var [err, stats] = await to(fs.promises.stat(`${root}/src/pages`));
   if (!err && stats?.isDirectory()) {
     return 'src/pages';
   }
-  throw new Error('cannot find pages directory in: ' + process.cwd());
+  throw new Error('cannot find pages directory in: ' + dir);
 }

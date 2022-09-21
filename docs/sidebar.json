@@ -1,0 +1,17 @@
+{
+    "path": "/home/barbosa/javascript/documentation/docs/pages",
+    "name": "pages",
+    "children": [
+        {
+            "path": "/home/barbosa/javascript/documentation/docs/pages/button-component.mdx",
+            "name": "button-component.mdx",
+            "meta": {
+                "title": "Button",
+                "description": "This page lists a number of current limitations of Prisma."
+            },
+            "title": "Button component",
+            "url": "/../docs/pages/button-component"
+        }
+    ],
+    "title": "Pages"
+}
