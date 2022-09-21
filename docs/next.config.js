@@ -1,17 +1,12 @@
-//@ts-check
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+require('fix-esm').register();
 const { withNx } = require('@nrwl/next/plugins/with-nx');
+const { engrafia } = require('../dist/packages/engrafia');
+const compose = require('compose-function');
 
-/**
- * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
- **/
-const nextConfig = {
+const composed = compose(engrafia, withNx);
+
+module.exports = composed({
   nx: {
-    // Set this to true if you would like to to use SVGR
-    // See: https://github.com/gregberge/svgr
     svgr: false,
   },
-};
-
-module.exports = withNx(nextConfig);
+});
