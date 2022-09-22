@@ -17,14 +17,19 @@ const addComponentsProps = (scopes: string[]) => (node: any, idx: number) => {
   // const tagOpen = new RegExp(`^\\<${name}`);
   // const formatted = formatter(toString(node));
   // const code = formatted.slice(1, Infinity);
-  const scope = scopes.join(',');
+  const scope = `{props, ${scopes.join(',')}}`;
+
   // const child = sanitizeCode(removeTags(code));
   // const newTag = `<${name} __position={${idx}} code={'${child}'} scope={${scope}}`;
   // node.value = node.value.replace(tagOpen, newTag);
 
   // console.log(toString(node).trim());
 
-  const out = toMarkdown(node, { extensions: [mdxJsxToMarkdown()] });
+  console.log(scope);
+
+  const out = toMarkdown(node.children[0], {
+    extensions: [mdxJsxToMarkdown()],
+  });
 
   node.attributes = [
     ...node.attributes,
@@ -36,7 +41,7 @@ const addComponentsProps = (scopes: string[]) => (node: any, idx: number) => {
     {
       type: 'mdxJsxAttribute',
       name: 'scope',
-      value: scope,
+      value: scopes,
     },
   ];
 };
@@ -55,12 +60,16 @@ export const injectCodeToPlayground =
     // return isPlayground(name);
     // });
 
-    const importNodes = tree.children.filter((n: any) => n.type === 'mdxjsEsm');
-    const exportNodes = tree.children.filter((n: any) => n.type === 'mdxjsEsm');
+    const importNodes = tree.children.filter((n: any) =>
+      n.value?.includes('import')
+    );
+    const exportNodes = tree.children.filter((n: any) =>
+      n.value?.includes('export')
+    );
     const importedScopes = flatten<string>(
       importNodes.map(getImportsVariables)
     );
-    console.log(importNodes);
+
     const exportedScopes = flatten<string>(
       exportNodes.map(getExportsVariables)
     ); // TODO exports not working, migrate to es lexer
