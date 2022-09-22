@@ -4,7 +4,7 @@ export const Playground = (props: any) => {
   console.log(props);
   return (
     <div>
-      <LiveProvider code="<strong>Hello World!</strong>">
+      <LiveProvider code={props.code} scope={props.scope}>
         <LivePreview />
         <LiveEditor />
         <LiveError />
