@@ -10,6 +10,7 @@ const fromSpecifiers = (specifiers: any = []) =>
 
 const traverseOnImports = (fn: (path: any) => any[]) => (node: any) => {
   try {
+    // console.log(node.value, '<<<<<<<<<<<<<<<');
     const ast = parser.parse(node.value, { sourceType: 'module' });
     let populated: any[] = [];
 

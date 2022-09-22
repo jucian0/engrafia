@@ -25,7 +25,7 @@ const addComponentsProps = (scopes: string[]) => (node: any, idx: number) => {
 
   // console.log(toString(node).trim());
 
-  console.log(scope);
+  console.log(scopes, scope);
 
   const out = toMarkdown(node.children[0], {
     extensions: [mdxJsxToMarkdown()],
@@ -41,7 +41,7 @@ const addComponentsProps = (scopes: string[]) => (node: any, idx: number) => {
     {
       type: 'mdxJsxAttribute',
       name: 'scope',
-      value: scopes,
+      value: scopes.toString(),
     },
   ];
 };
@@ -52,20 +52,20 @@ export interface PluginOpts {
 
 export const injectCodeToPlayground =
   () => (tree: any, file: { contents: string }) => {
-    const playgroundComponents: Node[] = tree.children.filter(
-      (node: any) => node.type === 'mdxJsxFlowElement'
-    );
-    // .filter((node) => {
-    // const name = componentName(node.value);
-    // return isPlayground(name);
-    // });
+    const playgroundComponents: Node[] = tree.children
+      .filter((node: any) => node.type === 'mdxJsxFlowElement')
+      .filter((node) => {
+        return node.name === 'Playground';
+      });
 
     const importNodes = tree.children.filter((n: any) =>
       n.value?.includes('import')
     );
+    //.filter((n: any) => !n.value?.split(';')[0]);
     const exportNodes = tree.children.filter((n: any) =>
       n.value?.includes('export')
     );
+
     const importedScopes = flatten<string>(
       importNodes.map(getImportsVariables)
     );
