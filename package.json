@@ -28,9 +28,11 @@
     "rehype-slug": "^5.0.1",
     "remark-frontmatter": "^4.0.1",
     "strip-indent": "^4.0.0",
-    "styled-components": "5.3.5",
     "toml": "^3.0.0",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "@nextui-org/react": "1.0.0",
+    "next-themes":"0.2.1"
+
   },
   "devDependencies": {
     "@nrwl/cli": "14.7.8",
@@ -51,11 +53,9 @@
     "@types/react": "18.0.18",
     "@types/react-dom": "18.0.6",
     "@types/react-is": "17.0.3",
-    "@types/styled-components": "5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
     "babel-jest": "28.1.1",
-    "babel-plugin-styled-components": "1.10.7",
     "cypress": "^10.7.0",
     "eslint": "~8.15.0",
     "eslint-config-next": "12.2.5",
