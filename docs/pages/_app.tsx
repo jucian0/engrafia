@@ -16,7 +16,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <title>Welcome to docs!</title>
       </Head>
       <ThemeProvider 
-        defaultTheme="system"
+        defaultTheme="light"
         attribute='class'
         value={{
           light: lightTheme,

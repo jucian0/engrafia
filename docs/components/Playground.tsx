@@ -1,13 +1,12 @@
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
-import dracula from 'prism-react-renderer/themes/vsLight';
+import light from 'prism-react-renderer/themes/vsLight';
+import dark from 'prism-react-renderer/themes/dracula';
+import { Button, Grid, useTheme } from '@nextui-org/react';
 
-import * as S from './playground-styles'
 
-/**
- * make a function to evaluate in children prop.
- * validate if there are any element type react component.
- * if exist take them, and validate if there are any another component inside their props again.
- */
+ 
+const Box = ({css,...props}:any)=> <Grid.Container {...props} css={{boxShadow: '$sm', ...css }}/>
+
 function evaluateScope(children:any){
   const scope = {}
   function evaluate(children:any){
@@ -29,18 +28,19 @@ function evaluateScope(children:any){
 
 export const Playground = (props: any) => {
   const scopes = evaluateScope(props.children)
+  const theme = useTheme()
   return (
-    <S.Container>
+    <Box md={12} css={{ boxShadow:'$sm', borderRadius:'$xs',border:'1px solid', borderColor:"$gray50",}}>
       <LiveProvider
-        code={props.code}
+        code={props.code.trim()}
         scope={scopes}
-        theme={dracula}
+        theme={theme.isDark ? dark: light}
         frameBorder={2}
       >
-        <LivePreview />
-        <LiveEditor />
-        <LiveError />
+        <Box as={LivePreview}  css={{ minHeight:'100px', p: '$5',borderBottom:'1px solid', borderColor:"$gray50"}}/>
+        <LiveEditor style={{borderRadius:8}} />
+        <Box as={LiveError}  css={{  background: '$errorDark',minHeight:'100px', p: '$5',borderRadius:'$xs',borderStartEndRadius:0, borderStartStartRadius:0}}/>
       </LiveProvider>
-    </S.Container>
+    </Box>
   );
 };
