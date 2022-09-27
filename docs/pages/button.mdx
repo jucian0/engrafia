@@ -9,6 +9,10 @@ import { FaBeer, FaAccessibleIcon } from 'react-icons/fa';
 
 import { Playground } from '../components/playground';
 
+
+import { Button, Grid } from '@nextui-org/react';
+
+
 # Test 1
 
 ## Button
@@ -16,13 +20,9 @@ import { Playground } from '../components/playground';
 export const Teste = ()=>(<h3>Juciano</h3>)
 
 <Playground>
-  <>
-    <RiSunFill />
-    <FaBeer />
-    <div>
-      <FaAccessibleIcon/>
-    </div>
-  </>
+  <Button>
+    <FaAccessibleIcon/>
+  </Button>
 </Playground>
 
 This page describes features that are currently not supported by Prisma and are not planned to be supported.

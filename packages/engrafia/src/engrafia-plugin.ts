@@ -7,7 +7,7 @@ import path from 'path';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { addClasses } from './table-of-content';
-import { injectCodeToPlayground } from './rehype/playground';
+import { injectCodeToPlayground } from './playground-plugin/playground';
 
 const EXTENSIONS_TO_WATCH = ['.mdx', '.md'];
 
