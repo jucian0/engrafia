@@ -16,6 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "components": ["packages/components/src/index.ts"],
       "engrafia": ["packages/engrafia/src/index.ts"],
       "playground": ["packages/playground/src/index.ts"]
     }

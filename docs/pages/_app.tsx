@@ -1,28 +1,26 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { MDXProvider } from "@mdx-js/react";
+import { MDXProvider } from '@mdx-js/react';
 import { NextUIProvider } from '@nextui-org/react';
 import { ThemeProvider } from 'next-themes';
 import { darkTheme, lightTheme } from 'docs/styles/theme';
 
-const components = {
+const components = {};
 
-}
-
-function CustomApp({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
         <title>Welcome to docs!</title>
       </Head>
-      <ThemeProvider 
+      <ThemeProvider
         defaultTheme="light"
-        attribute='class'
+        attribute="class"
         value={{
           light: lightTheme,
-          dark: darkTheme
+          dark: darkTheme,
         }}
-      >        
+      >
         <NextUIProvider>
           <main className="app">
             <MDXProvider components={components}>
@@ -35,4 +33,4 @@ function CustomApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default CustomApp;
+export default App;
