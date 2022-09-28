@@ -1,9 +1,9 @@
 {
-    "path": "/Users/barbosa/javascript/engrafia/docs/pages",
+    "path": "/home/barbosa/javascript/engrafia/docs/pages",
     "name": "pages",
     "children": [
         {
-            "path": "/Users/barbosa/javascript/engrafia/docs/pages/button.mdx",
+            "path": "/home/barbosa/javascript/engrafia/docs/pages/button.mdx",
             "name": "button.mdx",
             "meta": {
                 "title": "Button",

@@ -15,6 +15,7 @@
     "fix-esm": "^1.0.1",
     "front-matter": "^4.0.2",
     "hast-util-select": "^5.0.2",
+    "hastscript": "^7.0.2",
     "js-string-escape": "^1.0.1",
     "mdast-util-mdx-jsx": "^2.1.0",
     "mdast-util-toc": "^6.1.0",

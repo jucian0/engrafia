@@ -8,6 +8,7 @@ import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { addClasses } from './table-of-content';
 import { injectCodeToPlayground } from './playground-plugin/playground';
+import { h } from 'hastscript';
 
 const EXTENSIONS_TO_WATCH = ['.mdx', '.md'];
 
@@ -36,7 +37,13 @@ const withMDX = mdx({
     providerImportSource: '@mdx-js/react',
     rehypePlugins: [
       rehypeSlug,
-      [rehypeAutolinkHeadings, { behavior: 'wrap' }],
+      [
+        rehypeAutolinkHeadings,
+        {
+          behavior: 'prepend',
+          content: h('i.gg-link', { ariaHidden: 'true' }),
+        },
+      ],
       [addClasses, { 'h1,h2,h3,h4,h5,h6': 'title' }],
       injectCodeToPlayground,
     ],
