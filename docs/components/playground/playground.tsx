@@ -1,10 +1,9 @@
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
-import light from 'prism-react-renderer/themes/vsLight';
-import dark from 'prism-react-renderer/themes/nightOwl';
+import light from 'prism-react-renderer/themes/nightOwlLight';
+import dark from 'prism-react-renderer/themes/dracula';
 import { Grid, useTheme } from '@nextui-org/react';
 import { Resizable } from 're-resizable';
 import React from 'react';
-import { IframeWrapper } from './frame';
 
 const getResizableProps = (width, setWidth) => ({
   minWidth: 260,
@@ -47,26 +46,47 @@ export const Playground = (props: any) => {
   return (
     <Resizable
       {...resizableProps}
-      //handleComponent={{ right: <HandleComponent height="100%" /> }}
+      handleComponent={{
+        right: (
+          <Grid
+            css={{
+              width: 20,
+              height: '100%',
+              backgroundColor: '$border',
+              borderRadius: '0 8px 8px 0',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <Grid
+              css={{
+                width: 8,
+                height: '30%',
+                borderInlineEnd: '2px solid $accents4',
+                borderInlineStart: '2px solid $accents4',
+              }}
+            />
+          </Grid>
+        ),
+      }}
     >
-      <Box md={12} css={{ borderRadius: '$xs', border: '1px solid $gray100' }}>
+      <Box md={12} css={{ borderRadius: '$xs', border: '1px solid $border' }}>
         <LiveProvider
           code={props.code}
           scope={props.scope}
           theme={theme.isDark ? dark : light}
           frameBorder={2}
         >
-          {/* <IframeWrapper onMount={forceRender}> */}
           <Box
             as={LivePreview}
             css={{
               minHeight: '80px',
               p: '$5',
-              borderBottom: '1px solid $gray100',
+              borderBottom: '1px solid $border',
               alignItems: 'center',
             }}
           />
-          {/* </IframeWrapper> */}
           <LiveEditor
             style={{ borderEndEndRadius: 7, borderEndStartRadius: 7 }}
           />
