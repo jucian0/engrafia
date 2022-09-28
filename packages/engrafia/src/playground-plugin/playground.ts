@@ -4,14 +4,11 @@ import { getExportsVariables } from './utils/exports';
 import { mdxJsxFromMarkdown, mdxJsxToMarkdown } from 'mdast-util-mdx-jsx';
 import { toMarkdown } from 'mdast-util-to-markdown';
 import { fromMarkdown } from 'mdast-util-from-markdown';
-import {mdxJsx} from 'micromark-extension-mdx-jsx'
+import { mdxJsx } from 'micromark-extension-mdx-jsx';
 import * as acorn from 'acorn';
-import { formatter } from './utils/format';
-
 
 const addComponentsProps = (scopes: string[]) => (node: any, idx: number) => {
-
-  const scope = `{props, ${scopes.join(',')}}`
+  const scope = `{props, ${scopes.join(',')}}`;
 
   const code = toMarkdown(node.children[0], {
     extensions: [mdxJsxToMarkdown()],
@@ -21,14 +18,22 @@ const addComponentsProps = (scopes: string[]) => (node: any, idx: number) => {
     extensions: [mdxJsxToMarkdown()],
   });
 
-  const tree:any = fromMarkdown(out.replace('<Playground',`<Playground code={${code}} scope={${scope}}`), {
-    extensions: [mdxJsx({acorn: acorn, addResult: true})],
-    mdastExtensions: [mdxJsxFromMarkdown()]
-  })
+  const tree: any = fromMarkdown(
+    out.replace('<Playground', `<Playground scope={${scope}}`),
+    {
+      extensions: [mdxJsx({ acorn: acorn, addResult: true })],
+      mdastExtensions: [mdxJsxFromMarkdown()],
+    }
+  );
 
   node.attributes = [
     ...tree.children[0].attributes,
     ...node.attributes,
+    {
+      type: 'mdxJsxAttribute',
+      name: 'code',
+      value: code.trim(),
+    },
   ];
 };
 
@@ -47,7 +52,7 @@ export const injectCodeToPlayground =
     const importNodes = tree.children.filter((n: any) =>
       n.value?.includes('import')
     );
-    //.filter((n: any) => !n.value?.split(';')[0]);
+
     const exportNodes = tree.children.filter((n: any) =>
       n.value?.includes('export')
     );
@@ -58,8 +63,8 @@ export const injectCodeToPlayground =
 
     const exportedScopes = flatten<string>(
       exportNodes.map(getExportsVariables)
-    ); // TODO exports not working, migrate to es lexer
-    // filter added to avoid throwing if an unexpected type is exported
+    );
+
     const scopes: string[] = [...importedScopes, ...exportedScopes].filter(
       Boolean
     );
