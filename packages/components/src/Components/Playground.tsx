@@ -5,7 +5,10 @@ import { Grid, useTheme } from '@nextui-org/react';
 import { Resizable } from 're-resizable';
 import React from 'react';
 
-const getResizableProps = (width, setWidth) => ({
+const getResizableProps = (
+  width: string,
+  setWidth: (width: string) => void
+) => ({
   minWidth: 260,
   maxWidth: '100%',
   size: {
@@ -27,7 +30,7 @@ const getResizableProps = (width, setWidth) => ({
     bottomLeft: false,
     topLeft: false,
   },
-  onResizeStop: (e, direction, ref) => {
+  onResizeStop: (_: any, __: any, ref: any) => {
     setWidth(ref.style.width);
   },
 });
@@ -39,7 +42,6 @@ const Box = ({ css, ...props }: any) => (
 export const Playground = (props: any) => {
   const theme = useTheme();
   const [width, setWidth] = React.useState('100%');
-  const [_, forceRender] = React.useState('');
 
   const resizableProps = getResizableProps(width, setWidth);
 
@@ -52,7 +54,8 @@ export const Playground = (props: any) => {
             css={{
               width: 20,
               height: '100%',
-              backgroundColor: '$border',
+              backgroundColor: '$gray200',
+              border: '5px solid $gray200',
               borderRadius: '0 8px 8px 0',
               display: 'flex',
               alignItems: 'center',
@@ -71,7 +74,13 @@ export const Playground = (props: any) => {
         ),
       }}
     >
-      <Box md={12} css={{ borderRadius: '$xs', border: '1px solid $border' }}>
+      <Box
+        md={12}
+        css={{
+          borderRadius: '$xs 0 0 $xs',
+          border: '1px solid $gray200',
+        }}
+      >
         <LiveProvider
           code={props.code}
           scope={props.scope}
@@ -83,7 +92,7 @@ export const Playground = (props: any) => {
             css={{
               minHeight: '80px',
               p: '$5',
-              borderBottom: '1px solid $border',
+              borderBottom: '1px solid $gray200',
               alignItems: 'center',
             }}
           />

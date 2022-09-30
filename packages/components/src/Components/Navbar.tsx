@@ -20,7 +20,7 @@ export default function MenuNav() {
   ];
 
   return (
-    <Navbar isBordered={theme === 'dark'} variant="sticky">
+    <Navbar variant="sticky">
       <Navbar.Brand>
         <AcmeLogo />
         <Text b color="inherit" hideIn="xs">

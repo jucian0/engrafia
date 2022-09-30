@@ -1,5 +1,7 @@
-import { styled } from '@nextui-org/react';
+import { MDXProvider } from '@mdx-js/react';
+import { NextUIProvider, styled } from '@nextui-org/react';
 import React from 'react';
+import { Sidebar } from '../Components';
 import Navbar from '../Components/Navbar';
 
 export const Main = styled(`main`, {
@@ -28,34 +30,14 @@ export const Content = styled(`div`, {
 });
 
 export function DocsLayout({ children }: React.PropsWithChildren<{}>) {
-  const [isSidebarOpen, setIsSidebarOpen] = React.useState(true);
-
-  React.useEffect(() => {
-    const handleResize = () => {
-      setIsSidebarOpen(window.innerWidth > 768);
-    };
-
-    window.addEventListener(`resize`, handleResize);
-
-    return () => {
-      window.removeEventListener(`resize`, handleResize);
-    };
-  }, []);
-
   return (
-    <Main>
+    <Main className="app">
       <Navbar />
       <Container>
-        {/* <Sidebar isOpen={isSidebarOpen} /> */}
+        <Sidebar />
         <Content>
-          {/* <MDXProvider components={components}> */}
-
-          {children}
-
-          {/* </MDXProvider> */}
-          {/* <ContentFooter /> */}
+          <MDXProvider components={{}}>{children}</MDXProvider>
         </Content>
-        {/* <TableOfContent /> */}
       </Container>
     </Main>
   );
