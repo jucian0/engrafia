@@ -1,5 +1,6 @@
-import { Configuration } from "webpack";
-import path from "path";
+import { Configuration } from 'webpack';
+import path from 'path';
+import { resolveRoot } from './utils';
 
 type Options = {
   onStart?: (config: any, options: any) => void;
@@ -17,20 +18,22 @@ export function mdx(pluginOptions: Options = {}) {
           pluginOptions.onStart(config, options);
         }
 
-        config.resolve.alias["root_folder"] = path.join(process.cwd());
+        const root = resolveRoot(options.dir);
+
+        config.resolve.alias['root_folder'] = root;
 
         config?.module?.rules?.push({
           test: extension,
           use: [
             options.defaultLoaders.babel,
             {
-              loader: "@mdx-js/loader",
+              loader: '@mdx-js/loader',
               options: pluginOptions.options,
             },
           ],
         });
 
-        if (typeof nextConfig.webpack === "function") {
+        if (typeof nextConfig.webpack === 'function') {
           return nextConfig.webpack(config, options);
         }
 

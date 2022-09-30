@@ -11,6 +11,23 @@
             },
             "title": "Button",
             "url": "/../docs/pages/button"
+        },
+        {
+            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs",
+            "name": "docs",
+            "children": [
+                {
+                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/button.mdx",
+                    "name": "button.mdx",
+                    "meta": {
+                        "title": "Button",
+                        "description": "This page lists a number of current limitations of Prisma."
+                    },
+                    "title": "Button",
+                    "url": "/../docs/pages/docs/button"
+                }
+            ],
+            "title": "Docs"
         }
     ],
     "title": "Pages"
