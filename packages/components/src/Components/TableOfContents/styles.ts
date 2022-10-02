@@ -1,33 +1,33 @@
-import { styled, css } from '@nextui-org/react';
+import { styled, css, cssHideIn, cssHideShowIn } from '@nextui-org/react';
 
-export const TableOfContentWrapper = styled(`aside`, {
-  display: `flex`,
-  flexDirection: `column`,
-  position: `relative`,
-  maxWidth: `15.62rem`,
-  minWidth: `15.62rem`,
-  overflow: `auto`,
-  top: `1.797rem`,
+export const TableOfContentWrapper = styled(
+  `aside`,
+  {
+    display: `flex`,
+    flexDirection: `column`,
+    position: `relative`,
+    maxWidth: `15.62rem`,
+    minWidth: `15.62rem`,
+    overflow: `auto`,
+    top: `0.5rem`,
 
-  [`@media (max-width: 48rem)`]: {
-    display: `none`,
+    ul: {
+      margin: '1.5rem 0',
+    },
+
+    h3: {
+      fontSize: `1.125rem`,
+      color: `$text`,
+      fontWeight: `$medium`,
+      margin: `0`,
+    },
+
+    div: {
+      position: 'fixed',
+    },
   },
-
-  ul: {
-    margin: '1.5rem 0',
-  },
-
-  h3: {
-    fontSize: `1.125rem`,
-    color: `$text`,
-    fontWeight: `$medium`,
-    margin: `0`,
-  },
-
-  div: {
-    position: 'fixed',
-  },
-});
+  cssHideShowIn
+);
 
 export const ItemLink = styled(`li`, {
   display: `block`,

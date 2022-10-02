@@ -1,27 +1,31 @@
-import { styled, css } from '@nextui-org/react';
+import { styled, css, cssHideShowIn } from '@nextui-org/react';
 
-export const SidebarWrapper = styled(`aside`, {
-  display: `flex`,
-  position: `relative`,
-  flexDirection: `column`,
-  maxWidth: `15.62rem`,
-  width: `15.62rem`,
-  minWidth: `15.62rem`,
-  overflow: `auto`,
-  //borderRight: `1px solid $borderColor`,
-  //top: `3.797rem`,
+export const SidebarWrapper = styled(
+  `aside`,
+  {
+    display: `flex`,
+    position: `relative`,
+    flexDirection: `column`,
+    maxWidth: `15.62rem`,
+    width: `15.62rem`,
+    minWidth: `15.62rem`,
+    overflow: `auto`,
+    //borderRight: `1px solid $borderColor`,
+    //top: `3.797rem`,
 
-  // [`@media (max-width: 48rem)`]: {
-  //   position: `fixed`,
-  //   left: 0,
-  //   height: `calc(100% - 3.797rem)`,
-  //   zIndex: `$1`,
-  //   boxShadow: `$right`,
-  // },
-  // '.wrapper': {
-  //   position: `fixed`,
-  // },
-});
+    // [`@media (max-width: 48rem)`]: {
+    //   position: `fixed`,
+    //   left: 0,
+    //   height: `calc(100% - 3.797rem)`,
+    //   zIndex: `$1`,
+    //   boxShadow: `$right`,
+    // },
+    '.wrapper': {
+      position: `fixed`,
+    },
+  },
+  cssHideShowIn
+);
 
 export const List = styled(`ul`, {
   listStyle: `none`,
@@ -31,7 +35,7 @@ export const List = styled(`ul`, {
 
 export const Item = styled(`li`, {
   position: `relative`,
-  padding: 0,
+  paddingLeft: `1rem`,
 });
 
 export const Category = styled(`span`, {
@@ -54,7 +58,7 @@ export const Tag = styled(`div`, {
 export const Link = styled(`span`, {
   display: `flex`,
   alignItems: `center`,
-  padding: `0.7rem 0`,
+  padding: `0.2rem 0`,
   fontSize: `1rem`,
   '& a': {
     color: `$accents8`,

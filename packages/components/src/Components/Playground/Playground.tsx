@@ -4,36 +4,7 @@ import dark from 'prism-react-renderer/themes/dracula';
 import { Grid, useTheme } from '@nextui-org/react';
 import { Resizable } from 're-resizable';
 import React from 'react';
-
-const getResizableProps = (
-  width: string,
-  setWidth: (width: string) => void
-) => ({
-  minWidth: 260,
-  maxWidth: '100%',
-  size: {
-    width: width,
-    height: 'auto',
-  },
-  style: {
-    margin: 0,
-    marginRight: 'auto',
-    height: 'auto',
-  },
-  enable: {
-    top: false,
-    right: true,
-    bottom: false,
-    left: false,
-    topRight: false,
-    bottomRight: false,
-    bottomLeft: false,
-    topLeft: false,
-  },
-  onResizeStop: (_: any, __: any, ref: any) => {
-    setWidth(ref.style.width);
-  },
-});
+import { getResizableProps } from './resizableProps';
 
 const Box = ({ css, ...props }: any) => (
   <Grid.Container {...props} css={{ boxShadow: '$xs', ...css }} />
@@ -52,22 +23,23 @@ export const Playground = (props: any) => {
         right: (
           <Grid
             css={{
-              width: 20,
+              width: '1.25rem',
               height: '100%',
               backgroundColor: '$gray200',
-              border: '5px solid $gray200',
-              borderRadius: '0 8px 8px 0',
+              border: '0.313rem solid $gray200',
+              borderRadius: '0 0.5rem 0.5rem 0',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
+              marginLeft: '-1.25rem',
             }}
           >
             <Grid
               css={{
-                width: 8,
+                width: '0.5rem',
                 height: '30%',
-                borderInlineEnd: '2px solid $accents4',
-                borderInlineStart: '2px solid $accents4',
+                borderInlineEnd: '0.125rem solid $accents4',
+                borderInlineStart: '0.125rem solid $accents4',
               }}
             />
           </Grid>
@@ -78,7 +50,8 @@ export const Playground = (props: any) => {
         md={12}
         css={{
           borderRadius: '$xs 0 0 $xs',
-          border: '1px solid $gray200',
+          border: '0.063rem solid $gray200',
+          width: 'calc( 100% - 1.25rem )',
         }}
       >
         <LiveProvider
@@ -90,9 +63,9 @@ export const Playground = (props: any) => {
           <Box
             as={LivePreview}
             css={{
-              minHeight: '80px',
+              minHeight: '5rem',
               p: '$5',
-              borderBottom: '1px solid $gray200',
+              borderBottom: '0.063rem solid $gray200',
               alignItems: 'center',
             }}
           />
@@ -103,7 +76,7 @@ export const Playground = (props: any) => {
             as={LiveError}
             css={{
               background: '$errorDark',
-              minHeight: '100px',
+              minHeight: '6.125rem',
               p: '$5',
               borderRadius: '$xs',
               borderStartEndRadius: 0,

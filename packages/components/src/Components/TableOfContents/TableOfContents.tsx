@@ -14,7 +14,7 @@ export function TableOfContent() {
   }
 
   return (
-    <S.TableOfContentWrapper>
+    <S.TableOfContentWrapper hideIn="sm">
       <div>
         <h3>{t('table.of.content')}</h3>
         <ul>

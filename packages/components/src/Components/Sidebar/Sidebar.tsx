@@ -76,7 +76,7 @@ export function Sidebar() {
     );
   }
   return (
-    <S.SidebarWrapper>
+    <S.SidebarWrapper hideIn="xs">
       <div className="wrapper">{recursiveMenu(resolveSidebar())}</div>
     </S.SidebarWrapper>
   );
