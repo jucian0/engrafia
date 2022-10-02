@@ -1,6 +1,6 @@
 import { to } from 'await-to-js';
 import fs from 'fs';
-import dirTree,{DirectoryTree} from 'directory-tree';
+import dirTree, { DirectoryTree } from 'directory-tree';
 import getFrontMatter from 'front-matter';
 import path from 'path';
 import {
@@ -11,10 +11,10 @@ import {
 } from './utils';
 
 type File = {
-  meta:string
-  title:string
-  url:string
-} & DirectoryTree
+  meta: string;
+  title: string;
+  url: string;
+} & DirectoryTree;
 
 export const writeMdxIndex = debounce((dir: string) => {
   const root = resolveRoot(dir);
@@ -44,7 +44,9 @@ async function getMdxFilesIndex(dir: string) {
       const { name = '', ...meta }: any = attributes;
       node.meta = meta || {};
       node.title = name || formatTitle(node.name || '');
-      node.url = formatRelativePath(path.relative(pagesPath, pathName));
+      node.url = formatRelativePath(
+        path.relative(dir + '/' + pagesPath, pathName)
+      );
     },
     (node: File) => {
       node.title = formatTitle(node.name);
@@ -53,7 +55,7 @@ async function getMdxFilesIndex(dir: string) {
 
   if (tree.name === 'src') {
     const pagesNode = tree.children?.find((x) => x.name === 'pages');
-    return pagesNode
+    return pagesNode;
   }
   return tree;
 }

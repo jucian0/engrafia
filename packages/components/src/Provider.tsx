@@ -57,8 +57,6 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
           ? meta.title
           : `${siteConfig.config.title} - ${meta?.title ?? '404'}`;
 
-      console.log(children.props);
-
       const metaTags = Object.entries(children.props.data).map(
         ([key, value]) => {
           return <meta key={key} name={key} content={value as ''} />;
@@ -85,31 +83,31 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
     }
   }, [route]);
 
-  // if (route.includes(siteConfig.config?.docsPage ?? 'docs')) {
+  if (route.includes(siteConfig.config?.docsPage ?? 'docs')) {
+    return (
+      <Context.Provider value={{ ...siteConfig, setSiteConfig }}>
+        <DocsLayout>
+          <Head>
+            <>
+              <title>{title}</title>
+              {metaTags}
+            </>
+          </Head>
+          {children}
+        </DocsLayout>
+      </Context.Provider>
+    );
+  }
+
   return (
-    <Context.Provider value={{ ...siteConfig, setSiteConfig }}>
-      <DocsLayout>
-        <Head>
-          <>
-            <title>{title}</title>
-            {metaTags}
-          </>
-        </Head>
-        {children}
-      </DocsLayout>
+    <Context.Provider value={siteConfig}>
+      <Head>
+        <>
+          <title>{title}</title>
+          {metaTags}
+        </>
+      </Head>
+      <Grid>{children}</Grid>
     </Context.Provider>
   );
-  //}
-
-  // return (
-  //   <Context.Provider value={siteConfig}>
-  //     <Head>
-  //       <>
-  //         <title>{title}</title>
-  //         {metaTags}
-  //       </>
-  //     </Head>
-  //     <Grid>{children}</Grid>
-  //   </Context.Provider>
-  // );
 }

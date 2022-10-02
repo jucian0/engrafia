@@ -1,15 +1,13 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { useSiteConfig } from '../Provider';
+import { useSiteConfig } from '../../Provider';
 import * as S from './styles';
 
 export function Sidebar() {
   const { sidebar, language, versions, version } = useSiteConfig();
   const router = useRouter();
   const [toggle, setToggle] = React.useState(router.asPath);
-
-  console.log(sidebar, '<<<<<<<<<<<<<<<sidebar');
 
   function resolveSidebar() {
     const contentWithVersion = sidebar.children.find(
@@ -30,7 +28,7 @@ export function Sidebar() {
     if (contentWithLanguage) {
       return contentWithLanguage.children[0];
     }
-    return sidebar.children[0];
+    return sidebar;
   }
 
   function isActive(path: string) {
@@ -60,9 +58,7 @@ export function Sidebar() {
                   className={isActive(item.url) ? S.active() : S.inactive()}
                 >
                   <S.Tag
-                    css={
-                      isActive(item.url) ? { background: '$normalText' } : {}
-                    }
+                    css={isActive(item.url) ? { background: '$accents8' } : {}}
                   />
                   <Link href={item.url}>{item.title}</Link>
                 </S.Link>

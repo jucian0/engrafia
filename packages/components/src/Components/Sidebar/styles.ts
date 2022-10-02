@@ -7,31 +7,30 @@ export const SidebarWrapper = styled(`aside`, {
   maxWidth: `15.62rem`,
   width: `15.62rem`,
   minWidth: `15.62rem`,
-  padding: `0.5rem 0`,
   overflow: `auto`,
   //borderRight: `1px solid $borderColor`,
-  top: `3.797rem`,
+  //top: `3.797rem`,
 
-  [`@media (max-width: 48rem)`]: {
-    backgroundColor: `$background`,
-    position: `fixed`,
-    left: 0,
-    height: `calc(100% - 3.797rem)`,
-    zIndex: `$1`,
-    boxShadow: `$right`,
-  },
-  '.wrapper': {
-    position: `fixed`,
-  },
+  // [`@media (max-width: 48rem)`]: {
+  //   position: `fixed`,
+  //   left: 0,
+  //   height: `calc(100% - 3.797rem)`,
+  //   zIndex: `$1`,
+  //   boxShadow: `$right`,
+  // },
+  // '.wrapper': {
+  //   position: `fixed`,
+  // },
 });
 
 export const List = styled(`ul`, {
   listStyle: `none`,
-  paddingLeft: `1rem`,
+  // paddingLeft: `1rem`,
 });
 
 export const Item = styled(`li`, {
   position: `relative`,
+  padding: 0,
 });
 
 export const Category = styled(`span`, {
@@ -40,30 +39,36 @@ export const Category = styled(`span`, {
   border: `1px solid transparent`,
   fontWeight: `$medium`,
   fontSize: `1.125rem`,
-  color: `$normalText`,
+  color: `$text`,
 });
 
 export const Tag = styled(`div`, {
   width: `4px`,
   height: `4px`,
   marginInlineEnd: `0.5rem`,
-  background: `$textHeading`,
-  borderRadius: `$round`,
+  background: `$primary`,
+  borderRadius: `$rounded`,
 });
 
 export const Link = styled(`span`, {
   display: `flex`,
   alignItems: `center`,
-  padding: `0.7rem`,
+  padding: `0.7rem 0`,
   fontSize: `1rem`,
+  '& a': {
+    color: `$accents8`,
+  },
+  [Tag.toString()]: {
+    background: `$accents8`,
+  },
 });
 
 export const active = css({
-  color: `$normalText`,
+  color: `$accents8`,
   fontWeight: `$medium`,
 });
 
 export const inactive = css({
-  color: `$textHeading`,
+  color: `$accents8`,
   fontWeight: `$light`,
 });
