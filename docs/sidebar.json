@@ -10,7 +10,7 @@
                 "description": "This page lists a number of current limitations of Prisma."
             },
             "title": "Button",
-            "url": "/../docs/pages/button"
+            "url": "/button"
         },
         {
             "path": "/Users/barbosa/javascript/engrafia/docs/pages/docs",
@@ -24,7 +24,7 @@
                         "description": "This page lists a number of current limitations of Prisma."
                     },
                     "title": "Button",
-                    "url": "/../docs/pages/docs/button"
+                    "url": "/docs/button"
                 },
                 {
                     "path": "/Users/barbosa/javascript/engrafia/docs/pages/docs/quick-start.mdx",
@@ -34,7 +34,7 @@
                         "description": "This page lists a number of current limitations of Prisma."
                     },
                     "title": "Quick start",
-                    "url": "/../docs/pages/docs/quick-start"
+                    "url": "/docs/quick-start"
                 },
                 {
                     "path": "/Users/barbosa/javascript/engrafia/docs/pages/docs/tutorial.mdx",
@@ -44,7 +44,7 @@
                         "description": "This page lists a number of current limitations of Prisma."
                     },
                     "title": "Tutorial",
-                    "url": "/../docs/pages/docs/tutorial"
+                    "url": "/docs/tutorial"
                 }
             ],
             "title": "Docs"

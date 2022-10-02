@@ -1,0 +1,23 @@
+{
+    "title": "Engrafia docs",
+    "description": "description",
+    "docsPage": "docs",
+    "repository": {
+        "url": "http://github.com/jucian0/engrafia",
+        "branch": "main",
+        "author": "Jucian0"
+    },
+    "nav": {
+        "logo": "https://www.useform.org/build/_assets/green_logo-TH2WTCVN.svg",
+        "links": [
+            {
+                "title": "link.docs",
+                "url": "/pt_BR/docs"
+            },
+            {
+                "title": "link.github",
+                "url": "http://github.com/jucian0/engrafia"
+            }
+        ]
+    }
+}
