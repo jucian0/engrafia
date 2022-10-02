@@ -1,11 +1,16 @@
 import { Navbar, Button, Link, Text, Input } from '@nextui-org/react';
 import { useTheme } from 'next-themes';
 import { RiMoonFill, RiSearchFill, RiSunFill } from 'react-icons/ri';
+import { useSiteConfig } from '../Provider';
+import { useTranslate } from '../useTranslation';
 
 import { AcmeLogo } from './DefaultLogo';
+import { Sidebar } from './Sidebar/Sidebar';
 
 export default function MenuNav() {
   const { theme, setTheme } = useTheme();
+  const { config, sidebar } = useSiteConfig();
+  const t = useTranslate();
 
   const collapseItems = [
     'Features',
@@ -27,14 +32,13 @@ export default function MenuNav() {
           ACME
         </Text>
       </Navbar.Brand>
-      <Navbar.Content activeColor={'primary'} hideIn="xs" variant="default">
-        <Navbar.Link href="#">Features</Navbar.Link>
-        <Navbar.Link isActive href="#">
-          Customers
-        </Navbar.Link>
-        <Navbar.Link href="#">Pricing</Navbar.Link>
-        <Navbar.Link href="#">Company</Navbar.Link>
-      </Navbar.Content>
+      {config.nav?.links && (
+        <Navbar.Content activeColor={'primary'} hideIn="xs" variant="default">
+          {config.nav?.links.map((link) => (
+            <Navbar.Link href={link.url}>{t(link.title)}</Navbar.Link>
+          ))}
+        </Navbar.Content>
+      )}
       <Navbar.Content
         css={{
           '@xsMax': {
@@ -90,19 +94,10 @@ export default function MenuNav() {
         </Navbar.Item>
       </Navbar.Content>
       <Navbar.Collapse>
-        {collapseItems.map((item, index) => (
-          <Navbar.CollapseItem key={item}>
-            <Link
-              color="inherit"
-              css={{
-                minWidth: '100%',
-              }}
-              href="#"
-            >
-              {item}
-            </Link>
-          </Navbar.CollapseItem>
-        ))}
+        {/**
+         * destructure sidebar in favor to have a generic component to ue in different parts
+         */}
+        <Sidebar />
       </Navbar.Collapse>
       <Navbar.Toggle showIn="xs" aria-label="toggle navigation" />
     </Navbar>
