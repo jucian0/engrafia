@@ -25,7 +25,8 @@ export const SidebarWrapper = styled(`aside`, {
 
 export const List = styled(`ul`, {
   listStyle: `none`,
-  // paddingLeft: `1rem`,
+  margin: 0,
+  paddingLeft: `1rem`,
 });
 
 export const Item = styled(`li`, {

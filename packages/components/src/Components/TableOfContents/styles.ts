@@ -6,26 +6,22 @@ export const TableOfContentWrapper = styled(`aside`, {
   position: `relative`,
   maxWidth: `15.62rem`,
   minWidth: `15.62rem`,
-  padding: `2rem 1rem`,
   overflow: `auto`,
-  //borderLeft: `1px solid $borderColor`,
-  top: `3.797rem`,
+  top: `1.797rem`,
 
   [`@media (max-width: 48rem)`]: {
     display: `none`,
   },
 
   ul: {
-    paddingLeft: `0`,
-    marginTop: `0.5rem`,
+    margin: '1.5rem 0',
   },
 
   h3: {
     fontSize: `1.125rem`,
-    color: `$normalText`,
+    color: `$text`,
     fontWeight: `$medium`,
     margin: `0`,
-    padding: `0 0.5rem`,
   },
 
   div: {
@@ -38,16 +34,20 @@ export const ItemLink = styled(`li`, {
   textDecoration: `none`,
   fontSize: `.8rem`,
   lineHeight: `1.5`,
-  padding: `0.5rem`,
   transition: `all 0.2s ease-in-out`,
+  padding: '0.3rem 0',
 });
 
 export const active = css({
-  color: `$normalText`,
   fontWeight: `$medium`,
+  '& a': {
+    color: `$text`,
+  },
 });
 
 export const inactive = css({
-  color: `$textHeading`,
+  '& a': {
+    color: `$accents8`,
+  },
   fontWeight: `$light`,
 });

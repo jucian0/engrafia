@@ -45,38 +45,39 @@ export function Sidebar() {
 
   function recursiveMenu(menu: any) {
     return (
-      <S.Item>
+      <S.List>
         <S.Category onClick={() => handleClick(menu.path, menu.name)}>
           {menu.title}
         </S.Category>
+
         {isOpened(menu) &&
           menu.children &&
           menu.children.map((item: any) => {
             if (item.meta) {
               return (
-                <S.Link
-                  className={isActive(item.url) ? S.active() : S.inactive()}
-                >
-                  <S.Tag
-                    css={isActive(item.url) ? { background: '$accents8' } : {}}
-                  />
-                  <Link href={item.url}>{item.title}</Link>
-                </S.Link>
+                <S.Item>
+                  <S.Link
+                    className={isActive(item.url) ? S.active() : S.inactive()}
+                  >
+                    <S.Tag
+                      css={
+                        isActive(item.url) ? { background: '$accents8' } : {}
+                      }
+                    />
+                    <Link href={item.url}>{item.title}</Link>
+                  </S.Link>
+                </S.Item>
               );
             }
 
-            return (
-              <S.List className="icon is-small">{recursiveMenu(item)}</S.List>
-            );
+            return recursiveMenu(item);
           })}
-      </S.Item>
+      </S.List>
     );
   }
   return (
     <S.SidebarWrapper>
-      <div className="wrapper">
-        <S.List>{recursiveMenu(resolveSidebar())}</S.List>
-      </div>
+      <div className="wrapper">{recursiveMenu(resolveSidebar())}</div>
     </S.SidebarWrapper>
   );
 }
