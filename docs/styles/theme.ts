@@ -15,6 +15,9 @@ export const Global = globalCss({
   blockquote: {
     borderRadius: '$md',
   },
+  pre: {
+    padding: '0',
+  },
 });
 
 export const lightTheme = createTheme({

@@ -26,7 +26,6 @@ export const Content = styled(`div`, {
   padding: `$xs $md`,
   position: `relative`,
   margin: `0 auto`,
-  top: '3.797rem',
 });
 
 export function DocsLayout({ children }: React.PropsWithChildren<{}>) {
