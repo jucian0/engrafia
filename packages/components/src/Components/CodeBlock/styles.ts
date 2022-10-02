@@ -1,6 +1,7 @@
 import { styled } from '@nextui-org/react';
 
 export const Container = styled('div', {
+  position: 'relative',
   margin: '1rem 0',
   width: '100%',
   '*': {

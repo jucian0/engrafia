@@ -28,6 +28,7 @@
     "react-icons": "^4.4.0",
     "react-is": "18.2.0",
     "react-live": "^2.4.1",
+    "react-use-clipboard": "^1.0.8",
     "regenerator-runtime": "0.13.7",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-slug": "^5.0.1",

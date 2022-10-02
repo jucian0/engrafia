@@ -1,8 +1,9 @@
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import light from 'prism-react-renderer/themes/nightOwlLight';
 import dark from 'prism-react-renderer/themes/dracula';
-import { useTheme } from '@nextui-org/react';
+import { Button, useTheme } from '@nextui-org/react';
 import * as S from './styles';
+import { HeaderCode } from '../HeaderCode/Header';
 
 type Props = {
   className?: string;
@@ -26,6 +27,7 @@ export function Code({ children, className }: React.PropsWithChildren<Props>) {
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <S.Container>
+          <HeaderCode text={children.trim()} language={language} />
           <pre className={className} style={style}>
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })}>
