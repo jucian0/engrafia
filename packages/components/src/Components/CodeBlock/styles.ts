@@ -27,19 +27,6 @@ export const Container = styled('div', {
     display: 'inline',
   },
 
-  '& button': {
-    backgroundColor: '$primaryPure',
-    border: '0.063rem solid',
-    borderColor: '$primaryPure',
-    cursor: 'pointer',
-    padding: '0.313rem',
-    borderRadius: '0 0 0.125rem',
-
-    '&:hover': {
-      boxShadow: '$2',
-    },
-  },
-
   '& .header': {
     zIndex: 1,
     display: 'flex',

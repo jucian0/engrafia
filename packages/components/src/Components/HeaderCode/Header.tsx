@@ -23,12 +23,11 @@ export function HeaderCode({ text, language }: Props) {
     >
       <Button
         icon={isCopied ? <MdCheck /> : <MdContentCopy />}
-        auto
         light
-        rounded
+        auto
         onClick={() => setCopied()}
       />
-      <Button auto light rounded>
+      <Button auto light>
         {language}
       </Button>
     </Grid>
