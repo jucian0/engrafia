@@ -1,9 +1,9 @@
 {
-    "path": "/home/barbosa/javascript/engrafia/docs/pages",
+    "path": "/Users/barbosa/javascript/engrafia/docs/pages",
     "name": "pages",
     "children": [
         {
-            "path": "/home/barbosa/javascript/engrafia/docs/pages/button.mdx",
+            "path": "/Users/barbosa/javascript/engrafia/docs/pages/button.mdx",
             "name": "button.mdx",
             "meta": {
                 "title": "Button",
@@ -13,11 +13,11 @@
             "url": "/../docs/pages/button"
         },
         {
-            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs",
+            "path": "/Users/barbosa/javascript/engrafia/docs/pages/docs",
             "name": "docs",
             "children": [
                 {
-                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/button.mdx",
+                    "path": "/Users/barbosa/javascript/engrafia/docs/pages/docs/button.mdx",
                     "name": "button.mdx",
                     "meta": {
                         "title": "Button",
@@ -25,6 +25,26 @@
                     },
                     "title": "Button",
                     "url": "/../docs/pages/docs/button"
+                },
+                {
+                    "path": "/Users/barbosa/javascript/engrafia/docs/pages/docs/quick-start.mdx",
+                    "name": "quick-start.mdx",
+                    "meta": {
+                        "title": "Button",
+                        "description": "This page lists a number of current limitations of Prisma."
+                    },
+                    "title": "Quick start",
+                    "url": "/../docs/pages/docs/quick-start"
+                },
+                {
+                    "path": "/Users/barbosa/javascript/engrafia/docs/pages/docs/tutorial.mdx",
+                    "name": "tutorial.mdx",
+                    "meta": {
+                        "title": "Button",
+                        "description": "This page lists a number of current limitations of Prisma."
+                    },
+                    "title": "Tutorial",
+                    "url": "/../docs/pages/docs/tutorial"
                 }
             ],
             "title": "Docs"
