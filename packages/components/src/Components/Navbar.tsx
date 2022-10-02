@@ -29,7 +29,7 @@ export default function MenuNav() {
       <Navbar.Brand>
         <AcmeLogo />
         <Text b color="inherit" hideIn="xs">
-          ACME
+          {config.title}
         </Text>
       </Navbar.Brand>
       {config.nav?.links && (

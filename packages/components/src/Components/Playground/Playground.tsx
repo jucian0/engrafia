@@ -27,7 +27,7 @@ export const Playground = (props: any) => {
               height: '100%',
               backgroundColor: '$gray200',
               border: '0.313rem solid $gray200',
-              borderRadius: '0 0.5rem 0.5rem 0',
+              borderRadius: '0 $md $md 0',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -49,7 +49,7 @@ export const Playground = (props: any) => {
       <Box
         md={12}
         css={{
-          borderRadius: '$xs 0 0 $xs',
+          borderRadius: '$md 0 0 $md',
           border: '0.063rem solid $gray200',
           width: 'calc( 100% - 1.25rem )',
         }}

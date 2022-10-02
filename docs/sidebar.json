@@ -3,6 +3,43 @@
     "name": "pages",
     "children": [
         {
+            "path": "/Users/barbosa/javascript/engrafia/docs/pages/api",
+            "name": "api",
+            "children": [
+                {
+                    "path": "/Users/barbosa/javascript/engrafia/docs/pages/api/button.mdx",
+                    "name": "button.mdx",
+                    "meta": {
+                        "title": "Button",
+                        "description": "This page lists a number of current limitations of Prisma."
+                    },
+                    "title": "Button",
+                    "url": "/api/button"
+                },
+                {
+                    "path": "/Users/barbosa/javascript/engrafia/docs/pages/api/quick-start.mdx",
+                    "name": "quick-start.mdx",
+                    "meta": {
+                        "title": "Button",
+                        "description": "This page lists a number of current limitations of Prisma."
+                    },
+                    "title": "Quick start",
+                    "url": "/api/quick-start"
+                },
+                {
+                    "path": "/Users/barbosa/javascript/engrafia/docs/pages/api/tutorial.mdx",
+                    "name": "tutorial.mdx",
+                    "meta": {
+                        "title": "Button",
+                        "description": "This page lists a number of current limitations of Prisma."
+                    },
+                    "title": "Tutorial",
+                    "url": "/api/tutorial"
+                }
+            ],
+            "title": "Api"
+        },
+        {
             "path": "/Users/barbosa/javascript/engrafia/docs/pages/button.mdx",
             "name": "button.mdx",
             "meta": {
@@ -57,7 +94,7 @@
                     "path": "/Users/barbosa/javascript/engrafia/docs/pages/docs/button.mdx",
                     "name": "button.mdx",
                     "meta": {
-                        "title": "Button",
+                        "title": "Cinnamon pineapple",
                         "description": "This page lists a number of current limitations of Prisma."
                     },
                     "title": "Button",

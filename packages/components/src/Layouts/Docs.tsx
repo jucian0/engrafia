@@ -35,9 +35,7 @@ export function DocsLayout({ children }: React.PropsWithChildren<{}>) {
       <Navbar />
       <Container>
         <Sidebar />
-        <Content>
-          <MDXProvider components={{}}>{children}</MDXProvider>
-        </Content>
+        <Content>{children}</Content>
         <TableOfContent />
       </Container>
     </Main>

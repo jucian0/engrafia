@@ -9,6 +9,12 @@ export const Global = globalCss({
       marginInlineEnd: 10,
     },
   },
+  img: {
+    borderRadius: '$md',
+  },
+  blockquote: {
+    borderRadius: '$md',
+  },
 });
 
 export const lightTheme = createTheme({

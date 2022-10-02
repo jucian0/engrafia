@@ -1,3 +1,4 @@
+import { MDXProvider } from '@mdx-js/react';
 import { Grid } from '@nextui-org/react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -5,6 +6,7 @@ import React, { useContext } from 'react';
 import { Config, getConfig } from './get-config';
 import { getSidebarTree, SidebarTree } from './get-sidebar';
 import { DocsLayout } from './Layouts/Docs';
+import { mdxComponents } from './mdxComponents';
 
 export type ChildrenOfContent = {
   title: string;
@@ -32,7 +34,6 @@ const Context = React.createContext({} as DocsContext);
 
 export const useSiteConfig = (): DocsContext => {
   const data = useContext(Context);
-
   return data;
 };
 
@@ -93,7 +94,7 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
               {metaTags}
             </>
           </Head>
-          {children}
+          <MDXProvider components={mdxComponents}>{children}</MDXProvider>
         </DocsLayout>
       </Context.Provider>
     );
@@ -107,7 +108,9 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
           {metaTags}
         </>
       </Head>
-      <Grid>{children}</Grid>
+      <Grid>
+        <MDXProvider components={mdxComponents}>{children}</MDXProvider>
+      </Grid>
     </Context.Provider>
   );
 }
