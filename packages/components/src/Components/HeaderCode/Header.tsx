@@ -5,7 +5,7 @@ import useClipboard from 'react-use-clipboard';
 
 type Props = {
   text: string;
-  language: string;
+  language?: string;
 };
 export function HeaderCode({ text, language }: Props) {
   const [isCopied, setCopied] = useClipboard(text as '', {
@@ -16,7 +16,7 @@ export function HeaderCode({ text, language }: Props) {
     <Grid
       css={{
         position: 'absolute',
-        right: 0,
+        right: 20,
         display: 'flex',
         justifyContent: 'flex-end',
       }}
@@ -27,9 +27,20 @@ export function HeaderCode({ text, language }: Props) {
         auto
         onClick={() => setCopied()}
       />
-      <Button auto light>
-        {language}
-      </Button>
+      {language && (
+        <Grid
+          css={{
+            width: '2.4rem',
+            height: '2.4rem',
+            display: 'flex',
+            color: '$text',
+            jc: 'center',
+            ai: 'center',
+          }}
+        >
+          {language}
+        </Grid>
+      )}
     </Grid>
   );
 }

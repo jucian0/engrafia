@@ -1,13 +1,13 @@
 {
-    "path": "/home/barbosa/javascript/engrafia/docs/pages",
+    "path": "/Users/barbosa/javascript/engrafia/docs/pages",
     "name": "pages",
     "children": [
         {
-            "path": "/home/barbosa/javascript/engrafia/docs/pages/api",
+            "path": "/Users/barbosa/javascript/engrafia/docs/pages/api",
             "name": "api",
             "children": [
                 {
-                    "path": "/home/barbosa/javascript/engrafia/docs/pages/api/button.mdx",
+                    "path": "/Users/barbosa/javascript/engrafia/docs/pages/api/button.mdx",
                     "name": "button.mdx",
                     "meta": {
                         "title": "Button",
@@ -17,7 +17,7 @@
                     "url": "/api/button"
                 },
                 {
-                    "path": "/home/barbosa/javascript/engrafia/docs/pages/api/quick-start.mdx",
+                    "path": "/Users/barbosa/javascript/engrafia/docs/pages/api/quick-start.mdx",
                     "name": "quick-start.mdx",
                     "meta": {
                         "title": "Button",
@@ -27,7 +27,7 @@
                     "url": "/api/quick-start"
                 },
                 {
-                    "path": "/home/barbosa/javascript/engrafia/docs/pages/api/tutorial.mdx",
+                    "path": "/Users/barbosa/javascript/engrafia/docs/pages/api/tutorial.mdx",
                     "name": "tutorial.mdx",
                     "meta": {
                         "title": "Button",
@@ -40,7 +40,7 @@
             "title": "Api"
         },
         {
-            "path": "/home/barbosa/javascript/engrafia/docs/pages/button.mdx",
+            "path": "/Users/barbosa/javascript/engrafia/docs/pages/button.mdx",
             "name": "button.mdx",
             "meta": {
                 "title": "Button",
@@ -50,11 +50,11 @@
             "url": "/button"
         },
         {
-            "path": "/home/barbosa/javascript/engrafia/docs/pages/components",
+            "path": "/Users/barbosa/javascript/engrafia/docs/pages/components",
             "name": "components",
             "children": [
                 {
-                    "path": "/home/barbosa/javascript/engrafia/docs/pages/components/button.mdx",
+                    "path": "/Users/barbosa/javascript/engrafia/docs/pages/components/button.mdx",
                     "name": "button.mdx",
                     "meta": {
                         "title": "Button",
@@ -64,7 +64,7 @@
                     "url": "/components/button"
                 },
                 {
-                    "path": "/home/barbosa/javascript/engrafia/docs/pages/components/quick-start.mdx",
+                    "path": "/Users/barbosa/javascript/engrafia/docs/pages/components/quick-start.mdx",
                     "name": "quick-start.mdx",
                     "meta": {
                         "title": "Button",
@@ -74,7 +74,7 @@
                     "url": "/components/quick-start"
                 },
                 {
-                    "path": "/home/barbosa/javascript/engrafia/docs/pages/components/tutorial.mdx",
+                    "path": "/Users/barbosa/javascript/engrafia/docs/pages/components/tutorial.mdx",
                     "name": "tutorial.mdx",
                     "meta": {
                         "title": "Button",
@@ -87,11 +87,11 @@
             "title": "Components"
         },
         {
-            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs",
+            "path": "/Users/barbosa/javascript/engrafia/docs/pages/docs",
             "name": "docs",
             "children": [
                 {
-                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/button.mdx",
+                    "path": "/Users/barbosa/javascript/engrafia/docs/pages/docs/button.mdx",
                     "name": "button.mdx",
                     "meta": {
                         "title": "Cinnamon pineapple",
@@ -101,7 +101,7 @@
                     "url": "/docs/button"
                 },
                 {
-                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/quick-start.mdx",
+                    "path": "/Users/barbosa/javascript/engrafia/docs/pages/docs/quick-start.mdx",
                     "name": "quick-start.mdx",
                     "meta": {
                         "title": "Button",
@@ -111,7 +111,7 @@
                     "url": "/docs/quick-start"
                 },
                 {
-                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/tutorial.mdx",
+                    "path": "/Users/barbosa/javascript/engrafia/docs/pages/docs/tutorial.mdx",
                     "name": "tutorial.mdx",
                     "meta": {
                         "title": "Button",

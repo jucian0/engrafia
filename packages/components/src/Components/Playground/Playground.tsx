@@ -5,6 +5,7 @@ import { Grid, useTheme } from '@nextui-org/react';
 import { Resizable } from 're-resizable';
 import React from 'react';
 import { getResizableProps } from './resizableProps';
+import { HeaderCode } from '../HeaderCode/Header';
 
 const Box = ({ css, ...props }: any) => (
   <Grid.Container {...props} css={{ boxShadow: '$xs', ...css }} />
@@ -69,6 +70,9 @@ export const Playground = (props: any) => {
               alignItems: 'center',
             }}
           />
+
+          <HeaderCode text={props.code} />
+
           <LiveEditor
             style={{ borderEndEndRadius: 7, borderEndStartRadius: 7 }}
           />
