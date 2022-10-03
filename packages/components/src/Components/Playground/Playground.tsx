@@ -74,7 +74,7 @@ export const Playground = (props: any) => {
           <HeaderCode text={props.code} />
 
           <LiveEditor
-            style={{ borderEndEndRadius: 7, borderEndStartRadius: 7 }}
+            style={{ borderEndEndRadius: 6, borderEndStartRadius: 10 }}
           />
           <Box
             as={LiveError}
