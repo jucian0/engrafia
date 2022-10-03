@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import React, { useContext } from 'react';
 import { Config, getConfig } from './get-config';
 import { getSidebarTree, SidebarTree } from './get-sidebar';
+import { DefaultLayout } from './Layouts/Default';
 import { DocsLayout } from './Layouts/Docs';
 import { mdxComponents } from './mdxComponents';
 
@@ -51,8 +52,8 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
   });
 
   React.useEffect(() => {
-    if (route !== '/_error') {
-      const meta = children.props.data;
+    const meta = children.props?.data;
+    if (route !== '/_error' && meta) {
       const title =
         route === `/`
           ? meta.title
@@ -108,9 +109,9 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
           {metaTags}
         </>
       </Head>
-      <Grid>
+      <DefaultLayout>
         <MDXProvider components={mdxComponents}>{children}</MDXProvider>
-      </Grid>
+      </DefaultLayout>
     </Context.Provider>
   );
 }
