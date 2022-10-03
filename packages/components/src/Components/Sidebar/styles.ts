@@ -3,6 +3,7 @@ import { styled, css, cssHideShowIn } from '@nextui-org/react';
 export const SidebarWrapper = styled(
   `aside`,
   {
+    top: '1rem',
     display: `flex`,
     position: `relative`,
     flexDirection: `column`,
@@ -10,16 +11,6 @@ export const SidebarWrapper = styled(
     width: `15.62rem`,
     minWidth: `15.62rem`,
     overflow: `auto`,
-    //borderRight: `1px solid $borderColor`,
-    //top: `3.797rem`,
-
-    // [`@media (max-width: 48rem)`]: {
-    //   position: `fixed`,
-    //   left: 0,
-    //   height: `calc(100% - 3.797rem)`,
-    //   zIndex: `$1`,
-    //   boxShadow: `$right`,
-    // },
     '.wrapper': {
       position: `fixed`,
     },
@@ -58,22 +49,24 @@ export const Tag = styled(`div`, {
 export const Link = styled(`span`, {
   display: `flex`,
   alignItems: `center`,
-  padding: `0.2rem 0`,
+  padding: `0.1rem 0`,
   fontSize: `1rem`,
-  '& a': {
-    color: `$accents8`,
-  },
+  fontWeight: `$normal`,
   [Tag.toString()]: {
     background: `$accents8`,
   },
 });
 
 export const active = css({
-  color: `$accents8`,
-  fontWeight: `$medium`,
+  '& a': {
+    fontWeight: `$medium`,
+    color: `$text`,
+  },
 });
 
 export const inactive = css({
-  color: `$accents8`,
-  fontWeight: `$light`,
+  fontWeight: `$normal`,
+  '& a': {
+    color: `$accents8`,
+  },
 });

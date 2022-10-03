@@ -1,4 +1,4 @@
-import { styled, css, cssHideIn, cssHideShowIn } from '@nextui-org/react';
+import { styled, css, cssHideShowIn } from '@nextui-org/react';
 
 export const TableOfContentWrapper = styled(
   `aside`,
@@ -9,10 +9,10 @@ export const TableOfContentWrapper = styled(
     maxWidth: `15.62rem`,
     minWidth: `15.62rem`,
     overflow: `auto`,
-    top: `0.5rem`,
+    top: `1.5rem`,
 
     ul: {
-      margin: '1.5rem 0',
+      margin: '1rem ',
     },
 
     h3: {
@@ -35,7 +35,7 @@ export const ItemLink = styled(`li`, {
   fontSize: `.8rem`,
   lineHeight: `1.5`,
   transition: `all 0.2s ease-in-out`,
-  padding: '0.3rem 0',
+  padding: '0.1rem 0',
 });
 
 export const active = css({
