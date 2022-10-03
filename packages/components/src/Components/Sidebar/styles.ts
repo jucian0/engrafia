@@ -30,12 +30,18 @@ export const Item = styled(`li`, {
 });
 
 export const Category = styled(`span`, {
-  display: `block`,
+  display: `flex`,
+  alignItems: 'center',
   paddingBlock: `0.5rem`,
   border: `1px solid transparent`,
   fontWeight: `$medium`,
   fontSize: `1.125rem`,
   color: `$text`,
+  transition: 'ease 300ms',
+
+  '&:hover': {
+    color: `$accents8`,
+  },
 });
 
 export const Tag = styled(`div`, {

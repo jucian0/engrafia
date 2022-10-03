@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useSiteConfig } from '../../Provider';
 import * as S from './styles';
+import { MdChevronRight, MdExpandMore } from 'react-icons/md';
 
 export function Sidebar({ hide = true }) {
   const { sidebar, language, versions, version } = useSiteConfig();
@@ -36,7 +37,7 @@ export function Sidebar({ hide = true }) {
   }
 
   function isOpened(item: any) {
-    return true; //toggle.includes(item.name);
+    return toggle.includes(item.name);
   }
 
   const handleClick = React.useCallback((key: string, name: string) => {
@@ -47,7 +48,7 @@ export function Sidebar({ hide = true }) {
     return (
       <S.List>
         <S.Category onClick={() => handleClick(menu.path, menu.name)}>
-          {menu.title}
+          {menu.title} {isOpened(menu) ? <MdExpandMore /> : <MdChevronRight />}
         </S.Category>
 
         {isOpened(menu) &&
@@ -76,7 +77,7 @@ export function Sidebar({ hide = true }) {
     );
   }
   return (
-    <S.SidebarWrapper hideIn={hide && 'xs'}>
+    <S.SidebarWrapper hideIn={hide ? 'xs' : undefined}>
       <div className="wrapper">{recursiveMenu(resolveSidebar())}</div>
     </S.SidebarWrapper>
   );
