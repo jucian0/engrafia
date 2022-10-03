@@ -11,6 +11,7 @@ export type Config = {
   nav?: {
     logo?: string;
     links?: { title: string; url: string }[];
+    search_bar?: string;
   };
 };
 

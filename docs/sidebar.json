@@ -101,6 +101,16 @@
                     "url": "/docs/button"
                 },
                 {
+                    "path": "/Users/barbosa/javascript/engrafia/docs/pages/docs/index.mdx",
+                    "name": "index.mdx",
+                    "meta": {
+                        "title": "Button",
+                        "description": "This page lists a number of current limitations of Prisma."
+                    },
+                    "title": "Index",
+                    "url": "/docs/"
+                },
+                {
                     "path": "/Users/barbosa/javascript/engrafia/docs/pages/docs/quick-start.mdx",
                     "name": "quick-start.mdx",
                     "meta": {

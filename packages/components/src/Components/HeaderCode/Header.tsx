@@ -1,5 +1,4 @@
 import { Button, Grid } from '@nextui-org/react';
-import React from 'react';
 import { MdContentCopy, MdCheck } from 'react-icons/md';
 import useClipboard from 'react-use-clipboard';
 
@@ -30,7 +29,6 @@ export function HeaderCode({ text, language }: Props) {
       {language && (
         <Grid
           css={{
-            width: '2.4rem',
             height: '2.4rem',
             display: 'flex',
             color: '$text',

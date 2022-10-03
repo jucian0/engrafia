@@ -1,5 +1,6 @@
-import { Navbar, Button, Link, Text, Input, Grid } from '@nextui-org/react';
+import { Navbar, Button, Text, Input, Grid } from '@nextui-org/react';
 import { useTheme } from 'next-themes';
+import Link from 'next/link';
 import { RiMoonFill, RiSearchFill, RiSunFill } from 'react-icons/ri';
 import { useSiteConfig } from '../Provider';
 import { useTranslate } from '../useTranslation';
@@ -12,40 +13,28 @@ export default function MenuNav() {
   const { config, sidebar } = useSiteConfig();
   const t = useTranslate();
 
-  const collapseItems = [
-    'Features',
-    'Customers',
-    'Pricing',
-    'Company',
-    'Legal',
-    'Team',
-    'Help & Feedback',
-    'Login',
-    'Sign Up',
-  ];
-
   return (
     <Navbar variant="sticky" isBordered={theme === 'dark'} maxWidth="fluid">
       <Grid.Container
+        wrap="nowrap"
+        id="juciano"
         css={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
           maxWidth: '87.5rem',
           margin: 'auto',
-          '@xsMax': {
-            // fw: 'nowrap',
-            justifyContent: 'space-between',
-            //alignItems: 'center',
-            background: 'red',
-            // flexDirection: 'column',
-          },
         }}
       >
         <Navbar.Brand>
-          <AcmeLogo />
+          {config.nav?.logo ? (
+            <img alt="web_site_lgo" src={config.nav.logo} />
+          ) : (
+            <AcmeLogo />
+          )}
+
           <Text b color="inherit" hideIn="xs">
-            {config.title}
+            <Link href="/">{config.title}</Link>
           </Text>
         </Navbar.Brand>
         {config.nav?.links && (
@@ -76,7 +65,7 @@ export default function MenuNav() {
               contentLeft={
                 <RiSearchFill fill="var(--nextui-colors-accents6)" size={16} />
               }
-              contentLeftStyling={false}
+              contentLeftStyling
               css={{
                 w: '100%',
                 '@xsMax': {
@@ -88,7 +77,7 @@ export default function MenuNav() {
                   dflex: 'center',
                 },
               }}
-              placeholder="Search..."
+              placeholder={t(config.nav?.search_bar ?? 'Search')}
             />
           </Navbar.Item>
 

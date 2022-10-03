@@ -8,17 +8,18 @@
         "author": "Jucian0"
     },
     "nav": {
-        "logo": "https://www.useform.org/build/_assets/green_logo-TH2WTCVN.svg",
+        "logo": false,
         "links": [
             {
                 "title": "link.docs",
-                "url": "/pt_BR/docs"
+                "url": "/docs"
             },
             {
                 "title": "link.github",
                 "url": "http://github.com/jucian0/engrafia"
             }
-        ]
+        ],
+        "search_bar": "search.placeholder"
     },
     "i18n": {
         "pt_BR": {
@@ -26,14 +27,16 @@
             "link.docs": "Documentação",
             "link.github": "Github",
             "edit.content": "Edite esse conteúdo",
-            "table.of.content": "Conteúdos da página"
+            "table.of.content": "Conteúdos da página",
+            "search.placeholder": "Search..."
         },
         "en_US": {
             "description": "This is a documentation example",
             "link.docs": "Docs",
             "link.github": "Github",
             "edit.content": "Edit this content",
-            "table.of.content": "Page contents"
+            "table.of.content": "Page contents",
+            "search.placeholder": "Search..."
         }
     }
 }
