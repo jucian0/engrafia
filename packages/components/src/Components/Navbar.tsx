@@ -99,10 +99,7 @@ export default function MenuNav() {
           </Navbar.Item>
         </Navbar.Content>
         <Navbar.Collapse>
-          {/**
-           * destructure sidebar in favor to have a generic component to ue in different parts
-           */}
-          <Sidebar />
+          <Sidebar hide={false} />
         </Navbar.Collapse>
         <Navbar.Toggle showIn="xs" aria-label="toggle navigation" />
       </Grid.Container>

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useSiteConfig } from '../../Provider';
 import * as S from './styles';
 
-export function Sidebar() {
+export function Sidebar({ hide = true }) {
   const { sidebar, language, versions, version } = useSiteConfig();
   const router = useRouter();
   const [toggle, setToggle] = React.useState(router.asPath);
@@ -76,7 +76,7 @@ export function Sidebar() {
     );
   }
   return (
-    <S.SidebarWrapper hideIn="xs">
+    <S.SidebarWrapper hideIn={hide && 'xs'}>
       <div className="wrapper">{recursiveMenu(resolveSidebar())}</div>
     </S.SidebarWrapper>
   );
