@@ -37,7 +37,7 @@ export function Sidebar({ hide = true }) {
   }
 
   function isOpened(item: any) {
-    return toggle.includes(item.name);
+    return true; //toggle.includes(item.name);
   }
 
   const handleClick = React.useCallback((key: string, name: string) => {
@@ -45,6 +45,7 @@ export function Sidebar({ hide = true }) {
   }, []);
 
   function recursiveMenu(menu: any) {
+    console.log(menu);
     return (
       <S.List>
         <S.Category onClick={() => handleClick(menu.path, menu.name)}>
@@ -78,7 +79,9 @@ export function Sidebar({ hide = true }) {
   }
   return (
     <S.SidebarWrapper hideIn={hide ? 'xs' : undefined}>
-      <div className="wrapper">{recursiveMenu(resolveSidebar())}</div>
+      <div className="wrapper">
+        {resolveSidebar().children.map((child) => recursiveMenu(child))}
+      </div>
     </S.SidebarWrapper>
   );
 }
