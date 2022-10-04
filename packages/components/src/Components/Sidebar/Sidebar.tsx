@@ -45,35 +45,39 @@ export function Sidebar({ hide = true }) {
   }, []);
 
   function recursiveMenu(menu: any) {
-    console.log(menu);
     return (
       <S.List>
-        <S.Category onClick={() => handleClick(menu.path, menu.name)}>
-          {menu.title} {isOpened(menu) ? <MdExpandMore /> : <MdChevronRight />}
-        </S.Category>
+        {menu.meta ? (
+          <S.Link className={isActive(menu.url) ? S.active() : S.inactive()}>
+            <S.Tag
+              css={isActive(menu.url) ? { background: '$accents8' } : {}}
+            />
+            <Link href={menu.url}>{menu.title}</Link>
+          </S.Link>
+        ) : (
+          <S.Category onClick={() => handleClick(menu.path, menu.name)}>
+            {menu.title}{' '}
+            {isOpened(menu) ? <MdExpandMore /> : <MdChevronRight />}
+          </S.Category>
+        )}
+        {menu?.children?.map((item: any) => {
+          if (item.meta) {
+            return (
+              <S.Item>
+                <S.Link
+                  className={isActive(item.url) ? S.active() : S.inactive()}
+                >
+                  <S.Tag
+                    css={isActive(item.url) ? { background: '$accents8' } : {}}
+                  />
+                  <Link href={item.url}>{item.title}</Link>
+                </S.Link>
+              </S.Item>
+            );
+          }
 
-        {isOpened(menu) &&
-          menu.children &&
-          menu.children.map((item: any) => {
-            if (item.meta) {
-              return (
-                <S.Item>
-                  <S.Link
-                    className={isActive(item.url) ? S.active() : S.inactive()}
-                  >
-                    <S.Tag
-                      css={
-                        isActive(item.url) ? { background: '$accents8' } : {}
-                      }
-                    />
-                    <Link href={item.url}>{item.title}</Link>
-                  </S.Link>
-                </S.Item>
-              );
-            }
-
-            return recursiveMenu(item);
-          })}
+          return recursiveMenu(item);
+        })}
       </S.List>
     );
   }
