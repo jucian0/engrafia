@@ -14,6 +14,7 @@ type File = {
   meta: string;
   title: string;
   url: string;
+  relativePath: string;
 } & DirectoryTree;
 
 export const writeMdxIndex = debounce((dir: string) => {
@@ -47,6 +48,9 @@ async function getMdxFilesIndex(dir: string) {
       node.url = formatRelativePath(
         path.relative(dir + '/' + pagesPath, pathName)
       );
+
+      node.relativePath = node.path.replace(process.cwd(), '');
+      console.log(node);
     },
     (node: File) => {
       node.title = formatTitle(node.name);

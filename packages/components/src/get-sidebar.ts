@@ -1,11 +1,22 @@
-export type SidebarTree = {
-  path: string;
+export type SidebarTree = Category;
+
+type File = {
   name: string;
-  children: SidebarTree[];
-  meta?: {
+  path: string;
+  relativePath: string;
+  title: string;
+  url: string;
+  meta: {
     title: string;
     description: string;
   };
+};
+
+type Category = {
+  name: string;
+  path: string;
+  title: string;
+  children: Array<Category & File>;
 };
 
 export function getSidebarTree(): SidebarTree {
@@ -14,6 +25,7 @@ export function getSidebarTree(): SidebarTree {
   } catch (err) {
     return {
       name: 'pages',
+      title: 'Pages',
       children: [],
       path: '/',
     };
