@@ -6,11 +6,13 @@ import { useSiteConfig } from '../Provider';
 import { useTranslate } from '../useTranslation';
 
 import { AcmeLogo } from './DefaultLogo';
+import { LanguageSelector } from './LanguageSelector/Selector';
 import { Sidebar } from './Sidebar/Sidebar';
+import { VersionSelector } from './VersionSelector/Selector';
 
 export default function MenuNav() {
   const { theme, setTheme } = useTheme();
-  const { config, sidebar } = useSiteConfig();
+  const { config, versions } = useSiteConfig();
   const t = useTranslate();
 
   return (
@@ -103,6 +105,8 @@ export default function MenuNav() {
         </Navbar.Collapse>
         <Navbar.Toggle showIn="xs" aria-label="toggle navigation" />
       </Grid.Container>
+      {config.i18n && <LanguageSelector />}
+      {versions && versions.length > 0 && <VersionSelector />}
     </Navbar>
   );
 }
