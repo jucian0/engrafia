@@ -5,10 +5,9 @@ import { useSiteConfig } from '../../Provider';
 import * as S from './styles';
 
 export function LanguageSelector() {
-  const { config, setSiteConfig, language } = useSiteConfig();
+  const { config, setSiteConfig, language, languages } = useSiteConfig();
   const { replace, asPath } = useRouter();
 
-  const languages = Object.keys(config.i18n ?? {}) ?? [];
   const current = language;
 
   function handleChangeLanguage(e: React.ChangeEvent<HTMLSelectElement>) {

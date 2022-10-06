@@ -12,7 +12,7 @@ import { VersionSelector } from './VersionSelector/Selector';
 
 export default function MenuNav() {
   const { theme, setTheme } = useTheme();
-  const { config, versions } = useSiteConfig();
+  const { config, versions, languages } = useSiteConfig();
   const t = useTranslate();
 
   return (
@@ -105,7 +105,9 @@ export default function MenuNav() {
         </Navbar.Collapse>
         <Navbar.Toggle showIn="xs" aria-label="toggle navigation" />
       </Grid.Container>
-      {config.i18n && <LanguageSelector />}
+      {config.i18n && languages && languages?.length > 0 && (
+        <LanguageSelector />
+      )}
       {versions && versions.length > 0 && <VersionSelector />}
     </Navbar>
   );

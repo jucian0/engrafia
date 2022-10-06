@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React, { useContext } from 'react';
 import { Config, getConfig } from './get-config';
+import { getFolder } from './get-folders';
 import { getSidebarTree, SidebarTree } from './get-sidebar';
 import { DefaultLayout } from './Layouts/Default';
 import { DocsLayout } from './Layouts/Docs';
@@ -27,6 +28,7 @@ type DocsContext = {
   sidebar: SidebarTree;
   setSiteConfig?: React.Dispatch<React.SetStateAction<DocsContext>>;
   language: string;
+  languages?: string[];
   version?: string;
   versions?: string[];
 };
@@ -65,13 +67,15 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
         }
       );
       const tableOfContent = children.props.tableOfContents;
-      const versions = siteConfig.sidebar.children
-        .filter((child) =>
-          new RegExp(
-            /^([v])(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(-[a-zA-Z\d][-a-zA-Z.\d]*)?(\+[a-zA-Z\d][-a-zA-Z.\d]*)?$/
-          ).test(child.name)
-        )
-        .map((child) => child.name);
+      const versions = getFolder(
+        siteConfig.sidebar,
+
+        /^([v])(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(-[a-zA-Z\d][-a-zA-Z.\d]*)?(\+[a-zA-Z\d][-a-zA-Z.\d]*)?$/
+      );
+
+      const languages = getFolder(siteConfig.sidebar, /([a-z]+_[A-Z])\w/);
+
+      console.log(languages, '<<<<<<<<<<');
 
       setMetaTags(metaTags);
       setTitle(title);
@@ -79,6 +83,7 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
         ...state,
         tableOfContent,
         language: localStorage.getItem('language') ?? 'en_US',
+        languages: languages,
         versions: versions,
         version: localStorage.getItem('version') ?? 'lates',
       }));
