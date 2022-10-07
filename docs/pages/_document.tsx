@@ -1,7 +1,7 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { CssBaseline } from '@nextui-org/react';
-import { Global } from 'docs/styles/theme';
+import { GlobalStyles } from 'components';
 
 export default class CustomDocument extends Document {
   static async getInitialProps(ctx) {
@@ -17,7 +17,7 @@ export default class CustomDocument extends Document {
       <Html>
         <Head>
           {CssBaseline.flush()}
-          {Global()}
+          {GlobalStyles()}
           <link href="https://css.gg/link.css" rel="stylesheet" />
         </Head>
         <body>

@@ -8,32 +8,10 @@ import { getThemeConfig } from './get-theme-config';
 import { DefaultLayout } from './Layouts/Default';
 import { DocsLayout } from './Layouts/Docs';
 import { mdxComponents } from './mdxComponents';
+import { ThemeContext, ThemeContextType } from './ThemeContext';
 
-export type ChildrenOfContent = {
-  title: string;
-  slug: string;
-  children?: ChildrenOfContent[];
-};
-
-export type TableOfContent = {
-  children?: ChildrenOfContent[];
-  depth: number;
-};
-
-type DocsContext = {
-  meta: { [key: string]: string };
-  tableOfContent: TableOfContent;
-  setSiteConfig?: React.Dispatch<React.SetStateAction<DocsContext>>;
-  language: string;
-  languages?: string[];
-  version?: string;
-  versions?: string[];
-};
-
-const Context = React.createContext({} as DocsContext);
-
-export const useSiteConfig = (): DocsContext => {
-  const data = useContext(Context);
+export const useSiteConfig = (): ThemeContextType => {
+  const data = useContext(ThemeContext);
   return data;
 };
 
@@ -49,7 +27,7 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
   const { route } = useRouter();
   const [metaTags, setMetaTags] = React.useState<any>(null);
   const [title, setTitle] = React.useState('');
-  const [siteConfig, setSiteConfig] = React.useState<DocsContext>({
+  const [siteConfig, setSiteConfig] = React.useState<ThemeContextType>({
     meta: {},
     tableOfContent: { depth: 1 },
     language: 'en_US',
@@ -88,7 +66,7 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
 
   if (route.includes(themeConfig.rootDocs ?? 'docs')) {
     return (
-      <Context.Provider value={{ ...siteConfig, setSiteConfig }}>
+      <ThemeContext.Provider value={{ ...siteConfig, setSiteConfig }}>
         <DocsLayout>
           <Head>
             <>
@@ -100,12 +78,12 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
             {children}
           </MDXProvider>
         </DocsLayout>
-      </Context.Provider>
+      </ThemeContext.Provider>
     );
   }
 
   return (
-    <Context.Provider value={siteConfig}>
+    <ThemeContext.Provider value={siteConfig}>
       <Head>
         <>
           <title>{title}</title>
@@ -115,6 +93,6 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
       <DefaultLayout>
         <MDXProvider components={mdxComponents as any}>{children}</MDXProvider>
       </DefaultLayout>
-    </Context.Provider>
+    </ThemeContext.Provider>
   );
 }

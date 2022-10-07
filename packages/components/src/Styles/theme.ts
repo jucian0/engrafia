@@ -1,6 +1,6 @@
 import { createTheme, globalCss } from '@nextui-org/react';
 
-export const Global = globalCss({
+export const GlobalStyles = globalCss({
   '.title': {
     display: 'flex',
     justifyContent: 'flex-start',
