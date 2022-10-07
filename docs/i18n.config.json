@@ -1,27 +1,10 @@
 {
-    "title": "Your site name",
-    "description": "description",
-    "docsPage": "docs",
-    "repository": {
-        "url": "http://github.com/jucian0/engrafia",
-        "branch": "main",
-        "author": "Jucian0"
-    },
-    "nav": {
-        "logo": false,
-        "links": [
-            {
-                "title": "link.docs",
-                "url": "/docs"
-            },
-            {
-                "title": "link.github",
-                "url": "http://github.com/jucian0/engrafia"
-            }
-        ],
-        "search_bar": "search.placeholder"
-    },
-    "i18n": {
+    "locales": [
+        "pt",
+        "en"
+    ],
+    "default": "en",
+    "translations": {
         "pt_BR": {
             "description": "Este é um exemplo de documentação",
             "link.docs": "Documentação",

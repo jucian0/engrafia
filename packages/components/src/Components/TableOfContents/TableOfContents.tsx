@@ -1,5 +1,4 @@
 import * as S from './styles';
-import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { ChildrenOfContent, useSiteConfig } from '../../Provider';

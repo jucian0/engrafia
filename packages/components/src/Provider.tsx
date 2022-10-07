@@ -1,11 +1,10 @@
 import { MDXProvider } from '@mdx-js/react';
-import { Grid } from '@nextui-org/react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React, { useContext } from 'react';
-import { Config, getConfig } from './get-config';
 import { getFolder } from './get-folders';
-import { getSidebarTree, SidebarTree } from './get-sidebar';
+import { getSidebarTree } from './get-sidebar';
+import { getThemeConfig } from './get-theme-config';
 import { DefaultLayout } from './Layouts/Default';
 import { DocsLayout } from './Layouts/Docs';
 import { mdxComponents } from './mdxComponents';
@@ -24,8 +23,6 @@ export type TableOfContent = {
 type DocsContext = {
   meta: { [key: string]: string };
   tableOfContent: TableOfContent;
-  config: Config;
-  sidebar: SidebarTree;
   setSiteConfig?: React.Dispatch<React.SetStateAction<DocsContext>>;
   language: string;
   languages?: string[];
@@ -40,6 +37,14 @@ export const useSiteConfig = (): DocsContext => {
   return data;
 };
 
+const sidebar = getSidebarTree();
+const { default: themeConfig } = getThemeConfig();
+
+const TEST_VERSION_FOLDER =
+  /^([v])(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(-[a-zA-Z\d][-a-zA-Z.\d]*)?(\+[a-zA-Z\d][-a-zA-Z.\d]*)?$/;
+
+const TEST_LANGUAGE_FOLDER = /([a-z]+_[A-Z])\w/;
+
 export function Provider({ children }: React.PropsWithChildren<any>) {
   const { route } = useRouter();
   const [metaTags, setMetaTags] = React.useState<any>(null);
@@ -47,8 +52,6 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
   const [siteConfig, setSiteConfig] = React.useState<DocsContext>({
     meta: {},
     tableOfContent: { depth: 1 },
-    sidebar: getSidebarTree(),
-    config: getConfig(),
     language: 'en_US',
     version: 'latest',
   });
@@ -59,7 +62,7 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
       const title =
         route === `/`
           ? meta.title
-          : `${siteConfig.config.title} - ${meta?.title ?? '404'}`;
+          : `${themeConfig.title} - ${meta?.title ?? '404'}`;
 
       const metaTags = Object.entries(children.props.data).map(
         ([key, value]) => {
@@ -67,15 +70,8 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
         }
       );
       const tableOfContent = children.props.tableOfContents;
-      const versions = getFolder(
-        siteConfig.sidebar,
-
-        /^([v])(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(-[a-zA-Z\d][-a-zA-Z.\d]*)?(\+[a-zA-Z\d][-a-zA-Z.\d]*)?$/
-      );
-
-      const languages = getFolder(siteConfig.sidebar, /([a-z]+_[A-Z])\w/);
-
-      console.log(languages, '<<<<<<<<<<');
+      const versions = getFolder(sidebar, TEST_VERSION_FOLDER);
+      const languages = getFolder(sidebar, TEST_LANGUAGE_FOLDER);
 
       setMetaTags(metaTags);
       setTitle(title);
@@ -90,7 +86,7 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
     }
   }, [route]);
 
-  if (route.includes(siteConfig.config?.docsPage ?? 'docs')) {
+  if (route.includes(themeConfig.rootDocs ?? 'docs')) {
     return (
       <Context.Provider value={{ ...siteConfig, setSiteConfig }}>
         <DocsLayout>
@@ -100,7 +96,9 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
               {metaTags}
             </>
           </Head>
-          <MDXProvider components={mdxComponents}>{children}</MDXProvider>
+          <MDXProvider components={mdxComponents as any}>
+            {children}
+          </MDXProvider>
         </DocsLayout>
       </Context.Provider>
     );
@@ -115,7 +113,7 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
         </>
       </Head>
       <DefaultLayout>
-        <MDXProvider components={mdxComponents}>{children}</MDXProvider>
+        <MDXProvider components={mdxComponents as any}>{children}</MDXProvider>
       </DefaultLayout>
     </Context.Provider>
   );

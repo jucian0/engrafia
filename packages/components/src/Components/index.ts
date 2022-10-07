@@ -1,4 +1,3 @@
-export * from './DefaultLogo';
 export * from './Navbar';
 export * from './Playground/Playground';
 export * from './Sidebar/Sidebar';

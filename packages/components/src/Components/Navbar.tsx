@@ -2,17 +2,21 @@ import { Navbar, Button, Text, Input, Grid } from '@nextui-org/react';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { RiMoonFill, RiSearchFill, RiSunFill } from 'react-icons/ri';
+import { getI18nConfig } from '../get-i18n';
+import { getThemeConfig } from '../get-theme-config';
 import { useSiteConfig } from '../Provider';
 import { useTranslate } from '../useTranslation';
 
-import { AcmeLogo } from './DefaultLogo';
 import { LanguageSelector } from './LanguageSelector/Selector';
 import { Sidebar } from './Sidebar/Sidebar';
 import { VersionSelector } from './VersionSelector/Selector';
 
+const { default: themeConfig } = getThemeConfig();
+const i18nConfig = getI18nConfig();
+
 export default function MenuNav() {
   const { theme, setTheme } = useTheme();
-  const { config, versions, languages } = useSiteConfig();
+  const { versions, languages } = useSiteConfig();
   const t = useTranslate();
 
   return (
@@ -29,19 +33,16 @@ export default function MenuNav() {
         }}
       >
         <Navbar.Brand>
-          {config.nav?.logo ? (
-            <img alt="web_site_lgo" src={config.nav.logo} />
-          ) : (
-            <AcmeLogo />
-          )}
-
-          <Text b color="inherit" hideIn="xs">
-            <Link href="/">{config.title}</Link>
-          </Text>
+          <Link href="/">{themeConfig.nav?.logo}</Link>
+          <Link href="/">
+            <Text b color="inherit" hideIn="xs">
+              {themeConfig.title}
+            </Text>
+          </Link>
         </Navbar.Brand>
-        {config.nav?.links && (
+        {themeConfig.nav?.links && (
           <Navbar.Content activeColor={'primary'} hideIn="xs" variant="default">
-            {config.nav?.links.map((link) => (
+            {themeConfig.nav?.links.map((link) => (
               <Navbar.Link href={link.url}>{t(link.title)}</Navbar.Link>
             ))}
           </Navbar.Content>
@@ -79,7 +80,7 @@ export default function MenuNav() {
                   dflex: 'center',
                 },
               }}
-              placeholder={t(config.nav?.search_bar ?? 'Search')}
+              placeholder={t(themeConfig.nav?.search_bar ?? 'Search')}
             />
           </Navbar.Item>
 
@@ -105,7 +106,7 @@ export default function MenuNav() {
         </Navbar.Collapse>
         <Navbar.Toggle showIn="xs" aria-label="toggle navigation" />
       </Grid.Container>
-      {config.i18n && languages && languages?.length > 0 && (
+      {i18nConfig.locales && languages && languages?.length > 0 && (
         <LanguageSelector />
       )}
       {versions && versions.length > 0 && <VersionSelector />}

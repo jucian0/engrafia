@@ -4,9 +4,12 @@ import Link from 'next/link';
 import { useSiteConfig } from '../../Provider';
 import * as S from './styles';
 import { MdChevronRight, MdExpandMore } from 'react-icons/md';
+import { getSidebarTree } from '../../get-sidebar';
+
+const sidebar = getSidebarTree();
 
 export function Sidebar({ hide = true }) {
-  const { sidebar, language, versions, version } = useSiteConfig();
+  const { language, versions, version } = useSiteConfig();
   const router = useRouter();
   const [toggle, setToggle] = React.useState(router.asPath);
 

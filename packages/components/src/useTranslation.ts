@@ -1,9 +1,12 @@
+import { getI18nConfig } from './get-i18n';
 import { useSiteConfig } from './Provider';
 
+const i18nConfig = getI18nConfig();
+
 export function useTranslate() {
-  const { config, language } = useSiteConfig();
+  const { language } = useSiteConfig();
 
   return (key: string) => {
-    return config.i18n?.[language]?.[key] ?? key;
+    return i18nConfig.translations?.[language]?.[key] ?? key;
   };
 }

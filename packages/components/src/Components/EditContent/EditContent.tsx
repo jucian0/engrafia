@@ -1,23 +1,24 @@
 import { useRouter } from 'next/router';
 import { MdEdit } from 'react-icons/md';
-
-import { useSiteConfig } from '../../Provider';
+import { getSidebarTree } from '../../get-sidebar';
+import { getThemeConfig } from '../../get-theme-config';
 import { useTranslate } from '../../useTranslation';
 import * as S from './styles';
 import { createEditUrl, getFilePath } from './utils';
 
+const { default: themeConfig } = getThemeConfig();
+const sidebar = getSidebarTree();
 export function EditContent() {
-  const { config, sidebar } = useSiteConfig();
   const router = useRouter();
   const relativePath = getFilePath(sidebar, router.route);
 
   const href = createEditUrl({
-    repository: config.repository?.url,
-    branch: config.repository?.branch,
+    repository: themeConfig.repository?.url,
+    branch: themeConfig.repository?.branch,
     filePath: relativePath,
   });
   const t = useTranslate();
-  console.log(relativePath);
+
   return (
     <S.Wrapper>
       <a href={href} target="_blank" rel="noreferrer">

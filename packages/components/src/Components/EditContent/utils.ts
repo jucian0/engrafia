@@ -1,5 +1,4 @@
 import parseGithubUrl from 'parse-github-url';
-import { Config } from '../../get-config';
 import { SidebarTree } from '../../get-sidebar';
 
 export type MakeGitURLProps = {

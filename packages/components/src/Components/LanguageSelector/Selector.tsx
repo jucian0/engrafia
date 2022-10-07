@@ -5,7 +5,7 @@ import { useSiteConfig } from '../../Provider';
 import * as S from './styles';
 
 export function LanguageSelector() {
-  const { config, setSiteConfig, language, languages } = useSiteConfig();
+  const { setSiteConfig, language, languages } = useSiteConfig();
   const { replace, asPath } = useRouter();
 
   const current = language;
@@ -25,7 +25,7 @@ export function LanguageSelector() {
       {' '}
       <MdLanguage />
       <select value={current} onChange={handleChangeLanguage}>
-        {languages.map((language) => (
+        {languages?.map((language) => (
           <option value={language}>{language}</option>
         ))}
       </select>
