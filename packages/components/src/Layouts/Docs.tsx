@@ -1,6 +1,6 @@
 import { styled } from '@nextui-org/react';
 import React from 'react';
-import { EditContent, Sidebar, TableOfContent } from '../Components';
+import { EditContent, Footer, Sidebar, TableOfContent } from '../Components';
 import Navbar from '../Components/Navbar';
 
 export const Main = styled(`main`, {
@@ -36,6 +36,7 @@ export function DocsLayout({ children }: React.PropsWithChildren<{}>) {
         <Content>
           {children}
           <EditContent />
+          <Footer />
         </Content>
         <TableOfContent />
       </Container>

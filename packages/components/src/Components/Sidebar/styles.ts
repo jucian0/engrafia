@@ -10,9 +10,12 @@ export const SidebarWrapper = styled(
     maxWidth: `15.62rem`,
     width: `15.62rem`,
     minWidth: `15.62rem`,
-    overflow: `auto`,
+    height: 'calc(100vh - 90px)',
+
     '.wrapper': {
+      overflow: `auto`,
       position: `fixed`,
+      height: 'calc(100vh - 100px)',
     },
   },
   cssHideShowIn

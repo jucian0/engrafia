@@ -1,17 +1,15 @@
 import { styled } from '@nextui-org/react';
 import React from 'react';
+import { Footer } from '../Components';
 import Navbar from '../Components/Navbar';
 
 export const Main = styled(`main`, {
-  // display: `flex`,
   flex: 1,
   flexDirection: `column`,
   margin: `0 auto`,
 });
 
 export const Container = styled(`div`, {
-  // display: `flex`,
-  // flex: 1,
   flexDirection: `row`,
   width: `100%`,
   margin: `0 auto`,
@@ -31,6 +29,7 @@ export function DefaultLayout({ children }: React.PropsWithChildren<{}>) {
       <Container>
         <Content>{children}</Content>
       </Container>
+      <Footer />
     </Main>
   );
 }
