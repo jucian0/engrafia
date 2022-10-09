@@ -19,5 +19,5 @@ jobs:
       - name: Release
         uses: ./.github/actions/release
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_TOKEN }}
           npm_token: ${{ secrets.NPM_TOKEN }}
