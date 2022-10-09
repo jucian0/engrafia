@@ -1,11 +1,14 @@
 import { useRouter } from 'next/router';
 import React from 'react';
 import { MdLanguage } from 'react-icons/md';
+import { getI18nConfig } from '../../get-i18n';
 import { useSiteConfig } from '../../Provider';
 import * as S from './styles';
 
+const i18nConfig = getI18nConfig();
+
 export function LanguageSelector() {
-  const { setSiteConfig, language, languages } = useSiteConfig();
+  const { setSiteConfig, language } = useSiteConfig();
   const { replace, asPath } = useRouter();
 
   const current = language;
@@ -22,10 +25,9 @@ export function LanguageSelector() {
 
   return (
     <S.Wrapper>
-      {' '}
       <MdLanguage />
       <select value={current} onChange={handleChangeLanguage}>
-        {languages?.map((language) => (
+        {i18nConfig?.locales?.map((language) => (
           <option value={language}>{language}</option>
         ))}
       </select>

@@ -106,9 +106,7 @@ export default function MenuNav() {
         </Navbar.Collapse>
         <Navbar.Toggle showIn="xs" aria-label="toggle navigation" />
       </Grid.Container>
-      {i18nConfig.locales && languages && languages?.length > 0 && (
-        <LanguageSelector />
-      )}
+      {i18nConfig.locales && <LanguageSelector />}
       {versions && versions.length > 0 && <VersionSelector />}
     </Navbar>
   );
