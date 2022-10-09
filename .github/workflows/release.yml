@@ -1,35 +1,42 @@
 name: Release
 
 on:
-  push:
-    branches:
-      - "main"
+  - workflow_dispatch
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node_version: [14, 16]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup
+        uses: ./.github/actions/setup
+        with:
+          node_version: ${{ matrix.node_version }}
+
+      - name: Test
+        uses: ./.github/actions/test
+        with:
+          codecov_token: ${{ secrets.CODECOV_TOKEN }}
+
   release:
     runs-on: ubuntu-latest
+
+    if: github.ref == 'refs/heads/main'
+
+    needs: [test]
+
     steps:
-      - name: Checkout all commits
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+      - uses: actions/checkout@v3
+      - name: Setup
+        uses: ./.github/actions/setup
 
-      - uses: actions/setup-node@v3
+      - name: Release
+        uses: ./.github/actions/release
         with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
-      - run: npm i
-      - run: npx nx affected --target=version --base=last-release --parallel=1
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-      - name: Tag last-release
-        shell: bash
-        run: git tag -f last-release
-
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ inputs.github_token }}
-          branch: ${{ github.ref }}
-          force: true
-          tags: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          npm_token: ${{ secrets.NPM_TOKEN }}
