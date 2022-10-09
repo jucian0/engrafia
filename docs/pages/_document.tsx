@@ -1,7 +1,7 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { CssBaseline } from '@nextui-org/react';
-import { GlobalStyles } from 'components';
+import { GlobalStyles } from '@engrafia/ui';
 
 export default class CustomDocument extends Document {
   static async getInitialProps(ctx) {

@@ -16,8 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "engrafia-ui": ["packages/components/src/index.ts"],
-      "engrafia-plugin": ["packages/engrafia/src/index.ts"],
+      "@engrafia/ui": ["packages/engrafia-ui/src/index.ts"],
+      "@engrafia/plugin": ["packages/engrafia-plugin/src/index.ts"],
       "playground": ["packages/playground/src/index.ts"]
     }
   },

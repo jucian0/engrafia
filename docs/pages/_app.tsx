@@ -2,7 +2,7 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { NextUIProvider } from '@nextui-org/react';
 import { ThemeProvider } from 'next-themes';
-import { darkTheme, lightTheme, Provider } from 'components';
+import { darkTheme, lightTheme, Provider } from '@engrafia/ui';
 
 const components = {};
 

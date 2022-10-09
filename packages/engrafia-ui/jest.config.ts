@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'components',
+  displayName: '@engrafia/ui',
   preset: '../../jest.preset.js',
   transform: {
     '^.+\\.[tj]sx?$': [
