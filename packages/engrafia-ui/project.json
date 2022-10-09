@@ -48,6 +48,25 @@
         "jestConfig": "packages/engrafia-ui/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional",
+        "noVerify": true,
+        "commitMessageFormat": "chore(${projectName}): release version ${version} [skip ci]",
+        "tagPrefix": "@engrafia/${projectName}@",
+        "baseBranch": "main",
+        "postTargets": [
+          "use-root:deploy"
+        ]
+      }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   }
 }

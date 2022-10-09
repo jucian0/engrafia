@@ -2,9 +2,21 @@
   "name": "engrafia",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky install",
+    "format": "yarn nx format --all",
+    "commit": "git-cz"
+  },
   "private": true,
   "dependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "3.3.0",
+    "husky": "^8.0.0",
+    "prettier": "^2.6.2",
+    "ngx-deploy-npm": "^4.2.2",
+    "@jscutlery/semver": "^2.25.2",
     "@mdx-js/loader": "^2.1.3",
     "@mdx-js/react": "^2.1.3",
     "@nextui-org/react": "1.0.0-beta.10",
@@ -82,5 +94,10 @@
   },
   "workspaces": [
     "packages/**"
-  ]
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
