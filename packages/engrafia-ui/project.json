@@ -58,7 +58,7 @@
         "tagPrefix": "@engrafia/${projectName}@",
         "baseBranch": "main",
         "postTargets": [
-          "use-root:deploy"
+          "engrafia-ui:deploy"
         ]
       }
     },
