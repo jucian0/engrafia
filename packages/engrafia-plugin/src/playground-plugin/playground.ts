@@ -49,8 +49,6 @@ export const injectCodeToPlayground =
         return node.name === 'Playground';
       });
 
-    console.log(tree);
-
     const importNodes = tree.children.filter((n: any) =>
       n.value?.includes('import')
     );

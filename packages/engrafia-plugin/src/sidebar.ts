@@ -50,7 +50,6 @@ async function getMdxFilesIndex(dir: string) {
       );
 
       node.relativePath = node.path.replace(process.cwd(), '');
-      console.log(node);
     },
     (node: File) => {
       node.title = formatTitle(node.name);
