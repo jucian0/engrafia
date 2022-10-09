@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/engrafia/src",
+  "sourceRoot": "packages/engrafia-plugin/src",
   "projectType": "library",
   "targets": {
     "lint": {
@@ -10,17 +10,17 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "packages/engrafia/**/*.ts"
+          "packages/engrafia-plugin/**/*.ts"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": [
-        "coverage/packages/engrafia"
+        "coverage/packages/engrafia-plugin"
       ],
       "options": {
-        "jestConfig": "packages/engrafia/jest.config.ts",
+        "jestConfig": "packages/engrafia-plugin/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -33,12 +33,12 @@
         "format": [
           "esm"
         ],
-        "outputPath": "dist/packages/engrafia",
-        "tsConfig": "packages/engrafia/tsconfig.lib.json",
-        "packageJson": "packages/engrafia/package.json",
-        "main": "packages/engrafia/src/index.ts",
+        "outputPath": "dist/packages/engrafia-plugin",
+        "tsConfig": "packages/engrafia-plugin/tsconfig.lib.json",
+        "packageJson": "packages/engrafia-plugin/package.json",
+        "main": "packages/engrafia-plugin/src/index.ts",
         "assets": [
-          "packages/engrafia/*.md"
+          "packages/engrafia-plugin/*.md"
         ]
       }
     },
@@ -52,12 +52,12 @@
         "format": [
           "esm"
         ],
-        "outputPath": "dist/packages/engrafia",
-        "tsConfig": "packages/engrafia/tsconfig.lib.json",
-        "packageJson": "packages/engrafia/package.json",
-        "main": "packages/engrafia/src/index.ts",
+        "outputPath": "dist/packages/engrafia-plugin",
+        "tsConfig": "packages/engrafia-plugin/tsconfig.lib.json",
+        "packageJson": "packages/engrafia-plugin/package.json",
+        "main": "packages/engrafia-plugin/src/index.ts",
         "assets": [
-          "packages/engrafia/*.md"
+          "packages/engrafia-plugin/*.md"
         ]
       }
     }
