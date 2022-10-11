@@ -1,8 +1,5 @@
 {
-    "locales": [
-        "pt",
-        "en"
-    ],
+
     "default": "en",
     "translations": {
         "pt_BR": {

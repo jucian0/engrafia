@@ -2,7 +2,8 @@ import { MDXProvider } from '@mdx-js/react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React, { useContext } from 'react';
-import { getFolder } from './get-folders';
+import { getFolderName } from './get-folders';
+import { getI18nConfig } from './get-i18n';
 import { getSidebarTree } from './get-sidebar';
 import { getThemeConfig } from './get-theme-config';
 import { DefaultLayout } from './Layouts/Default';
@@ -17,9 +18,10 @@ export const useSiteConfig = (): ThemeContextType => {
 
 const sidebar = getSidebarTree();
 const { default: themeConfig } = getThemeConfig();
+const i18nConfig = getI18nConfig();
 
 const TEST_VERSION_FOLDER =
-  /^([v])(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(-[a-zA-Z\d][-a-zA-Z.\d]*)?(\+[a-zA-Z\d][-a-zA-Z.\d]*)?$/;
+  /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
 
 const TEST_LANGUAGE_FOLDER = /([a-z]+_[A-Z])\w/;
 
@@ -48,18 +50,21 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
         }
       );
       const tableOfContent = children.props.tableOfContents;
-      const versions = getFolder(sidebar, TEST_VERSION_FOLDER);
-      const languages = getFolder(sidebar, TEST_LANGUAGE_FOLDER);
+      const versions = getFolderName(sidebar, TEST_VERSION_FOLDER);
+      const languages = getFolderName(sidebar, TEST_LANGUAGE_FOLDER);
+
+      console.log(Math.max(...versions.map(v=>parseFloat(v.replace('.','')))), versions,'<<<<<<<<<<<');
 
       setMetaTags(metaTags);
       setTitle(title);
       setSiteConfig((state) => ({
         ...state,
         tableOfContent,
-        language: localStorage.getItem('language') ?? 'en_US',
+        language:
+          localStorage.getItem('language') ?? i18nConfig.default ?? 'en_US',
         languages: languages,
         versions: versions,
-        version: localStorage.getItem('version') ?? 'lates',
+        version: localStorage.getItem('version') ?? versions[0],
       }));
     }
   }, [route]);

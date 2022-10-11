@@ -6,6 +6,8 @@ import { useSiteConfig } from '../../Provider';
 import * as S from './styles';
 
 const i18nConfig = getI18nConfig();
+const locales = Object.keys(i18nConfig?.translations??{})
+
 
 export function LanguageSelector() {
   const { setSiteConfig, language } = useSiteConfig();
@@ -27,7 +29,7 @@ export function LanguageSelector() {
     <S.Wrapper>
       <MdLanguage />
       <select value={current} onChange={handleChangeLanguage}>
-        {i18nConfig?.locales?.map((language) => (
+        {locales?.map((language) => (
           <option value={language}>{language}</option>
         ))}
       </select>

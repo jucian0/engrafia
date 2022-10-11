@@ -13,6 +13,7 @@ import { VersionSelector } from './VersionSelector/Selector';
 
 const { default: themeConfig } = getThemeConfig();
 const i18nConfig = getI18nConfig();
+const locales = Object.keys(i18nConfig?.translations??{})
 
 export default function MenuNav() {
   const { theme, setTheme } = useTheme();
@@ -106,7 +107,7 @@ export default function MenuNav() {
         </Navbar.Collapse>
         <Navbar.Toggle showIn="xs" aria-label="toggle navigation" />
       </Grid.Container>
-      {i18nConfig.locales && <LanguageSelector />}
+      {locales && <LanguageSelector />}
       {versions && versions.length > 0 && <VersionSelector />}
     </Navbar>
   );

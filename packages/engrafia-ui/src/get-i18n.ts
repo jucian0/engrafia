@@ -1,5 +1,4 @@
 export type I18nConfig = {
-  locales?: string[];
   default?: string;
   translations?: {
     [k: string]: { [l: string]: string };

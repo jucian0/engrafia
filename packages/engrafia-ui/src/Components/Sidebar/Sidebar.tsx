@@ -5,33 +5,46 @@ import { useSiteConfig } from '../../Provider';
 import * as S from './styles';
 import { MdChevronRight, MdExpandMore } from 'react-icons/md';
 import { getSidebarTree } from '../../get-sidebar';
+import { getThemeConfig } from '../../get-theme-config';
+import { getFolderContent } from '../../get-folders';
 
 const sidebar = getSidebarTree();
+const { default: themeConfig } = getThemeConfig();
 
 export function Sidebar({ hide = true }) {
-  const { language, versions, version } = useSiteConfig();
+  const { language, version } = useSiteConfig();
   const router = useRouter();
   const [toggle, setToggle] = React.useState(router.asPath);
 
   function resolveSidebar() {
-    const contentWithVersion = sidebar.children.find(
-      (resource) => resource.name === version
-    );
-    if (contentWithVersion) {
-      const contentWithLanguage = contentWithVersion.children.find(
-        (child) => child.name === language
-      );
-      if (contentWithLanguage) {
-        return contentWithLanguage.children[0];
-      }
-      return contentWithVersion.children[0];
-    }
-    const contentWithLanguage = sidebar.children.find(
-      (resource) => resource.name === language
-    );
-    if (contentWithLanguage) {
-      return contentWithLanguage.children[0];
-    }
+    // const contentWithVersion = sidebar.children.find(
+    //   (resource) => resource.name === version
+    // );
+    // if (contentWithVersion) {
+    //   const contentWithLanguage = contentWithVersion.children.find(
+    //     (child) => child.name === language
+    //   );
+    //   if (contentWithLanguage) {
+    //     return contentWithLanguage.children[0];
+    //   }
+    //   return contentWithVersion.children[0];
+    // }
+    // const contentWithLanguage = sidebar.children.find(
+    //   (resource) => resource.name === language
+    // );
+    // if (contentWithLanguage) {
+    //   return contentWithLanguage.children[0];
+    // }
+    // return sidebar;
+
+    const paths = [themeConfig.rootDocs, version, language].filter(
+      (p) => p
+    ) as string[];
+
+    const dta = getFolderContent(sidebar, paths);
+
+//    console.log(dta);
+
     return sidebar;
   }
 
