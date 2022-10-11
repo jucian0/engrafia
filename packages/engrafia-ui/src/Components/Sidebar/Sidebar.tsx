@@ -17,35 +17,13 @@ export function Sidebar({ hide = true }) {
   const [toggle, setToggle] = React.useState(router.asPath);
 
   function resolveSidebar() {
-    // const contentWithVersion = sidebar.children.find(
-    //   (resource) => resource.name === version
-    // );
-    // if (contentWithVersion) {
-    //   const contentWithLanguage = contentWithVersion.children.find(
-    //     (child) => child.name === language
-    //   );
-    //   if (contentWithLanguage) {
-    //     return contentWithLanguage.children[0];
-    //   }
-    //   return contentWithVersion.children[0];
-    // }
-    // const contentWithLanguage = sidebar.children.find(
-    //   (resource) => resource.name === language
-    // );
-    // if (contentWithLanguage) {
-    //   return contentWithLanguage.children[0];
-    // }
-    // return sidebar;
-
-    const paths = [themeConfig.rootDocs, version, language].filter(
+    const paths = [version, language,themeConfig.rootDocs].filter(
       (p) => p
     ) as string[];
 
-    const dta = getFolderContent(sidebar, paths);
-
-//    console.log(dta);
-
-    return sidebar;
+    const data = getFolderContent(sidebar, paths);
+console.log(data)
+    return data;
   }
 
   function isActive(path: string) {
@@ -100,7 +78,7 @@ export function Sidebar({ hide = true }) {
   return (
     <S.SidebarWrapper hideIn={hide ? 'xs' : undefined}>
       <div className="wrapper">
-        {resolveSidebar().children.map((child) => recursiveMenu(child))}
+        {resolveSidebar()?.children?.map?.((child) => recursiveMenu(child))}
       </div>
     </S.SidebarWrapper>
   );

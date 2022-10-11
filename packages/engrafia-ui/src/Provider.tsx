@@ -53,8 +53,6 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
       const versions = getFolderName(sidebar, TEST_VERSION_FOLDER);
       const languages = getFolderName(sidebar, TEST_LANGUAGE_FOLDER);
 
-      console.log(Math.max(...versions.map(v=>parseFloat(v.replace('.','')))), versions,'<<<<<<<<<<<');
-
       setMetaTags(metaTags);
       setTitle(title);
       setSiteConfig((state) => ({
