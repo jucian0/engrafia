@@ -36,10 +36,10 @@ export function DocsLayout({ children }: React.PropsWithChildren<{}>) {
         <Content>
           {children}
           <EditContent />
-          <Footer />
         </Content>
         <TableOfContent />
       </Container>
+          <Footer />
     </Main>
   );
 }

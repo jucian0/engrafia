@@ -17,12 +17,12 @@ export function Sidebar({ hide = true }) {
   const [toggle, setToggle] = React.useState(router.asPath);
 
   function resolveSidebar() {
-    const paths = [version, language,themeConfig.rootDocs].filter(
+    const paths = [version, language, themeConfig.rootDocs].filter(
       (p) => p
     ) as string[];
 
     const data = getFolderContent(sidebar, paths);
-console.log(data)
+    console.log(data);
     return data;
   }
 

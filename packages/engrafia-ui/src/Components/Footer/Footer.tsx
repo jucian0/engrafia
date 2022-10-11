@@ -5,9 +5,24 @@ const { default: themeConfig } = getThemeConfig();
 
 export function Footer() {
   return (
-    <Grid.Container>
-      <>{themeConfig.footer?.logo}</>
-      {themeConfig.footer?.text}
+    <Grid.Container
+      css={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        p: '$lg',
+      }}
+    >
+      <Grid
+        css={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <>{themeConfig.footer?.logo}</>
+        {themeConfig.footer?.text}
+      </Grid>
     </Grid.Container>
   );
 }
