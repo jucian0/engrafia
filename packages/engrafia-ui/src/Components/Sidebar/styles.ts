@@ -41,7 +41,7 @@ export const Category = styled(`span`, {
   fontSize: `1.125rem`,
   color: `$text`,
   transition: 'ease 300ms',
-
+  cursor: 'pointer',
   '&:hover': {
     color: `$accents8`,
   },

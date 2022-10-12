@@ -4,7 +4,12 @@ import Link from 'next/link';
 import { useSiteConfig } from '../../Provider';
 import * as S from './styles';
 import { MdChevronRight, MdExpandMore } from 'react-icons/md';
-import { getSidebarTree } from '../../get-sidebar';
+import {
+  Category,
+  DocFile,
+  getSidebarTree,
+  SidebarTree,
+} from '../../get-sidebar';
 import { getThemeConfig } from '../../get-theme-config';
 import { getFolderContent } from '../../get-folders';
 
@@ -14,31 +19,43 @@ const { default: themeConfig } = getThemeConfig();
 export function Sidebar({ hide = true }) {
   const { language, version } = useSiteConfig();
   const router = useRouter();
-  const [toggle, setToggle] = React.useState(router.asPath);
+  const [toggle, setToggle] = React.useState(['']);
 
-  function resolveSidebar() {
+  const sidebarTree = React.useMemo(() => {
     const paths = [version, language, themeConfig.rootDocs].filter(
       (p) => p
     ) as string[];
 
-    const data = getFolderContent(sidebar, paths);
-    console.log(data);
-    return data;
-  }
+    return getFolderContent(sidebar, paths);
+  }, [sidebar, version, language, themeConfig]);
 
   function isActive(path: string) {
     return path === router.asPath;
   }
 
-  function isOpened(item: any) {
-    return true; //toggle.includes(item.name);
+  function isOpened(item: DocFile) {
+    return toggle?.includes(item.relativePath);
   }
 
-  const handleClick = React.useCallback((key: string, name: string) => {
-    setToggle((state) => (state === key ? state.replace(name, '') : key));
-  }, []);
+  const handleClick = React.useCallback(
+    (relativePath: string) => {
+      const index = toggle.indexOf(relativePath);
+      if (index >= 0) {
+        setToggle((state) => state.filter((path) => path !== relativePath));
+      } else {
+        setToggle((state) => state.concat([relativePath]));
+      }
+    },
+    [sidebarTree, toggle]
+  );
 
-  function recursiveMenu(menu: any) {
+  React.useEffect(() => {
+    const opened = sidebarTree?.children?.map((e) => e.relativePath);
+    console.log(opened);
+    setToggle(opened);
+  }, [sidebarTree]);
+
+  function recursiveMenu(menu: Category & DocFile) {
     return (
       <S.List>
         {menu.meta ? (
@@ -49,36 +66,39 @@ export function Sidebar({ hide = true }) {
             <Link href={menu.url}>{menu.title}</Link>
           </S.Link>
         ) : (
-          <S.Category onClick={() => handleClick(menu.path, menu.name)}>
-            {menu.title}{' '}
+          <S.Category onClick={() => handleClick(menu.relativePath)}>
+            {menu.title}
             {isOpened(menu) ? <MdExpandMore /> : <MdChevronRight />}
           </S.Category>
         )}
-        {menu?.children?.map((item: any) => {
-          if (item.meta) {
-            return (
-              <S.Item>
-                <S.Link
-                  className={isActive(item.url) ? S.active() : S.inactive()}
-                >
-                  <S.Tag
-                    css={isActive(item.url) ? { background: '$accents8' } : {}}
-                  />
-                  <Link href={item.url}>{item.title}</Link>
-                </S.Link>
-              </S.Item>
-            );
-          }
+        {isOpened(menu) &&
+          menu?.children?.map((item: any) => {
+            if (item.meta) {
+              return (
+                <S.Item>
+                  <S.Link
+                    className={isActive(item.url) ? S.active() : S.inactive()}
+                  >
+                    <S.Tag
+                      css={
+                        isActive(item.url) ? { background: '$accents8' } : {}
+                      }
+                    />
+                    <Link href={item.url}>{item.title}</Link>
+                  </S.Link>
+                </S.Item>
+              );
+            }
 
-          return recursiveMenu(item);
-        })}
+            return recursiveMenu(item);
+          })}
       </S.List>
     );
   }
   return (
     <S.SidebarWrapper hideIn={hide ? 'xs' : undefined}>
       <div className="wrapper">
-        {resolveSidebar()?.children?.map?.((child) => recursiveMenu(child))}
+        {sidebarTree?.children?.map?.((child) => recursiveMenu(child))}
       </div>
     </S.SidebarWrapper>
   );

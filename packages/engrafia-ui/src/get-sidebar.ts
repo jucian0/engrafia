@@ -1,6 +1,6 @@
 export type SidebarTree = Category;
 
-type File = {
+export type DocFile = {
   name: string;
   path: string;
   relativePath: string;
@@ -12,11 +12,11 @@ type File = {
   };
 };
 
-type Category = {
+export type Category = {
   name: string;
   path: string;
   title: string;
-  children: Array<Category & File>;
+  children: Array<Category & DocFile>;
 };
 
 export function getSidebarTree(): SidebarTree {
