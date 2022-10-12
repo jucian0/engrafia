@@ -8,6 +8,7 @@ import { useSiteConfig } from '../Provider';
 import { useTranslate } from '../useTranslation';
 
 import { LanguageSelector } from './LanguageSelector/Selector';
+import { NavigationMenuDemo } from './Search/Search';
 import { Sidebar } from './Sidebar/Sidebar';
 import { VersionSelector } from './VersionSelector/Selector';
 
@@ -78,7 +79,7 @@ export default function MenuNav() {
               },
             }}
           >
-            <Navbar.Item
+            {/* <Navbar.Item
               css={{
                 '@xsMax': {
                   w: '100%',
@@ -109,8 +110,9 @@ export default function MenuNav() {
                 aria-label="Search field"
                 placeholder={t(themeConfig.nav?.search_bar ?? 'Search')}
               />
-            </Navbar.Item>
+            </Navbar.Item> */}
 
+            <NavigationMenuDemo />
             <Navbar.Item>
               <Button
                 icon={

@@ -4,12 +4,7 @@ import Link from 'next/link';
 import { useSiteConfig } from '../../Provider';
 import * as S from './styles';
 import { MdChevronRight, MdExpandMore } from 'react-icons/md';
-import {
-  Category,
-  DocFile,
-  getSidebarTree,
-  SidebarTree,
-} from '../../get-sidebar';
+import { Category, DocFile, getSidebarTree } from '../../get-sidebar';
 import { getThemeConfig } from '../../get-theme-config';
 import { getFolderContent } from '../../get-folders';
 
