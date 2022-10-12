@@ -16,6 +16,10 @@ export const SidebarWrapper = styled(
       overflow: `auto`,
       position: `fixed`,
       height: 'calc(100vh - 100px)',
+
+      '& > ul': {
+        padding: 0,
+      },
     },
   },
   cssHideShowIn
