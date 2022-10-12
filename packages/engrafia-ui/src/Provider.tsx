@@ -59,15 +59,15 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
         ...state,
         tableOfContent,
         language:
+          (languages.find((l) => route.includes(l)) as '') ??
           localStorage.getItem('language') ??
           i18nConfig.default ??
-          'en_US' ??
           '',
         languages: languages,
         versions: versions,
         version:
-          localStorage.getItem('version') ??
           versions.find((v) => route.includes(v)) ??
+          localStorage.getItem('version') ??
           '',
       }));
     }
