@@ -9,5 +9,6 @@ export const Wrapper = styled(`div`, {
   select: {
     color: `$accents6`,
     border: 'none',
+    background: 'transparent',
   },
 });
