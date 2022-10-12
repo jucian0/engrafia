@@ -55,7 +55,9 @@ export default function MenuNav() {
               variant="default"
             >
               {themeConfig.nav?.links.map((link) => (
-                <Navbar.Link href={link.url}>{t(link.title)}</Navbar.Link>
+                <Navbar.Link key={link.url} href={link.url}>
+                  {t(link.title)}
+                </Navbar.Link>
               ))}
             </Navbar.Content>
           )}
@@ -104,6 +106,7 @@ export default function MenuNav() {
                     dflex: 'center',
                   },
                 }}
+                aria-label="Search field"
                 placeholder={t(themeConfig.nav?.search_bar ?? 'Search')}
               />
             </Navbar.Item>

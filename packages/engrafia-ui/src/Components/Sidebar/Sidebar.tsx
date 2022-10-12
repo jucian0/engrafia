@@ -57,7 +57,7 @@ export function Sidebar({ hide = true }) {
 
   function recursiveMenu(menu: Category & DocFile) {
     return (
-      <S.List>
+      <S.List key={menu.path}>
         {menu.meta ? (
           <S.Link className={isActive(menu.url) ? S.active() : S.inactive()}>
             <S.Tag
@@ -72,10 +72,10 @@ export function Sidebar({ hide = true }) {
           </S.Category>
         )}
         {isOpened(menu) &&
-          menu?.children?.map((item: any) => {
+          menu?.children?.map((item: Category & DocFile) => {
             if (item.meta) {
               return (
-                <S.Item>
+                <S.Item key={item.path}>
                   <S.Link
                     className={isActive(item.url) ? S.active() : S.inactive()}
                   >

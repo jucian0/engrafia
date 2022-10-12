@@ -24,7 +24,9 @@ export function VersionSelector() {
       <VscVersions />
       <select value={version} onChange={handleChangeLanguage}>
         {versions?.map((version) => (
-          <option value={version}>{version}</option>
+          <option key={version} value={version}>
+            {version}
+          </option>
         ))}
       </select>
     </S.Wrapper>
