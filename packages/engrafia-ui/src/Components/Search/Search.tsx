@@ -58,6 +58,7 @@ export const NavigationMenuDemo = () => {
           <NavigationMenuContent>
             <Grid css={{ padding: '20px' }}>
               <Input
+                autoFocus
                 clearable
                 contentLeftStyling
                 css={{
