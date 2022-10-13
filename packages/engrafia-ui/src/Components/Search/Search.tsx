@@ -52,15 +52,28 @@ export const NavigationMenuDemo = () => {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>
+          <NavigationMenuTrigger
+            onPointerMove={(e: any) => e.preventDefault()}
+            onPointerLeave={(e: any) => e.preventDefault()}
+          >
             <RiSearchFill fill="var(--nextui-colors-accents6)" size={16} />
           </NavigationMenuTrigger>
-          <NavigationMenuContent>
+          <NavigationMenuContent
+            onPointerEnter={(e: any) => e.preventDefault()}
+            onPointerLeave={(e: any) => e.preventDefault()}
+          >
             <Grid css={{ padding: '20px' }}>
               <Input
+                contentLeft={
+                  <RiSearchFill
+                    fill="var(--nextui-colors-accents6)"
+                    size={16}
+                  />
+                }
+                contentLeftStyling
                 autoFocus
                 clearable
-                contentLeftStyling
+                animated={false}
                 css={{
                   border: '1px solid $gray200',
                   background: '$gray200',

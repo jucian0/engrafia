@@ -126,7 +126,7 @@ export const StyledViewport = styled(NavigationMenuPrimitive.Viewport, {
   transformOrigin: 'top center',
   marginTop: 10,
   width: '100%',
-  backgroundColor: '$gray50',
+  backgroundColor: '$backgroundContrast',
   borderRadius: 6,
   overflow: 'hidden',
   boxShadow: '$sm',
