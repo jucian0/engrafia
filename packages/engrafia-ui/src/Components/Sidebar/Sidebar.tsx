@@ -46,7 +46,6 @@ export function Sidebar({ hide = true }) {
 
   React.useEffect(() => {
     const opened = sidebarTree?.children?.map((e) => e.relativePath);
-    console.log(opened);
     setToggle(opened);
   }, [sidebarTree]);
 

@@ -8,6 +8,8 @@ import * as S from './styles';
 import { DocFile, getSidebarTree } from '../../get-sidebar';
 import { getSearchableList } from './utils';
 import { search } from 'fast-fuzzy';
+import { useSiteConfig } from '../../Provider';
+import { getFolderContent } from '../../get-folders';
 
 const StyledTriggerWithCaret = React.forwardRef(
   ({ children, ...props }: any, forwardedRef) => {
@@ -40,11 +42,21 @@ const ContentListItem = React.forwardRef(
 
 const { default: themeConfig } = getThemeConfig();
 const content = getSidebarTree();
-const searchableContent = getSearchableList(content);
 
 export const NavigationMenuDemo = () => {
   const t = useTranslate();
   const [list, setList] = useState([] as DocFile[]);
+
+  const { language, version } = useSiteConfig();
+
+  const searchableContent = React.useMemo(() => {
+    const paths = [version, language, themeConfig.rootDocs].filter(
+      (p) => p
+    ) as string[];
+
+    const filteredContent = getFolderContent(content, paths);
+    return filteredContent.name ? getSearchableList(filteredContent) : [];
+  }, [content, version, language, themeConfig]);
 
   function handleSetList(e: React.ChangeEvent<FormElement>) {
     const data = search(e.target.value, searchableContent, {
@@ -112,6 +124,17 @@ export const NavigationMenuDemo = () => {
                 </ContentListItem>
               ))}
             </S.ContentList>
+            {list.length === 0 && (
+              <Grid
+                css={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  marginBottom: 20,
+                }}
+              >
+                {'...'}
+              </Grid>
+            )}
           </S.StyledContent>
         </NavigationMenuPrimitive.Item>
       </S.StyledList>
