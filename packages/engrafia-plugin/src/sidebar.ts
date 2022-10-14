@@ -66,7 +66,6 @@ async function getMdxFilesIndex(dir: string) {
 
 async function getPagesPath(dir: string) {
   const root = resolveRoot(dir);
-
   var [err, stats] = await to(fs.promises.stat(`${root}/pages`));
   if (!err && stats?.isDirectory()) {
     return 'pages';

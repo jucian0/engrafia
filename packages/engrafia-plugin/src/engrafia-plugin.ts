@@ -23,9 +23,9 @@ const withMDX = mdx({
         persistent: true,
         ignoreInitial: true,
       });
-      watcher.on('change', onFileChange);
-      watcher.on('add', onFileChange);
-      watcher.on('unlink', onFileChange);
+      watcher.on('change', onFileChange(options.dir));
+      watcher.on('add', onFileChange(options.dir));
+      watcher.on('unlink', onFileChange(options.dir));
     } else {
       writeMdxIndex(options.dir);
     }
@@ -50,12 +50,14 @@ const withMDX = mdx({
   },
 });
 
-function onFileChange(name: any, location: string) {
-  const ext = path.extname(name);
-  if (!EXTENSIONS_TO_WATCH.includes(ext)) {
-    return;
-  }
-  writeMdxIndex(location);
+function onFileChange(dir: string) {
+  return (name: string) => {
+    const ext = path.extname(name);
+    if (!EXTENSIONS_TO_WATCH.includes(ext)) {
+      return;
+    }
+    writeMdxIndex(dir);
+  };
 }
 
 export function engrafia(nextConfig: any = {}) {
