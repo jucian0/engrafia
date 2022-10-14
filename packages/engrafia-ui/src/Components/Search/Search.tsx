@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
-import { Grid, Input } from '@nextui-org/react';
+import { FormElement, Grid, Input } from '@nextui-org/react';
 import { RiSearchFill } from 'react-icons/ri';
 import { getThemeConfig } from '../../get-theme-config';
 import { useTranslate } from '../../useTranslation';
 import * as S from './styles';
+import { DocFile, getSidebarTree } from '../../get-sidebar';
+import { getSearchableList } from './utils';
+import { search } from 'fast-fuzzy';
 
 const StyledTriggerWithCaret = React.forwardRef(
   ({ children, ...props }: any, forwardedRef) => {
@@ -16,18 +19,10 @@ const StyledTriggerWithCaret = React.forwardRef(
   }
 );
 
-const NavigationMenu = S.StyledMenu;
-const NavigationMenuList = S.StyledList;
-const NavigationMenuItem = NavigationMenuPrimitive.Item;
-const NavigationMenuTrigger = StyledTriggerWithCaret;
-const NavigationMenuLink = S.StyledLink;
-const NavigationMenuContent = S.StyledContent;
-const NavigationMenuViewport = S.StyledViewport;
-
 const ContentListItem = React.forwardRef(
   ({ children, title, ...props }: any, forwardedRef) => (
     <S.ListItem>
-      <NavigationMenuLink
+      <S.StyledLink
         {...props}
         ref={forwardedRef}
         css={{
@@ -38,27 +33,45 @@ const ContentListItem = React.forwardRef(
       >
         <S.LinkTitle>{title}</S.LinkTitle>
         <S.LinkText>{children}</S.LinkText>
-      </NavigationMenuLink>
+      </S.StyledLink>
     </S.ListItem>
   )
 );
 
 const { default: themeConfig } = getThemeConfig();
+const content = getSidebarTree();
+const searchableContent = getSearchableList(content);
 
 export const NavigationMenuDemo = () => {
   const t = useTranslate();
+  const [list, setList] = useState([] as DocFile[]);
+
+  function handleSetList(e: React.ChangeEvent<FormElement>) {
+    const data = search(e.target.value, searchableContent, {
+      keySelector: (obj) => obj.meta.title,
+    });
+
+    if (data.length === 0) {
+      const data = search(e.target.value, searchableContent, {
+        keySelector: (obj) => obj.meta.description,
+      });
+      setList(data);
+    } else {
+      setList(data);
+    }
+  }
 
   return (
-    <NavigationMenu>
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger
+    <S.StyledMenu>
+      <S.StyledList>
+        <NavigationMenuPrimitive.Item>
+          <StyledTriggerWithCaret
             onPointerMove={(e: any) => e.preventDefault()}
             onPointerLeave={(e: any) => e.preventDefault()}
           >
             <RiSearchFill fill="var(--nextui-colors-accents6)" size={16} />
-          </NavigationMenuTrigger>
-          <NavigationMenuContent
+          </StyledTriggerWithCaret>
+          <S.StyledContent
             onPointerEnter={(e: any) => e.preventDefault()}
             onPointerLeave={(e: any) => e.preventDefault()}
           >
@@ -74,6 +87,7 @@ export const NavigationMenuDemo = () => {
                 autoFocus
                 clearable
                 animated={false}
+                onChange={handleSetList}
                 css={{
                   border: '1px solid $gray200',
                   background: '$gray200',
@@ -91,52 +105,20 @@ export const NavigationMenuDemo = () => {
                 placeholder={t(themeConfig.nav?.search_bar ?? 'Search')}
               />
             </Grid>
-            <S.ContentList layout="two">
-              <ContentListItem
-                title="Introduction"
-                href="/docs/primitives/overview/introduction"
-              >
-                Build high-quality, accessible design systems and web apps.
-              </ContentListItem>
-              <ContentListItem
-                title="Getting started"
-                href="/docs/primitives/overview/getting-started"
-              >
-                A quick tutorial to get you up and running with Radix
-                Primitives.
-              </ContentListItem>
-              <ContentListItem
-                title="Styling"
-                href="/docs/primitives/overview/styling"
-              >
-                Unstyled and compatible with any styling solution.
-              </ContentListItem>
-              <ContentListItem
-                title="Animation"
-                href="/docs/primitives/overview/animation"
-              >
-                Use CSS keyframes or any animation library of your choice.
-              </ContentListItem>
-              <ContentListItem
-                title="Accessibility"
-                href="/docs/primitives/overview/accessibility"
-              >
-                Tested in a range of browsers and assistive technologies.
-              </ContentListItem>
-              <ContentListItem
-                title="Releases"
-                href="/docs/primitives/overview/releases"
-              >
-                Radix Primitives releases and their changelogs.
-              </ContentListItem>
+            <S.ContentList>
+              {list.map((content) => (
+                <ContentListItem title={content.meta.title} href={content.url}>
+                  {content.meta.description}
+                </ContentListItem>
+              ))}
             </S.ContentList>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-      </NavigationMenuList>
+          </S.StyledContent>
+        </NavigationMenuPrimitive.Item>
+      </S.StyledList>
 
       <S.ViewportPosition>
-        <NavigationMenuViewport />
+        <S.StyledViewport />
       </S.ViewportPosition>
-    </NavigationMenu>
+    </S.StyledMenu>
   );
 };

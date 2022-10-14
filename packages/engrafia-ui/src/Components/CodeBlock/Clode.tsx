@@ -1,7 +1,7 @@
-import Highlight, { defaultProps } from 'prism-react-renderer';
+import Highlight, { defaultProps,Language } from 'prism-react-renderer';
 import light from 'prism-react-renderer/themes/nightOwlLight';
 import dark from 'prism-react-renderer/themes/dracula';
-import { Button, useTheme } from '@nextui-org/react';
+import {  useTheme } from '@nextui-org/react';
 import * as S from './styles';
 import { HeaderCode } from '../HeaderCode/Header';
 
@@ -23,7 +23,7 @@ export function Code({ children, className }: React.PropsWithChildren<Props>) {
       {...defaultProps}
       theme={theme.isDark ? dark : light}
       code={children.trim()}
-      language={language as any}
+      language={language as Language}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <S.Container>

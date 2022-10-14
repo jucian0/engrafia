@@ -1,26 +1,6 @@
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
 import { keyframes, styled } from '@nextui-org/react';
 
-const enterFromRight = keyframes({
-  from: { transform: 'translateX(200px)', opacity: 0 },
-  to: { transform: 'translateX(0)', opacity: 1 },
-});
-
-const enterFromLeft = keyframes({
-  from: { transform: 'translateX(-200px)', opacity: 0 },
-  to: { transform: 'translateX(0)', opacity: 1 },
-});
-
-const exitToRight = keyframes({
-  from: { transform: 'translateX(0)', opacity: 1 },
-  to: { transform: 'translateX(200px)', opacity: 0 },
-});
-
-const exitToLeft = keyframes({
-  from: { transform: 'translateX(0)', opacity: 1 },
-  to: { transform: 'translateX(-200px)', opacity: 0 },
-});
-
 const scaleIn = keyframes({
   from: { transform: 'rotateX(-30deg) scale(0.9)', opacity: 0 },
   to: { transform: 'rotateX(0deg) scale(1)', opacity: 1 },
@@ -29,16 +9,6 @@ const scaleIn = keyframes({
 const scaleOut = keyframes({
   from: { transform: 'rotateX(0deg) scale(1)', opacity: 1 },
   to: { transform: 'rotateX(-10deg) scale(0.95)', opacity: 0 },
-});
-
-const fadeIn = keyframes({
-  from: { opacity: 0 },
-  to: { opacity: 1 },
-});
-
-const fadeOut = keyframes({
-  from: { opacity: 1 },
-  to: { opacity: 0 },
 });
 
 const itemStyles = {
@@ -95,30 +65,6 @@ export const StyledContent = styled(NavigationMenuPrimitive.Content, {
   left: 0,
   width: '100%',
   '@media only screen and (min-width: 600px)': { width: 'auto' },
-  '@media (prefers-reduced-motion: no-preference)': {
-    animationDuration: '250ms',
-    animationTimingFunction: 'ease',
-    '&[data-motion="from-start"]': { animationName: enterFromLeft },
-    '&[data-motion="from-end"]': { animationName: enterFromRight },
-    '&[data-motion="to-start"]': { animationName: exitToLeft },
-    '&[data-motion="to-end"]': { animationName: exitToRight },
-  },
-});
-
-const StyledIndicator = styled(NavigationMenuPrimitive.Indicator, {
-  display: 'flex',
-  alignItems: 'flex-end',
-  justifyContent: 'center',
-  height: 10,
-  top: '100%',
-  overflow: 'hidden',
-  zIndex: 1,
-
-  '@media (prefers-reduced-motion: no-preference)': {
-    transition: 'width, transform 250ms ease',
-    '&[data-state="visible"]': { animation: `${fadeIn} 200ms ease` },
-    '&[data-state="hidden"]': { animation: `${fadeOut} 200ms ease` },
-  },
 });
 
 export const StyledViewport = styled(NavigationMenuPrimitive.Viewport, {
@@ -150,22 +96,9 @@ export const ContentList = styled('ul', {
   columnGap: 10,
   listStyle: 'none',
 
-  variants: {
-    layout: {
-      one: {
-        '@media only screen and (min-width: 600px)': {
-          width: 500,
-          gridTemplateColumns: '.75fr 1fr',
-        },
-      },
-      two: {
-        '@media only screen and (min-width: 600px)': {
-          width: 600,
-          gridAutoFlow: 'column',
-          gridTemplateRows: 'repeat(3, 1fr)',
-        },
-      },
-    },
+  '@media only screen and (min-width: 600px)': {
+    width: 500,
+    gridTemplateColumns: '1fr 1fr',
   },
 });
 
