@@ -31,7 +31,6 @@ export function TableOfContent() {
         const { scrollMarginTop } = getComputedStyle(element);
         return top - parseInt(scrollMarginTop) <= 0;
       });
-
       if (activeId) {
         setActiveId(activeId);
       }
@@ -64,15 +63,20 @@ type Props = {
 function TableOfContentItem({ item, activeId }: Props) {
 
   return (
-    <>
+    <li>
+      {item.children && <S.Line className={ activeId === item.id ? S.active() : S.inactive()}/>}
+       <S.Another className={ activeId === item.id ? S.active() : S.inactive()}/>
+
       <S.ItemLink id={item.id} className={ activeId === item.id ? S.active() : S.inactive()}>
         <Link href={item.slug}>{item.title}</Link>
       </S.ItemLink>
+      <ul>
       {item.children &&
         item.children.length > 0 &&
         item.children.map((child) => (
           <TableOfContentItem item={child} key={child.slug} activeId={activeId} />
         ))}
-    </>
+        </ul>
+    </li>
   );
 }

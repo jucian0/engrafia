@@ -24,7 +24,7 @@ export const Content = styled(`div`, {
   height: `100%`,
   padding: `$xs $md`,
   position: `relative`,
-  margin: `0 auto`,
+  margin: `3rem auto`,
 });
 
 export function DocsLayout({ children }: React.PropsWithChildren<{}>) {
