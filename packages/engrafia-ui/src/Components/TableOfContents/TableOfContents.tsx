@@ -1,5 +1,4 @@
 import * as S from './styles';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 import {  useSiteConfig } from '../../Provider';
 import { useTranslate } from '../../useTranslation';
@@ -63,14 +62,10 @@ type Props = {
 };
 
 function TableOfContentItem({ item, activeId }: Props) {
-  const route = useRouter();
-
-    const isActive = route.asPath.includes(item.slug);
-
 
   return (
     <>
-      <S.ItemLink id={item.id} className={ activeId === item.id || isActive ? S.active() : S.inactive()}>
+      <S.ItemLink id={item.id} className={ activeId === item.id ? S.active() : S.inactive()}>
         <Link href={item.slug}>{item.title}</Link>
       </S.ItemLink>
       {item.children &&
