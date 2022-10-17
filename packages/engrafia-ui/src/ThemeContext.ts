@@ -4,6 +4,7 @@ export type ChildrenOfContent = {
   title: string;
   slug: string;
   children?: ChildrenOfContent[];
+  id:string
 };
 
 export type TableOfContentType = {

@@ -10,6 +10,7 @@ type TNode = {
   title?: string;
   value?: string;
   slug?: string;
+  id?:string
 } & Node;
 
 export function generateTableOfContents(root: any) {
@@ -21,9 +22,11 @@ function getItems(node: TNode, current: TNode): any {
   if (!node) {
     return {};
   } else if (node.type === `paragraph`) {
+    console.log('<<<<<<<<<<<<<<<<<', node)
     visit(node, (item) => {
       if (item.type === `link`) {
         current.slug = item.url;
+        current.id = item.url.replace('#','')
       }
       if (item.type === `text`) {
         current.title = item.value;
