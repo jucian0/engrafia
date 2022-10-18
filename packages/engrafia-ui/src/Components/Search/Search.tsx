@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
-import { FormElement, Grid, Input } from '@nextui-org/react';
+import { FormElement, Grid, Input,Text } from '@nextui-org/react';
 import { RiSearchFill } from 'react-icons/ri';
 import { getThemeConfig } from '../../get-theme-config';
 import { useTranslate } from '../../useTranslation';
@@ -132,7 +132,7 @@ export const NavigationMenuDemo = () => {
                   marginBottom: 20,
                 }}
               >
-                {'...'}
+                <Text size="$3xl">Start to search by typing...</Text>
               </Grid>
             )}
           </S.StyledContent>
