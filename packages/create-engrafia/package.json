@@ -1,4 +1,7 @@
 {
   "name": "create-engrafia",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "bin": {
+    "create-dokz-app": "./dist/index.js"
+  }
 }
