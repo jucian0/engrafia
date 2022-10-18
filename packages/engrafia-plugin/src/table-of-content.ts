@@ -22,7 +22,6 @@ function getItems(node: TNode, current: TNode): any {
   if (!node) {
     return {};
   } else if (node.type === `paragraph`) {
-    console.log('<<<<<<<<<<<<<<<<<', node)
     visit(node, (item) => {
       if (item.type === `link`) {
         current.slug = item.url;
