@@ -1,0 +1,72 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/create-engrafia/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/create-engrafia/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/create-engrafia"],
+      "options": {
+        "jestConfig": "packages/create-engrafia/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/create-engrafia",
+        "tsConfig": "packages/create-engrafia/tsconfig.lib.json",
+        "packageJson": "packages/create-engrafia/package.json",
+        "main": "packages/create-engrafia/src/index.ts",
+        "assets": ["packages/create-engrafia/*.md"]
+      }
+    },    
+    "watch": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "watch": true,
+        "format": [
+          "esm"
+        ],
+        "outputPath": "dist/packages/create-engrafia",
+        "tsConfig": "packages/create-engrafia/tsconfig.lib.json",
+        "packageJson": "packages/create-engrafia/package.json",
+        "main": "packages/create-engrafia/src/index.ts",
+        "assets": [
+          "packages/create-engrafia/*.md"
+        ]
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional",
+        "noVerify": true,
+        "commitMessageFormat": "chore(${projectName}): release version ${version} [skip ci]",
+        "tagPrefix": "@engrafia/${projectName}@",
+        "baseBranch": "main",
+        "postTargets": [
+          "create-engrafia:deploy"
+        ]
+      }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    }
+  },
+  "tags": []
+}
