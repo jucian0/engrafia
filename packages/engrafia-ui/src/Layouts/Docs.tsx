@@ -24,12 +24,12 @@ export const Content = styled(`div`, {
   height: `100%`,
   padding: `$xs $md`,
   position: `relative`,
-  margin: `3rem auto`,
+  margin: `1rem auto`,
 });
 
 export function DocsLayout({ children }: React.PropsWithChildren<{}>) {
   return (
-    <Main className="app">
+    <Main>
       <Navbar />
       <Container>
         <Sidebar />
@@ -39,7 +39,7 @@ export function DocsLayout({ children }: React.PropsWithChildren<{}>) {
         </Content>
         <TableOfContent />
       </Container>
-          <Footer />
+      <Footer />
     </Main>
   );
 }

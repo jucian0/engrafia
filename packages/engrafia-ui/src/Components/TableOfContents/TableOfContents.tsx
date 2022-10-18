@@ -29,7 +29,7 @@ export function TableOfContent() {
         if (!element) return false;
         const { top } = element.getBoundingClientRect();
         const { scrollMarginTop } = getComputedStyle(element);
-        return top - parseInt(scrollMarginTop) <= 0;
+        return top - parseInt(scrollMarginTop) <= 80;
       });
       if (activeId) {
         setActiveId(activeId);

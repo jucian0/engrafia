@@ -1,7 +1,7 @@
-import { Navbar, Button, Text, Input, Grid } from '@nextui-org/react';
+import { Navbar, Button, Text,  Grid } from '@nextui-org/react';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
-import { RiMoonFill, RiSearchFill, RiSunFill } from 'react-icons/ri';
+import { RiMoonFill, RiSunFill } from 'react-icons/ri';
 import { getI18nConfig } from '../get-i18n';
 import { getThemeConfig } from '../get-theme-config';
 import { useSiteConfig } from '../Provider';
