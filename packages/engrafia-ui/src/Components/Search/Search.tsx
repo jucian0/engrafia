@@ -46,6 +46,7 @@ const content = getSidebarTree();
 export const NavigationMenuDemo = () => {
   const t = useTranslate();
   const [list, setList] = useState([] as DocFile[]);
+  const [input,setInput] = React.useState('')
 
   const { language, version } = useSiteConfig();
 
@@ -59,6 +60,7 @@ export const NavigationMenuDemo = () => {
   }, [content, version, language, themeConfig]);
 
   function handleSetList(e: React.ChangeEvent<FormElement>) {
+    setInput(e.target.value)
     const data = search(e.target.value, searchableContent, {
       keySelector: (obj) => obj.meta.title,
     });
@@ -132,7 +134,7 @@ export const NavigationMenuDemo = () => {
                   marginBottom: 20,
                 }}
               >
-                <Text size="$3xl">Start to search by typing...</Text>
+                {input.length === 0 ?<Text size="$3xl">Start to search by typing...</Text> :<Text size="$3xl">No results found for your search!</Text>}
               </Grid>
             )}
           </S.StyledContent>
