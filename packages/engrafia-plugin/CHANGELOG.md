@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.4](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-plugin@0.1.3...@engrafia/engrafia-plugin@0.1.4) (2022-10-19)
+
+
+### Bug Fixes
+
+* **engrafia-plugin:** fix dependencie lodash ([8184f73](https://github.com/Jucian0/engrafia/commit/8184f733ac6ce0bb6710b2b72afb925fa6142fbb))
+
 ### [0.1.3](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-plugin@0.1.2...@engrafia/engrafia-plugin@0.1.3) (2022-10-19)
 
 
