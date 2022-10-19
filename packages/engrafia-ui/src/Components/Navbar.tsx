@@ -1,4 +1,4 @@
-import { Navbar, Button, Text,  Grid } from '@nextui-org/react';
+import { Navbar, Button, Text, Grid } from '@nextui-org/react';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { RiMoonFill, RiSunFill } from 'react-icons/ri';

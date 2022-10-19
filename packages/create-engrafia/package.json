@@ -12,6 +12,7 @@
     "prompts": "2.1.0",
     "rimraf": "3.0.2",
     "chalk": "2.4.2",
-    "commander": "2.20.0"
+    "commander": "2.20.0",
+    "make-dir": "^3.1.0"
   }
 }
