@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.3](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-plugin@0.1.2...@engrafia/engrafia-plugin@0.1.3) (2022-10-19)
+
+
+### Bug Fixes
+
+* **engrafia-plugin:** fix dependencie chokidar ([64b226d](https://github.com/Jucian0/engrafia/commit/64b226d10d4f680fb03158b7b49b374cbf5913b1))
+
 ### [0.1.2](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-plugin@0.1.1...@engrafia/engrafia-plugin@0.1.2) (2022-10-19)
 
 
