@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.5](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.4...@engrafia/engrafia-ui@0.1.5) (2022-10-19)
+
+
+### Bug Fixes
+
+* **engrafia-ui:** sidebar - prevent content with same title, and url, fix table of content i18n ([e9cb4bc](https://github.com/Jucian0/engrafia/commit/e9cb4bc1d506ad96e9d7887dd53ce7f272064f09))
+
 ### [0.1.4](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.3...@engrafia/engrafia-ui@0.1.4) (2022-10-19)
 
 
