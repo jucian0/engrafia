@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
-import { FormElement, Grid, Input,Text } from '@nextui-org/react';
+import { FormElement, Grid, Input, Text } from '@nextui-org/react';
 import { RiSearchFill } from 'react-icons/ri';
 import { getThemeConfig } from '../../get-theme-config';
 import { useTranslate } from '../../useTranslation';
@@ -10,6 +10,7 @@ import { getSearchableList } from './utils';
 import { search } from 'fast-fuzzy';
 import { useSiteConfig } from '../../Provider';
 import { getFolderContent } from '../../get-folders';
+import Link from 'next/link';
 
 const StyledTriggerWithCaret = React.forwardRef(
   ({ children, ...props }: any, forwardedRef) => {
@@ -45,8 +46,8 @@ const content = getSidebarTree();
 
 export const NavigationMenuDemo = () => {
   const t = useTranslate();
-  const [list, setList] = useState([] as DocFile[]);
-  const [input,setInput] = React.useState('')
+  const [list, setList] = React.useState([] as DocFile[]);
+  const [input, setInput] = React.useState('');
 
   const { language, version } = useSiteConfig();
 
@@ -60,7 +61,7 @@ export const NavigationMenuDemo = () => {
   }, [content, version, language, themeConfig]);
 
   function handleSetList(e: React.ChangeEvent<FormElement>) {
-    setInput(e.target.value)
+    setInput(e.target.value);
     const data = search(e.target.value, searchableContent, {
       keySelector: (obj) => obj.meta.title,
     });
@@ -121,7 +122,11 @@ export const NavigationMenuDemo = () => {
             </Grid>
             <S.ContentList>
               {list.map((content) => (
-                <ContentListItem title={content.meta.title} href={content.url}>
+                <ContentListItem
+                  as={Link}
+                  title={content.meta.title}
+                  href={content.url}
+                >
                   {content.meta.description}
                 </ContentListItem>
               ))}
@@ -134,7 +139,11 @@ export const NavigationMenuDemo = () => {
                   marginBottom: 20,
                 }}
               >
-                {input.length === 0 ?<Text size="$3xl">Start to search by typing...</Text> :<Text size="$3xl">No results found for your search!</Text>}
+                {input.length === 0 ? (
+                  <Text size="$3xl">Start to search by typing...</Text>
+                ) : (
+                  <Text size="$3xl">No results found for your search!</Text>
+                )}
               </Grid>
             )}
           </S.StyledContent>
