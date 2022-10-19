@@ -6,11 +6,10 @@ import { getThemeConfig } from '../../get-theme-config';
 import { useTranslate } from '../../useTranslation';
 import * as S from './styles';
 import { DocFile, getSidebarTree } from '../../get-sidebar';
-import { getSearchableList } from './utils';
+import { filterItems, getSearchableList } from './utils';
 import { search } from 'fast-fuzzy';
 import { useSiteConfig } from '../../Provider';
 import { getFolderContent } from '../../get-folders';
-import Link from 'next/link';
 
 const StyledTriggerWithCaret = React.forwardRef(
   ({ children, ...props }: any, forwardedRef) => {
@@ -70,9 +69,9 @@ export const NavigationMenuDemo = () => {
       const data = search(e.target.value, searchableContent, {
         keySelector: (obj) => obj.meta.description,
       });
-      setList(data);
+      setList(filterItems(data));
     } else {
-      setList(data);
+      setList(filterItems(data));
     }
   }
 
@@ -122,11 +121,7 @@ export const NavigationMenuDemo = () => {
             </Grid>
             <S.ContentList>
               {list.map((content) => (
-                <ContentListItem
-                  as={Link}
-                  title={content.meta.title}
-                  href={content.url}
-                >
+                <ContentListItem title={content.meta.title} href={content.url}>
                   {content.meta.description}
                 </ContentListItem>
               ))}

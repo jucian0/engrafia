@@ -4,6 +4,9 @@ import { useSiteConfig } from '../../Provider';
 import { useTranslate } from '../../useTranslation';
 import { ChildrenOfContent } from '../../ThemeContext';
 import React from 'react';
+import { getI18nConfig } from '../../get-i18n';
+
+const i18nConfig = getI18nConfig();
 
 export function TableOfContent() {
   const { tableOfContent } = useSiteConfig();
@@ -44,7 +47,9 @@ export function TableOfContent() {
   return (
     <S.TableOfContentWrapper hideIn="sm">
       <div>
-        <h3>{t('table.of.content')}</h3>
+        <h3>
+          {i18nConfig.default ? t('table.of.content') : 'Table of content'}
+        </h3>
         <ul>
           {tableOfContent.children &&
             tableOfContent.children.map((item) => (
@@ -77,7 +82,9 @@ function TableOfContentItem({ item, activeId }: Props) {
         id={item.id}
         className={activeId === item.id ? S.active() : S.inactive()}
       >
-        <Link href={item.slug}>{item.title.trim()}</Link>
+        <Link href={item.slug}>
+          <a>{item.title.trim()}</a>
+        </Link>
       </S.ItemLink>
       <ul>
         {item.children &&

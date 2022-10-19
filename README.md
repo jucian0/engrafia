@@ -9,3 +9,10 @@ Engrafia is a site documentation generator, it`s built with Nextjs.
 yarn add @engrafia/ui @engrafia/plugin
 
 ```
+
+##
+
+Fix Link with a element.
+Fix sidebar folder, does not work without version, and language
+Nav linkns does not appear without language
+Translation does work

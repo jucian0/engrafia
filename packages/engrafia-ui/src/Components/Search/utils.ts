@@ -14,3 +14,9 @@ export function getSearchableList(content: SidebarTree) {
   evaluate(content);
   return contentList;
 }
+
+export function filterItems(list: DocFile[]) {
+  return list.filter((item, index, self) => {
+    return index === self.findIndex((t) => t.url === item.url);
+  });
+}

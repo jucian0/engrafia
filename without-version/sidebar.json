@@ -1,0 +1,101 @@
+{
+    "path": "/home/barbosa/javascript/engrafia/without-version/pages",
+    "name": "pages",
+    "children": [
+        {
+            "path": "/home/barbosa/javascript/engrafia/without-version/pages/docs",
+            "name": "docs",
+            "children": [
+                {
+                    "path": "/home/barbosa/javascript/engrafia/without-version/pages/docs/button.mdx",
+                    "name": "button.mdx",
+                    "meta": {
+                        "title": "Cinnamon pineapple",
+                        "description": "This page lists a number of current limitations of Prisma."
+                    },
+                    "title": "Button",
+                    "url": "/docs/button",
+                    "relativePath": "/without-version/pages/docs/button.mdx"
+                },
+                {
+                    "path": "/home/barbosa/javascript/engrafia/without-version/pages/docs/components",
+                    "name": "components",
+                    "children": [
+                        {
+                            "path": "/home/barbosa/javascript/engrafia/without-version/pages/docs/components/button.mdx",
+                            "name": "button.mdx",
+                            "meta": {
+                                "title": "Components Button",
+                                "description": "This page lists a number of current limitations of Prisma."
+                            },
+                            "title": "Button",
+                            "url": "/docs/components/button",
+                            "relativePath": "/without-version/pages/docs/components/button.mdx"
+                        },
+                        {
+                            "path": "/home/barbosa/javascript/engrafia/without-version/pages/docs/components/quick-start.mdx",
+                            "name": "quick-start.mdx",
+                            "meta": {
+                                "title": "Components Quick start",
+                                "description": "This page lists a number of current limitations of Prisma."
+                            },
+                            "title": "Quick start",
+                            "url": "/docs/components/quick-start",
+                            "relativePath": "/without-version/pages/docs/components/quick-start.mdx"
+                        },
+                        {
+                            "path": "/home/barbosa/javascript/engrafia/without-version/pages/docs/components/tutorial.mdx",
+                            "name": "tutorial.mdx",
+                            "meta": {
+                                "title": "Components Tutorial",
+                                "description": "This page lists a number of current limitations of Prisma."
+                            },
+                            "title": "Tutorial",
+                            "url": "/docs/components/tutorial",
+                            "relativePath": "/without-version/pages/docs/components/tutorial.mdx"
+                        }
+                    ],
+                    "title": "Components",
+                    "relativePath": "/without-version/pages/docs/components"
+                },
+                {
+                    "path": "/home/barbosa/javascript/engrafia/without-version/pages/docs/index.mdx",
+                    "name": "index.mdx",
+                    "meta": {
+                        "title": "Docs",
+                        "description": "This page lists a number of current limitations of Prisma."
+                    },
+                    "title": "Index",
+                    "url": "/docs/",
+                    "relativePath": "/without-version/pages/docs/index.mdx"
+                },
+                {
+                    "path": "/home/barbosa/javascript/engrafia/without-version/pages/docs/quick-start.mdx",
+                    "name": "quick-start.mdx",
+                    "meta": {
+                        "title": "Quick start",
+                        "description": "This page lists a number of current limitations of Prisma."
+                    },
+                    "title": "Quick start",
+                    "url": "/docs/quick-start",
+                    "relativePath": "/without-version/pages/docs/quick-start.mdx"
+                },
+                {
+                    "path": "/home/barbosa/javascript/engrafia/without-version/pages/docs/tutorial.mdx",
+                    "name": "tutorial.mdx",
+                    "meta": {
+                        "title": "Tutorial",
+                        "description": "This page lists a number of current limitations of Prisma."
+                    },
+                    "title": "Tutorial",
+                    "url": "/docs/tutorial",
+                    "relativePath": "/without-version/pages/docs/tutorial.mdx"
+                }
+            ],
+            "title": "Docs",
+            "relativePath": "/without-version/pages/docs"
+        }
+    ],
+    "title": "Pages",
+    "relativePath": "/without-version/pages"
+}

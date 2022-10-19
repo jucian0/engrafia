@@ -1,0 +1,70 @@
+{
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "without-version",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "without-version",
+        "outputPath": "dist/without-version"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "without-version"
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "without-version:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "without-version:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "without-version:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nrwl/next:export",
+      "options": {
+        "buildTarget": "without-version:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/without-version"
+      ],
+      "options": {
+        "jestConfig": "without-version/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "without-version/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

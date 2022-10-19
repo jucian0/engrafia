@@ -34,11 +34,15 @@ export default function MenuNav() {
         }}
       >
         <Navbar.Brand>
-          <Link href="/">{themeConfig.nav?.logo}</Link>
           <Link href="/">
-            <Text b color="inherit" hideIn="xs">
-              {themeConfig.title}
-            </Text>
+            <a>{themeConfig.nav?.logo}</a>
+          </Link>
+          <Link href="/">
+            <a>
+              <Text b color="inherit" hideIn="xs">
+                {themeConfig.title}
+              </Text>
+            </a>
           </Link>
         </Navbar.Brand>
         <Grid.Container
