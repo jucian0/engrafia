@@ -57,7 +57,7 @@ async function run() {
     console.log();
     console.log('For example:');
     console.log(
-      `  ${chalk.cyan(program.name())} ${chalk.green('my-dokz-app')}`
+      `  ${chalk.cyan(program.name())} ${chalk.green('my-engrafia')}`
     );
     console.log();
     console.log(
@@ -101,14 +101,14 @@ async function notifyUpdate() {
 
       console.log();
       console.log(
-        chalk.yellow.bold('A new version of `create-dokz-app` is available!')
+        chalk.yellow.bold('A new version of `create-engrafia` is available!')
       );
       console.log(
         'You can update by running: ' +
           chalk.cyan(
             isYarn
-              ? 'yarn global add create-dokz-app'
-              : 'npm i -g create-dokz-app'
+              ? 'yarn global add create-engrafia'
+              : 'npm i -g create-engrafia'
           )
       );
       console.log();
