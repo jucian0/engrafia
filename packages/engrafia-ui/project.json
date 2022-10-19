@@ -18,6 +18,10 @@
           "react/jsx-runtime"
         ],
         "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "format": [
+          "cjs",
+          "esm"
+        ],
         "compiler": "swc",
         "assets": [
           {
