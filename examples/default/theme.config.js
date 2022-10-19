@@ -28,15 +28,15 @@ export default {
     ),
     links: [
       {
-        title: 'link.docs',
-        url: '/0.1.0/en_US/docs',
+        title: 'Docs',
+        url: '/docs',
       },
       {
-        title: 'link.github',
+        title: 'Github',
         url: 'http://github.com/jucian0/engrafia',
       },
     ],
-    search_bar: 'search.placeholder',
+    search_bar: 'Search',
   },
   footer: {
     text: 'Engrafia 2022',

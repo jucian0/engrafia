@@ -18,7 +18,7 @@ const locales = Object.keys(i18nConfig?.translations ?? {});
 
 export default function MenuNav() {
   const { theme, setTheme } = useTheme();
-  const { versions, languages } = useSiteConfig();
+  const { versions } = useSiteConfig();
   const t = useTranslate();
 
   return (
@@ -109,7 +109,7 @@ export default function MenuNav() {
             <Sidebar hide={false} />
           </Navbar.Collapse>
           <Navbar.Content activeColor={'primary'} hideIn="xs" variant="default">
-            {locales && <LanguageSelector />}
+            {locales.length > 0 && <LanguageSelector />}
             {versions && versions.length > 0 && <VersionSelector />}
           </Navbar.Content>
         </Grid.Container>

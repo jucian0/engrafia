@@ -5,20 +5,19 @@ import makeDir from 'make-dir';
 import path from 'path';
 import { tryGitInit } from './helpers/git';
 import { isFolderEmpty } from './helpers/is-folder-empty';
-//import { getOnline } from './helpers/is-online';
 import { shouldUseYarn } from './helpers/should-use-yarn';
 
-const TEMPLATE_FOLDER = `example`;
+const TEMPLATE_FOLDER = `examples`;
 const TEMPLATE_REPO = `jucian0/engrafia`;
 
 export async function createApp({
   appPath,
   useNpm,
+  layout,
 }: {
   appPath: string;
   useNpm: boolean;
-  example?: string;
-  examplePath?: string;
+  layout: string;
 }) {
   const root = path.resolve(appPath);
   const appName = path.basename(root);
@@ -29,7 +28,6 @@ export async function createApp({
   }
 
   const useYarn = useNpm ? false : shouldUseYarn();
-  //const isOnline = !useYarn || (await getOnline());
   const originalDirectory = process.cwd();
 
   console.log(`Creating a new Engrafia app in ${chalk.green(root)}.`);
@@ -38,10 +36,7 @@ export async function createApp({
   await makeDir(root);
   process.chdir(root);
 
-  await downloadRepo(TEMPLATE_REPO, '.', TEMPLATE_FOLDER);
-  // if (isOnline) {
-  //     await install({ useYarn })
-  // }
+  await downloadRepo(TEMPLATE_REPO, '.', `${TEMPLATE_FOLDER}/${layout}`);
 
   if (tryGitInit(root)) {
     console.log('Initialized a git repository.');

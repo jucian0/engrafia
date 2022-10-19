@@ -11,6 +11,7 @@ import { validateNpmName } from './helpers/validate-pkg';
 import packageJson from './../package.json';
 
 let projectPath: string = '';
+let layout: string = '';
 
 const program = new Commander.Command(packageJson.name)
   .version(packageJson.version)
@@ -19,6 +20,9 @@ const program = new Commander.Command(packageJson.name)
   .action((name) => {
     projectPath = name;
   })
+  .action((name) => {
+    layout = name;
+  })
   .option('--use-npm')
   .allowUnknownOption()
   .parse(process.argv);
@@ -26,6 +30,10 @@ const program = new Commander.Command(packageJson.name)
 async function run() {
   if (typeof projectPath === 'string') {
     projectPath = projectPath.trim();
+  }
+
+  if (typeof layout === 'string') {
+    layout = layout.trim();
   }
 
   if (!projectPath) {
@@ -45,6 +53,27 @@ async function run() {
 
     if (typeof res.path === 'string') {
       projectPath = res.path.trim();
+    }
+  }
+
+  if (!layout) {
+    const res = await prompts({
+      type: 'select',
+      name: 'layout',
+      message: 'Chose a layout',
+      initial: 1,
+      choices: [
+        {
+          title: 'Default',
+          description:
+            'Default layout without versioning or translation resource',
+          value: 'default',
+        },
+      ],
+    });
+
+    if (typeof res.layout === 'string') {
+      layout = res.path.trim();
     }
   }
 
@@ -84,10 +113,7 @@ async function run() {
   await createApp({
     appPath: resolvedProjectPath,
     useNpm: !!program.useNpm,
-    example:
-      (typeof program.example === 'string' && program.example.trim()) ||
-      undefined,
-    examplePath: program.examplePath,
+    layout: layout,
   });
 }
 
