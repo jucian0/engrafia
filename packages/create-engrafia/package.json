@@ -2,6 +2,6 @@
   "name": "create-engrafia",
   "version": "0.1.0",
   "bin": {
-    "create-engrafia": "./index.js"
+    "create-engrafia": "./src/index.js"
   }
 }
