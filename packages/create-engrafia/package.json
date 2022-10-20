@@ -9,10 +9,12 @@
     "tslib": "^2.3.0",
     "update-check": "^1.5.4",
     "validate-npm-package-name": "^5.0.0",
-    "prompts": "2.1.0",
     "rimraf": "3.0.2",
     "chalk": "2.4.2",
     "commander": "2.20.0",
-    "make-dir": "^3.1.0"
+    "make-dir": "^3.1.0",
+    "inquirer": "^9.1.4",
+    "pad": "^3.2.0",
+    "colors": "^1.4.0"
   }
 }

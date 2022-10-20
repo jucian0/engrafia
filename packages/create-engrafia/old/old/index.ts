@@ -8,7 +8,7 @@ import { createApp } from './create-app';
 import { shouldUseYarn } from './helpers/should-use-yarn';
 import { validateNpmName } from './helpers/validate-pkg';
 // @ts-ignore
-import packageJson from './../package.json';
+import packageJson from '../package.json';
 
 let projectPath: string = '';
 let layout: string = '';
@@ -61,7 +61,7 @@ async function run() {
       type: 'select',
       name: 'layout',
       message: 'Chose a layout',
-      initial: 1,
+      initial: 'default',
       choices: [
         {
           title: 'Default',
