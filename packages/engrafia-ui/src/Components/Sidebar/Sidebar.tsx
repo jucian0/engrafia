@@ -7,6 +7,7 @@ import { MdChevronRight, MdExpandMore } from 'react-icons/md';
 import { Category, DocFile, getSidebarTree } from '../../get-sidebar';
 import { getThemeConfig } from '../../get-theme-config';
 import { getFolderContent } from '../../get-folders';
+import { order } from './util';
 
 const sidebar = getSidebarTree();
 const { default: themeConfig } = getThemeConfig();
@@ -68,7 +69,15 @@ export function Sidebar({ hide = true }) {
           </S.Category>
         )}
         {isOpened(menu) &&
-          menu?.children?.map((item: Category & DocFile) => {
+          order(
+            menu?.children?.sort((a, b) => {
+              if (a.meta) {
+                return -1;
+              } else {
+                return 1;
+              }
+            })
+          )?.map((item: Category & DocFile) => {
             if (item.meta) {
               return (
                 <S.Item key={item.path}>
@@ -96,7 +105,15 @@ export function Sidebar({ hide = true }) {
   return (
     <S.SidebarWrapper hideIn={hide ? 'xs' : undefined}>
       <div className="wrapper">
-        {sidebarTree?.children?.map?.((child) => recursiveMenu(child))}
+        {order(
+          sidebarTree?.children?.sort((a, b) => {
+            if (a.meta) {
+              return -1;
+            } else {
+              return 1;
+            }
+          })
+        )?.map?.((child) => recursiveMenu(child))}
       </div>
     </S.SidebarWrapper>
   );

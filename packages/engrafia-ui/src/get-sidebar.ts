@@ -9,6 +9,7 @@ export type DocFile = {
   meta: {
     title: string;
     description: string;
+    position?: string;
   };
 };
 

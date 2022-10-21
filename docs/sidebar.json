@@ -235,7 +235,8 @@
                                     "name": "tutorial.mdx",
                                     "meta": {
                                         "title": "Button",
-                                        "description": "This page lists a number of current limitations of Prisma."
+                                        "description": "This page lists a number of current limitations of Prisma.",
+                                        "position": 2
                                     },
                                     "title": "Tutorial",
                                     "url": "/0.1.0/pt_BR/api/tutorial",
@@ -250,7 +251,8 @@
                             "name": "button.mdx",
                             "meta": {
                                 "title": "Test Quick starts juciano barbosa",
-                                "description": "This page lists a number of current limitations of Prisma. Content to test"
+                                "description": "This page lists a number of current limitations of Prisma. Content to test",
+                                "position": 0
                             },
                             "title": "Button",
                             "url": "/0.1.0/pt_BR/button",
@@ -287,7 +289,8 @@
                                     "name": "tutorial.mdx",
                                     "meta": {
                                         "title": "Button",
-                                        "description": "This page lists a number of current limitations of Prisma."
+                                        "description": "This page lists a number of current limitations of Prisma.",
+                                        "position": 0
                                     },
                                     "title": "Tutorial",
                                     "url": "/0.1.0/pt_BR/components/tutorial",
@@ -389,6 +392,18 @@
                             ],
                             "title": "Docs",
                             "relativePath": "/docs/pages/0.1.0/pt_BR/docs"
+                        },
+                        {
+                            "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/quick-start.md",
+                            "name": "quick-start.md",
+                            "meta": {
+                                "title": "Test Quick starts juciano barbosa",
+                                "description": "This page lists a number of current limitations of Prisma. Content to test",
+                                "position": 1
+                            },
+                            "title": "Quick start",
+                            "url": "/0.1.0/pt_BR/quick-start",
+                            "relativePath": "/docs/pages/0.1.0/pt_BR/quick-start.md"
                         }
                     ],
                     "title": "Pt BR",
