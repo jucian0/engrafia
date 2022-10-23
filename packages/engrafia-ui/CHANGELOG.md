@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.7](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.6...@engrafia/engrafia-ui@0.1.7) (2022-10-23)
+
+
+### Bug Fixes
+
+* **engrafia-ui:** fix Sidebar sort algorithm ([81186d9](https://github.com/Jucian0/engrafia/commit/81186d93b3c52af648f1a147327d93205dcfd1ee))
+
 ### [0.1.6](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.5...@engrafia/engrafia-ui@0.1.6) (2022-10-19)
 
 
