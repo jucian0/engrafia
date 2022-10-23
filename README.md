@@ -6,13 +6,9 @@ Engrafia is a site documentation generator, it`s built with Nextjs.
 
 ```bash
 
-yarn add @engrafia/ui @engrafia/plugin
+yarn create engrafia
 
 ```
 
-##
+## Docs
 
-Fix Link with a element.
-Fix sidebar folder, does not work without version, and language
-Nav linkns does not appear without language
-Translation does work
