@@ -18,10 +18,14 @@ export const GlobalStyles = globalCss({
   pre: {
     padding: '0',
   },
-  'h1 , h2 , h3 , h4 , h5 , h6':{
+  'h1 , h2 , h3 , h4 , h5 , h6': {
     scrollMarginTop: `5rem`,
   },
-  span:{}
+  span: {},
+
+  p: {
+    fontSize: '1.125rem',
+  },
 });
 
 export const lightTheme = createTheme({

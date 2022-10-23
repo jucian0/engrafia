@@ -8,14 +8,6 @@
             "edit.content": "Edite esse conteúdo",
             "table.of.content": "Conteúdos da página",
             "search.placeholder": "Search..."
-        },
-        "en_US": {
-            "description": "This is a documentation example",
-            "link.docs": "Docs",
-            "link.github": "Github",
-            "edit.content": "Edit this content",
-            "table.of.content": "Page contents",
-            "search.placeholder": "Search..."
         }
     }
 }

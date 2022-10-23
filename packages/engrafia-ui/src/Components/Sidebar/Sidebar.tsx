@@ -59,7 +59,7 @@ export function Sidebar({ hide = true }) {
               css={isActive(menu.url) ? { background: '$accents8' } : {}}
             />
             <Link href={menu.url}>
-              <a>{menu.title.trim()}</a>
+              <a>{menu.meta.title.trim()}</a>
             </Link>
           </S.Link>
         ) : (
