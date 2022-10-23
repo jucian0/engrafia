@@ -90,7 +90,7 @@ export function Sidebar({ hide = true }) {
                       }
                     />
                     <Link href={item.url}>
-                      <a>{item.title.trim()}</a>
+                      <a>{item.meta.title.trim()}</a>
                     </Link>
                   </S.Link>
                 </S.Item>
