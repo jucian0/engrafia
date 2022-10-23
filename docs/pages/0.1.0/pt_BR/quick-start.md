@@ -8,7 +8,7 @@ position: 0
 
 Engrafia é um pacote destinado a gerar site de documentação em poucos comandos, Engrafia é construído usando NextJs, portanto todos os recursos de do NextJs são utilizados e pode ser utilizados no desenvolvimento de sua documentação.
 
-### Tecnologias
+## Tecnologias
 
 - [React](https://reactjs.org/)
 - [NextJS](https://nextjs.org/)
@@ -29,6 +29,8 @@ Este é o processo recomendado para iniciar uma aplicação Engrafia, abra o ter
 yarn create engrafia
 ```
 
+### Instalação de dependências
+
 Em seguida navegue até o projeto que acabou de criar e faça a instalação das dependências com o gerenciado de sua preferência:
 
 ```bash
@@ -40,3 +42,23 @@ npm install
 ```
 
 Este comando vai te guiar por algumas passo a fim de saber suas preferências ao iniciar um novo projeto, no final você vai ter um novo app pronto para ser customizado e utilizado, e pronto para produção.
+
+### Iniciando
+
+Subir uma versão de desenvolvimento no endereço `http://localhost:3000`, dentro de `pages` você pode criar seu primeiro arquivo `mdx | md`, e começar a adicionar conteúdos.
+
+```bash
+yarn dev
+```
+
+![engrafia-start](/engrafia-start.png)
+
+### Gerando versão de produção
+
+Como Engrafia usa NextJs, você pode seguir os mesmos passo do NextJs para colocar sua aplicação em produção, o seguinte comando deve gerar uma versão de produção do Engrafia. Você ainda pode utilizar a Vercel para colocar sua aplicação em produção, seguindo o guia do Nextjs, [aqui](https://nextjs.org/docs/deployment).
+
+```bash
+yarn build
+```
+
+Fim!

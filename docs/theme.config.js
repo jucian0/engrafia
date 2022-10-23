@@ -29,7 +29,7 @@ export default {
     links: [
       {
         title: 'link.docs',
-        url: '/0.1.0/en_US/docs',
+        url: '/0.1.0/pt_BR/quick-start',
       },
       {
         title: 'link.github',

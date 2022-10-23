@@ -82,8 +82,8 @@ function TableOfContentItem({ item, activeId }: Props) {
         id={item.id}
         className={activeId === item.id ? S.active() : S.inactive()}
       >
-        <Link href={item.slug}>
-          <a>{item.title.trim()}</a>
+        <Link href={item.slug ?? '.'}>
+          <a>{item.title ?? '.'}</a>
         </Link>
       </S.ItemLink>
       <ul>
