@@ -11,9 +11,74 @@
                     "name": "pt_BR",
                     "children": [
                         {
+                            "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/Funcionalidades",
+                            "name": "Funcionalidades",
+                            "children": [
+                                {
+                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/Funcionalidades/code-highlighting.md",
+                                    "name": "code-highlighting.md",
+                                    "meta": {
+                                        "title": "Trechos de códigos",
+                                        "description": "Este é um guia lhe ensina como exibir trechos de códigos no documento."
+                                    },
+                                    "title": "Code highlighting",
+                                    "url": "/0.1.0/pt_BR/Funcionalidades/code-highlighting",
+                                    "relativePath": "/docs/pages/0.1.0/pt_BR/Funcionalidades/code-highlighting.md"
+                                },
+                                {
+                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/Funcionalidades/md-mdx.md",
+                                    "name": "md-mdx.md",
+                                    "meta": {
+                                        "title": "MD e MDX",
+                                        "description": "Este é um guia descreve o que são arquivos md, e mdx",
+                                        "position": 4
+                                    },
+                                    "title": "Md mdx",
+                                    "url": "/0.1.0/pt_BR/Funcionalidades/md-mdx",
+                                    "relativePath": "/docs/pages/0.1.0/pt_BR/Funcionalidades/md-mdx.md"
+                                },
+                                {
+                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/Funcionalidades/next-js.md",
+                                    "name": "next-js.md",
+                                    "meta": {
+                                        "title": "NextJs",
+                                        "description": "Engrafia usa NextJs como base, então você pode usar todos os recuros do Nextjs.",
+                                        "position": 4
+                                    },
+                                    "title": "Next js",
+                                    "url": "/0.1.0/pt_BR/Funcionalidades/next-js",
+                                    "relativePath": "/docs/pages/0.1.0/pt_BR/Funcionalidades/next-js.md"
+                                },
+                                {
+                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/Funcionalidades/playground.mdx",
+                                    "name": "playground.mdx",
+                                    "meta": {
+                                        "title": "Playground",
+                                        "description": "Playground é um componente que permite testar, editar componentes."
+                                    },
+                                    "title": "Playground",
+                                    "url": "/0.1.0/pt_BR/Funcionalidades/playground",
+                                    "relativePath": "/docs/pages/0.1.0/pt_BR/Funcionalidades/playground.mdx"
+                                }
+                            ],
+                            "title": "Funcionalidades",
+                            "relativePath": "/docs/pages/0.1.0/pt_BR/Funcionalidades"
+                        },
+                        {
                             "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/Tutoriais",
                             "name": "Tutoriais",
                             "children": [
+                                {
+                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/Tutoriais/custom-theme.md",
+                                    "name": "custom-theme.md",
+                                    "meta": {
+                                        "title": "Customizando",
+                                        "description": "Este é um guia lhe ensina com customizar seu app Engrafia."
+                                    },
+                                    "title": "Custom theme",
+                                    "url": "/0.1.0/pt_BR/Tutoriais/custom-theme",
+                                    "relativePath": "/docs/pages/0.1.0/pt_BR/Tutoriais/custom-theme.md"
+                                },
                                 {
                                     "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/Tutoriais/trandlation-versioning.md",
                                     "name": "trandlation-versioning.md",
@@ -76,6 +141,18 @@
                             ],
                             "title": "Tutoriais",
                             "relativePath": "/docs/pages/0.1.0/pt_BR/Tutoriais"
+                        },
+                        {
+                            "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/basic-info.md",
+                            "name": "basic-info.md",
+                            "meta": {
+                                "title": "Informações básicas",
+                                "description": "Informações básica sobre as principais configurações do Engrafia.",
+                                "position": 1
+                            },
+                            "title": "Basic info",
+                            "url": "/0.1.0/pt_BR/basic-info",
+                            "relativePath": "/docs/pages/0.1.0/pt_BR/basic-info.md"
                         },
                         {
                             "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/quick-start.md",
