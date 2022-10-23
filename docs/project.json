@@ -11,7 +11,7 @@
       "defaultConfiguration": "production",
       "options": {
         "root": "docs",
-        "outputPath": ".next"
+        "outputPath": "dist/docs"
       },
       "configurations": {
         "development": {
