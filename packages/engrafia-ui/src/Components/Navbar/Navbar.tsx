@@ -3,15 +3,15 @@ import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { RiMoonFill, RiSunFill } from 'react-icons/ri';
-import { getI18nConfig } from '../get-i18n';
-import { getThemeConfig } from '../get-theme-config';
-import { useSiteConfig } from '../Provider';
-import { useTranslate } from '../useTranslation';
+import { getI18nConfig } from '../../get-i18n';
+import { getThemeConfig } from '../../get-theme-config';
+import { useSiteConfig } from '../../Provider';
+import { useTranslate } from '../../useTranslation';
 
-import { LanguageSelector } from './LanguageSelector/Selector';
-import { NavigationMenuDemo } from './Search/Search';
-import { Sidebar } from './Sidebar/Sidebar';
-import { VersionSelector } from './VersionSelector/Selector';
+import { LanguageSelector } from '../LanguageSelector/Selector';
+import { NavigationMenuDemo } from '../Search/Search';
+import { Sidebar } from '../Sidebar/Sidebar';
+import { VersionSelector } from '../VersionSelector/Selector';
 
 const { default: themeConfig } = getThemeConfig();
 const i18nConfig = getI18nConfig();
@@ -21,9 +21,8 @@ export default function MenuNav() {
   const { theme, setTheme } = useTheme();
   const { versions } = useSiteConfig();
   const t = useTranslate();
-  const router = useRouter()
-  const isRoot = router.route.includes(themeConfig.rootDocs?? 'docs')
-
+  const router = useRouter();
+  const isRoot = router.route.includes(themeConfig.rootDocs ?? 'docs');
 
   return (
     <Navbar variant="sticky" isBordered={theme === 'dark'} maxWidth="fluid">
@@ -64,9 +63,9 @@ export default function MenuNav() {
               variant="default"
             >
               {themeConfig.nav?.links.map((link) => (
-                <Navbar.Link key={link.url} href={link.url}>
-                  {t(link.title)}
-                </Navbar.Link>
+                <Link key={link.url} href={link.url}>
+                  <Navbar.Link>{t(link.title)}</Navbar.Link>
+                </Link>
               ))}
             </Navbar.Content>
           )}

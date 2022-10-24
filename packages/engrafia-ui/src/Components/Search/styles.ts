@@ -30,6 +30,9 @@ export const StyledLink = styled(NavigationMenuPrimitive.Link, {
   textDecoration: 'none',
   fontSize: 15,
   lineHeight: 1,
+  padding: 12,
+  borderRadius: 6,
+  '&:hover': { backgroundColor: '$gray200' },
 });
 
 export const StyledMenu = styled(NavigationMenuPrimitive.Root, {

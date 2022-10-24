@@ -10,9 +10,13 @@ import { filterItems, getSearchableList } from './utils';
 import { search } from 'fast-fuzzy';
 import { useSiteConfig } from '../../Provider';
 import { getFolderContent } from '../../get-folders';
+import Link from 'next/link';
 
 const StyledTriggerWithCaret = React.forwardRef(
-  ({ children, ...props }: any, forwardedRef) => {
+  (
+    { children, ...props }: React.PropsWithChildren<any>,
+    forwardedRef: React.Ref<HTMLAnchorElement>
+  ) => {
     return (
       <S.StyledTrigger {...props} ref={forwardedRef}>
         {children}
@@ -22,20 +26,21 @@ const StyledTriggerWithCaret = React.forwardRef(
 );
 
 const ContentListItem = React.forwardRef(
-  ({ children, title, ...props }: any, forwardedRef) => (
+  (
+    {
+      children,
+      title,
+      ...props
+    }: React.PropsWithChildren<{ title: string; href: string }>,
+    forwardedRef: React.Ref<HTMLAnchorElement>
+  ) => (
     <S.ListItem>
-      <S.StyledLink
-        {...props}
-        ref={forwardedRef}
-        css={{
-          padding: 12,
-          borderRadius: 6,
-          '&:hover': { backgroundColor: '$gray200' },
-        }}
-      >
-        <S.LinkTitle>{title}</S.LinkTitle>
-        <S.LinkText>{children}</S.LinkText>
-      </S.StyledLink>
+      <Link {...props}>
+        <S.StyledLink ref={forwardedRef}>
+          <S.LinkTitle>{title}</S.LinkTitle>
+          <S.LinkText>{children}</S.LinkText>
+        </S.StyledLink>
+      </Link>
     </S.ListItem>
   )
 );
@@ -51,7 +56,7 @@ export const NavigationMenuDemo = () => {
   const { language, version } = useSiteConfig();
 
   const searchableContent = React.useMemo(() => {
-    const paths = [version, language, themeConfig.rootDocs].filter(
+    const paths = [themeConfig.rootDocs, version, language].filter(
       (p) => p
     ) as string[];
 
@@ -121,7 +126,11 @@ export const NavigationMenuDemo = () => {
             </Grid>
             <S.ContentList>
               {list.map((content) => (
-                <ContentListItem title={content.meta.title} href={content.url}>
+                <ContentListItem
+                  key={content.url}
+                  title={content.meta.title}
+                  href={content.url}
+                >
                   {content.meta.description}
                 </ContentListItem>
               ))}
