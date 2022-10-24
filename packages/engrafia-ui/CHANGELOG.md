@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.8](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.7...@engrafia/engrafia-ui@0.1.8) (2022-10-24)
+
+
+### Bug Fixes
+
+* **engrafia-ui:** change order to organize contents ([321f182](https://github.com/Jucian0/engrafia/commit/321f182b66de6e8a9312b8a53b41d4a5163f2332))
+
 ### [0.1.7](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.6...@engrafia/engrafia-ui@0.1.7) (2022-10-23)
 
 
