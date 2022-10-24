@@ -1,7 +1,7 @@
 import { styled } from '@nextui-org/react';
 import React from 'react';
 import { Footer } from '../Components';
-import Navbar from '../Components/Navbar';
+import Navbar from '../Components/Navbar/Navbar';
 
 export const Main = styled(`main`, {
   flex: 1,

@@ -29,6 +29,14 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
   const { route } = useRouter();
   const [metaTags, setMetaTags] = React.useState<any>(null);
   const [title, setTitle] = React.useState('');
+  const versions = React.useMemo(
+    () => getFolderName(sidebar, TEST_VERSION_FOLDER),
+    [sidebar]
+  );
+  const languages = React.useMemo(
+    () => getFolderName(sidebar, TEST_LANGUAGE_FOLDER),
+    [sidebar]
+  );
   const [siteConfig, setSiteConfig] = React.useState<ThemeContextType>({
     meta: {},
     tableOfContent: { depth: 1 },
@@ -38,43 +46,38 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
 
   React.useEffect(() => {
     const meta = children.props?.data;
-    if (route !== '/_error' && meta) {
-      const title =
-        route === `/`
-          ? meta.title
-          : `${themeConfig.title} - ${meta?.title ?? '404'}`;
 
-      const metaTags = Object.entries(children.props.data).map(
-        ([key, value]) => {
-          return <meta key={key} name={key} content={value as ''} />;
-        }
-      );
+    if (route !== '/_error') {
+      if (meta) {
+        const title =
+          route === `/`
+            ? meta.title
+            : `${themeConfig.title} - ${meta?.title ?? '404'}`;
+
+        const metaTags = Object.entries(children.props.data).map(
+          ([key, value]) => {
+            return <meta key={key} name={key} content={value as ''} />;
+          }
+        );
+
+        setMetaTags(metaTags);
+        setTitle(title);
+      }
+
       const tableOfContent = children.props.tableOfContents;
-      const versions = getFolderName(sidebar, TEST_VERSION_FOLDER);
-      const languages = getFolderName(sidebar, TEST_LANGUAGE_FOLDER);
 
-      setMetaTags(metaTags);
-      setTitle(title);
       setSiteConfig((state) => ({
         ...state,
         tableOfContent,
-        language:
-          (languages.find((l) => route.includes(l)) as '') ??
-          localStorage.getItem('language') ??
-          i18nConfig.default ??
-          '',
+        language: localStorage.getItem('language') ?? i18nConfig.default ?? '',
         languages: languages,
         versions: versions,
-        version:
-          versions.find((v) => route.includes(v)) ??
-          localStorage.getItem('version') ??
-          '',
+        version: versions[versions.length - 1],
       }));
     }
-  }, [route]);
+  }, [route, languages, versions]);
 
   if (route.includes(themeConfig.rootDocs ?? 'docs')) {
-    console.log(route, themeConfig.rootDocs)
     return (
       <ThemeContext.Provider value={{ ...siteConfig, setSiteConfig }}>
         <DocsLayout>
