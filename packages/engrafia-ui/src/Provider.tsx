@@ -32,7 +32,7 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
   const [siteConfig, setSiteConfig] = React.useState<ThemeContextType>({
     meta: {},
     tableOfContent: { depth: 1 },
-    language: 'en_US',
+    language: i18nConfig.default ?? 'en_US',
     version: 'latest',
   });
 
@@ -74,6 +74,7 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
   }, [route]);
 
   if (route.includes(themeConfig.rootDocs ?? 'docs')) {
+    console.log(route, themeConfig.rootDocs)
     return (
       <ThemeContext.Provider value={{ ...siteConfig, setSiteConfig }}>
         <DocsLayout>

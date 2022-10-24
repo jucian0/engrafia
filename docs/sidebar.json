@@ -3,176 +3,184 @@
     "name": "pages",
     "children": [
         {
-            "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0",
-            "name": "0.1.0",
+            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs",
+            "name": "docs",
             "children": [
                 {
-                    "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR",
-                    "name": "pt_BR",
+                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0",
+                    "name": "0.1.0",
                     "children": [
                         {
-                            "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/Funcionalidades",
-                            "name": "Funcionalidades",
+                            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/pt_BR",
+                            "name": "pt_BR",
                             "children": [
                                 {
-                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/Funcionalidades/code-highlighting.md",
-                                    "name": "code-highlighting.md",
-                                    "meta": {
-                                        "title": "Trechos de códigos",
-                                        "description": "Este é um guia lhe ensina como exibir trechos de códigos no documento."
-                                    },
-                                    "title": "Code highlighting",
-                                    "url": "/0.1.0/pt_BR/Funcionalidades/code-highlighting",
-                                    "relativePath": "/docs/pages/0.1.0/pt_BR/Funcionalidades/code-highlighting.md"
+                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/pt_BR/Funcionalidades",
+                                    "name": "Funcionalidades",
+                                    "children": [
+                                        {
+                                            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/pt_BR/Funcionalidades/code-highlighting.md",
+                                            "name": "code-highlighting.md",
+                                            "meta": {
+                                                "title": "Trechos de códigos",
+                                                "description": "Este é um guia lhe ensina como exibir trechos de códigos no documento."
+                                            },
+                                            "title": "Code highlighting",
+                                            "url": "/docs/0.1.0/pt_BR/Funcionalidades/code-highlighting",
+                                            "relativePath": "/docs/pages/docs/0.1.0/pt_BR/Funcionalidades/code-highlighting.md"
+                                        },
+                                        {
+                                            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/pt_BR/Funcionalidades/md-mdx.md",
+                                            "name": "md-mdx.md",
+                                            "meta": {
+                                                "title": "MD e MDX",
+                                                "description": "Este é um guia descreve o que são arquivos md, e mdx",
+                                                "position": 4
+                                            },
+                                            "title": "Md mdx",
+                                            "url": "/docs/0.1.0/pt_BR/Funcionalidades/md-mdx",
+                                            "relativePath": "/docs/pages/docs/0.1.0/pt_BR/Funcionalidades/md-mdx.md"
+                                        },
+                                        {
+                                            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/pt_BR/Funcionalidades/next-js.md",
+                                            "name": "next-js.md",
+                                            "meta": {
+                                                "title": "NextJs",
+                                                "description": "Engrafia usa NextJs como base, então você pode usar todos os recuros do Nextjs.",
+                                                "position": 4
+                                            },
+                                            "title": "Next js",
+                                            "url": "/docs/0.1.0/pt_BR/Funcionalidades/next-js",
+                                            "relativePath": "/docs/pages/docs/0.1.0/pt_BR/Funcionalidades/next-js.md"
+                                        },
+                                        {
+                                            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/pt_BR/Funcionalidades/playground.mdx",
+                                            "name": "playground.mdx",
+                                            "meta": {
+                                                "title": "Playground",
+                                                "description": "Playground é um componente que permite testar, editar componentes."
+                                            },
+                                            "title": "Playground",
+                                            "url": "/docs/0.1.0/pt_BR/Funcionalidades/playground",
+                                            "relativePath": "/docs/pages/docs/0.1.0/pt_BR/Funcionalidades/playground.mdx"
+                                        }
+                                    ],
+                                    "title": "Funcionalidades",
+                                    "relativePath": "/docs/pages/docs/0.1.0/pt_BR/Funcionalidades"
                                 },
                                 {
-                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/Funcionalidades/md-mdx.md",
-                                    "name": "md-mdx.md",
-                                    "meta": {
-                                        "title": "MD e MDX",
-                                        "description": "Este é um guia descreve o que são arquivos md, e mdx",
-                                        "position": 4
-                                    },
-                                    "title": "Md mdx",
-                                    "url": "/0.1.0/pt_BR/Funcionalidades/md-mdx",
-                                    "relativePath": "/docs/pages/0.1.0/pt_BR/Funcionalidades/md-mdx.md"
+                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/pt_BR/Tutoriais",
+                                    "name": "Tutoriais",
+                                    "children": [
+                                        {
+                                            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/pt_BR/Tutoriais/custom-theme.md",
+                                            "name": "custom-theme.md",
+                                            "meta": {
+                                                "title": "Customizando",
+                                                "description": "Este é um guia lhe ensina com customizar seu app Engrafia."
+                                            },
+                                            "title": "Custom theme",
+                                            "url": "/docs/0.1.0/pt_BR/Tutoriais/custom-theme",
+                                            "relativePath": "/docs/pages/docs/0.1.0/pt_BR/Tutoriais/custom-theme.md"
+                                        },
+                                        {
+                                            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/pt_BR/Tutoriais/translation-versioning.md",
+                                            "name": "translation-versioning.md",
+                                            "meta": {
+                                                "title": "Tradução e versionamento",
+                                                "description": "Este é um guia lhe ensina com usar tradução e versionamento em um app Engrafia.",
+                                                "position": 2
+                                            },
+                                            "title": "Translation versioning",
+                                            "url": "/docs/0.1.0/pt_BR/Tutoriais/translation-versioning",
+                                            "relativePath": "/docs/pages/docs/0.1.0/pt_BR/Tutoriais/translation-versioning.md"
+                                        },
+                                        {
+                                            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/pt_BR/Tutoriais/translation.md",
+                                            "name": "translation.md",
+                                            "meta": {
+                                                "title": "Tradução",
+                                                "description": "Este é um guia lhe ensina com criar conteúdos em diversos idiomas, com Engrafia.",
+                                                "position": 0
+                                            },
+                                            "title": "Translation",
+                                            "url": "/docs/0.1.0/pt_BR/Tutoriais/translation",
+                                            "relativePath": "/docs/pages/docs/0.1.0/pt_BR/Tutoriais/translation.md"
+                                        },
+                                        {
+                                            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/pt_BR/Tutoriais/using-playground.mdx",
+                                            "name": "using-playground.mdx",
+                                            "meta": {
+                                                "title": "Usando playground",
+                                                "description": "Este guia tem como finalidade te mostrar como usar o componente Playground."
+                                            },
+                                            "title": "Using playground",
+                                            "url": "/docs/0.1.0/pt_BR/Tutoriais/using-playground",
+                                            "relativePath": "/docs/pages/docs/0.1.0/pt_BR/Tutoriais/using-playground.mdx"
+                                        },
+                                        {
+                                            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/pt_BR/Tutoriais/versioning.md",
+                                            "name": "versioning.md",
+                                            "meta": {
+                                                "title": "Versionando",
+                                                "description": "Este é um guia lhe ensina com versionar sua documentação, usando Engrafia.",
+                                                "position": 1
+                                            },
+                                            "title": "Versioning",
+                                            "url": "/docs/0.1.0/pt_BR/Tutoriais/versioning",
+                                            "relativePath": "/docs/pages/docs/0.1.0/pt_BR/Tutoriais/versioning.md"
+                                        },
+                                        {
+                                            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/pt_BR/Tutoriais/writing-md-mdx.mdx",
+                                            "name": "writing-md-mdx.mdx",
+                                            "meta": {
+                                                "title": "Escrevendo MD e MDX",
+                                                "description": "Este é um guia lhe ensina com usar arquivos md e dx para criar conteúdos",
+                                                "position": 4
+                                            },
+                                            "title": "Writing md mdx",
+                                            "url": "/docs/0.1.0/pt_BR/Tutoriais/writing-md-mdx",
+                                            "relativePath": "/docs/pages/docs/0.1.0/pt_BR/Tutoriais/writing-md-mdx.mdx"
+                                        }
+                                    ],
+                                    "title": "Tutoriais",
+                                    "relativePath": "/docs/pages/docs/0.1.0/pt_BR/Tutoriais"
                                 },
                                 {
-                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/Funcionalidades/next-js.md",
-                                    "name": "next-js.md",
+                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/pt_BR/basic-info.md",
+                                    "name": "basic-info.md",
                                     "meta": {
-                                        "title": "NextJs",
-                                        "description": "Engrafia usa NextJs como base, então você pode usar todos os recuros do Nextjs.",
-                                        "position": 4
-                                    },
-                                    "title": "Next js",
-                                    "url": "/0.1.0/pt_BR/Funcionalidades/next-js",
-                                    "relativePath": "/docs/pages/0.1.0/pt_BR/Funcionalidades/next-js.md"
-                                },
-                                {
-                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/Funcionalidades/playground.mdx",
-                                    "name": "playground.mdx",
-                                    "meta": {
-                                        "title": "Playground",
-                                        "description": "Playground é um componente que permite testar, editar componentes."
-                                    },
-                                    "title": "Playground",
-                                    "url": "/0.1.0/pt_BR/Funcionalidades/playground",
-                                    "relativePath": "/docs/pages/0.1.0/pt_BR/Funcionalidades/playground.mdx"
-                                }
-                            ],
-                            "title": "Funcionalidades",
-                            "relativePath": "/docs/pages/0.1.0/pt_BR/Funcionalidades"
-                        },
-                        {
-                            "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/Tutoriais",
-                            "name": "Tutoriais",
-                            "children": [
-                                {
-                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/Tutoriais/custom-theme.md",
-                                    "name": "custom-theme.md",
-                                    "meta": {
-                                        "title": "Customizando",
-                                        "description": "Este é um guia lhe ensina com customizar seu app Engrafia."
-                                    },
-                                    "title": "Custom theme",
-                                    "url": "/0.1.0/pt_BR/Tutoriais/custom-theme",
-                                    "relativePath": "/docs/pages/0.1.0/pt_BR/Tutoriais/custom-theme.md"
-                                },
-                                {
-                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/Tutoriais/trandlation-versioning.md",
-                                    "name": "trandlation-versioning.md",
-                                    "meta": {
-                                        "title": "Tradução e versionamento",
-                                        "description": "Este é um guia lhe ensina com usar tradução e versionamento em um app Engrafia.",
-                                        "position": 2
-                                    },
-                                    "title": "Trandlation versioning",
-                                    "url": "/0.1.0/pt_BR/Tutoriais/trandlation-versioning",
-                                    "relativePath": "/docs/pages/0.1.0/pt_BR/Tutoriais/trandlation-versioning.md"
-                                },
-                                {
-                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/Tutoriais/translation.md",
-                                    "name": "translation.md",
-                                    "meta": {
-                                        "title": "Tradução",
-                                        "description": "Este é um guia lhe ensina com criar conteúdos em diversos idiomas, com Engrafia.",
-                                        "position": 0
-                                    },
-                                    "title": "Translation",
-                                    "url": "/0.1.0/pt_BR/Tutoriais/translation",
-                                    "relativePath": "/docs/pages/0.1.0/pt_BR/Tutoriais/translation.md"
-                                },
-                                {
-                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/Tutoriais/using-playground.mdx",
-                                    "name": "using-playground.mdx",
-                                    "meta": {
-                                        "title": "Usando playground",
-                                        "description": "Este guia tem como finalidade te mostrar como usar o componente Playground."
-                                    },
-                                    "title": "Using playground",
-                                    "url": "/0.1.0/pt_BR/Tutoriais/using-playground",
-                                    "relativePath": "/docs/pages/0.1.0/pt_BR/Tutoriais/using-playground.mdx"
-                                },
-                                {
-                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/Tutoriais/versioning.md",
-                                    "name": "versioning.md",
-                                    "meta": {
-                                        "title": "Versionando",
-                                        "description": "Este é um guia lhe ensina com versionar sua documentação, usando Engrafia.",
+                                        "title": "Informações básicas",
+                                        "description": "Informações básica sobre as principais configurações do Engrafia.",
                                         "position": 1
                                     },
-                                    "title": "Versioning",
-                                    "url": "/0.1.0/pt_BR/Tutoriais/versioning",
-                                    "relativePath": "/docs/pages/0.1.0/pt_BR/Tutoriais/versioning.md"
+                                    "title": "Basic info",
+                                    "url": "/docs/0.1.0/pt_BR/basic-info",
+                                    "relativePath": "/docs/pages/docs/0.1.0/pt_BR/basic-info.md"
                                 },
                                 {
-                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/Tutoriais/writing-md-mdx.mdx",
-                                    "name": "writing-md-mdx.mdx",
+                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/pt_BR/quick-start.md",
+                                    "name": "quick-start.md",
                                     "meta": {
-                                        "title": "Escrevendo MD e MDX",
-                                        "description": "Este é um guia lhe ensina com usar arquivos md e dx para criar conteúdos",
-                                        "position": 4
+                                        "title": "Iniciando com Engrafia",
+                                        "description": "Este é um guia que vai te conduzir nos principais tópicos para iniciar com Engrafia ",
+                                        "position": 0
                                     },
-                                    "title": "Writing md mdx",
-                                    "url": "/0.1.0/pt_BR/Tutoriais/writing-md-mdx",
-                                    "relativePath": "/docs/pages/0.1.0/pt_BR/Tutoriais/writing-md-mdx.mdx"
+                                    "title": "Quick start",
+                                    "url": "/docs/0.1.0/pt_BR/quick-start",
+                                    "relativePath": "/docs/pages/docs/0.1.0/pt_BR/quick-start.md"
                                 }
                             ],
-                            "title": "Tutoriais",
-                            "relativePath": "/docs/pages/0.1.0/pt_BR/Tutoriais"
-                        },
-                        {
-                            "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/basic-info.md",
-                            "name": "basic-info.md",
-                            "meta": {
-                                "title": "Informações básicas",
-                                "description": "Informações básica sobre as principais configurações do Engrafia.",
-                                "position": 1
-                            },
-                            "title": "Basic info",
-                            "url": "/0.1.0/pt_BR/basic-info",
-                            "relativePath": "/docs/pages/0.1.0/pt_BR/basic-info.md"
-                        },
-                        {
-                            "path": "/home/barbosa/javascript/engrafia/docs/pages/0.1.0/pt_BR/quick-start.md",
-                            "name": "quick-start.md",
-                            "meta": {
-                                "title": "Iniciando com Engrafia",
-                                "description": "Este é um guia que vai te conduzir nos principais tópicos para iniciar com Engrafia ",
-                                "position": 0
-                            },
-                            "title": "Quick start",
-                            "url": "/0.1.0/pt_BR/quick-start",
-                            "relativePath": "/docs/pages/0.1.0/pt_BR/quick-start.md"
+                            "title": "Pt BR",
+                            "relativePath": "/docs/pages/docs/0.1.0/pt_BR"
                         }
                     ],
-                    "title": "Pt BR",
-                    "relativePath": "/docs/pages/0.1.0/pt_BR"
+                    "title": "0.1.0",
+                    "relativePath": "/docs/pages/docs/0.1.0"
                 }
             ],
-            "title": "0.1.0",
-            "relativePath": "/docs/pages/0.1.0"
+            "title": "Docs",
+            "relativePath": "/docs/pages/docs"
         }
     ],
     "title": "Pages",

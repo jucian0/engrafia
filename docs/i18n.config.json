@@ -1,5 +1,5 @@
 {
-    "default": "en_US",
+    "default": "pt_BR",
     "translations": {
         "pt_BR": {
             "description": "Este é um exemplo de documentação",
@@ -8,7 +8,6 @@
             "edit.content": "Edite esse conteúdo",
             "table.of.content": "Conteúdos da página",
             "search.placeholder": "Search..."
-        },
-        "en_US": {}
+        }
     }
 }

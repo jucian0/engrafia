@@ -1,7 +1,7 @@
 export default {
   title: 'Engrafia',
   description: 'Easily, and delightful documentation website generator!',
-  rootDocs: '',
+  rootDocs: 'docs',
   repository: {
     url: 'http://github.com/jucian0/engrafia',
     branch: 'main',
@@ -29,7 +29,7 @@ export default {
     links: [
       {
         title: 'link.docs',
-        url: '/0.1.0/pt_BR/quick-start',
+        url: '/docs/0.1.0/pt_BR/quick-start',
       },
       {
         title: 'link.github',

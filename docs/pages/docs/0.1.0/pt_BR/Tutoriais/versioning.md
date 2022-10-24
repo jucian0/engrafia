@@ -18,8 +18,9 @@ A melhor maneira de iniciar um app Engrafia com versionamento é usando o `creat
 ```mdx
     engrafia-app
       - pages
-        - 0.0.0
-          - page-examples
+        - docs
+          - 0.0.0
+            - page-examples
 ```
 
 Essa estrutura de pasta é criada como exemplo de como gerar conteúdos versionados, no exemplo acima, temos a versão `0.0.0`, altere para a versão desejada. Outro ponto, após alterar para a versão desejada, é necessário alterar possíveis links que apontem para a versão anterior.

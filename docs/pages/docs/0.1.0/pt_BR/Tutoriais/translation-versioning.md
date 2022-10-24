@@ -13,16 +13,17 @@ Em apps Engrafia, é importante seguir um esquema de pasta especifico para que e
 ```mdx
     engrafia-app
       - pages
-        - 0.0.0
-          - en_US
-            - page-examples
-          - pt_BR
-            - page-examples
-        - 0.0.1
-          - en_US
-            - page-examples
-          - pt_BR
-            - page-examples
+        - docs
+          - 0.0.0
+            - en_US
+              - page-examples
+            - pt_BR
+              - page-examples
+          - 0.0.1
+            - en_US
+              - page-examples
+            - pt_BR
+              - page-examples
 ```
 
 Seguindo esse esquema de configuração, Engrafia vai entender como cada pasta deve ser tratada e organizara o conteúdo de forma correta no menu lateral.

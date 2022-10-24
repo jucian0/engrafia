@@ -18,7 +18,7 @@ export function Sidebar({ hide = true }) {
   const [toggle, setToggle] = React.useState(['']);
 
   const sidebarTree = React.useMemo(() => {
-    const paths = [version, language, themeConfig.rootDocs].filter(
+    const paths = [themeConfig.rootDocs,version, language].filter(
       (p) => p
     ) as string[];
 

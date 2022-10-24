@@ -17,8 +17,9 @@ A melhor maneira de criar uma documentação disponível em diversos idiomas, é
 ```mdx
     engrafia-app
       - pages
-        - en_US
-          - page-examples
+        - docs
+          - en_US
+            - page-examples
 ```
 
 Essa estrutura de pasta é criada como exemplo de como gerar conteúdos com tradução, no exemplo acima, temos o idioma `pt_BR`, você pode criar uma nova pasta para o idioma que deseja usar, exemplo `en_US`.

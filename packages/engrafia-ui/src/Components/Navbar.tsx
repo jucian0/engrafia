@@ -1,6 +1,7 @@
 import { Navbar, Button, Text, Grid } from '@nextui-org/react';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { RiMoonFill, RiSunFill } from 'react-icons/ri';
 import { getI18nConfig } from '../get-i18n';
 import { getThemeConfig } from '../get-theme-config';
@@ -20,6 +21,9 @@ export default function MenuNav() {
   const { theme, setTheme } = useTheme();
   const { versions } = useSiteConfig();
   const t = useTranslate();
+  const router = useRouter()
+  const isRoot = router.route.includes(themeConfig.rootDocs?? 'docs')
+
 
   return (
     <Navbar variant="sticky" isBordered={theme === 'dark'} maxWidth="fluid">
@@ -110,7 +114,7 @@ export default function MenuNav() {
           </Navbar.Collapse>
           <Navbar.Content activeColor={'primary'} hideIn="xs" variant="default">
             {locales.length > 0 && <LanguageSelector />}
-            {versions && versions.length > 0 && <VersionSelector />}
+            {!isRoot && versions && versions.length > 0 && <VersionSelector />}
           </Navbar.Content>
         </Grid.Container>
         <Navbar.Toggle showIn="xs" aria-label="toggle navigation" />
