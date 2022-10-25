@@ -83,10 +83,7 @@ export default {
       {meta.description && (
         <meta name="twitter:description" content={meta.description} />
       )}
-      <meta
-        name="twitter:image"
-        content="https://astro.build/assets/social.4df01cf6_Z1jhpsT.jpeg"
-      />
+      <meta name="twitter:image" content="/code.png" />
     </>
   ),
 };
