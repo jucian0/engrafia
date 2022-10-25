@@ -63,10 +63,26 @@ export default {
     <>
       <title>{title}</title>
       {meta.description && (
-        <meta name="description" content={meta.description} />
+        <>
+          <meta name="description" content={meta.description} />
+          <meta name="twitter:description" content={meta.description} />
+          <meta property="og:description" content={meta.description} />
+        </>
       )}
-      {meta.tag && <meta name="keywords" content={meta.tag} />}
+      {meta.tags && <meta name="keywords" content={meta.tags} />}
       {meta.author && <meta name="author" content={meta.author} />}
+      {meta.socialImage && <meta name="author" content={meta.author} />}
+
+      <meta name="og:site_name" property="og:site_name" content="Engrafia" />
+      <meta name="og:type" property="og:type" content="website" />
+      <meta property="og:title" content={title} />
+      <meta property="og:image" content="/code.png" />
+      <meta property="og:url" content="https://engrafia.vercel.app/" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="engrafia" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:image" content="/code.png" />
     </>
   ),
 };

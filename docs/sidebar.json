@@ -174,7 +174,9 @@
                                     "meta": {
                                         "title": "Informações básicas",
                                         "description": "Informações básica sobre as principais configurações do Engrafia.",
-                                        "position": 1
+                                        "position": 1,
+                                        "tags": "docs, engrafia, nextjs",
+                                        "socialImage": "/code.png"
                                     },
                                     "title": "Basic info",
                                     "url": "/docs/0.1.0/pt_BR/basic-info",

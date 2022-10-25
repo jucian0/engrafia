@@ -17,6 +17,19 @@ export type Config = {
       text: string;
       logo: string | any;
     };
+    head?: ({
+      title,
+      meta,
+    }: {
+      title: string;
+      meta: {
+        author: string;
+        tags: string;
+        description: string;
+        title: string;
+        socialImage: string;
+      };
+    }) => JSX.Element;
   };
 };
 

@@ -27,7 +27,10 @@ const TEST_LANGUAGE_FOLDER = /([a-z]+_[A-Z])\w/;
 
 export function Provider({ children }: React.PropsWithChildren<any>) {
   const { route } = useRouter();
-  const [metaTags, setMetaTags] = React.useState<any>(null);
+  const meta = React.useMemo(
+    () => children.props?.data,
+    [children.props?.data]
+  );
   const [title, setTitle] = React.useState('');
   const versions = React.useMemo(
     () => getFolderName(sidebar, TEST_VERSION_FOLDER),
@@ -48,21 +51,11 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
     const meta = children.props?.data;
 
     if (route !== '/_error') {
-      if (meta) {
-        const title =
-          route === `/`
-            ? meta.title
-            : `${themeConfig.title} - ${meta?.title ?? '404'}`;
-
-        const metaTags = Object.entries(children.props.data).map(
-          ([key, value]) => {
-            return <meta key={key} name={key} content={value as ''} />;
-          }
-        );
-
-        setMetaTags(metaTags);
-        setTitle(title);
-      }
+      const title =
+        route === `/`
+          ? meta?.title
+          : `${themeConfig.title} - ${meta?.title ?? '404'}`;
+      setTitle(title);
 
       const tableOfContent = children.props.tableOfContents;
 
@@ -81,15 +74,8 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
     return (
       <ThemeContext.Provider value={{ ...siteConfig, setSiteConfig }}>
         <DocsLayout>
-          <Head>
-            <>
-              <title>{title}</title>
-              {metaTags}
-            </>
-          </Head>
-          <MDXProvider components={mdxComponents as any}>
-            {children}
-          </MDXProvider>
+          <Head>{themeConfig?.head?.({ title, meta })}</Head>
+          <MDXProvider components={mdxComponents as {}}>{children}</MDXProvider>
         </DocsLayout>
       </ThemeContext.Provider>
     );
@@ -97,14 +83,9 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
 
   return (
     <ThemeContext.Provider value={siteConfig}>
-      <Head>
-        <>
-          <title>{title}</title>
-          {metaTags}
-        </>
-      </Head>
+      <Head>{themeConfig?.head?.({ title, meta })}</Head>
       <DefaultLayout>
-        <MDXProvider components={mdxComponents as any}>{children}</MDXProvider>
+        <MDXProvider components={mdxComponents as {}}>{children}</MDXProvider>
       </DefaultLayout>
     </ThemeContext.Provider>
   );

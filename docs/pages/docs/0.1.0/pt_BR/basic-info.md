@@ -2,6 +2,8 @@
 title: 'Informações básicas'
 description: 'Informações básica sobre as principais configurações do Engrafia.'
 position: 1
+tags: docs, engrafia, nextjs
+socialImage: /code.png
 ---
 
 # Informações básicas
@@ -29,11 +31,11 @@ Todos os conteúdos devem estar na pasta de `pages`, seguindo as regras para ver
             - page-examples
 ```
 
-## _app.js
+## \_app.js
 
-_app.js é o arquivo de entrada da aplicação Engrafia, não existe muita configuração a ser feita nele, a menos que seja necessário alterar o tema ou coisas relacionadas a estilização (css).
+\_app.js é o arquivo de entrada da aplicação Engrafia, não existe muita configuração a ser feita nele, a menos que seja necessário alterar o tema ou coisas relacionadas a estilização (css).
 
-## _document.js
+## \_document.js
 
 Assim como `_app.js`, não é um arquivo comumente alterado, salvo em casos de customização de estilo, ou adicionar mais meta tags.
 
@@ -76,18 +78,18 @@ Este é um arquivo opcional, deve ser descartado se o app não possui internacio
 
 ```json
 {
-    "default": "en_US",
-    "translations": {
-        "pt_BR": {
-            "description": "Este é um exemplo de documentação",
-            "link.docs": "Documentação",
-            "link.github": "Github",
-            "edit.content": "Edite esse conteúdo",
-            "table.of.content": "Conteúdos da página",
-            "search.placeholder": "Search..."
-        },
-        "en_US": {}
-    }
+  "default": "en_US",
+  "translations": {
+    "pt_BR": {
+      "description": "Este é um exemplo de documentação",
+      "link.docs": "Documentação",
+      "link.github": "Github",
+      "edit.content": "Edite esse conteúdo",
+      "table.of.content": "Conteúdos da página",
+      "search.placeholder": "Search..."
+    },
+    "en_US": {}
+  }
 }
 ```
 

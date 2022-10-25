@@ -7,9 +7,6 @@ import { darkTheme, lightTheme, Provider } from '@engrafia/ui';
 function App({ Component, pageProps }: AppProps) {
   return (
     <NextUIProvider>
-      <Head>
-        <title>Welcome to docs!</title>
-      </Head>
       <ThemeProvider
         defaultTheme="light"
         attribute="class"
