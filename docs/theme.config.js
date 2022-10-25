@@ -63,18 +63,16 @@ export default {
     <>
       <title>{title}</title>
       {meta.description && (
-        <>
-          <meta name="description" content={meta.description} />
-          <meta name="twitter:description" content={meta.description} />
-          <meta property="og:description" content={meta.description} />
-        </>
+        <meta name="description" content={meta.description} />
       )}
       {meta.tags && <meta name="keywords" content={meta.tags} />}
       {meta.author && <meta name="author" content={meta.author} />}
       {meta.socialImage && <meta name="author" content={meta.author} />}
-
       <meta name="og:site_name" property="og:site_name" content="Engrafia" />
       <meta name="og:type" property="og:type" content="website" />
+      {meta.description && (
+        <meta property="og:description" content={meta.description} />
+      )}
       <meta property="og:title" content={title} />
       <meta property="og:image" content="/code.png" />
       <meta property="og:url" content="https://engrafia.vercel.app/" />
@@ -82,7 +80,13 @@ export default {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="engrafia" />
       <meta name="twitter:title" content={title} />
-      <meta name="twitter:image" content="/code.png" />
+      {meta.description && (
+        <meta name="twitter:description" content={meta.description} />
+      )}
+      <meta
+        name="twitter:image"
+        content="https://astro.build/assets/social.4df01cf6_Z1jhpsT.jpeg"
+      />
     </>
   ),
 };

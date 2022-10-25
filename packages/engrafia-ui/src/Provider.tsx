@@ -28,7 +28,7 @@ const TEST_LANGUAGE_FOLDER = /([a-z]+_[A-Z])\w/;
 export function Provider({ children }: React.PropsWithChildren<any>) {
   const { route } = useRouter();
   const meta = React.useMemo(
-    () => children.props?.data,
+    () => children.props?.data ?? {},
     [children.props?.data]
   );
   const [title, setTitle] = React.useState('');
