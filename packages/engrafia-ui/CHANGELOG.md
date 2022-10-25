@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.11](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.10...@engrafia/engrafia-ui@0.1.11) (2022-10-25)
+
+
+### Bug Fixes
+
+* **engrafia-ui:** fix seo description ([0ff96d5](https://github.com/Jucian0/engrafia/commit/0ff96d5312ce0884c2e1457c20e5c330dd81896a))
+
 ### [0.1.10](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.9...@engrafia/engrafia-ui@0.1.10) (2022-10-25)
 
 
