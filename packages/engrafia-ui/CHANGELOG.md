@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.9](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.8...@engrafia/engrafia-ui@0.1.9) (2022-10-24)
+
+
+### Bug Fixes
+
+* **engrafia-ui:** fix Link - use Next Links to improve navigation performance ([4913bed](https://github.com/Jucian0/engrafia/commit/4913bedda1eb5f05e5bfa250e855852ff13a98c8))
+* **engrafia-ui:** fix Search engine to work in homepage ([c96c921](https://github.com/Jucian0/engrafia/commit/c96c921fb6ae1c668add204e479e6b070993c666))
+
 ### [0.1.8](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.7...@engrafia/engrafia-ui@0.1.8) (2022-10-24)
 
 
