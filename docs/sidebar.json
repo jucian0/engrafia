@@ -30,6 +30,17 @@
                                             "relativePath": "/docs/pages/docs/0.1.0/pt_BR/Funcionalidades/code-highlighting.md"
                                         },
                                         {
+                                            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/pt_BR/Funcionalidades/i18n.md",
+                                            "name": "i18n.md",
+                                            "meta": {
+                                                "title": "i18n",
+                                                "description": "Oferece um sistema de tradução e gerenciamento de conteúdo em mais de um idioma."
+                                            },
+                                            "title": "I18n",
+                                            "url": "/docs/0.1.0/pt_BR/Funcionalidades/i18n",
+                                            "relativePath": "/docs/pages/docs/0.1.0/pt_BR/Funcionalidades/i18n.md"
+                                        },
+                                        {
                                             "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/pt_BR/Funcionalidades/md-mdx.md",
                                             "name": "md-mdx.md",
                                             "meta": {
@@ -63,6 +74,17 @@
                                             "title": "Playground",
                                             "url": "/docs/0.1.0/pt_BR/Funcionalidades/playground",
                                             "relativePath": "/docs/pages/docs/0.1.0/pt_BR/Funcionalidades/playground.mdx"
+                                        },
+                                        {
+                                            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/pt_BR/Funcionalidades/versioning.md",
+                                            "name": "versioning.md",
+                                            "meta": {
+                                                "title": "Versionamento",
+                                                "description": "Versionar uma documentação garante a consistência da mesma."
+                                            },
+                                            "title": "Versioning",
+                                            "url": "/docs/0.1.0/pt_BR/Funcionalidades/versioning",
+                                            "relativePath": "/docs/pages/docs/0.1.0/pt_BR/Funcionalidades/versioning.md"
                                         }
                                     ],
                                     "title": "Funcionalidades",
