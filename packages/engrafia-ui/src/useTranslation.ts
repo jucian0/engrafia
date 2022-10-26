@@ -1,10 +1,11 @@
+import { useRouter } from 'next/router';
 import { getI18nConfig } from './get-i18n';
-import { useSiteConfig } from './Provider';
 
 const i18nConfig = getI18nConfig();
 
 export function useTranslate() {
-  const { language } = useSiteConfig();
+  const { locale, defaultLocale } = useRouter();
+  const language = locale ?? defaultLocale ?? '';
 
   return (key: string) => {
     return i18nConfig.translations?.[language]?.[key] ?? key;

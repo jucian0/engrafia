@@ -1,39 +1,47 @@
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { MdLanguage } from 'react-icons/md';
-import { getI18nConfig } from '../../get-i18n';
 import { useSiteConfig } from '../../Provider';
+import {
+  Select,
+  SelectContent,
+  SelectIcon,
+  SelectItem,
+  SelectItemText,
+  SelectTrigger,
+  SelectValue,
+  SelectViewport,
+} from '../Select/Select';
 import * as S from './styles';
 
-const i18nConfig = getI18nConfig();
-const locales = Object.keys(i18nConfig?.translations ?? {});
-
 export function LanguageSelector() {
-  const { setSiteConfig, language } = useSiteConfig();
-  const { replace, asPath } = useRouter();
+  const { pathname, query, asPath, locales, locale, ...router } = useRouter();
 
-  const current = language;
-
-  function handleChangeLanguage(e: React.ChangeEvent<HTMLSelectElement>) {
-    const value = e.target.value;
-    replace(asPath.replace(language, value));
-    localStorage.setItem('language', value);
-    setSiteConfig?.((state) => ({
-      ...state,
-      language: value,
-    }));
+  function handleChangeLanguage(locale: string) {
+    router.push({ pathname, query }, asPath, { locale });
   }
 
   return (
     <S.Wrapper>
-      <MdLanguage />
-      <select value={current} onChange={handleChangeLanguage}>
-        {locales?.map((language) => (
-          <option key={language} value={language}>
-            {language}
-          </option>
-        ))}
-      </select>
+      <Select value={locale} onValueChange={handleChangeLanguage}>
+        <SelectTrigger aria-label="Food">
+          <SelectValue placeholder="Select a fruit…" />
+          <SelectIcon>
+            <MdLanguage />
+          </SelectIcon>
+        </SelectTrigger>
+
+        <SelectContent>
+          <SelectViewport>
+            {locales?.map((language) => (
+              <SelectItem value={language} key={language}>
+                <SelectItemText>{language}</SelectItemText>
+              </SelectItem>
+            ))}
+          </SelectViewport>
+        </SelectContent>
+      </Select>
     </S.Wrapper>
   );
 }

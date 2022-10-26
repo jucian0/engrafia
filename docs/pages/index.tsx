@@ -1,10 +1,15 @@
 import { Button, Grid, Text } from '@nextui-org/react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { getI18nConfig } from 'packages/engrafia-ui/src/get-i18n';
 import { useTranslate } from 'packages/engrafia-ui/src/useTranslation';
+
+const { translations } = getI18nConfig();
 
 export default function Index() {
   const router = useRouter();
+  const contents = translations;
+  console.log(router.locale, router.locales, router.defaultLocale, contents);
   const t = useTranslate();
   return (
     <>

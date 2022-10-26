@@ -1,7 +1,7 @@
 {
     "default": "pt_BR",
     "translations": {
-        "pt_BR": {
+        "pt-BR": {
             "description": "O modo mais simples de escrever documentação para seu projeto.",
             "link.docs": "Documentação",
             "link.github": "Github",
@@ -18,7 +18,7 @@
             "easy.to.use": "Fácil de usar",
             "easy.to.use.sentence": "Não se preocupe com coisas como; menu lateral, tabela de conteúdo, layout e outras coisas do tipo, Engrafia te entrega todas a configurações e ferramentas necessárias, apenas relaxe e escreva seus arquivos MD e MDX."
         },
-        "en_US": {
+        "en-US": {
             "description": "The most easiest way to write docs for your project.",
             "link.docs": "Docs",
             "link.github": "Github",

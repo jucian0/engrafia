@@ -9,6 +9,7 @@
   },
   "private": true,
   "dependencies": {
+    "@radix-ui/react-select": "^1.1.1",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "@jscutlery/semver": "^2.25.2",
