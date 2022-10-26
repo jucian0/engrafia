@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.13](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.12...@engrafia/engrafia-ui@0.1.13) (2022-10-26)
+
+
+### Bug Fixes
+
+* **engrafia-ui:** fixing sidebar, working on translation ([50362cf](https://github.com/Jucian0/engrafia/commit/50362cf01a16edae2006e2ab5ae45d2558f9936c))
+
 ### [0.1.12](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.11...@engrafia/engrafia-ui@0.1.12) (2022-10-26)
 
 
