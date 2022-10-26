@@ -33,7 +33,8 @@ export default {
       },
       {
         title: 'link.github',
-        url: 'http://github.com/jucian0/engrafia',
+        url: 'https://github.com/jucian0/engrafia',
+        external: true,
       },
     ],
     search_bar: 'search.placeholder',

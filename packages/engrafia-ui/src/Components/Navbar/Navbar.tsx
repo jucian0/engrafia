@@ -62,11 +62,20 @@ export default function MenuNav() {
               hideIn="xs"
               variant="default"
             >
-              {themeConfig.nav?.links.map((link) => (
-                <Link key={link.url} href={link.url}>
-                  <Navbar.Link>{t(link.title)}</Navbar.Link>
-                </Link>
-              ))}
+              {themeConfig.nav?.links.map((link) => {
+                if (link.external) {
+                  return (
+                    <Navbar.Link key={link.url} href={link.url}>
+                      {t(link.title)}
+                    </Navbar.Link>
+                  );
+                }
+                return (
+                  <Link key={link.url} href={link.url}>
+                    <Navbar.Link>{t(link.title)}</Navbar.Link>
+                  </Link>
+                );
+              })}
             </Navbar.Content>
           )}
         </Grid.Container>

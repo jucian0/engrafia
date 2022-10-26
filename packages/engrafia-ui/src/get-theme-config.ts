@@ -10,7 +10,7 @@ export type Config = {
     };
     nav?: {
       logo?: string | any;
-      links?: { title: string; url: string }[];
+      links?: { title: string; url: string; external?: boolean }[];
       search_bar?: string;
     };
     footer?: {
