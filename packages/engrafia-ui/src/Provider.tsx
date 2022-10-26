@@ -10,7 +10,6 @@ import { DefaultLayout } from './Layouts/Default';
 import { DocsLayout } from './Layouts/Docs';
 import { mdxComponents } from './mdxComponents';
 import { ThemeContext, ThemeContextType } from './ThemeContext';
-import { useLocalStorage } from './useLocalStorage';
 
 export const useSiteConfig = (): ThemeContextType => {
   const data = useContext(ThemeContext);
@@ -48,9 +47,6 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
     version: 'latest',
   });
 
-  const [version] = useLocalStorage('version');
-  const [language] = useLocalStorage('language');
-
   React.useEffect(() => {
     const meta = children.props?.data;
 
@@ -66,15 +62,13 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
       setSiteConfig((state) => ({
         ...state,
         tableOfContent,
-        language: language ?? i18nConfig.default ?? '',
+        language: localStorage.getItem('language') ?? i18nConfig.default ?? '',
         languages: languages,
         versions: versions,
-        version: version ?? versions[versions.length - 1],
+        version: versions[versions.length - 1],
       }));
     }
-  }, [route, languages, versions, version, language]);
-
-  console.log('<<<<<<<<<<<<<', siteConfig);
+  }, [route, languages, versions]);
 
   if (route.includes(themeConfig.rootDocs ?? 'docs')) {
     return (
