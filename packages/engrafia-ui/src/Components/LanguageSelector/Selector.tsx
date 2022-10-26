@@ -16,8 +16,8 @@ export function LanguageSelector() {
 
   function handleChangeLanguage(e: React.ChangeEvent<HTMLSelectElement>) {
     const value = e.target.value;
-    replace(asPath.replace(language, value));
-    localStorage.setItem('language', value);
+    // replace(asPath.replace(language, value));
+    //localStorage.setItem('language', value);
     setSiteConfig?.((state) => ({
       ...state,
       language: value,
