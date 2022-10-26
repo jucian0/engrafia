@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.12](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.11...@engrafia/engrafia-ui@0.1.12) (2022-10-26)
+
+
+### Bug Fixes
+
+* **engrafia-ui:** adding home page ([7619df0](https://github.com/Jucian0/engrafia/commit/7619df0df5f163b694a4128b5758342341e0b3bd))
+
 ### [0.1.11](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.10...@engrafia/engrafia-ui@0.1.11) (2022-10-25)
 
 
