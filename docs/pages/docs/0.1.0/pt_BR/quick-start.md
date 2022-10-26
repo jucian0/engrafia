@@ -19,7 +19,7 @@ Engrafia é um pacote destinado a gerar site de documentação em poucos comando
 
 Criar um site de documentação bonito e customizável não precisa ser um difícil, e nem demorado, na maioria das vezes construir um site de documentação que seja bonito e fácil de usar se torna uma tarefa difícil, e se optar por tecnologias que constroem sites de documentação, o caminho não se torna mais simples, pelo contrário, plugins, e mais plugins, templates que não são atraentes, tudo isso pode minar seu empenho, empolgação, e desempenho.
 
-Não precisa ser assim, experimente Engrafia, e tenha o poder do NextJs e Next UI em seu site.
+Não precisa ser assim, experimente Engrafia, e tenha o poder do NextJs e Next UI em seu site
 
 ## Criando uma nova aplicação
 
