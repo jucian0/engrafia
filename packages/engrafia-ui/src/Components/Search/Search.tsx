@@ -11,6 +11,7 @@ import { search } from 'fast-fuzzy';
 import { useSiteConfig } from '../../Provider';
 import { getFolderContent } from '../../get-folders';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const StyledTriggerWithCaret = React.forwardRef(
   (
@@ -52,17 +53,18 @@ export const NavigationMenuDemo = () => {
   const t = useTranslate();
   const [list, setList] = React.useState([] as DocFile[]);
   const [input, setInput] = React.useState('');
+  const { locale } = useRouter();
 
-  const { language, version } = useSiteConfig();
+  const { version } = useSiteConfig();
 
   const searchableContent = React.useMemo(() => {
-    const paths = [themeConfig.rootDocs, version, language].filter(
+    const paths = [themeConfig.rootDocs, version, locale].filter(
       (p) => p
     ) as string[];
 
     const filteredContent = getFolderContent(content, paths);
     return filteredContent.name ? getSearchableList(filteredContent) : [];
-  }, [content, version, language, themeConfig]);
+  }, [content, version, locale, themeConfig]);
 
   function handleSetList(e: React.ChangeEvent<FormElement>) {
     setInput(e.target.value);

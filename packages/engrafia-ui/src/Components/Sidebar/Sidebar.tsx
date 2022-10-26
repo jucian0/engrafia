@@ -13,17 +13,17 @@ const sidebar = getSidebarTree();
 const { default: themeConfig } = getThemeConfig();
 
 export function Sidebar({ hide = true }) {
-  const { language, version } = useSiteConfig();
+  const { version } = useSiteConfig();
   const router = useRouter();
   const [toggle, setToggle] = React.useState(['']);
 
   const sidebarTree = React.useMemo(() => {
-    const paths = [themeConfig.rootDocs,version, language].filter(
+    const paths = [themeConfig.rootDocs, version, router.locale].filter(
       (p) => p
     ) as string[];
 
     return getFolderContent(sidebar, paths);
-  }, [sidebar, version, language, themeConfig]);
+  }, [sidebar, version, router.locale, themeConfig]);
 
   function isActive(path: string) {
     return path === router.asPath;

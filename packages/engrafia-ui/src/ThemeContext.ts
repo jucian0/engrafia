@@ -4,7 +4,7 @@ export type ChildrenOfContent = {
   title: string;
   slug: string;
   children?: ChildrenOfContent[];
-  id:string
+  id: string;
 };
 
 export type TableOfContentType = {
@@ -16,8 +16,6 @@ export type ThemeContextType = {
   meta: { [key: string]: string };
   tableOfContent: TableOfContentType;
   setSiteConfig?: React.Dispatch<React.SetStateAction<ThemeContextType>>;
-  language: string;
-  languages?: string[];
   version?: string;
   versions?: string[];
 };

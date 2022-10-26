@@ -36,14 +36,10 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
     () => getFolderName(sidebar, TEST_VERSION_FOLDER),
     [sidebar]
   );
-  const languages = React.useMemo(
-    () => getFolderName(sidebar, TEST_LANGUAGE_FOLDER),
-    [sidebar]
-  );
+
   const [siteConfig, setSiteConfig] = React.useState<ThemeContextType>({
     meta: {},
     tableOfContent: { depth: 1 },
-    language: i18nConfig.default ?? 'en_US',
     version: 'latest',
   });
 
@@ -62,13 +58,11 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
       setSiteConfig((state) => ({
         ...state,
         tableOfContent,
-        language: localStorage.getItem('language') ?? i18nConfig.default ?? '',
-        languages: languages,
         versions: versions,
         version: versions[versions.length - 1],
       }));
     }
-  }, [route, languages, versions]);
+  }, [route, versions]);
 
   if (route.includes(themeConfig.rootDocs ?? 'docs')) {
     return (
