@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.14](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.13...@engrafia/engrafia-ui@0.1.14) (2022-10-26)
+
+
+### Bug Fixes
+
+* **engrafia-ui:** fix navbar external links ([822fe68](https://github.com/Jucian0/engrafia/commit/822fe68270b142d41526e6805f76d895eacfa760))
+
 ### [0.1.13](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.12...@engrafia/engrafia-ui@0.1.13) (2022-10-26)
 
 
