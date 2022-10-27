@@ -72,7 +72,10 @@ export default function MenuNav() {
                   );
                 }
                 return (
-                  <Link key={link.url} href={link.url}>
+                  <Link
+                    key={link.url}
+                    href={link.url.concat(`.${router.locale}`)}
+                  >
                     <Navbar.Link>{t(link.title)}</Navbar.Link>
                   </Link>
                 );

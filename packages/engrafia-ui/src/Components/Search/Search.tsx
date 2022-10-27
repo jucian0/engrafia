@@ -58,12 +58,12 @@ export const NavigationMenuDemo = () => {
   const { version } = useSiteConfig();
 
   const searchableContent = React.useMemo(() => {
-    const paths = [themeConfig.rootDocs, version, locale].filter(
-      (p) => p
-    ) as string[];
+    const paths = [themeConfig.rootDocs, version].filter((p) => p) as string[];
 
     const filteredContent = getFolderContent(content, paths);
-    return filteredContent.name ? getSearchableList(filteredContent) : [];
+    return filteredContent.name
+      ? getSearchableList(filteredContent, locale as '')
+      : [];
   }, [content, version, locale, themeConfig]);
 
   function handleSetList(e: React.ChangeEvent<FormElement>) {

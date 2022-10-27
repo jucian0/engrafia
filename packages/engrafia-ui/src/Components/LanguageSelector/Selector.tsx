@@ -18,8 +18,12 @@ import * as S from './styles';
 export function LanguageSelector() {
   const { pathname, query, asPath, locales, locale, ...router } = useRouter();
 
-  function handleChangeLanguage(locale: string) {
-    router.push({ pathname, query }, asPath, { locale });
+  function handleChangeLanguage(e: string) {
+    const nextPathName = pathname.replace(locale as '', e);
+    const nextAsPath = asPath.replace(locale as '', e);
+    router.push({ pathname: nextPathName, query }, nextAsPath, {
+      locale: e,
+    });
   }
 
   return (
