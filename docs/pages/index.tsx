@@ -38,7 +38,7 @@ export default function Index() {
           }}
           weight="bold"
         >
-          Beta
+          Beta Docs, Work in progress
         </Text>
 
         <Text>{t('description')}</Text>
