@@ -37,14 +37,9 @@ function filterByLocale(list: (Category & DocFile)[] = [], locale: string) {
         }
         return null;
       }
-      return item;
+      return item.children.length > 0;
     })
-    ?.filter((e) => {
-      if (!e.meta) {
-        return e.children.length === 0;
-      }
-      return e;
-    });
+    .filter((e) => e.name);
 }
 
 export function filterSidebarContent(

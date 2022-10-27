@@ -22,8 +22,6 @@ export default function MenuNav() {
   const { versions } = useSiteConfig();
   const t = useTranslate();
   const router = useRouter();
-  const isRoot = router.route.includes(themeConfig.rootDocs ?? 'docs');
-  console.log(versions, isRoot);
 
   return (
     <Navbar variant="sticky" isBordered={theme === 'dark'} maxWidth="fluid">

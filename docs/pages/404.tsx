@@ -10,7 +10,6 @@ const { translations } = getI18nConfig();
 export default function NotFound() {
   const router = useRouter();
   const contents = translations;
-  console.log(router.locale, router.locales, router.defaultLocale, contents);
   const t = useTranslate();
   return (
     <>
