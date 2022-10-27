@@ -1,5 +1,5 @@
 ---
-title: 'Informações básicas'
+title: 'Basic info'
 description: 'Informações básica sobre as principais configurações do Engrafia.'
 position: 1
 tags: docs, engrafia, nextjs

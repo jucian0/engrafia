@@ -26,10 +26,10 @@ export function LanguageSelector() {
     <S.Wrapper>
       <Select value={locale} onValueChange={handleChangeLanguage}>
         <SelectTrigger aria-label="Food">
-          <SelectValue placeholder="Select a fruit…" />
           <SelectIcon>
-            <MdLanguage />
+            <MdLanguage size={16} />
           </SelectIcon>
+          <SelectValue placeholder="Select a fruit…" />
         </SelectTrigger>
 
         <SelectContent>

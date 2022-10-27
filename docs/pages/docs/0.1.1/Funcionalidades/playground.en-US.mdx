@@ -1,0 +1,23 @@
+---
+title: 'Playground'
+description: 'Playground é um componente que permite testar, editar componentes.'
+---
+
+import { FaAccessibleIcon } from 'react-icons/fa';
+
+import { Playground } from '@engrafia/ui';
+
+import { Button } from '@nextui-org/react';
+
+# Usando Playground
+
+Playground é um componente que permite que outros componentes sejam renderizados dentro de um ambiente isolado,
+além de renderizar o Playground também permite editar o código e ver o resultado da edição ao vivo. Este recurso é muito útil em casos de documentação de componentes.
+
+## Exemplo
+
+<Playground>
+  <Button>
+    <FaAccessibleIcon />
+  </Button>
+</Playground>

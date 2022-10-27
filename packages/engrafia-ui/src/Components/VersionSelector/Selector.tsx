@@ -1,34 +1,50 @@
 import { useRouter } from 'next/router';
-import React from 'react';
 import { VscVersions } from 'react-icons/vsc';
 import { useSiteConfig } from '../../Provider';
+import {
+  Select,
+  SelectContent,
+  SelectIcon,
+  SelectItem,
+  SelectItemText,
+  SelectTrigger,
+  SelectValue,
+  SelectViewport,
+} from '../Select/Select';
 import * as S from './styles';
 
 export function VersionSelector() {
   const { setSiteConfig, version, versions } = useSiteConfig();
   const { replace, asPath } = useRouter();
 
-  function handleChangeLanguage(e: React.ChangeEvent<HTMLSelectElement>) {
-    const value = e.target.value;
-    replace(asPath.replace(version ?? '', value));
-    localStorage.setItem('version', value);
+  function handleChangeLanguage(e: string) {
+    replace(asPath.replace(version ?? '', e));
     setSiteConfig?.((state) => ({
       ...state,
-      version: value,
+      version: e,
     }));
   }
 
   return (
     <S.Wrapper>
-      {' '}
-      <VscVersions />
-      <select value={version} onChange={handleChangeLanguage}>
-        {versions?.map((version) => (
-          <option key={version} value={version}>
-            {version}
-          </option>
-        ))}
-      </select>
+      <Select value={version} onValueChange={handleChangeLanguage}>
+        <SelectTrigger aria-label="version">
+          <SelectIcon>
+            <VscVersions size={18} />
+          </SelectIcon>
+          <SelectValue placeholder="Select a version" />
+        </SelectTrigger>
+
+        <SelectContent>
+          <SelectViewport>
+            {versions?.map((version) => (
+              <SelectItem value={version} key={version}>
+                <SelectItemText>{version}</SelectItemText>
+              </SelectItem>
+            ))}
+          </SelectViewport>
+        </SelectContent>
+      </Select>
     </S.Wrapper>
   );
 }

@@ -23,6 +23,7 @@ export default function MenuNav() {
   const t = useTranslate();
   const router = useRouter();
   const isRoot = router.route.includes(themeConfig.rootDocs ?? 'docs');
+  console.log(versions, isRoot);
 
   return (
     <Navbar variant="sticky" isBordered={theme === 'dark'} maxWidth="fluid">
@@ -122,7 +123,7 @@ export default function MenuNav() {
           </Navbar.Collapse>
           <Navbar.Content activeColor={'primary'} hideIn="xs" variant="default">
             {locales.length > 0 && <LanguageSelector />}
-            {!isRoot && versions && versions.length > 0 && <VersionSelector />}
+            {versions && <VersionSelector />}
           </Navbar.Content>
         </Grid.Container>
         <Navbar.Toggle showIn="xs" aria-label="toggle navigation" />

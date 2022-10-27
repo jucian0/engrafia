@@ -7,7 +7,7 @@ import { MdChevronRight, MdExpandMore } from 'react-icons/md';
 import { Category, DocFile, getSidebarTree } from '../../get-sidebar';
 import { getThemeConfig } from '../../get-theme-config';
 import { getFolderContent } from '../../get-folders';
-import { order } from './util';
+import { filterSidebarContent } from './util';
 
 const sidebar = getSidebarTree();
 const { default: themeConfig } = getThemeConfig();
@@ -18,12 +18,10 @@ export function Sidebar({ hide = true }) {
   const [toggle, setToggle] = React.useState(['']);
 
   const sidebarTree = React.useMemo(() => {
-    const paths = [themeConfig.rootDocs, version, router.locale].filter(
-      (p) => p
-    ) as string[];
+    const paths = [themeConfig.rootDocs, version].filter((p) => p) as string[];
 
     return getFolderContent(sidebar, paths);
-  }, [sidebar, version, router.locale, themeConfig]);
+  }, [sidebar, version, themeConfig]);
 
   function isActive(path: string) {
     return path === router.asPath;
@@ -69,50 +67,39 @@ export function Sidebar({ hide = true }) {
           </S.Category>
         )}
         {isOpened(menu) &&
-          order(
-            menu?.children?.sort((a, b) => {
-              if (a.meta) {
-                return -1;
-              } else {
-                return 1;
+          filterSidebarContent(menu?.children, router.locale as '')?.map(
+            (item: Category & DocFile) => {
+              if (item.meta) {
+                return (
+                  <S.Item key={item.path}>
+                    <S.Link
+                      className={isActive(item.url) ? S.active() : S.inactive()}
+                    >
+                      <S.Tag
+                        css={
+                          isActive(item.url) ? { background: '$accents8' } : {}
+                        }
+                      />
+                      <Link href={item.url}>
+                        <a>{item.meta.title.trim()}</a>
+                      </Link>
+                    </S.Link>
+                  </S.Item>
+                );
               }
-            })
-          )?.map((item: Category & DocFile) => {
-            if (item.meta) {
-              return (
-                <S.Item key={item.path}>
-                  <S.Link
-                    className={isActive(item.url) ? S.active() : S.inactive()}
-                  >
-                    <S.Tag
-                      css={
-                        isActive(item.url) ? { background: '$accents8' } : {}
-                      }
-                    />
-                    <Link href={item.url}>
-                      <a>{item.meta.title.trim()}</a>
-                    </Link>
-                  </S.Link>
-                </S.Item>
-              );
-            }
 
-            return recursiveMenu(item);
-          })}
+              return recursiveMenu(item);
+            }
+          )}
       </S.List>
     );
   }
   return (
     <S.SidebarWrapper hideIn={hide ? 'xs' : undefined}>
       <div className="wrapper">
-        {order(
-          sidebarTree?.children?.sort((a, b) => {
-            if (a.meta) {
-              return -1;
-            } else {
-              return 1;
-            }
-          })
+        {filterSidebarContent(
+          sidebarTree?.children,
+          router.locale as ''
         )?.map?.((child) => recursiveMenu(child))}
       </div>
     </S.SidebarWrapper>

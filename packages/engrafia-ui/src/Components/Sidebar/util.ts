@@ -1,10 +1,9 @@
 import { Category, DocFile } from '../../get-sidebar';
 
-export function order(list?: (Category & DocFile)[]) {
+function order(list?: (Category & DocFile)[]) {
   if (!list) {
     return [];
   }
-
   const newList = list
     .reduce((acc, ac) => {
       if (typeof ac?.meta?.position !== 'undefined') {
@@ -20,5 +19,37 @@ export function order(list?: (Category & DocFile)[]) {
     return !newList.some((i) => i.name === item.name);
   });
 
-  return newList.concat(test);
+  return newList.concat(test).sort((a, b) => {
+    if (a.meta) {
+      return -1;
+    } else {
+      return 1;
+    }
+  });
+}
+
+function filterByLocale(list: (Category & DocFile)[] = [], locale: string) {
+  return list
+    ?.filter((item) => {
+      if (item.meta) {
+        if (item.name.includes(locale)) {
+          return item;
+        }
+        return null;
+      }
+      return item;
+    })
+    ?.filter((e) => {
+      if (!e.meta) {
+        return e.children.length === 0;
+      }
+      return e;
+    });
+}
+
+export function filterSidebarContent(
+  list: (Category & DocFile)[] = [],
+  locale: string
+) {
+  return order(filterByLocale(list, locale));
 }

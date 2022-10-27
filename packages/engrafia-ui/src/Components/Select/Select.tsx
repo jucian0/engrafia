@@ -14,15 +14,16 @@ const StyledTrigger = styled(SelectPrimitive.SelectTrigger, {
   height: 35,
   gap: 5,
   backgroundColor: '$background',
-  color: '$text',
-  boxShadow: '$sm',
+  color: '$accents8',
   '&:hover': { backgroundColor: '$backgroundContrast' },
   '&:focus': { boxShadow: `0 0 0 2px black` },
   '&[data-placeholder]': { color: '$text' },
 });
 
 const StyledIcon = styled(SelectPrimitive.SelectIcon, {
-  color: '$text',
+  color: '$accents8',
+  display: 'flex',
+  alignItems: 'center',
 });
 
 const StyledContent = styled(SelectPrimitive.Content, {
