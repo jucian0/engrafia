@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.15](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.14...@engrafia/engrafia-ui@0.1.15) (2022-10-27)
+
+
+### Bug Fixes
+
+* **engrafia-plugin:** change geti18n function, and move iq18 translation to public directory ([5540617](https://github.com/Jucian0/engrafia/commit/5540617b409ab2cdd5a617ba5ef301e436b1ba81))
+* **engrafia-ui:** fix i18n examples ([a7e5d12](https://github.com/Jucian0/engrafia/commit/a7e5d12456dabf7a229731713c93fc7ff578a9a2))
+* **engrafia-ui:** fixing i18n ([90b239f](https://github.com/Jucian0/engrafia/commit/90b239f68118f119ff38e176c3d6517d63007749))
+* **engrafia-ui:** fixing i18n config ([0444c02](https://github.com/Jucian0/engrafia/commit/0444c02bff907294e865e53ffa0231d293377cea))
+* **engrafia-ui:** fixing i18n feature ([9a752f6](https://github.com/Jucian0/engrafia/commit/9a752f6087de57cb5b583fd04f9340224a1e37b8))
+
 ### [0.1.14](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.13...@engrafia/engrafia-ui@0.1.14) (2022-10-26)
 
 
