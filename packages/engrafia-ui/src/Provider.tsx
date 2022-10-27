@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React, { useContext } from 'react';
 import { getFolderName } from './get-folders';
-import { getI18nConfig } from './get-i18n';
 import { getSidebarTree } from './get-sidebar';
 import { getThemeConfig } from './get-theme-config';
 import { DefaultLayout } from './Layouts/Default';
@@ -18,7 +17,6 @@ export const useSiteConfig = (): ThemeContextType => {
 
 const sidebar = getSidebarTree();
 const { default: themeConfig } = getThemeConfig();
-const i18nConfig = getI18nConfig();
 
 const TEST_VERSION_FOLDER =
   /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;

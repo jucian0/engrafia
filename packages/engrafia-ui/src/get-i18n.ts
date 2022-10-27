@@ -1,13 +1,10 @@
 export type I18nConfig = {
-  default?: string;
-  translations?: {
-    [k: string]: { [l: string]: string };
-  };
+  [k: string]: string;
 };
 
-export function getI18nConfig(): I18nConfig {
+export function getI18nConfig(locale: string): I18nConfig {
   try {
-    return require('root_folder/i18n.config.json');
+    return require(`root_folder/public/locales/${locale}.json`);
   } catch (err) {
     return {};
   }
