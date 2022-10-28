@@ -1,20 +1,15 @@
 import * as S from './styles';
 import Link from 'next/link';
 import { useSiteConfig } from '../../Provider';
-import { useTranslate } from '../../useTranslation';
+import { useTranslation } from '../../useTranslation';
 import { ChildrenOfContent } from '../../ThemeContext';
 import React from 'react';
 
 export function TableOfContent() {
   const { tableOfContent } = useSiteConfig();
-
-  const t = useTranslate();
-
-  if (!tableOfContent) {
-    return null;
-  }
-
   const [activeId, setActiveId] = React.useState('');
+
+  const t = useTranslation();
 
   React.useEffect(() => {
     const onScroll = () => {
@@ -40,6 +35,10 @@ export function TableOfContent() {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, [tableOfContent]);
+
+  if (!tableOfContent) {
+    return null;
+  }
 
   return (
     <S.TableOfContentWrapper hideIn="sm">

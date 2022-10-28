@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import { getI18nConfig, I18nConfig } from './get-i18n';
 
-export function useTranslate() {
+export function useTranslation() {
   const { locale, defaultLocale } = useRouter();
 
   const language = locale ?? defaultLocale ?? '';

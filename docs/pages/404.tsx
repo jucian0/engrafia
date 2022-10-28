@@ -2,10 +2,10 @@ import { Grid, Text } from '@nextui-org/react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-import { useTranslate } from 'packages/engrafia-ui/src/useTranslation';
+import { useTranslation } from 'packages/engrafia-ui/src/useTranslation';
 
 export default function NotFound() {
-  const t = useTranslate();
+  const t = useTranslation();
   return (
     <>
       <Head>

@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { RiMoonFill, RiSunFill } from 'react-icons/ri';
 import { getThemeConfig } from '../../get-theme-config';
 import { useSiteConfig } from '../../Provider';
-import { useTranslate } from '../../useTranslation';
+import { useTranslation } from '../../useTranslation';
 
 import { LanguageSelector } from '../LanguageSelector/Selector';
 import { NavigationMenuDemo } from '../Search/Search';
@@ -16,7 +16,7 @@ const { default: themeConfig } = getThemeConfig();
 export default function MenuNav() {
   const { theme, setTheme } = useTheme();
   const { versions } = useSiteConfig();
-  const t = useTranslate();
+  const t = useTranslation();
   const router = useRouter();
 
   return (
