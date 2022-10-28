@@ -21,7 +21,6 @@
                                         "title": "Trechos de códigos",
                                         "description": "Este é um guia lhe ensina como exibir trechos de códigos no documento."
                                     },
-                                    "title": "Code highlighting.en",
                                     "url": "/docs/0.1.0/Funcionalidades/code-highlighting.en",
                                     "relativePath": "/docs/pages/docs/0.1.0/Funcionalidades/code-highlighting.en.md"
                                 },
@@ -32,7 +31,6 @@
                                         "title": "Trechos de códigos",
                                         "description": "Este é um guia lhe ensina como exibir trechos de códigos no documento."
                                     },
-                                    "title": "Code highlighting.pt",
                                     "url": "/docs/0.1.0/Funcionalidades/code-highlighting.pt",
                                     "relativePath": "/docs/pages/docs/0.1.0/Funcionalidades/code-highlighting.pt.md"
                                 },
@@ -43,7 +41,6 @@
                                         "title": "i18n",
                                         "description": "Oferece um sistema de tradução e gerenciamento de conteúdo em mais de um idioma."
                                     },
-                                    "title": "I18n.en",
                                     "url": "/docs/0.1.0/Funcionalidades/i18n.en",
                                     "relativePath": "/docs/pages/docs/0.1.0/Funcionalidades/i18n.en.md"
                                 },
@@ -54,7 +51,6 @@
                                         "title": "i18n",
                                         "description": "Oferece um sistema de tradução e gerenciamento de conteúdo em mais de um idioma."
                                     },
-                                    "title": "I18n.pt",
                                     "url": "/docs/0.1.0/Funcionalidades/i18n.pt",
                                     "relativePath": "/docs/pages/docs/0.1.0/Funcionalidades/i18n.pt.md"
                                 },
@@ -66,7 +62,6 @@
                                         "description": "Este é um guia descreve o que são arquivos md, e mdx",
                                         "position": 4
                                     },
-                                    "title": "Md mdx.en",
                                     "url": "/docs/0.1.0/Funcionalidades/md-mdx.en",
                                     "relativePath": "/docs/pages/docs/0.1.0/Funcionalidades/md-mdx.en.md"
                                 },
@@ -78,7 +73,6 @@
                                         "description": "Este é um guia descreve o que são arquivos md, e mdx",
                                         "position": 4
                                     },
-                                    "title": "Md mdx.pt",
                                     "url": "/docs/0.1.0/Funcionalidades/md-mdx.pt",
                                     "relativePath": "/docs/pages/docs/0.1.0/Funcionalidades/md-mdx.pt.md"
                                 },
@@ -90,7 +84,6 @@
                                         "description": "Engrafia usa NextJs como base, então você pode usar todos os recuros do Nextjs.",
                                         "position": 4
                                     },
-                                    "title": "Next js.en",
                                     "url": "/docs/0.1.0/Funcionalidades/next-js.en",
                                     "relativePath": "/docs/pages/docs/0.1.0/Funcionalidades/next-js.en.md"
                                 },
@@ -102,7 +95,6 @@
                                         "description": "Engrafia usa NextJs como base, então você pode usar todos os recuros do Nextjs.",
                                         "position": 4
                                     },
-                                    "title": "Next js.pt",
                                     "url": "/docs/0.1.0/Funcionalidades/next-js.pt",
                                     "relativePath": "/docs/pages/docs/0.1.0/Funcionalidades/next-js.pt.md"
                                 },
@@ -113,7 +105,6 @@
                                         "title": "Playground",
                                         "description": "Playground é um componente que permite testar, editar componentes."
                                     },
-                                    "title": "Playground.en",
                                     "url": "/docs/0.1.0/Funcionalidades/playground.en",
                                     "relativePath": "/docs/pages/docs/0.1.0/Funcionalidades/playground.en.mdx"
                                 },
@@ -124,7 +115,6 @@
                                         "title": "Playground",
                                         "description": "Playground é um componente que permite testar, editar componentes."
                                     },
-                                    "title": "Playground.pt",
                                     "url": "/docs/0.1.0/Funcionalidades/playground.pt",
                                     "relativePath": "/docs/pages/docs/0.1.0/Funcionalidades/playground.pt.mdx"
                                 },
@@ -135,7 +125,6 @@
                                         "title": "Versionamento",
                                         "description": "Versionar uma documentação garante a consistência da mesma."
                                     },
-                                    "title": "Versioning.en",
                                     "url": "/docs/0.1.0/Funcionalidades/versioning.en",
                                     "relativePath": "/docs/pages/docs/0.1.0/Funcionalidades/versioning.en.md"
                                 },
@@ -146,12 +135,10 @@
                                         "title": "Versionamento",
                                         "description": "Versionar uma documentação garante a consistência da mesma."
                                     },
-                                    "title": "Versioning.pt",
                                     "url": "/docs/0.1.0/Funcionalidades/versioning.pt",
                                     "relativePath": "/docs/pages/docs/0.1.0/Funcionalidades/versioning.pt.md"
                                 }
                             ],
-                            "title": "Funcionalidades",
                             "relativePath": "/docs/pages/docs/0.1.0/Funcionalidades"
                         },
                         {
@@ -165,7 +152,6 @@
                                         "title": "Customizando",
                                         "description": "Este é um guia lhe ensina com customizar seu app Engrafia."
                                     },
-                                    "title": "Custom theme.en",
                                     "url": "/docs/0.1.0/Tutoriais/custom-theme.en",
                                     "relativePath": "/docs/pages/docs/0.1.0/Tutoriais/custom-theme.en.md"
                                 },
@@ -176,7 +162,6 @@
                                         "title": "Customizando",
                                         "description": "Este é um guia lhe ensina com customizar seu app Engrafia."
                                     },
-                                    "title": "Custom theme.pt",
                                     "url": "/docs/0.1.0/Tutoriais/custom-theme.pt",
                                     "relativePath": "/docs/pages/docs/0.1.0/Tutoriais/custom-theme.pt.md"
                                 },
@@ -188,7 +173,6 @@
                                         "description": "Este é um guia lhe ensina com usar tradução e versionamento em um app Engrafia.",
                                         "position": 2
                                     },
-                                    "title": "Translation versioning.en",
                                     "url": "/docs/0.1.0/Tutoriais/translation-versioning.en",
                                     "relativePath": "/docs/pages/docs/0.1.0/Tutoriais/translation-versioning.en.md"
                                 },
@@ -200,7 +184,6 @@
                                         "description": "Este é um guia lhe ensina com usar tradução e versionamento em um app Engrafia.",
                                         "position": 2
                                     },
-                                    "title": "Translation versioning.pt",
                                     "url": "/docs/0.1.0/Tutoriais/translation-versioning.pt",
                                     "relativePath": "/docs/pages/docs/0.1.0/Tutoriais/translation-versioning.pt.md"
                                 },
@@ -212,7 +195,6 @@
                                         "description": "Este é um guia lhe ensina com criar conteúdos em diversos idiomas, com Engrafia.",
                                         "position": 0
                                     },
-                                    "title": "Translation.en",
                                     "url": "/docs/0.1.0/Tutoriais/translation.en",
                                     "relativePath": "/docs/pages/docs/0.1.0/Tutoriais/translation.en.md"
                                 },
@@ -224,7 +206,6 @@
                                         "description": "Este é um guia lhe ensina com criar conteúdos em diversos idiomas, com Engrafia.",
                                         "position": 0
                                     },
-                                    "title": "Translation.pt",
                                     "url": "/docs/0.1.0/Tutoriais/translation.pt",
                                     "relativePath": "/docs/pages/docs/0.1.0/Tutoriais/translation.pt.md"
                                 },
@@ -235,7 +216,6 @@
                                         "title": "Usando playground",
                                         "description": "Este guia tem como finalidade te mostrar como usar o componente Playground."
                                     },
-                                    "title": "Using playground.en",
                                     "url": "/docs/0.1.0/Tutoriais/using-playground.en",
                                     "relativePath": "/docs/pages/docs/0.1.0/Tutoriais/using-playground.en.mdx"
                                 },
@@ -246,7 +226,6 @@
                                         "title": "Usando playground",
                                         "description": "Este guia tem como finalidade te mostrar como usar o componente Playground."
                                     },
-                                    "title": "Using playground.pt",
                                     "url": "/docs/0.1.0/Tutoriais/using-playground.pt",
                                     "relativePath": "/docs/pages/docs/0.1.0/Tutoriais/using-playground.pt.mdx"
                                 },
@@ -258,7 +237,6 @@
                                         "description": "Este é um guia lhe ensina com versionar sua documentação, usando Engrafia.",
                                         "position": 1
                                     },
-                                    "title": "Versioning.en",
                                     "url": "/docs/0.1.0/Tutoriais/versioning.en",
                                     "relativePath": "/docs/pages/docs/0.1.0/Tutoriais/versioning.en.md"
                                 },
@@ -270,7 +248,6 @@
                                         "description": "Este é um guia lhe ensina com versionar sua documentação, usando Engrafia.",
                                         "position": 1
                                     },
-                                    "title": "Versioning.pt",
                                     "url": "/docs/0.1.0/Tutoriais/versioning.pt",
                                     "relativePath": "/docs/pages/docs/0.1.0/Tutoriais/versioning.pt.md"
                                 },
@@ -282,7 +259,6 @@
                                         "description": "Este é um guia lhe ensina com usar arquivos md e dx para criar conteúdos",
                                         "position": 4
                                     },
-                                    "title": "Writing md mdx.en",
                                     "url": "/docs/0.1.0/Tutoriais/writing-md-mdx.en",
                                     "relativePath": "/docs/pages/docs/0.1.0/Tutoriais/writing-md-mdx.en.mdx"
                                 },
@@ -294,12 +270,10 @@
                                         "description": "Este é um guia lhe ensina com usar arquivos md e dx para criar conteúdos",
                                         "position": 4
                                     },
-                                    "title": "Writing md mdx.pt",
                                     "url": "/docs/0.1.0/Tutoriais/writing-md-mdx.pt",
                                     "relativePath": "/docs/pages/docs/0.1.0/Tutoriais/writing-md-mdx.pt.mdx"
                                 }
                             ],
-                            "title": "Tutoriais",
                             "relativePath": "/docs/pages/docs/0.1.0/Tutoriais"
                         },
                         {
@@ -312,7 +286,6 @@
                                 "tags": "docs, engrafia, nextjs",
                                 "socialImage": "/code.png"
                             },
-                            "title": "Basic info.en",
                             "url": "/docs/0.1.0/basic-info.en",
                             "relativePath": "/docs/pages/docs/0.1.0/basic-info.en.md"
                         },
@@ -326,7 +299,6 @@
                                 "tags": "docs, engrafia, nextjs",
                                 "socialImage": "/code.png"
                             },
-                            "title": "Basic info.pt",
                             "url": "/docs/0.1.0/basic-info.pt",
                             "relativePath": "/docs/pages/docs/0.1.0/basic-info.pt.md"
                         },
@@ -338,7 +310,6 @@
                                 "description": "Este é um guia que vai te conduzir nos principais tópicos para iniciar com Engrafia ",
                                 "position": 0
                             },
-                            "title": "Quick start.en",
                             "url": "/docs/0.1.0/quick-start.en",
                             "relativePath": "/docs/pages/docs/0.1.0/quick-start.en.md"
                         },
@@ -350,19 +321,15 @@
                                 "description": "Este é um guia que vai te conduzir nos principais tópicos para iniciar com Engrafia ",
                                 "position": 0
                             },
-                            "title": "Quick start.pt",
                             "url": "/docs/0.1.0/quick-start.pt",
                             "relativePath": "/docs/pages/docs/0.1.0/quick-start.pt.md"
                         }
                     ],
-                    "title": "0.1.0",
                     "relativePath": "/docs/pages/docs/0.1.0"
                 }
             ],
-            "title": "Docs",
             "relativePath": "/docs/pages/docs"
         }
     ],
-    "title": "Pages",
     "relativePath": "/docs/pages"
 }

@@ -44,7 +44,7 @@ async function getMdxFilesIndex(dir: string) {
       const { attributes = {} } = getFrontMatter(content);
       const { name = '', ...meta }: any = attributes;
       node.meta = meta || {};
-      node.title = name || formatTitle(node.name || '');
+      // node.title = name || formatTitle(node.name || '');
       node.url = formatRelativePath(
         path.relative(dir + '/' + pagesPath, pathName)
       );
@@ -52,7 +52,7 @@ async function getMdxFilesIndex(dir: string) {
       node.relativePath = node.path.replace(process.cwd(), '');
     },
     (node: File) => {
-      node.title = formatTitle(node.name);
+      // node.title = formatTitle(node.name);
       node.relativePath = node.path.replace(process.cwd(), '');
     }
   );
@@ -63,6 +63,7 @@ async function getMdxFilesIndex(dir: string) {
   }
   return tree;
 }
+// adicionar um anova key com nome do arquivo sem formatação, e usar ela como key de tradução, somente para casos com tranlate
 
 async function getPagesPath(dir: string) {
   const root = resolveRoot(dir);

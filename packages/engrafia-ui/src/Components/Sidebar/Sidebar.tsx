@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useSiteConfig } from '../../Provider';
@@ -8,6 +8,7 @@ import { Category, DocFile, getSidebarTree } from '../../get-sidebar';
 import { getThemeConfig } from '../../get-theme-config';
 import { getFolderContent } from '../../get-folders';
 import { filterSidebarContent } from './util';
+import { getMetaCategory } from '../../get-meta-category';
 
 const sidebar = getSidebarTree();
 const { default: themeConfig } = getThemeConfig();
@@ -15,6 +16,7 @@ const { default: themeConfig } = getThemeConfig();
 export function Sidebar({ hide = true }) {
   const { version } = useSiteConfig();
   const router = useRouter();
+  const { locale } = router;
   const [toggle, setToggle] = React.useState(['']);
 
   const sidebarTree = React.useMemo(() => {
@@ -47,6 +49,8 @@ export function Sidebar({ hide = true }) {
     const opened = sidebarTree?.children?.map((e) => e.relativePath);
     setToggle(opened);
   }, [sidebarTree]);
+
+  console.log(sidebarTree);
 
   function recursiveMenu(menu: Category & DocFile) {
     return (

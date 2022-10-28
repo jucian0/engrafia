@@ -9,12 +9,11 @@ Em casos de documentação técnica é muito importante prover exemplos de uso d
 
 Engrafia usa [Prims](https://prismjs.com/) para exibir trechos de código, abaixo, alguns exemplos de uso.
 
-
 ```jsx
 import { createTheme, globalCss } from '@nextui-org/react';
 
 export const myDarkTheme = createTheme({
-    type: 'light',
+  type: 'light',
   theme: {},
 });
 ```
