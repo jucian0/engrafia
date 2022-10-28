@@ -52,8 +52,6 @@ export function Sidebar({ hide = true }) {
     setToggle(opened);
   }, [sidebarTree]);
 
-  console.log(sidebarTree);
-
   function recursiveMenu(menu: Category & DocFile) {
     return (
       <S.List key={menu.path}>

@@ -7,14 +7,8 @@ import React from 'react';
 
 export function TableOfContent() {
   const { tableOfContent } = useSiteConfig();
-
-  const t = useTranslation();
-
-  if (!tableOfContent) {
-    return null;
-  }
-
   const [activeId, setActiveId] = React.useState('');
+  const t = useTranslation();
 
   React.useEffect(() => {
     const onScroll = () => {
@@ -40,6 +34,10 @@ export function TableOfContent() {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, [tableOfContent]);
+
+  if (!tableOfContent) {
+    return null;
+  }
 
   return (
     <S.TableOfContentWrapper hideIn="sm">
