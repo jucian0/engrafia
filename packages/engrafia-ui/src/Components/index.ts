@@ -6,3 +6,4 @@ export * from './EditContent/EditContent';
 export * from './LanguageSelector/Selector';
 export * from './VersionSelector/Selector';
 export * from './Footer/Footer';
+export * from './Link';

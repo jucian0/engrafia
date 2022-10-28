@@ -46,14 +46,20 @@ export default function Index() {
 
       <Grid.Container gap={2} justify="center">
         <Grid>
-          <Button onClick={() => router.push('/docs/0.1.0/pt_BR/quick-start')}>
+          <Button
+            onClick={() =>
+              router.push(`/docs/0.1.0/quick-start.${router.locale}`)
+            }
+          >
             {t('get.start')}
           </Button>
         </Grid>
         <Grid>
           <Button
             bordered
-            onClick={() => router.push('/docs/0.1.0/pt_BR/quick-start')}
+            onClick={() =>
+              router.push(`/docs/0.1.0/quick-start.${router.locale}`)
+            }
           >
             {t('read.docs')}
           </Button>
