@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.6](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-plugin@0.1.5...@engrafia/engrafia-plugin@0.1.6) (2022-10-28)
+
+
+### Bug Fixes
+
+* **engrafia-plugin:** rename useTranslate to useTranslation, and use name as trandlation key ([e9c68fa](https://github.com/Jucian0/engrafia/commit/e9c68fa8b9df4f202ead31bd6b5b0b773010f85c))
+
 ### [0.1.5](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-plugin@0.1.4...@engrafia/engrafia-plugin@0.1.5) (2022-10-19)
 
 
