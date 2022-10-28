@@ -14,7 +14,7 @@ export function useTranslate() {
 
   React.useEffect(() => {
     handleTranslations();
-  }, []);
+  }, [language]);
 
   return (key: string) => {
     return translations[key] ?? key;
