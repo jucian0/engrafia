@@ -52,7 +52,7 @@ async function getMdxFilesIndex(dir: string) {
       node.relativePath = node.path.replace(process.cwd(), '');
     },
     (node: File) => {
-      // node.title = formatTitle(node.name);
+      node.title = formatTitle(node.name);
       node.relativePath = node.path.replace(process.cwd(), '');
     }
   );

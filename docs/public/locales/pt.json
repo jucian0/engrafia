@@ -1,4 +1,6 @@
 {
+    "features": "Funcionalidades",
+    "tutorials": "Tutoriais",
     "description": "O modo mais simples de escrever documentação para seu projeto.",
     "link.docs": "Documentação",
     "link.github": "Github",

@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { MdEdit } from 'react-icons/md';
 import { getSidebarTree } from '../../get-sidebar';
 import { getThemeConfig } from '../../get-theme-config';
-import { useTranslate } from '../../useTranslation';
+import { useTranslation } from '../../useTranslation';
 import * as S from './styles';
 import { createEditUrl, getFilePath } from './utils';
 
@@ -17,7 +17,7 @@ export function EditContent() {
     branch: themeConfig.repository?.branch,
     filePath: relativePath,
   });
-  const t = useTranslate();
+  const t = useTranslation();
 
   return (
     <S.Wrapper>

@@ -1,14 +1,14 @@
 import * as S from './styles';
 import Link from 'next/link';
 import { useSiteConfig } from '../../Provider';
-import { useTranslate } from '../../useTranslation';
+import { useTranslation } from '../../useTranslation';
 import { ChildrenOfContent } from '../../ThemeContext';
 import React from 'react';
 
 export function TableOfContent() {
   const { tableOfContent } = useSiteConfig();
 
-  const t = useTranslate();
+  const t = useTranslation();
 
   if (!tableOfContent) {
     return null;

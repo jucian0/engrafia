@@ -9,6 +9,7 @@ import { getThemeConfig } from '../../get-theme-config';
 import { getFolderContent } from '../../get-folders';
 import { filterSidebarContent } from './util';
 import { getMetaCategory } from '../../get-meta-category';
+import { useTranslation } from '../../useTranslation';
 
 const sidebar = getSidebarTree();
 const { default: themeConfig } = getThemeConfig();
@@ -17,6 +18,7 @@ export function Sidebar({ hide = true }) {
   const { version } = useSiteConfig();
   const router = useRouter();
   const { locale } = router;
+  const t = useTranslation();
   const [toggle, setToggle] = React.useState(['']);
 
   const sidebarTree = React.useMemo(() => {
@@ -66,7 +68,7 @@ export function Sidebar({ hide = true }) {
           </S.Link>
         ) : (
           <S.Category onClick={() => handleClick(menu.relativePath)}>
-            {menu.title}
+            {locale ? t(menu.name) : menu.title}
             {isOpened(menu) ? <MdExpandMore /> : <MdChevronRight />}
           </S.Category>
         )}

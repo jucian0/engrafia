@@ -1,4 +1,6 @@
 {
+    "features": "Features",
+    "tutorials": "Tutorials",
     "description": "The most easiest way to write docs for your project.",
     "link.docs": "Docs",
     "link.github": "Github",

@@ -3,7 +3,7 @@ import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
 import { FormElement, Grid, Input, Text } from '@nextui-org/react';
 import { RiSearchFill } from 'react-icons/ri';
 import { getThemeConfig } from '../../get-theme-config';
-import { useTranslate } from '../../useTranslation';
+import { useTranslation } from '../../useTranslation';
 import * as S from './styles';
 import { DocFile, getSidebarTree } from '../../get-sidebar';
 import { filterItems, getSearchableList } from './utils';
@@ -50,7 +50,7 @@ const { default: themeConfig } = getThemeConfig();
 const content = getSidebarTree();
 
 export const NavigationMenuDemo = () => {
-  const t = useTranslate();
+  const t = useTranslation();
   const [list, setList] = React.useState([] as DocFile[]);
   const [input, setInput] = React.useState('');
   const { locale } = useRouter();

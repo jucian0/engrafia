@@ -1,11 +1,11 @@
 import { Button, Grid, Text } from '@nextui-org/react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { useTranslate } from 'packages/engrafia-ui/src/useTranslation';
+import { useTranslation } from 'packages/engrafia-ui/src/useTranslation';
 
 export default function Index() {
   const router = useRouter();
-  const t = useTranslate();
+  const t = useTranslation();
   return (
     <>
       <Head>
