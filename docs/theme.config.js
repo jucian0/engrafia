@@ -62,6 +62,7 @@ export default {
   },
   head: ({ title, meta }) => (
     <>
+      <link rel="shortcut icon" href="/favicon.ico" />
       <title>{title}</title>
       {meta.description && (
         <meta name="description" content={meta.description} />

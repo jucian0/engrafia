@@ -18,7 +18,6 @@ export default class CustomDocument extends Document {
         <Head>
           {CssBaseline.flush()}
           {GlobalStyles()}
-          <link href="https://css.gg/link.css" rel="stylesheet" />
         </Head>
         <body>
           <Main />
