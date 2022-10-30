@@ -11,6 +11,25 @@
                     "name": "0.1.0",
                     "children": [
                         {
+                            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/Features",
+                            "name": "Features",
+                            "children": [
+                                {
+                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/Features/i18n.en.md",
+                                    "name": "i18n.en.md",
+                                    "meta": {
+                                        "title": "i18n",
+                                        "description": "This docs will guide you thought i18n feature, and how you can configure translations in you documentation.",
+                                        "tags": "react, docs, nextjs, i18n, internationalization"
+                                    },
+                                    "url": "/docs/0.1.0/Features/i18n.en",
+                                    "relativePath": "/docs/pages/docs/0.1.0/Features/i18n.en.md"
+                                }
+                            ],
+                            "title": "Features",
+                            "relativePath": "/docs/pages/docs/0.1.0/Features"
+                        },
+                        {
                             "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/introduction",
                             "name": "introduction",
                             "children": [
