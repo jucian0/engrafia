@@ -39,7 +39,7 @@ Do that running the command `yarn dev`, the development environment will be avai
 
 ### MD files
 
-To write a new document you need to create a new `md` or `mdx` file, and add some metadata, like `title`, `description`, and options data named `position`, which is used to define the position of the item in a menu category.
+To write a new document you need to create a new `md` or `mdx` file, and add some metadata, like `title`, `description`,`tags`, and options data named `position`, which is used to define the position of the item in a menu category.
 
 > If you are new with `md`, `mdx` files, you can read the documentation [here](https://www.markdownguide.org/)
 

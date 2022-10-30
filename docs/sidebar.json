@@ -11,6 +11,19 @@
                     "name": "0.1.0",
                     "children": [
                         {
+                            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/basic-info.en.md",
+                            "name": "basic-info.en.md",
+                            "meta": {
+                                "title": "Basic info",
+                                "description": "Basic information about how Engrafia works.",
+                                "position": 1,
+                                "tags": "docs, engrafia, nextjs",
+                                "socialImage": "/code.png"
+                            },
+                            "url": "/docs/0.1.0/basic-info.en",
+                            "relativePath": "/docs/pages/docs/0.1.0/basic-info.en.md"
+                        },
+                        {
                             "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/quick-start.en.md",
                             "name": "quick-start.en.md",
                             "meta": {
