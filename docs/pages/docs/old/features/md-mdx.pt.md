@@ -42,7 +42,6 @@ This is a list in markdown:
 - One
 - Two
 - Three
-
 ```
 
 ## O que são arquivos .mdx?

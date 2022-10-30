@@ -3,6 +3,12 @@ import { load as parseYaml } from 'js-yaml';
 import { parse as parseToml } from 'toml';
 import { generateTableOfContents } from './table-of-content';
 
+type Data = {
+  title: string;
+  description: string;
+  position?: number;
+};
+
 export function remarkMetadataPlugin() {
   return (ast: any) => {
     const tableOfCOntent = generateTableOfContents(ast);
@@ -40,7 +46,7 @@ function getValue(node: { [k: string]: any }) {
   }
 }
 
-function renderer(data: {}, tableOfCOntents: {}) {
+function renderer(data: Data, tableOfCOntents: {}) {
   return `
       export const getStaticProps = async () => {
         return { 
