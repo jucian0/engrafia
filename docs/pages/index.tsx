@@ -48,7 +48,9 @@ export default function Index() {
         <Grid>
           <Button
             onClick={() =>
-              router.push(`/docs/0.1.0/quick-start.${router.locale}`)
+              router.push(
+                `/docs/0.1.0/introduction/quick-start.${router.locale}`
+              )
             }
           >
             {t('get.start')}
@@ -58,7 +60,9 @@ export default function Index() {
           <Button
             bordered
             onClick={() =>
-              router.push(`/docs/0.1.0/quick-start.${router.locale}`)
+              router.push(
+                `/docs/0.1.0/introduction/quick-start.${router.locale}`
+              )
             }
           >
             {t('read.docs')}
