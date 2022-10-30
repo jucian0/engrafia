@@ -19,7 +19,7 @@
                                     "name": "i18n.en.md",
                                     "meta": {
                                         "title": "i18n",
-                                        "description": "This docs will guide you thought i18n feature, and how you can configure translations in you documentation.",
+                                        "description": "This doc will guide you through the i18n feature, and how you can configure translations in your documentation.",
                                         "tags": "react, docs, nextjs, i18n, internationalization"
                                     },
                                     "url": "/docs/0.1.0/Features/i18n.en",
