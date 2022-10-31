@@ -21,8 +21,6 @@ const { default: themeConfig } = getThemeConfig();
 const TEST_VERSION_FOLDER =
   /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
 
-const TEST_LANGUAGE_FOLDER = /([a-z]+_[A-Z])\w/;
-
 export function Provider({ children }: React.PropsWithChildren<any>) {
   const { route } = useRouter();
   const meta = React.useMemo(
@@ -65,10 +63,10 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
   if (route.includes(themeConfig.rootDocs ?? 'docs')) {
     return (
       <ThemeContext.Provider value={{ ...siteConfig, setSiteConfig }}>
-        <DocsLayout>
-          <Head>{themeConfig?.head?.({ title, meta })}</Head>
-          <MDXProvider components={mdxComponents as {}}>{children}</MDXProvider>
-        </DocsLayout>
+        <Head>{themeConfig?.head?.({ title, meta })}</Head>
+        <MDXProvider components={mdxComponents as {}}>
+          <DocsLayout>{children}</DocsLayout>
+        </MDXProvider>
       </ThemeContext.Provider>
     );
   }
@@ -76,9 +74,9 @@ export function Provider({ children }: React.PropsWithChildren<any>) {
   return (
     <ThemeContext.Provider value={siteConfig}>
       <Head>{themeConfig?.head?.({ title, meta })}</Head>
-      <DefaultLayout>
-        <MDXProvider components={mdxComponents as {}}>{children}</MDXProvider>
-      </DefaultLayout>
+      <MDXProvider components={mdxComponents as {}}>
+        <DefaultLayout>{children}</DefaultLayout>
+      </MDXProvider>
     </ThemeContext.Provider>
   );
 }

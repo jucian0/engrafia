@@ -11,23 +11,45 @@
                     "name": "0.1.0",
                     "children": [
                         {
-                            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/Features",
-                            "name": "Features",
+                            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/features",
+                            "name": "features",
                             "children": [
                                 {
-                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/Features/i18n.en.md",
+                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/features/i18n.en.md",
                                     "name": "i18n.en.md",
                                     "meta": {
                                         "title": "i18n",
                                         "description": "This doc will guide you through the i18n feature, and how you can configure translations in your documentation.",
                                         "tags": "react, docs, nextjs, i18n, internationalization"
                                     },
-                                    "url": "/docs/0.1.0/Features/i18n.en",
-                                    "relativePath": "/docs/pages/docs/0.1.0/Features/i18n.en.md"
+                                    "url": "/docs/0.1.0/features/i18n.en",
+                                    "relativePath": "/docs/pages/docs/0.1.0/features/i18n.en.md"
+                                },
+                                {
+                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/features/md-mdx.en.mdx",
+                                    "name": "md-mdx.en.mdx",
+                                    "meta": {
+                                        "title": "MD e MDX",
+                                        "description": "This doc will help you to understand how to use MD, and MDX files.",
+                                        "position": 4
+                                    },
+                                    "url": "/docs/0.1.0/features/md-mdx.en",
+                                    "relativePath": "/docs/pages/docs/0.1.0/features/md-mdx.en.mdx"
+                                },
+                                {
+                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/features/playground.en.mdx",
+                                    "name": "playground.en.mdx",
+                                    "meta": {
+                                        "title": "Playground",
+                                        "description": "Playground is component that provide you a isolated environment to test your React components.",
+                                        "tags": "reactjs, playground, documentation"
+                                    },
+                                    "url": "/docs/0.1.0/features/playground.en",
+                                    "relativePath": "/docs/pages/docs/0.1.0/features/playground.en.mdx"
                                 }
                             ],
                             "title": "Features",
-                            "relativePath": "/docs/pages/docs/0.1.0/Features"
+                            "relativePath": "/docs/pages/docs/0.1.0/features"
                         },
                         {
                             "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/introduction",
