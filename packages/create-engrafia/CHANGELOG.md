@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.12](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.11...@engrafia/create-engrafia@0.1.12) (2022-11-01)
+
+
+### Bug Fixes
+
+* **create-engrafia:** add #!/usr/bin/env node ([d1b53ff](https://github.com/Jucian0/engrafia/commit/d1b53ffa0782814118b9dad85109627011a771d9))
+* **create=engrafia:** add #!/usr/bin/env node ([8ab55b4](https://github.com/Jucian0/engrafia/commit/8ab55b4628a983d4afc390a8e5f1814507e26cd3))
+
 ### [0.1.11](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.10...@engrafia/create-engrafia@0.1.11) (2022-11-01)
 
 
