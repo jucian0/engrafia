@@ -25,17 +25,12 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:tsc",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "executor": "nx:run-commands",
       "options": {
-        "outputPath": "dist/packages/create-engrafia",
-        "tsConfig": "packages/create-engrafia/tsconfig.lib.json",
-        "packageJson": "packages/create-engrafia/package.json",
-        "main": "packages/create-engrafia/src/index.ts",
-        "assets": [
-          "packages/create-engrafia/*.md"
+        "commands": [
+          {
+            "command": "cd packages/create-engrafia && yarn build"
+          }
         ]
       }
     },
@@ -46,9 +41,6 @@
       ],
       "options": {
         "watch": true,
-        "format": [
-          "esm"
-        ],
         "outputPath": "dist/packages/create-engrafia",
         "tsConfig": "packages/create-engrafia/tsconfig.lib.json",
         "packageJson": "packages/create-engrafia/package.json",
