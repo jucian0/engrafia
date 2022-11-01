@@ -29,7 +29,10 @@
       "options": {
         "commands": [
           {
-            "command": "cd packages/create-engrafia && yarn minify"
+            "command": "rm -rf packages/create-engrafia/src"
+          },
+          {
+            "command": "cd packages/create-engrafia/src && yarn minify"
           }
         ]
       }

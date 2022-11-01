@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.13](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.12...@engrafia/create-engrafia@0.1.13) (2022-11-01)
+
+
+### Bug Fixes
+
+* **create-engrafia:** add minify command to turn many filos into one ([aa2379d](https://github.com/Jucian0/engrafia/commit/aa2379d95cce5ba04136626e5de0aaa87ad6e89d))
+* **create-engrafia:** fix commands order after version ([9455b1a](https://github.com/Jucian0/engrafia/commit/9455b1aa9c0faa5df0bd4aa266232a4df50b3b5d))
+
 ### [0.1.12](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.11...@engrafia/create-engrafia@0.1.12) (2022-11-01)
 
 
