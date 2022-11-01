@@ -24,7 +24,7 @@
         "passWithNoTests": true
       }
     },
-    "build": {
+    "build-2": {
       "executor": "nx:run-commands",
       "options": {
         "commands": [
@@ -34,16 +34,28 @@
         ]
       }
     },
-    "copy-files": {
+    "minify": {
       "executor": "nx:run-commands",
       "options": {
         "commands": [
           {
-            "command": "cp packages/create-engrafia/package.json dist/packages/create-engrafia/"
-          },
-          {
-            "command": "cp packages/create-engrafia/README.md dist/packages/create-engrafia/"
+            "command": "cd packages/create-engrafia/src && yarn minify"
           }
+        ]
+      }
+    },
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/create-engrafia",
+        "tsConfig": "packages/create-engrafia/tsconfig.lib.json",
+        "packageJson": "packages/create-engrafia/package.json",
+        "main": "packages/create-engrafia/src/index.ts",
+        "assets": [
+          "packages/create-engrafia/*.md"
         ]
       }
     },
@@ -72,8 +84,8 @@
         "tagPrefix": "@engrafia/${projectName}@",
         "baseBranch": "main",
         "postTargets": [
-          "create-engrafia:copy-files",
-          "create-engrafia:deploy"
+          "create-engrafia:deploy",
+          "create-engrafia:minify"
         ]
       }
     },
