@@ -84,8 +84,8 @@
         "tagPrefix": "@engrafia/${projectName}@",
         "baseBranch": "main",
         "postTargets": [
-          "create-engrafia:deploy",
-          "create-engrafia:minify"
+          "create-engrafia:minify",
+          "create-engrafia:deploy"
         ]
       }
     },
