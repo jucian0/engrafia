@@ -4,10 +4,6 @@
   "bin": {
     "create-engrafia": "./src/index.js"
   },
-  "scripts": {
-    "dev": "ncc build ./src/index.ts -w -o dist/",
-    "build": "ncc build ./src/index.ts -o ./../../dist/packages/create-engrafia --minify --no-cache --no-source-map-register"
-  },
   "dependencies": {
     "github-download-parts": "^2.1.0",
     "tslib": "^2.3.0",

@@ -25,12 +25,17 @@
       }
     },
     "build": {
-      "executor": "nx:run-commands",
+      "executor": "@nrwl/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "commands": [
-          {
-            "command": "cd packages/create-engrafia && yarn build"
-          }
+        "outputPath": "dist/packages/create-engrafia",
+        "tsConfig": "packages/create-engrafia/tsconfig.lib.json",
+        "packageJson": "packages/create-engrafia/package.json",
+        "main": "packages/create-engrafia/src/index.ts",
+        "assets": [
+          "packages/create-engrafia/*.md"
         ]
       }
     },
