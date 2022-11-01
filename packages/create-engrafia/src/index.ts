@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { command, parse } from 'commander';
 import Questions from './create';
 //@ts-ignore
