@@ -24,31 +24,26 @@
         "passWithNoTests": true
       }
     },
-    "minify": {
+    "build": {
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          {
-            "command": "rm -rf packages/create-engrafia/src"
-          },
           {
             "command": "cd packages/create-engrafia/src && yarn minify"
           }
         ]
       }
     },
-    "build": {
-      "executor": "@nrwl/js:tsc",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+    "copy-files": {
+      "executor": "nx:run-commands",
       "options": {
-        "outputPath": "dist/packages/create-engrafia",
-        "tsConfig": "packages/create-engrafia/tsconfig.lib.json",
-        "packageJson": "packages/create-engrafia/package.json",
-        "main": "packages/create-engrafia/src/index.ts",
-        "assets": [
-          "packages/create-engrafia/*.md"
+        "commands": [
+          {
+            "command": "cp packages/create-engrafia/package.json dist/packages/create-engrafia/"
+          },
+          {
+            "command": "cp packages/create-engrafia/README.md dist/packages/create-engrafia/"
+          }
         ]
       }
     },
@@ -77,7 +72,7 @@
         "tagPrefix": "@engrafia/${projectName}@",
         "baseBranch": "main",
         "postTargets": [
-          "create-engrafia:minify",
+          "create-engrafia:copy-files",
           "create-engrafia:deploy"
         ]
       }
