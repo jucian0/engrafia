@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.17](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.16...@engrafia/engrafia-ui@0.1.17) (2022-11-01)
+
+
+### Bug Fixes
+
+* **engrafia-plugin:** fix mdx md contents - add remark-gfm ([beb1c53](https://github.com/Jucian0/engrafia/commit/beb1c5373093cb14fd6d01d73a83db2c4fde0412))
+
 ### [0.1.16](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.15...@engrafia/engrafia-ui@0.1.16) (2022-10-28)
 
 
