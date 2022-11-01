@@ -24,5 +24,8 @@
     "url": "https://github.com/jucian0/engrafia",
     "homepage": "https://engrafia.vercel.app/"
   },
+  "scripts": {
+    "minify": "ncc build ./src/index.ts -o ./../../dist/packages/create-engrafia --minify --no-cache --no-source-map-register"
+  },
   "license": "MIT"
 }

@@ -24,6 +24,16 @@
         "passWithNoTests": true
       }
     },
+    "minify": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "cd packages/create-engrafia && yarn minify"
+          }
+        ]
+      }
+    },
     "build": {
       "executor": "@nrwl/js:tsc",
       "outputs": [
@@ -64,7 +74,8 @@
         "tagPrefix": "@engrafia/${projectName}@",
         "baseBranch": "main",
         "postTargets": [
-          "create-engrafia:deploy"
+          "create-engrafia:deploy",
+          "create-engrafia:minify"
         ]
       }
     },
