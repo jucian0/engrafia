@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.16](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.15...@engrafia/engrafia-ui@0.1.16) (2022-10-28)
+
+
+### Bug Fixes
+
+* **engrafia-plugin:** rename useTranslate to useTranslation, and use name as trandlation key ([e9c68fa](https://github.com/Jucian0/engrafia/commit/e9c68fa8b9df4f202ead31bd6b5b0b773010f85c))
+* **engrafia-ui:** fix function getI18nConfig ([91b504c](https://github.com/Jucian0/engrafia/commit/91b504c79b53f7e0155556b8311e469fe500415d))
+* **engrafia-ui:** fix getIq18nConfig - replace require to  async import ([0c96677](https://github.com/Jucian0/engrafia/commit/0c9667732f27148afd1e66299fb0f61d2c6113bb))
+* **engrafia-ui:** rename useTranslate to useTranslation ([cd86a1c](https://github.com/Jucian0/engrafia/commit/cd86a1c22b1f695f424ef68c420732b9db0cb8c8))
+
 ### [0.1.15](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.14...@engrafia/engrafia-ui@0.1.15) (2022-10-27)
 
 
