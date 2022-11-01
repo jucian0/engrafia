@@ -1,4 +1,4 @@
-# Engrafia
+# Engrafia UI
 
 Docs - https://engrafia.vercel.app/
 

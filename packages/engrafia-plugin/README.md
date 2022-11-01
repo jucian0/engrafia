@@ -1,4 +1,4 @@
-# Engrafia
+# Engrafia Plugin
 
 Docs - https://engrafia.vercel.app/
 
