@@ -16,5 +16,12 @@
     "inquirer": "^9.1.4",
     "pad": "^3.2.0",
     "colors": "^1.4.0"
-  }
+  },
+  "author": "Jucian0 <juciano@outlook.com.br>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jucian0/engrafia",
+    "homepage": "https://engrafia.vercel.app/"
+  },
+  "license": "MIT"
 }

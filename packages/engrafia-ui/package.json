@@ -17,5 +17,12 @@
     "react": ">=18",
     "react-dom": ">=18",
     "next": ">=12"
-  }
+  },
+  "author": "Jucian0 <juciano@outlook.com.br>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jucian0/engrafia",
+    "homepage": "https://engrafia.vercel.app/"
+  },
+  "license": "MIT"
 }

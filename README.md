@@ -6,7 +6,7 @@ Engrafia is an open-source project designed to build documentation websites with
 
 ## Motivations
 
-The main concepts to build Engrafia are to provide a better option to build a website for documentation with no effort, something to make you stay focused just on writing your documents, don't worry about things like configs, and layouts, stay focused on writing MD, and MDX files.
+The main concepts of Engrafia are to provide a better option to build a website for documentation with no effort, something to make you stay focused just on writing your documents, don't worry about things like configs, and layouts, stay focused on writing MD, and MDX files.
 
 ## Technologies
 

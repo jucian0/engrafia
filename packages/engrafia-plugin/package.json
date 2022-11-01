@@ -24,5 +24,12 @@
     "chokidar": "^3.5.3",
     "lodash": "^4.17.15",
     "next-images": "^1.8.4"
-  }
+  },
+  "author": "Jucian0 <juciano@outlook.com.br>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jucian0/engrafia",
+    "homepage": "https://engrafia.vercel.app/"
+  },
+  "license": "MIT"
 }
