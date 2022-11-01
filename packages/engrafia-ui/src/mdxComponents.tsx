@@ -1,12 +1,14 @@
+import { Text } from '@nextui-org/react';
 import Link from 'next/link';
-import { Table } from '@nextui-org/react';
 import { Code } from './Components/CodeBlock/Clode';
+import { Table, TCol, THead, TRow, Input } from './Components/Table/Table';
 
 export const mdxComponents = {
   code: Code,
   a: Link,
   table: Table,
-  thead: Table.Header,
-  tr: Table.Row,
-  td: Table.Column,
+  thead: THead,
+  tr: TRow,
+  td: TCol,
+  input: Input,
 };

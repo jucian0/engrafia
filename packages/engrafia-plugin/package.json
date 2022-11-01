@@ -4,6 +4,7 @@
   "dependencies": {
     "rehype-autolink-headings": "^6.1.1",
     "rehype-slug": "^5.0.1",
+    "remark-gfm": "3.0.1",
     "remark-frontmatter": "^4.0.1",
     "strip-indent": "^4.0.0",
     "toml": "^3.0.0",

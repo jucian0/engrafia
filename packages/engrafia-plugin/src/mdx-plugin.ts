@@ -9,8 +9,6 @@ type Options = {
 
 export function mdx(pluginOptions: Options = {}) {
   return (nextConfig: any = {}) => {
-    const extension = pluginOptions.extension || /\.mdx$/;
-
     return Object.assign({}, nextConfig, {
       webpack(config: Configuration, options: any) {
         if (pluginOptions.onStart) {
@@ -22,7 +20,7 @@ export function mdx(pluginOptions: Options = {}) {
         config.resolve.alias['root_folder'] = root;
 
         config?.module?.rules?.push({
-          test: extension,
+          test: pluginOptions.extension,
           use: [
             options.defaultLoaders.babel,
             {

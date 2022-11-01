@@ -9,7 +9,6 @@
   },
   "private": true,
   "dependencies": {
-    "@radix-ui/react-select": "^1.1.1",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "@jscutlery/semver": "^2.25.2",
@@ -17,6 +16,7 @@
     "@mdx-js/react": "^2.1.5",
     "@nextui-org/react": "1.0.0-beta.10",
     "@radix-ui/react-navigation-menu": "^1.0.0",
+    "@radix-ui/react-select": "^1.1.1",
     "await-to-js": "^3.0.0",
     "commitizen": "^4.2.4",
     "compose-function": "^3.0.3",
@@ -52,6 +52,7 @@
     "rehype-autolink-headings": "^6.1.1",
     "rehype-slug": "^5.0.1",
     "remark-frontmatter": "^4.0.1",
+    "remark-gfm": "^3.0.1",
     "strip-indent": "^4.0.0",
     "toml": "^3.0.0",
     "tslib": "^2.3.0",

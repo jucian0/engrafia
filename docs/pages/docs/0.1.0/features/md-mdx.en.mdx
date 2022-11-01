@@ -4,14 +4,15 @@ description: 'This doc will help you to understand how to use MD, and MDX files.
 position: 4
 ---
 
-import { Button } from '@nextui-org/react';
-import { Table } from '@nextui-org/react';
+import { Button, Spacer } from '@nextui-org/react';
+
+import { Playground } from '@engrafia/ui';
 
 # MD e MDX
 
 Engrafia uses `md`, and `mdx` files to write documentation, and `js` files to create custom pages, you can also create custom pages with `mdx` files too.
 
-## What is Markdown (MD) files
+## What is Markdown (MD) file
 
 That is the better definition of a MArkdown file:
 
@@ -35,26 +36,116 @@ This is a list in markdown:
 - Three
 ```
 
-## O que são arquivos .mdx?
+## Autolink literals
+
+```md
+www.example.com, https://example.com, and contact@example.com.
+```
+
+www.example.com, https://example.com, and contact@example.com.
+
+### Footnote
+
+```md
+A note[^1]
+
+[^1]: This content is located on the top os the page, but appear hear.
+```
+
+A note[^1]
+
+[^1]: This content is located on the top os the page, but appear hear.
+
+### Strikethrough
+
+```md
+~one~ or ~~two~~ tildes.
+```
+
+~one~ or ~~two~~ tildes.
+
+### Table
+
+```md
+| Tables   |      Are      |  Cool |
+| -------- | :-----------: | ----: |
+| col 1 is | left-aligned  | $1600 |
+| col 2 is |   centered    |   $12 |
+| col 3 is | right-aligned |    $1 |
+```
+
+| Tables   |      Are      |  Cool |
+| -------- | :-----------: | ----: |
+| col 1 is | left-aligned  | $1600 |
+| col 2 is |   centered    |   $12 |
+| col 3 is | right-aligned |    $1 |
+
+### Tasklist
+
+```md
+- [ ] to do
+- [x] done
+```
+
+- [ ] to do
+- [x] done
+
+## What is a mdx file?
 
 MDX is an authorable format that lets you seamlessly write JSX in your markdown documents. You can import components, such as interactive charts or alerts, and embed them within your content. This makes writing long-form content with components a blast.
 
-```mdx
-import { MyComponent } from './my-library';
+```md
+# Hello, world!
 
-<MyComponent />
-
-//or
-
-export function MyComponent() {
-  return <h1>My Component</h1>;
-
-}
+<div className="note">> Some notable things in a block quote!</div>
 ```
 
-> Saiba mais sobre MDX em [Docs](https://mdxjs.com/)
+### Expressions
 
-| type      | name   | description                         |
-| --------- | ------ | ----------------------------------- |
-| _address_ | \_user | address of certificate owner        |
-| _bytes32_ | \_hash | sha256 hash of the certificate text |
+MDX also supports JavaScript expressions inside curly braces:
+
+```md
+Two 🍰 is: {Math.PI \* 2}
+```
+
+Expressions can contain whole JavaScript programs as long as that they’re (wrapped in) an expression that evaluates to something that can be rendered. You can use an IIFE like so:
+
+```md
+{(function () {
+const guess = Math.random()
+
+if (guess > 0.66) {
+return <span style={{color: 'tomato'}}>Look at us.</span>
+}
+
+if (guess > 0.33) {
+return <span style={{color: 'violet'}}>Who would have guessed?!</span>
+}
+
+return <span style={{color: 'goldenrod'}}>Not me.</span>
+})()}
+```
+
+> Those and more examples you can find on official documentation [Docs](https://mdxjs.com/docs/what-is-mdx/)
+
+### Writing a pages in MDX
+
+Using Engrafia you will use `mdx` files to write pages, it means that you can import, and export functions, and modules from a documentation page, for example:
+
+```md
+import { Button } from '@nextui-org/react';
+
+<Button>Engrafia Docs</Button>
+```
+
+<Button>Engrafia Docs</Button>
+
+<Spacer x={2} />
+
+Or you can import your `Playground` component;
+
+<Spacer x={2} />
+
+<Playground>
+  <Button>Engrafia Docs</Button>
+</Playground>

@@ -9,6 +9,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { addClasses } from './table-of-content';
 import { injectCodeToPlayground } from './playground-plugin/playground';
 import { h } from 'hastscript';
+import remarkGfm from 'remark-gfm';
 
 const EXTENSIONS_TO_WATCH = ['.mdx', '.md'];
 
@@ -31,9 +32,9 @@ const withMDX = mdx({
     }
   },
 
-  extension: /\.mdx?$/,
+  extension: /\.(md|mdx)$/,
   options: {
-    remarkPlugins: [remarkFrontmatter, remarkMetadataPlugin],
+    remarkPlugins: [remarkGfm, remarkFrontmatter, remarkMetadataPlugin],
     providerImportSource: '@mdx-js/react',
     rehypePlugins: [
       rehypeSlug,
