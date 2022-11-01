@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.9](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.8...@engrafia/create-engrafia@0.1.9) (2022-11-01)
+
+
+### Bug Fixes
+
+* **create-engrafia:** fixing cli commands ([be283ec](https://github.com/Jucian0/engrafia/commit/be283ecb51d2d9ee6d077cf50a2718591c4ef5d3))
+
 ### [0.1.8](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.7...@engrafia/create-engrafia@0.1.8) (2022-11-01)
 
 
