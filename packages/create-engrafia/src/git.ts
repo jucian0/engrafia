@@ -1,5 +1,6 @@
 import { sync } from 'rimraf';
 import { execSync } from 'child_process';
+import path from 'path';
 
 function isInGitRepository() {
   try {
@@ -17,7 +18,7 @@ function isInMercurialRepository() {
   return false;
 }
 
-function initRepository(root) {
+export function initRepository(root) {
   let didInit = false;
   try {
     execSync('git --version', { stdio: 'ignore' });
@@ -42,7 +43,3 @@ function initRepository(root) {
     return false;
   }
 }
-
-export default {
-  initRepository,
-};

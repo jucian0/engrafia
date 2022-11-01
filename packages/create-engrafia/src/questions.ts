@@ -1,9 +1,9 @@
 const LAYOUT_OPTIONS = ['default', 'versioned', 'i18n'];
 const PACKAGE_MANAGER_OPTIONS = ['yarn', 'npm'];
-const TEMPLATE_REPO = `jucian0/engrafia`;
-const TEMPLATE_FOLDER = `examples`;
+export const TEMPLATE_REPO = `jucian0/engrafia`;
+export const TEMPLATE_FOLDER = `examples`;
 
-const QUESTIONS = [
+export const QUESTIONS = [
   {
     type: 'input',
     name: 'name',
@@ -23,9 +23,3 @@ const QUESTIONS = [
     choices: PACKAGE_MANAGER_OPTIONS,
   },
 ];
-
-export default {
-  TEMPLATE_FOLDER,
-  TEMPLATE_REPO,
-  QUESTIONS,
-};

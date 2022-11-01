@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
 import { command, parse } from 'commander';
-import Questions from './../lib/create';
-import packageJson from './../package.json';
+import Questions from './create';
+//@ts-ignore
+import packageJson from '../package.json';
 
 command('create')
   .version(packageJson.version)

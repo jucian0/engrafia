@@ -1,7 +1,7 @@
 import validateProjectName from 'validate-npm-package-name';
 import { execSync } from 'child_process';
 
-function validateNpmName(name) {
+export function validateNpmName(name) {
   const nameValidation = validateProjectName(name);
   if (nameValidation.validForNewPackages) {
     return { valid: true };
@@ -16,7 +16,7 @@ function validateNpmName(name) {
   };
 }
 
-function shouldUseYarn() {
+export function shouldUseYarn() {
   try {
     const userAgent = process.env.npm_config_user_agent;
     if (userAgent) {
@@ -28,8 +28,3 @@ function shouldUseYarn() {
     return false;
   }
 }
-
-export default {
-  validateNpmName,
-  shouldUseYarn,
-};

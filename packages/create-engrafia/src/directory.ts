@@ -3,7 +3,7 @@ import { join } from 'path';
 import { green, blue } from 'colors';
 import pad from 'pad';
 
-function isADirectory() {
+export function isADirectory() {
   let result = null;
   access('./directory-name', function (error) {
     if (error) {
@@ -18,7 +18,7 @@ function isADirectory() {
   return result;
 }
 
-function isFolderEmpty(root, name) {
+export function isFolderEmpty(root, name) {
   const validFiles = [
     '.DS_Store',
     '.git',
@@ -46,7 +46,10 @@ function isFolderEmpty(root, name) {
 
   if (conflicts.length > 0) {
     console.log(
-      pad(`The directory ${green(name)} contains files that could conflict:`),
+      pad(
+        `The directory ${green(name)} contains files that could conflict:`,
+        null
+      ),
       30
     );
 
@@ -70,7 +73,3 @@ function isFolderEmpty(root, name) {
 
   return true;
 }
-
-export default {
-  isFolderEmpty,
-};

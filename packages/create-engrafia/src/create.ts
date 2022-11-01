@@ -1,12 +1,14 @@
 import { prompt } from 'inquirer';
 import { green } from 'colors';
 import makeDir from 'make-dir';
+//@ts-ignore
 import downloadRepo from 'github-download-parts/index';
 import { isFolderEmpty } from './directory';
 import { shouldUseYarn } from './module-utils';
 import { resolve } from 'path';
 import { error, info } from './console';
 import { TEMPLATE_FOLDER, TEMPLATE_REPO, QUESTIONS } from './questions';
+import { initRepository } from './git';
 
 export default async function () {
   prompt(QUESTIONS).then(async function (resp) {
@@ -40,7 +42,7 @@ export default async function () {
         `${TEMPLATE_FOLDER}/${resp.layout}`
       );
 
-      if (tryGitInit(resolvedProjectPath)) {
+      if (initRepository(resolvedProjectPath)) {
         info('Initialized a git repository.');
       }
 
