@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.11](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.10...@engrafia/create-engrafia@0.1.11) (2022-11-01)
+
+
+### Bug Fixes
+
+* **create-engrafia:** change bundler to tsc ([1da0cc9](https://github.com/Jucian0/engrafia/commit/1da0cc96e895dd82e6d4281b7594c13ceb069b9e))
+* **engrafia-ui:** fix docs linkns and readme ([9ca68e8](https://github.com/Jucian0/engrafia/commit/9ca68e89b1fbe5d258d90d2a036544c4ca209f9e))
+* **engrafia-ui:** fix readme ([1be02fe](https://github.com/Jucian0/engrafia/commit/1be02fe56aa7892b33995154315968a5aaec9c86))
+
 ### [0.1.10](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.9...@engrafia/create-engrafia@0.1.10) (2022-11-01)
 
 
