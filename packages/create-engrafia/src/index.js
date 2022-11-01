@@ -2,9 +2,10 @@
 
 import { command, parse } from 'commander';
 import Questions from './../lib/create';
+import packageJson from './../package.json';
 
 command('create')
-  .version('1.0.0')
+  .version(packageJson.version)
   .alias('c')
   .description('Create an Engrafia application')
   .action(async () => Questions());
