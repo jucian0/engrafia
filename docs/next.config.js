@@ -8,7 +8,7 @@ const composed = compose(engrafia, withImages);
 module.exports = composed({
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   i18n: {
-    locales: ['en', 'pt'],
+    locales: ['en'],
     defaultLocale: 'en',
   },
 });
