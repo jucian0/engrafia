@@ -24,27 +24,18 @@
         "passWithNoTests": true
       }
     },
-    "build": {
+    "minify": {
       "executor": "nx:run-commands",
       "options": {
         "commands": [
           {
             "command": "cd packages/create-engrafia/src && yarn build"
-          },
-          {
-            "command": "cp packages/create-engrafia/package.json dist/packages/create-engrafia/"
-          },
-          {
-            "command": "cp packages/create-engrafia/README.md dist/packages/create-engrafia/"
-          },
-          {
-            "command": "cp packages/create-engrafia/CHANGELOG.md dist/packages/create-engrafia/"
           }
         ],
         "parallel": false
       }
     },
-    "build-old": {
+    "build": {
       "executor": "@nrwl/js:tsc",
       "outputs": [
         "{options.outputPath}"
@@ -84,6 +75,7 @@
         "tagPrefix": "@engrafia/${projectName}@",
         "baseBranch": "main",
         "postTargets": [
+          "create-engrafia:minify",
           "create-engrafia:deploy"
         ]
       }
