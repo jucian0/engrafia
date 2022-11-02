@@ -2,7 +2,7 @@
   "name": "create-engrafia",
   "version": "0.1.16",
   "bin": {
-    "create-engrafia": "./src/index.js"
+    "create-engrafia": "./bin/index.js"
   },
   "dependencies": {
     "github-download-parts": "^2.1.0",
@@ -25,7 +25,7 @@
     "homepage": "https://engrafia.vercel.app/"
   },
   "scripts": {
-    "minify": "ncc build ./src/index.ts -o ./../../dist/packages/create-engrafia/src --minify --no-cache --no-source-map-register"
+    "minify": "ncc build ./src/index.ts -o ./../../dist/packages/create-engrafia/bin --minify --no-cache --no-source-map-register"
   },
   "license": "MIT"
 }
