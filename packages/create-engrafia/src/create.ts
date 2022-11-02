@@ -1,17 +1,18 @@
-import { prompt } from 'inquirer';
+import inquirer from 'inquirer';
 import { green } from 'colors';
 import makeDir from 'make-dir';
 //@ts-ignore
-import downloadRepo from 'github-download-parts/index';
 import { isFolderEmpty } from './directory';
-import { shouldUseYarn } from './module-utils';
+import { installDependencies } from './module-utils';
 import { resolve } from 'path';
-import { error, info } from './console';
-import { TEMPLATE_FOLDER, TEMPLATE_REPO, QUESTIONS } from './questions';
+import { error, info, init, success } from './console';
+import { TEMPLATE_REPO, QUESTIONS } from './questions';
 import { initRepository } from './git';
+import download from 'github-directory-downloader';
 
-export default async function () {
-  prompt(QUESTIONS).then(async function (resp) {
+export default function () {
+  init('Create Engrafia');
+  inquirer.prompt(QUESTIONS).then(async function (resp) {
     if (!resp.name) {
       error('We could not create your app, you should input a name!');
       process.exit(1);
@@ -29,27 +30,27 @@ export default async function () {
       if (!isFolderEmpty(resolvedProjectPath, resp.name)) {
         process.exit(1);
       }
-      const useYarn = resp.packageManager === 'npm' ? false : shouldUseYarn();
-      const originalDirectory = process.cwd();
+      // const useYarn = resp.packageManager === 'npm' ? false : shouldUseYarn();
+      //      const originalDirectory = process.cwd();
       info(`Creating a new Engrafia app in ${green(resolvedProjectPath)}.`);
 
       await makeDir(resolvedProjectPath);
       process.chdir(resolvedProjectPath);
 
-      await downloadRepo(
-        TEMPLATE_REPO,
-        '.',
-        `${TEMPLATE_FOLDER}/${resp.layout}`
+      await download(
+        `${TEMPLATE_REPO}/${resp.layout}`,
+        resolve(__dirname, resolvedProjectPath)
       );
 
       if (initRepository(resolvedProjectPath)) {
         info('Initialized a git repository.');
       }
 
-      info("Congratulations, you've done!");
+      installDependencies(resp.packageManager, resolvedProjectPath);
+
+      success("Congratulations, you've done!");
     } catch (err) {
       error(err);
     }
-    console.log('Dragons');
   });
 }

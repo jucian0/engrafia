@@ -1,13 +1,12 @@
 const LAYOUT_OPTIONS = ['default', 'versioned', 'i18n'];
 const PACKAGE_MANAGER_OPTIONS = ['yarn', 'npm'];
-export const TEMPLATE_REPO = `jucian0/engrafia`;
-export const TEMPLATE_FOLDER = `examples`;
+export const TEMPLATE_REPO = `https://github.com/Jucian0/engrafia/tree/main/examples`;
 
 export const QUESTIONS = [
   {
     type: 'input',
     name: 'name',
-    message: 'What is your project named?',
+    message: 'What is your project name?',
     default: 'engrafia-app',
   },
   {

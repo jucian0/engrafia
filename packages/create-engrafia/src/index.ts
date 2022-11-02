@@ -1,14 +1,22 @@
 #!/usr/bin/env node
 
-import { command, parse } from 'commander';
-import Questions from './create';
+import { Command } from 'commander';
+import questions from './create';
 //@ts-ignore
 import packageJson from '../package.json';
 
-command('create')
-  .version(packageJson.version)
-  .alias('c')
-  .description('Create an Engrafia application')
-  .action(async () => Questions());
+const program = new Command();
 
-parse(process.argv);
+program
+  .name('Engrafia')
+  .description('Engrafia website generator')
+  .version(packageJson.version);
+
+program
+  .command('create')
+  .description('Create an Engrafia web application.')
+  .action(() => {
+    questions();
+  });
+
+program.parse();
