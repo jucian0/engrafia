@@ -48,6 +48,18 @@
         "parallel": false
       }
     },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm publish dist/packages/create-engrafia",
+            "forwardAllArgs": false
+          }
+        ],
+        "parallel": false
+      }
+    },
     "build-old": {
       "executor": "@nrwl/js:tsc",
       "outputs": [
@@ -88,14 +100,9 @@
         "tagPrefix": "@engrafia/${projectName}@",
         "baseBranch": "main",
         "postTargets": [
+          "create-engrafia:build",
           "create-engrafia:deploy"
         ]
-      }
-    },
-    "deploy": {
-      "executor": "ngx-deploy-npm:deploy",
-      "options": {
-        "access": "public"
       }
     }
   },
