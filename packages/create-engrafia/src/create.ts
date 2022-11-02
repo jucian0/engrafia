@@ -50,5 +50,6 @@ export default async function () {
     } catch (err) {
       error(err);
     }
+    console.log('Dragons');
   });
 }
