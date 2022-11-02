@@ -29,6 +29,10 @@
       "options": {
         "commands": [
           {
+            "command": "rm -r dist/packages/create-engrafia/src/*",
+            "forwardAllArgs": false
+          },
+          {
             "command": "cd packages/create-engrafia/src && yarn minify",
             "forwardAllArgs": false
           }
