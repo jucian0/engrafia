@@ -27,17 +27,5 @@
       }
     }
   },
-  "targetDefaults": {
-    "build": {
-      "dependsOn": [
-        "^build"
-      ]
-    },
-    "version": {
-      "dependsOn": [
-        "build"
-      ]
-    }
-  },
   "defaultProject": "docs"
 }
