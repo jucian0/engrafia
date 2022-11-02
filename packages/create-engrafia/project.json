@@ -29,7 +29,8 @@
       "options": {
         "commands": [
           {
-            "command": "cd packages/create-engrafia/src && yarn build"
+            "command": "cd packages/create-engrafia/src && yarn minify",
+            "forwardAllArgs": false
           }
         ],
         "parallel": false
