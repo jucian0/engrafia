@@ -153,14 +153,14 @@ export default {
         content="https://engrafia.vercel.app/imgs/engrafia-social-image.png"
       />
 
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="juciano_barbosa" />
-      <meta name="twitter:title" content={meta.title} />
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:site" content="juciano_barbosa" />
+      <meta property="twitter:title" content={meta.title} />
       {meta.description && (
-        <meta name="twitter:description" content={meta.description} />
+        <meta property="twitter:description" content={meta.description} />
       )}
       <meta
-        name="twitter:image"
+        property="twitter:image"
         content="https://engrafia.vercel.app/imgs/engrafia-social-image.png"
       />
     </>
