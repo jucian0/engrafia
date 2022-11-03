@@ -141,7 +141,6 @@ export default {
       )}
       {meta.tags && <meta name="keywords" content={meta.tags} />}
       {meta.author && <meta name="author" content={meta.author} />}
-      {meta.socialImage && <meta name="author" content={meta.author} />}
       <meta name="og:site_name" property="og:site_name" content="Engrafia" />
       <meta name="og:type" property="og:type" content="website" />
       {meta.description && (
@@ -155,7 +154,7 @@ export default {
       <meta property="og:url" content="https://engrafia.vercel.app/" />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="engrafia" />
+      <meta name="twitter:site" content="juciano_barbosa" />
       <meta name="twitter:title" content={title} />
       {meta.description && (
         <meta name="twitter:description" content={meta.description} />
