@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.21](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.20...@engrafia/engrafia-ui@0.1.21) (2022-11-03)
+
+
+### Bug Fixes
+
+* **docs:** fix docs homepage, and update logo, and icons ([f8b1136](https://github.com/Jucian0/engrafia/commit/f8b1136c405822727fa34856c0c2152c657e1866))
+
 ### [0.1.18](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.17...@engrafia/engrafia-ui@0.1.18) (2022-11-01)
 
 
