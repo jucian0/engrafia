@@ -148,7 +148,7 @@ export default {
         <meta property="og:description" content={meta.description} />
       )}
       <meta property="og:title" content={title} />
-      <meta property="og:image" content="/code.png" />
+      <meta property="og:image" content="/imgs/engrafia-social-image.png" />
       <meta property="og:url" content="https://engrafia.vercel.app/" />
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -157,7 +157,7 @@ export default {
       {meta.description && (
         <meta name="twitter:description" content={meta.description} />
       )}
-      <meta name="twitter:image" content="/code.png" />
+      <meta name="twitter:image" content="/imgs/engrafia-social-image.png" />
     </>
   ),
 };
