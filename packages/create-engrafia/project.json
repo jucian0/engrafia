@@ -25,6 +25,42 @@
       }
     },
     "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "cd packages/create-engrafia/src && yarn build",
+            "forwardAllArgs": false
+          },
+          {
+            "command": "cp packages/create-engrafia/package.json dist/packages/create-engrafia/",
+            "forwardAllArgs": false
+          },
+          {
+            "command": "cp packages/create-engrafia/README.md dist/packages/create-engrafia/",
+            "forwardAllArgs": false
+          },
+          {
+            "command": "cp packages/create-engrafia/CHANGELOG.md dist/packages/create-engrafia/",
+            "forwardAllArgs": false
+          }
+        ],
+        "parallel": false
+      }
+    },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm publish dist/packages/create-engrafia",
+            "forwardAllArgs": false
+          }
+        ],
+        "parallel": false
+      }
+    },
+    "build-old": {
       "executor": "@nrwl/js:tsc",
       "outputs": [
         "{options.outputPath}"
@@ -46,9 +82,6 @@
       ],
       "options": {
         "watch": true,
-        "format": [
-          "esm"
-        ],
         "outputPath": "dist/packages/create-engrafia",
         "tsConfig": "packages/create-engrafia/tsconfig.lib.json",
         "packageJson": "packages/create-engrafia/package.json",
@@ -67,14 +100,9 @@
         "tagPrefix": "@engrafia/${projectName}@",
         "baseBranch": "main",
         "postTargets": [
+          "create-engrafia:build",
           "create-engrafia:deploy"
         ]
-      }
-    },
-    "deploy": {
-      "executor": "ngx-deploy-npm:deploy",
-      "options": {
-        "access": "public"
       }
     }
   },

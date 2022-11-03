@@ -2,6 +2,116 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.20](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.19...@engrafia/create-engrafia@0.1.20) (2022-11-02)
+
+
+### Bug Fixes
+
+* **create-engrafia:** fix create-engrafia commands ([569baa2](https://github.com/Jucian0/engrafia/commit/569baa2b2e5175684f7a7b4256d2da6eff063c75))
+
+### [0.1.19](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.18...@engrafia/create-engrafia@0.1.19) (2022-11-02)
+
+### [0.1.19](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.18...@engrafia/create-engrafia@0.1.19) (2022-11-02)
+
+### [0.1.18](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.17...@engrafia/create-engrafia@0.1.18) (2022-11-02)
+
+### [0.1.17](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.16...@engrafia/create-engrafia@0.1.17) (2022-11-02)
+
+### [0.1.16](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.15...@engrafia/create-engrafia@0.1.16) (2022-11-02)
+
+### [0.1.15](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.14...@engrafia/create-engrafia@0.1.15) (2022-11-02)
+
+
+### Bug Fixes
+
+* **create-engrafia:** fix ([bd59d6d](https://github.com/Jucian0/engrafia/commit/bd59d6dda10bbe5dfdfdcadf19892c5ca8bff654))
+* **create-engrafia:** fix build commands ([d7544f7](https://github.com/Jucian0/engrafia/commit/d7544f745674b7179c7e457aa7bff6bee1be1ad4))
+* **create-engrafia:** fix command to cp library information ([70f285f](https://github.com/Jucian0/engrafia/commit/70f285f44f168d303689b21c95c32678aa60bcdd))
+* **create-engrafia:** fixing create-engrafia build command ([0991819](https://github.com/Jucian0/engrafia/commit/0991819a465e21be8f3fd4b5e1e0eb3053289500))
+* **create-engrafia:** fixing create-engrafia build command ([e279288](https://github.com/Jucian0/engrafia/commit/e2792889a9b8d68d5c609fe2348a118c975424d1))
+
+### [0.1.26](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.25...@engrafia/create-engrafia@0.1.26) (2022-11-02)
+
+
+### Bug Fixes
+
+* **create-engrafia:** fixing create-engrafia build command ([0991819](https://github.com/Jucian0/engrafia/commit/0991819a465e21be8f3fd4b5e1e0eb3053289500))
+
+### [0.1.25](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.24...@engrafia/create-engrafia@0.1.25) (2022-11-02)
+
+
+### Bug Fixes
+
+* **create-engrafia:** fix ([bd59d6d](https://github.com/Jucian0/engrafia/commit/bd59d6dda10bbe5dfdfdcadf19892c5ca8bff654))
+* **create-engrafia:** fix build commands ([d7544f7](https://github.com/Jucian0/engrafia/commit/d7544f745674b7179c7e457aa7bff6bee1be1ad4))
+* **create-engrafia:** fixing create-engrafia build command ([e279288](https://github.com/Jucian0/engrafia/commit/e2792889a9b8d68d5c609fe2348a118c975424d1))
+
+### [0.1.24](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.23...@engrafia/create-engrafia@0.1.24) (2022-11-01)
+
+
+### Bug Fixes
+
+* **create-engrafia:** fix command to cp library information ([70f285f](https://github.com/Jucian0/engrafia/commit/70f285f44f168d303689b21c95c32678aa60bcdd))
+
+### [0.1.23](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.22...@engrafia/create-engrafia@0.1.23) (2022-11-01)
+
+### [0.1.22](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.21...@engrafia/create-engrafia@0.1.22) (2022-11-01)
+
+### [0.1.21](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.20...@engrafia/create-engrafia@0.1.21) (2022-11-01)
+
+### [0.1.20](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.19...@engrafia/create-engrafia@0.1.20) (2022-11-01)
+
+### [0.1.19](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.18...@engrafia/create-engrafia@0.1.19) (2022-11-01)
+
+### [0.1.18](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.17...@engrafia/create-engrafia@0.1.18) (2022-11-01)
+
+### [0.1.17](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.16...@engrafia/create-engrafia@0.1.17) (2022-11-01)
+
+### [0.1.16](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.15...@engrafia/create-engrafia@0.1.16) (2022-11-01)
+
+### [0.1.15](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.14...@engrafia/create-engrafia@0.1.15) (2022-11-01)
+
+### [0.1.14](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.13...@engrafia/create-engrafia@0.1.14) (2022-11-01)
+
+### [0.1.13](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.12...@engrafia/create-engrafia@0.1.13) (2022-11-01)
+
+
+### Bug Fixes
+
+* **create-engrafia:** add minify command to turn many filos into one ([aa2379d](https://github.com/Jucian0/engrafia/commit/aa2379d95cce5ba04136626e5de0aaa87ad6e89d))
+* **create-engrafia:** fix commands order after version ([9455b1a](https://github.com/Jucian0/engrafia/commit/9455b1aa9c0faa5df0bd4aa266232a4df50b3b5d))
+
+### [0.1.12](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.11...@engrafia/create-engrafia@0.1.12) (2022-11-01)
+
+
+### Bug Fixes
+
+* **create-engrafia:** add #!/usr/bin/env node ([d1b53ff](https://github.com/Jucian0/engrafia/commit/d1b53ffa0782814118b9dad85109627011a771d9))
+* **create=engrafia:** add #!/usr/bin/env node ([8ab55b4](https://github.com/Jucian0/engrafia/commit/8ab55b4628a983d4afc390a8e5f1814507e26cd3))
+
+### [0.1.11](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.10...@engrafia/create-engrafia@0.1.11) (2022-11-01)
+
+
+### Bug Fixes
+
+* **create-engrafia:** change bundler to tsc ([1da0cc9](https://github.com/Jucian0/engrafia/commit/1da0cc96e895dd82e6d4281b7594c13ceb069b9e))
+* **engrafia-ui:** fix docs linkns and readme ([9ca68e8](https://github.com/Jucian0/engrafia/commit/9ca68e89b1fbe5d258d90d2a036544c4ca209f9e))
+* **engrafia-ui:** fix readme ([1be02fe](https://github.com/Jucian0/engrafia/commit/1be02fe56aa7892b33995154315968a5aaec9c86))
+
+### [0.1.10](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.9...@engrafia/create-engrafia@0.1.10) (2022-11-01)
+
+
+### Bug Fixes
+
+* **create-engrafia:** fixing module create-engrafia add vercel/ncc ([d235f90](https://github.com/Jucian0/engrafia/commit/d235f90e1f05d6bf5bf6f98a905969bfa1f09393))
+
+### [0.1.9](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.8...@engrafia/create-engrafia@0.1.9) (2022-11-01)
+
+
+### Bug Fixes
+
+* **create-engrafia:** fixing cli commands ([be283ec](https://github.com/Jucian0/engrafia/commit/be283ecb51d2d9ee6d077cf50a2718591c4ef5d3))
+
 ### [0.1.8](https://github.com/Jucian0/engrafia/compare/@engrafia/create-engrafia@0.1.7...@engrafia/create-engrafia@0.1.8) (2022-11-01)
 
 

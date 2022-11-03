@@ -33,12 +33,14 @@ export default function MenuNav() {
       >
         <Navbar.Brand>
           <Link href="/">
-            <a>{themeConfig.nav?.logo}</a>
+            <a style={{ display: 'flex', alignItems: 'center' }}>
+              {themeConfig.nav?.logo}
+            </a>
           </Link>
           <Link href="/">
             <a>
               <Text b color="inherit" hideIn="xs">
-                {themeConfig.title}
+                {themeConfig.nav?.textLogo}
               </Text>
             </a>
           </Link>

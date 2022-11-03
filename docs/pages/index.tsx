@@ -12,7 +12,7 @@ export default function Index() {
         <title>Engrafia | Docs generator</title>
         <meta
           name="description"
-          content="The most easiest way to write docs for your project."
+          content="The easiest way to write docs for your project."
         />
       </Head>
       <Grid.Container
@@ -30,15 +30,6 @@ export default function Index() {
           size="5rem"
         >
           Engrafia
-        </Text>
-        <Text
-          h1
-          css={{
-            textGradient: '45deg, $purple600 -20%, $pink600 100%',
-          }}
-          weight="bold"
-        >
-          Beta Docs, Work in progress
         </Text>
 
         <Text>{t('description')}</Text>

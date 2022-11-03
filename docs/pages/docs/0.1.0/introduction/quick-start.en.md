@@ -28,6 +28,8 @@ This is the default process to start a new Engrafia application, open the termin
 yarn create engrafia
 ```
 
+![create-engrafia](/imgs/create-engrafia.png)
+
 This command will guide you through some steps to decide which template would you like to use. After those steps, you will have a new application up to production.
 
 ## Development mode
@@ -36,7 +38,7 @@ To write new documents, it's useful if your development environment is up, other
 
 Do that by running the command `yarn dev`, the development environment will be available in [`http://localhost:3000`](http://localhost:3000)
 
-![engrafia-start](/engrafia-start.png)
+![engrafia-start](/imgs/engrafia-start.png)
 
 ### MD files
 
@@ -83,3 +85,5 @@ Okay, after you wrote some documents, you want to publish them to the world, so 
 To have a production artifact you just need to run the following command `yarn build`.
 
 Done!
+
+![engrafia](/imgs/engrafia.svg)

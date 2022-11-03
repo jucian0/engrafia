@@ -20,7 +20,8 @@ export function Footer() {
           alignItems: 'center',
         }}
       >
-        <>{themeConfig.footer?.logo}</>
+        {themeConfig.footer?.logo}
+        {themeConfig.footer?.textLogo}
         {themeConfig.footer?.text}
       </Grid>
     </Grid.Container>
