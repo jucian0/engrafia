@@ -150,7 +150,10 @@ export default {
       )}
       <meta
         property="og:image"
-        content="https://engrafia.vercel.app/imgs/engrafia-social-image.png"
+        content={
+          meta.socialImage ??
+          'https://engrafia.vercel.app/imgs/engrafia-social-image.png'
+        }
       />
 
       <meta property="twitter:card" content="summary_large_image" />
@@ -161,7 +164,10 @@ export default {
       )}
       <meta
         property="twitter:image"
-        content="https://engrafia.vercel.app/imgs/engrafia-social-image.png"
+        content={
+          meta.socialImage ??
+          'https://engrafia.vercel.app/imgs/engrafia-social-image.png'
+        }
       />
     </>
   ),

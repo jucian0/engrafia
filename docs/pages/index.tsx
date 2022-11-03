@@ -1,20 +1,24 @@
 import { Button, Grid, Text } from '@nextui-org/react';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'packages/engrafia-ui/src/useTranslation';
+
+export const getStaticProps = async () => {
+  return {
+    props: {
+      data: {
+        title: 'Engrafia | Docs generator',
+        description: 'The easiest way to write docs for your project.',
+        tags: 'docs, documentation, nextjs',
+      },
+    },
+  };
+};
 
 export default function Index() {
   const router = useRouter();
   const t = useTranslation();
   return (
     <>
-      <Head>
-        <title>Engrafia | Docs generator</title>
-        <meta
-          name="description"
-          content="The easiest way to write docs for your project."
-        />
-      </Head>
       <Grid.Container
         justify="center"
         direction="column"
