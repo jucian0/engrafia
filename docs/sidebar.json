@@ -15,6 +15,17 @@
                             "name": "features",
                             "children": [
                                 {
+                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/features/customization.en.md",
+                                    "name": "customization.en.md",
+                                    "meta": {
+                                        "title": "Customization",
+                                        "description": "This doc will guide you through the Engrafia customization, like themes, colors, and pages.",
+                                        "tags": "react, docs, nextjs, theme, styles"
+                                    },
+                                    "url": "/docs/0.1.0/features/customization.en",
+                                    "relativePath": "/docs/pages/docs/0.1.0/features/customization.en.md"
+                                },
+                                {
                                     "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/features/i18n.en.md",
                                     "name": "i18n.en.md",
                                     "meta": {
