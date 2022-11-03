@@ -85,3 +85,5 @@ Okay, after you wrote some documents, you want to publish them to the world, so 
 To have a production artifact you just need to run the following command `yarn build`.
 
 Done!
+
+![engrafia](/imgs/engrafia.svg)

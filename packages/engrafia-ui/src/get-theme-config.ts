@@ -10,12 +10,14 @@ export type Config = {
     };
     nav?: {
       logo?: string | any;
+      textLogo: string;
       links?: { title: string; url: string; external?: boolean }[];
       search_bar?: string;
     };
     footer?: {
       text: string;
       logo: string | any;
+      textLogo: string;
     };
     head?: ({
       title,

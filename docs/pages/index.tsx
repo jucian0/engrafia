@@ -10,7 +10,10 @@ export default function Index() {
     <>
       <Head>
         <title>Engrafia | Docs generator</title>
-        <meta name="description" content={t('sentence.brand')} />
+        <meta
+          name="description"
+          content="The easiest way to write docs for your project."
+        />
       </Head>
       <Grid.Container
         justify="center"
