@@ -1,0 +1,19 @@
+{
+    "features": "Funcionalidades",
+    "tutorials": "Tutoriais",
+    "description": "O modo mais simples de escrever documentação para seu projeto.",
+    "link.docs": "Documentação",
+    "link.github": "Github",
+    "edit.content": "Edite esse conteúdo",
+    "table.of.content": "Conteúdos da página",
+    "search.placeholder": "Search...",
+    "get.start": "Iniciar",
+    "read.docs": "Ler documentação",
+    "sentence.brand": "Construa documentações incríveis, Engrafia + NextJs lhe permite escrever a documentação para seu projeto com arquivos MD e MDX.",
+    "performant": "Performático",
+    "performant.sentence": "NextJs é um poderoso framework para aplicações React, ele  é super performático, e toda esse desempenho e poder esta disponível para você!",
+    "next.power": "Poder do NextJs",
+    "next.power.sentence": "Engrafia é empoderado por NextJs, usando Engrafia você tem uma grande comunidade e toda a performance do NextJs para escrever documentações incríveis.",
+    "easy.to.use": "Fácil de usar",
+    "easy.to.use.sentence": "Não se preocupe com coisas como; menu lateral, tabela de conteúdo, layout e outras coisas do tipo, Engrafia te entrega todas a configurações e ferramentas necessárias, apenas relaxe e escreva seus arquivos MD e MDX."
+}

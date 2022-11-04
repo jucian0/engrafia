@@ -1,0 +1,19 @@
+{
+    "introduction": "Introduction",
+    "description": "The easiest way to write docs for your project.",
+    "features": "Features",
+    "link.docs": "Docs",
+    "link.github": "Github",
+    "edit.content": "Edit this content",
+    "table.of.content": "Page content",
+    "search.placeholder": "Search...",
+    "get.start": "Get start",
+    "read.docs": "Read the docs",
+    "sentence.brand": "Build awesome documentation, Engrafia + NextJs allow you to write your documentation with MD or MDX files.",
+    "performant": "Performant",
+    "performant.sentence": "NextJs is a powerful React framework, it's performant, and all this performance is up to you, just try it!",
+    "next.power": "Next power",
+    "next.power.sentence": "Egrafia is empowered by NextJs, so you can expect performance, and a rouge ecosystem to custom your documentation.",
+    "easy.to.use": "Easy to use",
+    "easy.to.use.sentence": "Don't worry about stuff like, sidebar menu, top menu, table of content, layout, or other things, Engrafia provides everything for you, just relax and write your MD files."
+}
