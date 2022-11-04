@@ -1,7 +1,7 @@
 export default {
   title: 'Engrafia',
   description: 'Easily, and delightful documentation website generator!',
-  rootDocs: '',
+  rootDocs: 'docs',
   repository: {
     url: 'http://github.com/jucian0/engrafia',
     branch: 'main',
@@ -26,6 +26,7 @@ export default {
         />
       </svg>
     ),
+    textLogo: 'Engrafia',
     links: [
       {
         title: 'Docs',
@@ -39,6 +40,7 @@ export default {
     search_bar: 'Search',
   },
   footer: {
+    textLogo: '',
     text: 'Engrafia 2022',
     logo: (
       <svg

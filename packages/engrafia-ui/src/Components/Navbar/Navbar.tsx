@@ -11,6 +11,7 @@ import { LanguageSelector } from '../LanguageSelector/Selector';
 import { NavigationMenuDemo } from '../Search/Search';
 import { Sidebar } from '../Sidebar/Sidebar';
 import { VersionSelector } from '../VersionSelector/Selector';
+
 const { default: themeConfig } = getThemeConfig();
 
 export default function MenuNav() {
