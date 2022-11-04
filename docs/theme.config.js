@@ -135,7 +135,7 @@ export default {
   head: ({ title, meta }) => (
     <>
       <link rel="shortcut icon" href="/favicon.ico" />
-      <title>{meta.title}</title>
+      <title>{title}</title>
       {meta.description && (
         <meta name="description" content={meta.description} />
       )}
@@ -158,7 +158,7 @@ export default {
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:site" content="juciano_barbosa" />
-      <meta property="twitter:title" content={meta.title} />
+      <meta property="twitter:title" content={title} />
       {meta.description && (
         <meta property="twitter:description" content={meta.description} />
       )}
