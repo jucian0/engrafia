@@ -76,7 +76,12 @@ export default {
     search_bar: 'search.placeholder',
   },
   footer: {
-    text: 'Engrafia 2022',
+    text: (
+      <>
+        Engrafia 2022 Developed by:{' '}
+        <a href={'https://github.com/Jucian0'}> Juciano</a>
+      </>
+    ),
     textLogo: '',
     logo: (
       <svg
