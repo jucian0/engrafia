@@ -135,7 +135,7 @@ export default {
   head: ({ title, meta }) => (
     <>
       <link rel="shortcut icon" href="/favicon.ico" />
-      <title>{meta.title}</title>
+      <title>{title}</title>
       {meta.description && (
         <meta name="description" content={meta.description} />
       )}
@@ -150,17 +150,20 @@ export default {
       )}
       <meta
         property="og:image"
-        content="https://engrafia.vercel.app/imgs/engrafia-social-image.png"
+        content={
+          meta.socialImage ??
+          'https://engrafia.vercel.app/imgs/engrafia-social-image.png'
+        }
       />
 
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@juciano_barbosa" />
-      <meta name="twitter:title" content={meta.title} />
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:site" content="juciano_barbosa" />
+      <meta property="twitter:title" content={title} />
       {meta.description && (
         <meta name="twitter:description" content={meta.description} />
       )}
       <meta
-        name="twitter:image"
+        property="twitter:image"
         content={
           meta.socialImage ??
           'https://engrafia.vercel.app/imgs/engrafia-social-image.png'
