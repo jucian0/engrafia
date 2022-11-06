@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.24](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.23...@engrafia/engrafia-ui@0.1.24) (2022-11-06)
+
 ### [0.1.23](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.22...@engrafia/engrafia-ui@0.1.23) (2022-11-06)
 
 
