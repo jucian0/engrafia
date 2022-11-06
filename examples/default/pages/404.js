@@ -2,8 +2,8 @@ export const getStaticProps = async () => {
   return {
     props: {
       data: {
-        title: 'Engrafia | Docs generator',
-        description: 'The easiest way to write docs for your project.',
+        title: 'Engrafia | 404',
+        description: 'Page not found',
         tags: 'docs, documentation, nextjs',
       },
     },
@@ -16,7 +16,7 @@ export function Index() {
    *
    * Note: The corresponding styles are in the ./index.styled-components file.
    */
-  return <div>alo</div>;
+  return <div>Page not found 404</div>;
 }
 
 export default Index;

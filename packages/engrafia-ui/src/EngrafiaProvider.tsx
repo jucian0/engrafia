@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import React from 'react';
 import { EngrafiaContextType, EngrafiaContext } from './EngrafiaContext';
-import { getFolderName } from './get-folders';
+import { getFolderContent, getFolderName } from './get-folders';
 import { getI18nConfig } from './get-i18n';
 import { getSidebarTree, sidebarFallback } from './get-sidebar';
 import { getThemeConfigModule, Meta } from './get-theme-config';
@@ -27,94 +27,56 @@ function configReducer(
 const INITIAL_STATE: EngrafiaContextType = {
   meta: {} as Meta,
   tableOfContent: { depth: 1, children: [] },
-  version: 'latest',
+  version: undefined,
   sidebar: sidebarFallback,
   translations: {},
   themeConfig: {},
 };
 
+async function resolveEngrafiaDataConfig(locale?: string) {
+  return Promise.allSettled([
+    getThemeConfigModule(),
+    getSidebarTree(),
+    getI18nConfig(locale ?? 'default'),
+  ]);
+}
+
 export function EngrafiaProvider({ children }: React.PropsWithChildren<any>) {
-  const { locale, defaultLocale } = useRouter();
+  const { locale, route } = useRouter();
   const [config, setConfig] = React.useReducer(configReducer, INITIAL_STATE);
 
-  const versions = React.useMemo(
-    () => getFolderName(config.sidebar, TEST_VERSION_FOLDER),
-    [config.sidebar]
-  );
+  async function resolveAll() {
+    const data: any = await resolveEngrafiaDataConfig(locale);
+    const themeConfig = data[0].value;
+    const pseudoSidebarData = data[1].value;
+    const translations = data[2].value;
 
-  React.useEffect(() => {
+    const versions = getFolderName(pseudoSidebarData, TEST_VERSION_FOLDER);
+    const version = versions[versions.length - 1];
+    const paths = [themeConfig.rootDocs, version].filter((p) => p) as string[];
+    const sidebar = getFolderContent(pseudoSidebarData, paths);
+
     setConfig({
-      versions: versions,
-      version: versions[versions.length - 1],
+      themeConfig,
+      sidebar,
+      translations,
+      version,
+      versions,
     });
-  }, [versions]);
-
-  async function getThemeConfig() {
-    getThemeConfigModule()
-      .then((resp) => setConfig({ themeConfig: resp }))
-      .catch((err) => console.error(err));
   }
 
   React.useEffect(() => {
-    let isSubscribed = true;
-
-    if (isSubscribed) {
-      getThemeConfig();
-    }
-
-    return () => {
-      isSubscribed = false;
-    };
-  }, []);
-
-  async function getSidebar() {
-    getSidebarTree()
-      .then((resp) => setConfig({ sidebar: resp }))
-      .catch((err) => console.error(err));
-  }
-
-  React.useEffect(() => {
-    let isSubscribed = true;
-
-    if (isSubscribed) {
-      getSidebar();
-    }
-
-    return () => {
-      isSubscribed = false;
-    };
-  }, [locale, config.version]);
-
-  async function getI18n() {
-    const language = locale ?? defaultLocale;
-    if (language) {
-      getI18nConfig(language)
-        .then((resp) => setConfig({ translations: resp }))
-        .catch((err) => console.error(err));
-    }
-  }
-
-  React.useEffect(() => {
-    let isSubscribed = true;
-
-    if (isSubscribed) {
-      getI18n();
-    }
-
-    return () => {
-      isSubscribed = false;
-    };
-  }, [locale]);
+    resolveAll();
+  }, [locale, route]);
 
   React.useEffect(() => {
     if (children?.props?.children?.props) {
-      console.log(children?.props?.children);
       setConfig({
         meta: children.props.children.props.data,
         tableOfContent: children.props.children.props.tableOfContents,
       });
     }
-  }, [children?.props]);
+  }, [children?.props?.children?.props]);
 
   return (
     <EngrafiaContext.Provider value={config}>

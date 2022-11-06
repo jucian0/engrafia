@@ -1,9 +1,14 @@
+import { useRouter } from 'next/router';
 import { useEngrafiaConfig } from './EngrafiaProvider';
 
 export function useTranslation() {
+  const { locale } = useRouter();
   const { translations } = useEngrafiaConfig();
 
   return (key: string) => {
-    return translations[key] ?? key;
+    if (!locale) {
+      return key;
+    }
+    return translations[key];
   };
 }

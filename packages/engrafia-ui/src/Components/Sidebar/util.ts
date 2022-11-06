@@ -28,7 +28,10 @@ function order(list?: (Category & DocFile)[]) {
   });
 }
 
-function filterByLocale(list: (Category & DocFile)[] = [], locale: string) {
+function filterByLocale(list: (Category & DocFile)[] = [], locale?: string) {
+  if (!locale) {
+    return list;
+  }
   return list
     ?.filter((item) => {
       if (item.meta) {
@@ -44,7 +47,7 @@ function filterByLocale(list: (Category & DocFile)[] = [], locale: string) {
 
 export function filterSidebarContent(
   list: (Category & DocFile)[] = [],
-  locale: string
+  locale?: string
 ) {
   return order(filterByLocale(list, locale));
 }

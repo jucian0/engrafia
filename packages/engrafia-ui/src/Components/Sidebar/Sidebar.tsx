@@ -4,23 +4,16 @@ import Link from 'next/link';
 import * as S from './styles';
 import { MdChevronRight, MdExpandMore } from 'react-icons/md';
 import { Category, DocFile } from '../../get-sidebar';
-import { getFolderContent } from '../../get-folders';
 import { filterSidebarContent } from './util';
 import { useTranslation } from '../../useTranslation';
 import { useEngrafiaConfig } from '../../EngrafiaProvider';
 
 export function Sidebar({ hide = true }) {
-  const { version, sidebar, themeConfig } = useEngrafiaConfig();
+  const { sidebar } = useEngrafiaConfig();
   const router = useRouter();
   const { locale } = router;
   const t = useTranslation();
   const [toggle, setToggle] = React.useState(['']);
-
-  const sidebarTree = React.useMemo(() => {
-    const paths = [themeConfig.rootDocs, version].filter((p) => p) as string[];
-
-    return getFolderContent(sidebar, paths);
-  }, [sidebar, version, themeConfig]);
 
   function isActive(path: string) {
     return path === router.asPath;
@@ -39,13 +32,13 @@ export function Sidebar({ hide = true }) {
         setToggle((state) => state.concat([relativePath]));
       }
     },
-    [sidebarTree, toggle]
+    [sidebar, toggle]
   );
 
   React.useEffect(() => {
-    const opened = sidebarTree?.children?.map((e) => e.relativePath);
+    const opened = sidebar?.children?.map((e) => e.relativePath);
     setToggle(opened);
-  }, [sidebarTree]);
+  }, [sidebar]);
 
   function recursiveMenu(menu: Category & DocFile) {
     return (
@@ -66,7 +59,7 @@ export function Sidebar({ hide = true }) {
           </S.Category>
         )}
         {isOpened(menu) &&
-          filterSidebarContent(menu?.children, router.locale as '')?.map(
+          filterSidebarContent(menu?.children, router.locale)?.map(
             (item: Category & DocFile) => {
               if (item.meta) {
                 return (
@@ -96,10 +89,9 @@ export function Sidebar({ hide = true }) {
   return (
     <S.SidebarWrapper hideIn={hide ? 'xs' : undefined}>
       <div className="wrapper">
-        {filterSidebarContent(
-          sidebarTree?.children,
-          router.locale as ''
-        )?.map?.((child) => recursiveMenu(child))}
+        {filterSidebarContent(sidebar?.children, router.locale)?.map?.(
+          (child) => recursiveMenu(child)
+        )}
       </div>
     </S.SidebarWrapper>
   );
