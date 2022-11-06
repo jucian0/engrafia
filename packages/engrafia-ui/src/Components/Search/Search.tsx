@@ -2,16 +2,15 @@ import React from 'react';
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
 import { FormElement, Grid, Input, Text } from '@nextui-org/react';
 import { RiSearchFill } from 'react-icons/ri';
-import { getThemeConfig } from '../../get-theme-config';
 import { useTranslation } from '../../useTranslation';
 import * as S from './styles';
-import { DocFile, getSidebarTree } from '../../get-sidebar';
+import { DocFile } from '../../get-sidebar';
 import { filterItems, getSearchableList } from './utils';
 import { search } from 'fast-fuzzy';
-import { useSiteConfig } from '../../Provider';
 import { getFolderContent } from '../../get-folders';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useEngrafiaConfig } from '../../EngrafiaProvider';
 
 const StyledTriggerWithCaret = React.forwardRef(
   (
@@ -46,25 +45,22 @@ const ContentListItem = React.forwardRef(
   )
 );
 
-const { default: themeConfig } = getThemeConfig();
-const content = getSidebarTree();
-
 export const NavigationMenuDemo = () => {
   const t = useTranslation();
   const [list, setList] = React.useState([] as DocFile[]);
   const [input, setInput] = React.useState('');
   const { locale } = useRouter();
 
-  const { version } = useSiteConfig();
+  const { version, sidebar, themeConfig } = useEngrafiaConfig();
 
   const searchableContent = React.useMemo(() => {
     const paths = [themeConfig.rootDocs, version].filter((p) => p) as string[];
 
-    const filteredContent = getFolderContent(content, paths);
+    const filteredContent = getFolderContent(sidebar, paths);
     return filteredContent.name
       ? getSearchableList(filteredContent, locale as '')
       : [];
-  }, [content, version, locale, themeConfig]);
+  }, [sidebar, version, locale, themeConfig]);
 
   function handleSetList(e: React.ChangeEvent<FormElement>) {
     setInput(e.target.value);

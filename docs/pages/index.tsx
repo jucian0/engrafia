@@ -26,8 +26,8 @@ export default function Index() {
         src="/imgs/background.svg"
         style={{
           position: 'absolute',
-          maxWidth: '60%',
-          height: 700,
+          maxWidth: '50%',
+          height: 'auto',
           right: 0,
         }}
       />

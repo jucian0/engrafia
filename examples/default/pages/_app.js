@@ -1,7 +1,6 @@
-import { AppProps } from 'next/app';
 import { Engrafia } from '@engrafia/ui';
 
-function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }) {
   return (
     <Engrafia>
       <Component {...pageProps} />

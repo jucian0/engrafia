@@ -30,9 +30,9 @@ export default {
             width="223.981"
             height="186.016"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -105,9 +105,9 @@ export default {
             width="223.981"
             height="186.016"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -137,10 +137,10 @@ export default {
       </svg>
     ),
   },
-  head: ({ title, meta }) => (
+  head: (meta) => (
     <>
       <link rel="shortcut icon" href="/favicon.ico" />
-      <title>{title}</title>
+      <title>{meta.title}</title>
       {meta.description && (
         <meta name="description" content={meta.description} />
       )}
@@ -163,7 +163,7 @@ export default {
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:site" content="juciano_barbosa" />
-      <meta property="twitter:title" content={title} />
+      <meta property="twitter:title" content={meta.title} />
       {meta.description && (
         <meta name="twitter:description" content={meta.description} />
       )}

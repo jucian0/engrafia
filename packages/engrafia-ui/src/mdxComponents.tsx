@@ -1,11 +1,22 @@
-import { Text } from '@nextui-org/react';
-import Link from 'next/link';
+import Link, { LinkProps } from 'next/link';
+import React from 'react';
 import { Code } from './Components/CodeBlock/Clode';
 import { Table, TCol, THead, TRow, Input } from './Components/Table/Table';
 
+function MDXLink(
+  props: React.PropsWithChildren<LinkProps>,
+  ref: React.Ref<HTMLAnchorElement>
+) {
+  return (
+    <Link {...props}>
+      <a ref={ref}>{props.children}</a>
+    </Link>
+  );
+}
+
 export const mdxComponents = {
   code: Code,
-  a: Link,
+  a: React.forwardRef(MDXLink),
   table: Table,
   thead: THead,
   tr: TRow,

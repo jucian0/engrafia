@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { VscVersions } from 'react-icons/vsc';
-import { useSiteConfig } from '../../Provider';
+import { useEngrafiaConfig } from '../../EngrafiaProvider';
 import {
   Select,
   SelectContent,
@@ -14,7 +14,7 @@ import {
 import * as S from './styles';
 
 export function VersionSelector() {
-  const { setSiteConfig, version, versions } = useSiteConfig();
+  const { setSiteConfig, version, versions } = useEngrafiaConfig();
   const { replace, asPath } = useRouter();
 
   function handleChangeLanguage(e: string) {

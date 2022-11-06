@@ -1,12 +1,12 @@
 import * as S from './styles';
 import Link from 'next/link';
-import { useSiteConfig } from '../../Provider';
 import { useTranslation } from '../../useTranslation';
-import { ChildrenOfContent } from '../../ThemeContext';
+import { ChildrenOfContent } from '../../EngrafiaContext';
 import React from 'react';
+import { useEngrafiaConfig } from '../../EngrafiaProvider';
 
 export function TableOfContent() {
-  const { tableOfContent } = useSiteConfig();
+  const { tableOfContent } = useEngrafiaConfig();
   const [activeId, setActiveId] = React.useState('');
   const t = useTranslation();
 

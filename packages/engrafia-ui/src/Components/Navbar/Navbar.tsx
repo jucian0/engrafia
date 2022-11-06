@@ -3,8 +3,7 @@ import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { RiMoonFill, RiSunFill } from 'react-icons/ri';
-import { getThemeConfig } from '../../get-theme-config';
-import { useSiteConfig } from '../../Provider';
+import { useEngrafiaConfig } from '../../EngrafiaProvider';
 import { useTranslation } from '../../useTranslation';
 
 import { LanguageSelector } from '../LanguageSelector/Selector';
@@ -12,11 +11,9 @@ import { NavigationMenuDemo } from '../Search/Search';
 import { Sidebar } from '../Sidebar/Sidebar';
 import { VersionSelector } from '../VersionSelector/Selector';
 
-const { default: themeConfig } = getThemeConfig();
-
 export default function MenuNav() {
   const { theme, setTheme } = useTheme();
-  const { versions } = useSiteConfig();
+  const { versions, themeConfig } = useEngrafiaConfig();
   const t = useTranslation();
   const router = useRouter();
 

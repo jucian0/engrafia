@@ -1,21 +1,16 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { useSiteConfig } from '../../Provider';
 import * as S from './styles';
 import { MdChevronRight, MdExpandMore } from 'react-icons/md';
-import { Category, DocFile, getSidebarTree } from '../../get-sidebar';
-import { getThemeConfig } from '../../get-theme-config';
+import { Category, DocFile } from '../../get-sidebar';
 import { getFolderContent } from '../../get-folders';
 import { filterSidebarContent } from './util';
-import { getMetaCategory } from '../../get-meta-category';
 import { useTranslation } from '../../useTranslation';
-
-const sidebar = getSidebarTree();
-const { default: themeConfig } = getThemeConfig();
+import { useEngrafiaConfig } from '../../EngrafiaProvider';
 
 export function Sidebar({ hide = true }) {
-  const { version } = useSiteConfig();
+  const { version, sidebar, themeConfig } = useEngrafiaConfig();
   const router = useRouter();
   const { locale } = router;
   const t = useTranslation();

@@ -61,9 +61,9 @@ export default {
       </svg>
     ),
   },
-  head: ({ title, meta }) => (
+  head: (meta) => (
     <>
-      <title>{title}</title>
+      <title>{meta.title}</title>
       {meta.description && (
         <meta name="description" content={meta.description} />
       )}

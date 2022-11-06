@@ -1,3 +1,5 @@
+import { Meta } from './get-theme-config';
+
 export type SidebarTree = Category;
 
 export type DocFile = {
@@ -6,11 +8,7 @@ export type DocFile = {
   relativePath: string;
   title: string;
   url: string;
-  meta: {
-    title: string;
-    description: string;
-    position?: string;
-  };
+  meta: Meta;
 };
 
 export type Category = {
@@ -20,15 +18,18 @@ export type Category = {
   children: Array<Category & DocFile>;
 };
 
-export function getSidebarTree(): SidebarTree {
+export const sidebarFallback = {
+  name: 'pages',
+  title: 'Pages',
+  children: [],
+  path: '/',
+};
+
+export async function getSidebarTree(): Promise<SidebarTree> {
   try {
-    return require('root_folder/sidebar.json');
+    const data = await import('root_folder/sidebar.json' as any);
+    return data.default;
   } catch (err) {
-    return {
-      name: 'pages',
-      title: 'Pages',
-      children: [],
-      path: '/',
-    };
+    return Promise.resolve(sidebarFallback);
   }
 }

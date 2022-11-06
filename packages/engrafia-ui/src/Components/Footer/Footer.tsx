@@ -1,9 +1,8 @@
 import { Grid } from '@nextui-org/react';
-import { getThemeConfig } from '../../get-theme-config';
-
-const { default: themeConfig } = getThemeConfig();
+import { useEngrafiaConfig } from '../../EngrafiaProvider';
 
 export function Footer() {
+  const { themeConfig } = useEngrafiaConfig();
   return (
     <Grid.Container
       css={{
