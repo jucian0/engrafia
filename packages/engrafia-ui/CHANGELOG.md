@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.23](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.22...@engrafia/engrafia-ui@0.1.23) (2022-11-06)
+
+
+### Bug Fixes
+
+* **engrafia-ui:** add async functions to dynamic import site configuration ([aa1041e](https://github.com/Jucian0/engrafia/commit/aa1041ec490906cb95bf30e262e2198d1f52a642))
+
 ### [0.1.22](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.21...@engrafia/engrafia-ui@0.1.22) (2022-11-04)
 
 ### [0.1.21](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.20...@engrafia/engrafia-ui@0.1.21) (2022-11-03)
