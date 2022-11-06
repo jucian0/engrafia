@@ -25,7 +25,7 @@ The main concepts of Engrafia are to provide a better option to build a website 
 This is the default process to start a new Engrafia application, open the terminal and run the following command:
 
 ```bash
-yarn create engrafia
+npx create-engrafia create
 ```
 
 ![create-engrafia](/imgs/create-engrafia.png)

@@ -26,7 +26,7 @@ Não precisa ser assim, experimente Engrafia, e tenha o poder do NextJs e Next U
 Este é o processo recomendado para iniciar uma aplicação Engrafia, abra o terminal e siga com o comando abaixo:
 
 ```bash
-yarn create engrafia
+npx create-engrafia create
 ```
 
 ### Instalação de dependências
