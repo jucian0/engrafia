@@ -165,8 +165,6 @@ export default {
           siteName: 'Engrafia',
         }}
         twitter={{
-          handle: '@juciano_barbosa',
-          site: '@juciano_barbosa',
           cardType: 'summary_large_image',
         }}
       />
