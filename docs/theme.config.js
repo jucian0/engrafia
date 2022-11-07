@@ -179,6 +179,8 @@ export default {
           'https://engrafia.vercel.app/imgs/engrafia-social-image.jpeg'
         }
       />
+      <meta name="twitter:url" content="https://nextra.vercel.app" />
+      <meta name="twitter:site:domain" content="nextra.vercel.app" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="robots" content="follow, index" />
       <meta name="apple-mobile-web-app-title" content="Engrafia" />
