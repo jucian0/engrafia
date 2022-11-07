@@ -161,7 +161,7 @@ export default {
         property="og:image"
         content={
           meta.socialImage ??
-          'https://engrafia.vercel.app/imgs/engrafia-social-image.png'
+          'https://engrafia.vercel.app/imgs/engrafia-social-image.jpeg'
         }
       />
 
@@ -178,7 +178,6 @@ export default {
           'https://engrafia.vercel.app/imgs/engrafia-social-image.jpeg'
         }
       />
-      <meta name="theme-color" content="#7961E2"></meta>
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="robots" content="follow, index" />
       <meta name="apple-mobile-web-app-title" content="Engrafia" />
