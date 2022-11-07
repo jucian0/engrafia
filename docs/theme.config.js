@@ -143,43 +143,43 @@ export default {
   },
   head: ({ meta, title }) => (
     <>
-      <meta charset="utf-8" />
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
         href="/favicon/apple-icon-180x180.png"
-      ></link>
+      />
       <link
         rel="icon"
         type="image/png"
         sizes="192x192"
         href="/favicon/android-icon-192x192.png"
-      ></link>
+      />
       <link
         rel="icon"
         type="image/png"
         sizes="32x32"
         href="/favicon/favicon-32x32.png"
-      ></link>
+      />
       <link
         rel="icon"
         type="image/png"
         sizes="96x96"
         href="/favicon/favicon-96x96.png"
-      ></link>
+      />
       <link
         rel="icon"
         type="image/png"
         sizes="16x16"
         href="/favicon/favicon-16x16.png"
-      ></link>
+      />
       <title>{`${title} | ${meta.title}`}</title>
       {meta.description && (
         <meta name="description" content={meta.description} />
       )}
       {meta.tags && <meta name="keywords" content={meta.tags} />}
       {meta.author && <meta name="author" content={meta.author} />}
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta property="og:title" content={`${title} | ${meta.title}`} />
       <meta property="og:url" content="https://engrafia.vercel.app" />
       <meta property="og:site_name" content="Engrafia" />
