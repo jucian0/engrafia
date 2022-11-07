@@ -143,6 +143,7 @@ export default {
   },
   head: ({ meta, title }) => (
     <>
+      <meta charset="utf-8" />
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
       <link
         rel="apple-touch-icon"
@@ -189,7 +190,8 @@ export default {
       <meta
         property="og:image"
         content={
-          meta.socialImage ?? 'https://engrafia.vercel.app/imgs/engrafia.jpg'
+          meta.socialImage ??
+          'https://engrafia.vercel.app/imgs/engrafia_resized.jpg'
         }
       />
 
@@ -202,7 +204,8 @@ export default {
       <meta
         name="twitter:image"
         content={
-          meta.socialImage ?? 'https://engrafia.vercel.app/imgs/engrafia.jpg'
+          meta.socialImage ??
+          'https://engrafia.vercel.app/imgs/engrafia_resized.jpg'
         }
       />
       <meta name="twitter:url" content="https://engrafia.vercel.app" />
