@@ -144,7 +144,36 @@ export default {
   head: ({ meta, title }) => (
     <>
       <meta charset="utf-8" />
-      <link rel="shortcut icon" href="/favicon.ico" />
+      <link rel="shortcut icon" href="/favicon/favicon.ico" />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/favicon/apple-icon-180x180.png"
+      ></link>
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="192x192"
+        href="/favicon/android-icon-192x192.png"
+      ></link>
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon/favicon-32x32.png"
+      ></link>
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="96x96"
+        href="/favicon/favicon-96x96.png"
+      ></link>
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon/favicon-16x16.png"
+      ></link>
       <title>{`${title} | ${meta.title}`}</title>
       {meta.description && (
         <meta name="description" content={meta.description} />
@@ -162,7 +191,7 @@ export default {
         property="og:image"
         content={
           meta.socialImage ??
-          'https://engrafia.vercel.app/imgs/engrafia-social-image.jpeg'
+          'https://engrafia.vercel.app/imgs/engrafia-social-image.png'
         }
       />
 
@@ -176,11 +205,11 @@ export default {
         name="twitter:image"
         content={
           meta.socialImage ??
-          'https://engrafia.vercel.app/imgs/engrafia-social-image.jpeg'
+          'https://engrafia.vercel.app/imgs/engrafia-social-image.png'
         }
       />
-      <meta name="twitter:url" content="https://nextra.vercel.app" />
-      <meta name="twitter:site:domain" content="nextra.vercel.app" />
+      <meta name="twitter:url" content="https://engrafia.vercel.app" />
+      <meta name="twitter:site:domain" content="engrafia.vercel.app" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="robots" content="follow, index" />
       <meta name="apple-mobile-web-app-title" content="Engrafia" />
