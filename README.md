@@ -1,7 +1,7 @@
 # Engrafia
 
 ## The easiest way to write docs for your project.
-![logo](/publicl/imgs/engrafia.jpg)
+![logo](/public/imgs/engrafia.jpg)
 
 Docs - https://engrafia.vercel.app/
 
