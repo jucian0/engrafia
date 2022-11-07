@@ -1,3 +1,5 @@
+import { RiGithubFill } from 'react-icons/ri';
+
 export default {
   title: 'Engrafia',
   description: 'Easily, and delightful documentation website generator!',
@@ -65,15 +67,17 @@ export default {
     links: [
       {
         title: 'link.docs',
-        url: '/docs/0.1.0/introduction/quick-start',
-      },
-      {
-        title: 'link.github',
-        url: 'https://github.com/jucian0/engrafia',
-        external: true,
+        href: '/docs/0.1.0/introduction/quick-start',
       },
     ],
     search_bar: 'search.placeholder',
+    iconsLinks: [
+      {
+        icon: <RiGithubFill fill="var(--nextui-colors-accents6)" size={20} />,
+        href: 'https://github.com/jucian0/engrafia',
+        external: true,
+      },
+    ],
   },
   footer: {
     text: (

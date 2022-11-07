@@ -45,7 +45,7 @@ const ContentListItem = React.forwardRef(
   )
 );
 
-export const NavigationMenuDemo = () => {
+export const Search = () => {
   const t = useTranslation();
   const [list, setList] = React.useState([] as DocFile[]);
   const [input, setInput] = React.useState('');

@@ -7,7 +7,7 @@ import { useEngrafiaConfig } from '../../EngrafiaProvider';
 import { useTranslation } from '../../useTranslation';
 
 import { LanguageSelector } from '../LanguageSelector/Selector';
-import { NavigationMenuDemo } from '../Search/Search';
+import { Search } from '../Search/Search';
 import { Sidebar } from '../Sidebar/Sidebar';
 import { VersionSelector } from '../VersionSelector/Selector';
 
@@ -49,6 +49,7 @@ export default function MenuNav() {
             display: 'flex',
             justifyContent: 'flex-end',
             alignItems: 'center',
+            marginRight: '$20',
           }}
         >
           {themeConfig.nav?.links && (
@@ -56,19 +57,20 @@ export default function MenuNav() {
               activeColor={'primary'}
               hideIn="xs"
               variant="default"
+              css={{ color: '$accents8' }}
             >
-              {themeConfig.nav?.links.map((link) => {
+              {themeConfig.nav?.links?.map((link) => {
                 if (link.external) {
                   return (
-                    <Navbar.Link key={link.url} href={link.url}>
+                    <Navbar.Link key={link.href} href={link.href}>
                       {t(link.title)}
                     </Navbar.Link>
                   );
                 }
                 return (
                   <Link
-                    key={link.url}
-                    href={link.url.concat(`.${router.locale}`)}
+                    key={link.href}
+                    href={link.href.concat(`.${router.locale}`)}
                   >
                     <Navbar.Link>{t(link.title)}</Navbar.Link>
                   </Link>
@@ -83,6 +85,7 @@ export default function MenuNav() {
             display: 'flex',
             justifyContent: 'flex-end',
             alignItems: 'center',
+            width: 'max-content',
           }}
         >
           <Navbar.Content
@@ -93,7 +96,30 @@ export default function MenuNav() {
               },
             }}
           >
-            <NavigationMenuDemo />
+            {themeConfig.nav?.iconsLinks?.map((link) => {
+              if (link.external) {
+                return (
+                  <Navbar.Item>
+                    <Navbar.Link key={link.href} href={link.href}>
+                      {link.icon}
+                    </Navbar.Link>
+                  </Navbar.Item>
+                );
+              }
+              return (
+                <Navbar.Item>
+                  <Link
+                    key={link.href}
+                    href={link.href.concat(`.${router.locale}`)}
+                  >
+                    <Navbar.Link>{link.icon}</Navbar.Link>
+                  </Link>
+                </Navbar.Item>
+              );
+            })}
+
+            <Search />
+
             <Navbar.Item>
               <Button
                 icon={
