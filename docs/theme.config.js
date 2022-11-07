@@ -175,7 +175,7 @@ export default {
         name="twitter:image"
         content={
           meta.socialImage ??
-          'https://engrafia.vercel.app/imgs/engrafia-social-image.png'
+          'https://engrafia.vercel.app/imgs/engrafia-social-image.jpeg'
         }
       />
       <meta name="theme-color" content="#7961E2"></meta>
