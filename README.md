@@ -2,6 +2,8 @@
 
 ## The easiest way to write docs for your project.
 
+![logo](docs/public/imgs/engrafia.jpg)
+
 Docs - https://engrafia.vercel.app/
 
 Engrafia is an open-source project designed to build documentation websites without any effort. Engrafia is built up NextJs, which means that you have the power, and performance of NextJs to build your documentation.
