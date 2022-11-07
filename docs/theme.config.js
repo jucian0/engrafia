@@ -169,6 +169,7 @@ export default {
         }}
       />
       <Head>
+        <meta property="og:type" content="website" />
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
         <link
           rel="apple-touch-icon"
