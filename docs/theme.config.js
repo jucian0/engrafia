@@ -165,19 +165,23 @@ export default {
         }
       />
 
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:site" content="@juciano_barbosa" />
-      <meta property="twitter:title" content={meta.title} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@juciano_barbosa" />
+      <meta name="twitter:title" content={meta.title} />
       {meta.description && (
         <meta name="twitter:description" content={meta.description} />
       )}
       <meta
-        property="twitter:image"
+        name="twitter:image"
         content={
           meta.socialImage ??
           'https://engrafia.vercel.app/imgs/engrafia-social-image.png'
         }
       />
+      <meta name="theme-color" content="#7961E2"></meta>
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="robots" content="follow, index" />
+      <meta name="apple-mobile-web-app-title" content="Engrafia" />
     </>
   ),
 };
