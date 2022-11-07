@@ -137,16 +137,16 @@ export default {
       </svg>
     ),
   },
-  head: (meta) => (
+  head: ({ meta, title }) => (
     <>
       <link rel="shortcut icon" href="/favicon.ico" />
-      <title>{meta.title}</title>
+      <title>{`${title} | ${meta.title}`}</title>
       {meta.description && (
         <meta name="description" content={meta.description} />
       )}
       {meta.tags && <meta name="keywords" content={meta.tags} />}
       {meta.author && <meta name="author" content={meta.author} />}
-      <meta property="og:title" content={meta.title} />
+      <meta property="og:title" content={`${title} | ${meta.title}`} />
       <meta property="og:url" content="https://engrafia.vercel.app" />
       <meta property="og:site_name" content="Engrafia" />
       <meta property="og:type" content="website" />

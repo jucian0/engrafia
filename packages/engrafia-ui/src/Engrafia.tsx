@@ -17,7 +17,9 @@ function RootLayout({ children }: React.PropsWithChildren<any>) {
   if (route.includes(themeConfig.rootDocs ?? 'docs')) {
     return (
       <>
-        <Head>{themeConfig?.head?.(meta)}</Head>
+        <Head>
+          {themeConfig?.head?.({ meta, title: themeConfig.title ?? '' })}
+        </Head>
         <DocsLayout>{children}</DocsLayout>
       </>
     );
@@ -25,7 +27,9 @@ function RootLayout({ children }: React.PropsWithChildren<any>) {
 
   return (
     <>
-      <Head>{themeConfig?.head?.(meta)}</Head>
+      <Head>
+        {themeConfig?.head?.({ meta, title: themeConfig.title ?? '' })}
+      </Head>
       <DefaultLayout>{children}</DefaultLayout>
     </>
   );

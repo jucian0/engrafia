@@ -18,7 +18,7 @@ export type ThemeConfig = {
     logo: string | any;
     textLogo: string;
   };
-  head?: (meta: Meta) => JSX.Element;
+  head?: (data: { meta: Meta; title: string }) => JSX.Element;
 };
 
 export type Meta = {
