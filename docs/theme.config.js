@@ -155,9 +155,9 @@ export default {
           description: meta.description,
           images: [
             {
-              url: 'https://engrafia.vercel.app/imgs/engrafia_resized.jpg',
-              width: 300,
-              height: 157,
+              url: 'https://engrafia.vercel.app/imgs/engrafia.jpg',
+              width: 1200,
+              height: 675,
               alt: 'Og Image Alt',
               type: 'image/jpeg',
             },
