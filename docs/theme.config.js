@@ -190,8 +190,7 @@ export default {
       <meta
         property="og:image"
         content={
-          meta.socialImage ??
-          'https://engrafia.vercel.app/imgs/engrafia-social-image.png'
+          meta.socialImage ?? 'https://engrafia.vercel.app/imgs/engrafia.jpg'
         }
       />
 
@@ -204,8 +203,7 @@ export default {
       <meta
         name="twitter:image"
         content={
-          meta.socialImage ??
-          'https://engrafia.vercel.app/imgs/engrafia-social-image.png'
+          meta.socialImage ?? 'https://engrafia.vercel.app/imgs/engrafia.jpg'
         }
       />
       <meta name="twitter:url" content="https://engrafia.vercel.app" />
