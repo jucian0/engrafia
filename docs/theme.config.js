@@ -1,4 +1,6 @@
 import { RiGithubFill } from 'react-icons/ri';
+import { NextSeo } from 'next-seo';
+import Head from 'next/head';
 
 export default {
   title: 'Engrafia',
@@ -143,76 +145,63 @@ export default {
   },
   head: ({ meta, title }) => (
     <>
-      <link rel="shortcut icon" href="/favicon/favicon.ico" />
-      <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/favicon/apple-icon-180x180.png"
+      <NextSeo
+        title={`${title} | ${meta.title}`}
+        description={meta.description}
+        canonical="https://www.canonical.ie/"
+        openGraph={{
+          url: 'https://engrafia.vercel.app',
+          title: `${title} | ${meta.title}`,
+          description: meta.description,
+          images: [
+            {
+              url: 'https://engrafia.vercel.app/imgs/engrafia_resized.jpg',
+              width: 300,
+              height: 157,
+              alt: 'Og Image Alt',
+              type: 'image/jpeg',
+            },
+          ],
+          siteName: 'Engrafia',
+        }}
+        twitter={{
+          handle: '@juciano_barbosa',
+          site: '@juciano_barbosa',
+          cardType: 'summary_large_image',
+        }}
       />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="192x192"
-        href="/favicon/android-icon-192x192.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/favicon/favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="96x96"
-        href="/favicon/favicon-96x96.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/favicon/favicon-16x16.png"
-      />
-      <title>{`${title} | ${meta.title}`}</title>
-      {meta.description && (
-        <meta name="description" content={meta.description} />
-      )}
-      {meta.tags && <meta name="keywords" content={meta.tags} />}
-      {meta.author && <meta name="author" content={meta.author} />}
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta property="og:title" content={`${title} | ${meta.title}`} />
-      <meta property="og:url" content="https://engrafia.vercel.app" />
-      <meta property="og:site_name" content="Engrafia" />
-      <meta property="og:type" content="website" />
-      {meta.description && (
-        <meta property="og:description" content={meta.description} />
-      )}
-      <meta
-        property="og:image"
-        content={
-          meta.socialImage ??
-          'https://engrafia.vercel.app/imgs/engrafia_resized.jpg'
-        }
-      />
-
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@juciano_barbosa" />
-      <meta name="twitter:title" content={meta.title} />
-      {meta.description && (
-        <meta name="twitter:description" content={meta.description} />
-      )}
-      <meta
-        name="twitter:image"
-        content={
-          meta.socialImage ??
-          'https://engrafia.vercel.app/imgs/engrafia_resized.jpg'
-        }
-      />
-      <meta name="twitter:url" content="https://engrafia.vercel.app" />
-      <meta name="twitter:site:domain" content="engrafia.vercel.app" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="robots" content="follow, index" />
-      <meta name="apple-mobile-web-app-title" content="Engrafia" />
+      <Head>
+        <link rel="shortcut icon" href="/favicon/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-icon-180x180.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href="/favicon/android-icon-192x192.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="96x96"
+          href="/favicon/favicon-96x96.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon/favicon-16x16.png"
+        />
+      </Head>
     </>
   ),
 };

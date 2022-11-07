@@ -9,7 +9,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       data: {
-        title: 'Engrafia | Docs generator',
+        title: 'Docs generator',
         description: 'The easiest way to write docs for your project.',
         tags: 'docs, documentation, nextjs',
       },

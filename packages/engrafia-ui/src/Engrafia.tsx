@@ -1,6 +1,5 @@
 import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { DefaultLayout } from './Layouts/Default';
 import { DocsLayout } from './Layouts/Docs';
@@ -17,9 +16,7 @@ function RootLayout({ children }: React.PropsWithChildren<any>) {
   if (route.includes(themeConfig.rootDocs ?? 'docs')) {
     return (
       <>
-        <Head>
-          {themeConfig?.head?.({ meta, title: themeConfig.title ?? '' })}
-        </Head>
+        {themeConfig?.head?.({ meta, title: themeConfig.title ?? '' })}
         <DocsLayout>{children}</DocsLayout>
       </>
     );
@@ -27,9 +24,7 @@ function RootLayout({ children }: React.PropsWithChildren<any>) {
 
   return (
     <>
-      <Head>
-        {themeConfig?.head?.({ meta, title: themeConfig.title ?? '' })}
-      </Head>
+      {themeConfig?.head?.({ meta, title: themeConfig.title ?? '' })}
       <DefaultLayout>{children}</DefaultLayout>
     </>
   );

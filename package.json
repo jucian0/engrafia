@@ -57,7 +57,8 @@
     "toml": "^3.0.0",
     "tslib": "^2.3.0",
     "update-check": "^1.5.4",
-    "validate-npm-package-name": "^5.0.0"
+    "validate-npm-package-name": "^5.0.0",
+    "next-seo": "^5.14.0"
   },
   "devDependencies": {
     "@vercel/ncc": "0.34.0",
