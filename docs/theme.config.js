@@ -166,7 +166,7 @@ export default {
       />
 
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:site" content="juciano_barbosa" />
+      <meta property="twitter:site" content="@juciano_barbosa" />
       <meta property="twitter:title" content={meta.title} />
       {meta.description && (
         <meta name="twitter:description" content={meta.description} />
