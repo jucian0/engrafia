@@ -143,6 +143,7 @@ export default {
   },
   head: ({ meta, title }) => (
     <>
+      <meta charset="utf-8" />
       <link rel="shortcut icon" href="/favicon.ico" />
       <title>{`${title} | ${meta.title}`}</title>
       {meta.description && (
@@ -181,7 +182,6 @@ export default {
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="robots" content="follow, index" />
       <meta name="apple-mobile-web-app-title" content="Engrafia" />
-      <meta content="text/html; charset=UTF-8" name="Content-Type" />
     </>
   ),
 };
