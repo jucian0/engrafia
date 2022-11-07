@@ -143,7 +143,6 @@ export default {
   },
   head: ({ meta, title }) => (
     <>
-      <meta charset="utf-8" />
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
       <link
         rel="apple-touch-icon"
