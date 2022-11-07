@@ -1,6 +1,7 @@
 # Engrafia
 
 ## The easiest way to write docs for your project.
+![logo](/public/imgs/engrafia.jpg)
 
 ![logo](docs/public/imgs/engrafia.jpg)
 
