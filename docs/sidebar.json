@@ -70,6 +70,17 @@
                                     "relativePath": "/docs/pages/docs/0.1.0/features/playground.en.mdx"
                                 },
                                 {
+                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/features/search.en.md",
+                                    "name": "search.en.md",
+                                    "meta": {
+                                        "title": "Search",
+                                        "description": "Describes how the search feature works in Engrafia.",
+                                        "tags": "docs, nextjs, code, search"
+                                    },
+                                    "url": "/docs/0.1.0/features/search.en",
+                                    "relativePath": "/docs/pages/docs/0.1.0/features/search.en.md"
+                                },
+                                {
                                     "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/features/seo.en.md",
                                     "name": "seo.en.md",
                                     "meta": {

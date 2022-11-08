@@ -34,4 +34,4 @@ engrafia-app
 
 To switch between versions, just use the version selector at the top of the right side. 
 
-![versioning-semantic-version](/imgs/versioning.png)
+![versioning-semantic-version-engrafia](/imgs/versioning.png)

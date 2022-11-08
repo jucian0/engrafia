@@ -54,12 +54,7 @@ export const Search = () => {
   const { version, sidebar, themeConfig } = useEngrafiaConfig();
 
   const searchableContent = React.useMemo(() => {
-    const paths = [themeConfig.rootDocs, version].filter((p) => p) as string[];
-
-    const filteredContent = getFolderContent(sidebar, paths);
-    return filteredContent.name
-      ? getSearchableList(filteredContent, locale as '')
-      : [];
+    return sidebar.name ? getSearchableList(sidebar, locale as '') : [];
   }, [sidebar, version, locale, themeConfig]);
 
   function handleSetList(e: React.ChangeEvent<FormElement>) {
