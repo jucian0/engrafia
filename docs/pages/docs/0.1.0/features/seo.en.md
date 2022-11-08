@@ -64,14 +64,16 @@ tags: react, docs, nextjs, i18n, internationalization
 To configure meta tags it's necessary to make some changes in `theme.config.js`, in the HEAD property, every metadata added to the page can be recovered by HEAD function.
 
  ```jsx
+   //import Head from 'next/head';
+
    head: ({ title, meta }) => (
-    <>
+    <Head>
       <link rel="shortcut icon" href="/favicon.ico" />
       <title>{meta.title}</title>
       {meta.description && (
         <meta name="description" content={meta.description} />
       )}
-    </>
+    </Head>
   ),
  ```
  ## Principal tags
@@ -132,3 +134,60 @@ You can also add specific tags for social media, and images:
   }
 />
 ```
+
+## NextSeo
+
+Another viable option is to use [next-seo](https://github.com/garmeeh/next-seo), this package removes all effort you should put into configuring SEO in NextJs applications.
+
+In the link above, you can find all instructions about configuring it, but the process is very simple. Below there is an example of where you should put it.
+
+```bash
+npm install next-seo
+```
+```js
+//import { NextSeo } from 'next-seo';
+
+//theme.config.js
+
+...
+head:({title, meta})=>(
+  <>
+    <NextSeo
+      title="Using More of Config"
+      description="This example uses more of the available config options."
+      canonical="https://www.canonical.ie/"
+      openGraph={{
+        url: 'https://www.url.ie/a',
+        title: 'Open Graph Title',
+        description: 'Open Graph Description',
+        images: [
+          {
+            url: 'https://www.example.ie/og-image-01.jpg',
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt',
+            type: 'image/jpeg',
+          },
+          {
+            url: 'https://www.example.ie/og-image-02.jpg',
+            width: 900,
+            height: 800,
+            alt: 'Og Image Alt Second',
+            type: 'image/jpeg',
+          },
+          { url: 'https://www.example.ie/og-image-03.jpg' },
+          { url: 'https://www.example.ie/og-image-04.jpg' },
+        ],
+        siteName: 'SiteName',
+      }}
+      twitter={{
+        handle: '@handle',
+        site: '@site',
+        cardType: 'summary_large_image',
+      }}
+    />
+  </>
+)
+```
+
+Just by following this example, you have configured all social media tags, as well as SEO tags.
