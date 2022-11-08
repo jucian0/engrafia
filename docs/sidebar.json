@@ -79,6 +79,17 @@
                                     },
                                     "url": "/docs/0.1.0/features/seo.en",
                                     "relativePath": "/docs/pages/docs/0.1.0/features/seo.en.md"
+                                },
+                                {
+                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/features/versioning.en.md",
+                                    "name": "versioning.en.md",
+                                    "meta": {
+                                        "title": "Versioning",
+                                        "description": "This doc will guide you through the versioning feature, and how to have versioned documentation.",
+                                        "tags": "docs, nextjs, semantic-version, semver, version"
+                                    },
+                                    "url": "/docs/0.1.0/features/versioning.en",
+                                    "relativePath": "/docs/pages/docs/0.1.0/features/versioning.en.md"
                                 }
                             ],
                             "title": "Features",
