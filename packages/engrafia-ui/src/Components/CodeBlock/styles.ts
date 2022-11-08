@@ -2,7 +2,7 @@ import { styled } from '@nextui-org/react';
 
 export const Container = styled('div', {
   position: 'relative',
-  margin: '1rem 0',
+  margin: '0',
   width: '100%',
   '*': {
     fontFamily: '"JetBrains Mono", monospace',
@@ -10,6 +10,7 @@ export const Container = styled('div', {
     whiteSpace: 'pre-wrap',
   },
   pre: {
+    margin: '0',
     padding: '$lg',
     boxShadow: '$2',
     width: '100%',

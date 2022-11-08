@@ -15,6 +15,17 @@
                             "name": "features",
                             "children": [
                                 {
+                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/features/code-highlight.en.md",
+                                    "name": "code-highlight.en.md",
+                                    "meta": {
+                                        "title": "Code Highlight",
+                                        "description": "This doc will help you to understand how to use  code highlight.",
+                                        "tags": "docs, nextjs, code, codeblock, prism"
+                                    },
+                                    "url": "/docs/0.1.0/features/code-highlight.en",
+                                    "relativePath": "/docs/pages/docs/0.1.0/features/code-highlight.en.md"
+                                },
+                                {
                                     "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/features/customization.en.md",
                                     "name": "customization.en.md",
                                     "meta": {
@@ -42,7 +53,7 @@
                                     "meta": {
                                         "title": "MD e MDX",
                                         "description": "This doc will help you to understand how to use MD, and MDX files.",
-                                        "position": 4
+                                        "tags": "md, mdx, reactjs"
                                     },
                                     "url": "/docs/0.1.0/features/md-mdx.en",
                                     "relativePath": "/docs/pages/docs/0.1.0/features/md-mdx.en.mdx"

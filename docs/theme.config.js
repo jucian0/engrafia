@@ -148,7 +148,7 @@ export default {
       <NextSeo
         title={`${title} | ${meta.title}`}
         description={meta.description}
-        canonical="https://www.canonical.ie/"
+        canonical="https://engrafia.vercel.app"
         openGraph={{
           url: 'https://engrafia.vercel.app',
           title: `${title} | ${meta.title}`,
@@ -169,6 +169,7 @@ export default {
         }}
       />
       <Head>
+        <meta name="keywords" content={meta.tags} />
         <meta property="og:type" content="website" />
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
         <link
