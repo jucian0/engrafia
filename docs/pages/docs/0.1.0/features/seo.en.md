@@ -97,7 +97,7 @@ The meta description should provide an accurate description of the content of yo
 
 ### Other tags
 
-You can also add specific tags for social media, and images:
+You can also add specific tags for social media, and images, there are any rules about what you can add in the head of a page.
 
 ```jsx
 <meta property="og:title" content={meta.title} />
@@ -110,7 +110,7 @@ You can also add specific tags for social media, and images:
 <meta
   property="og:image"
   content={
-    meta.socialImage ??
+    meta.image ??
       'https://engrafia.vercel.app/imgs/engrafia-social-image.png'
     }
   />

@@ -75,7 +75,8 @@
                                     "meta": {
                                         "title": "Search",
                                         "description": "Describes how the search feature works in Engrafia.",
-                                        "tags": "docs, nextjs, code, search"
+                                        "tags": "docs, nextjs, code, search",
+                                        "image": "/imgs/search.gif"
                                     },
                                     "url": "/docs/0.1.0/features/search.en",
                                     "relativePath": "/docs/pages/docs/0.1.0/features/search.en.md"
