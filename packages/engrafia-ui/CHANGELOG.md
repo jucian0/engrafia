@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.32](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.31...@engrafia/engrafia-ui@0.1.32) (2022-11-09)
+
+
+### Bug Fixes
+
+* **engrafia-ui:** fix Link component to add locale just in rootDocs directory ([ab054c9](https://github.com/Jucian0/engrafia/commit/ab054c9938936f20c4be2b4e0d458a8642cfc4b3))
+* **engrafia-ui:** fix Link component to work in docs direcotry ([9ebc9f0](https://github.com/Jucian0/engrafia/commit/9ebc9f04ca372a97e105e26bd253a2a251855d3e))
+
 ### [0.1.31](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.30...@engrafia/engrafia-ui@0.1.31) (2022-11-09)
 
 
