@@ -37,7 +37,7 @@ async function resolveEngrafiaDataConfig(locale?: string) {
   return Promise.allSettled([
     getThemeConfigModule(),
     getSidebarTree(),
-    locale && getI18nConfig(locale),
+    getI18nConfig(locale),
   ]);
 }
 
