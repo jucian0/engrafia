@@ -7,7 +7,7 @@ export function Link(props: React.PropsWithChildren<L.LinkProps>) {
   const { themeConfig } = useEngrafiaConfig();
   const href = props.href;
 
-  if (locale && href.toString().includes(themeConfig.rootDocs ?? '')) {
+  if (locale && href.toString().includes(themeConfig.rootDocs ?? 'docs')) {
     return <L.default {...props} href={href.toString().concat(`.${locale}`)} />;
   }
   return <L.default {...props} href={href} />;
