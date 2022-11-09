@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.33](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.32...@engrafia/engrafia-ui@0.1.33) (2022-11-09)
+
+
+### Bug Fixes
+
+* **engrafia-ui:** fix Menunav component, links ([aa115ba](https://github.com/Jucian0/engrafia/commit/aa115baa3456464dfe7bdbdd3c8fac3eed04522f))
+
 ### [0.1.32](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.31...@engrafia/engrafia-ui@0.1.32) (2022-11-09)
 
 
