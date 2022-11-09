@@ -26,6 +26,7 @@
     "next-images": "^1.8.4"
   },
   "author": "Jucian0 <juciano@outlook.com.br>",
+  "homepage": "https://engrafia.vercel.app",
   "repository": {
     "type": "git",
     "url": "https://github.com/jucian0/engrafia",
