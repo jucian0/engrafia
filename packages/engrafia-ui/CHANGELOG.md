@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.31](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.30...@engrafia/engrafia-ui@0.1.31) (2022-11-09)
+
+
+### Bug Fixes
+
+* **engrafia-ui:** fix Link component to work with i18n ([a12f8af](https://github.com/Jucian0/engrafia/commit/a12f8af2d8ba7fdd79b45bcbc3687013e1b6fc8a))
+* **engrafia:** fix package information ([ed18b08](https://github.com/Jucian0/engrafia/commit/ed18b083dd03f59d02b977f52c1d5dde10f4fc61))
+
 ### [0.1.30](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.29...@engrafia/engrafia-ui@0.1.30) (2022-11-08)
 
 ### [0.1.29](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.28...@engrafia/engrafia-ui@0.1.29) (2022-11-08)
