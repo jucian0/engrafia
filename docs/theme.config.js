@@ -166,6 +166,7 @@ export default {
         }}
       />
       <Head>
+        <link rel="sitemap" href="/sitemap.xml" />
         <meta name="keywords" content={meta.tags} />
         <meta property="og:type" content="website" />
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
