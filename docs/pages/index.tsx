@@ -75,7 +75,7 @@ export default function Index() {
         </Text>
       </Grid.Container>
 
-      <Grid.Container gap={2} justify="center" css={{ zIndex: 1 }}>
+      <Grid.Container gap={2} justify="center" css={{ zIndex: 1, mb: 200 }}>
         <Grid>
           <Card
             css={{

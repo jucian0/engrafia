@@ -1,12 +1,14 @@
 import * as L from 'next/link';
 import { useRouter } from 'next/router';
+import { useEngrafiaConfig } from '../EngrafiaProvider';
 
-export function Link(props: L.LinkProps) {
+export function Link(props: React.PropsWithChildren<L.LinkProps>) {
   const { locale } = useRouter();
+  const { themeConfig } = useEngrafiaConfig();
   const href = props.href;
 
-  if (locale) {
-    return <L.default {...props} href={href.toString().concat(locale)} />;
+  if (locale && href.toString().includes(themeConfig.rootDocs ?? '')) {
+    return <L.default {...props} href={href.toString().concat(`.${locale}`)} />;
   }
   return <L.default {...props} href={href} />;
 }

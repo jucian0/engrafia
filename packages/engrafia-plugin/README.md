@@ -29,7 +29,7 @@ This command will guide you through some steps to decide which template would yo
 
 To write new documents, it's useful if your development environment is up, otherwise, you will not be able to see live changes on the docs you are writing.
 
-Do that by running the command `yarn dev`, the development environment will be available in [`http://localhost:3000`](http://localhost:3000)
+Do that by running the command `yarn dev`, the development environment will be available at [`http://localhost:3000`](http://localhost:3000)
 
 ### MD files
 

@@ -1,12 +1,12 @@
 import { Navbar, Button, Text, Grid } from '@nextui-org/react';
 import { useTheme } from 'next-themes';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { RiMoonFill, RiSunFill } from 'react-icons/ri';
 import { useEngrafiaConfig } from '../../EngrafiaProvider';
 import { useTranslation } from '../../useTranslation';
 
 import { LanguageSelector } from '../LanguageSelector/Selector';
+import { Link } from '../Link';
 import { Search } from '../Search/Search';
 import { Sidebar } from '../Sidebar/Sidebar';
 import { VersionSelector } from '../VersionSelector/Selector';
@@ -68,10 +68,7 @@ export default function MenuNav() {
                   );
                 }
                 return (
-                  <Link
-                    key={link.href}
-                    href={link.href.concat(`.${router.locale}`)}
-                  >
+                  <Link key={link.href} href={link.href}>
                     <Navbar.Link>{t(link.title)}</Navbar.Link>
                   </Link>
                 );
