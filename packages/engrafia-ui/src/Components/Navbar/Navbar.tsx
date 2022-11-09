@@ -95,7 +95,7 @@ export default function MenuNav() {
             {themeConfig.nav?.iconsLinks?.map((link) => {
               if (link.external) {
                 return (
-                  <Navbar.Item>
+                  <Navbar.Item key={link.href}>
                     <Navbar.Link key={link.href} href={link.href}>
                       {link.icon}
                     </Navbar.Link>
@@ -103,11 +103,8 @@ export default function MenuNav() {
                 );
               }
               return (
-                <Navbar.Item>
-                  <Link
-                    key={link.href}
-                    href={link.href.concat(`.${router.locale}`)}
-                  >
+                <Navbar.Item key={link.href}>
+                  <Link key={link.href} href={link.href}>
                     <Navbar.Link>{link.icon}</Navbar.Link>
                   </Link>
                 </Navbar.Item>

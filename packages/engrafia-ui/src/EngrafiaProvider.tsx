@@ -37,7 +37,7 @@ async function resolveEngrafiaDataConfig(locale?: string) {
   return Promise.allSettled([
     getThemeConfigModule(),
     getSidebarTree(),
-    getI18nConfig(locale ?? 'default'),
+    locale && getI18nConfig(locale),
   ]);
 }
 
@@ -49,7 +49,7 @@ export function EngrafiaProvider({ children }: React.PropsWithChildren<any>) {
     const data: any = await resolveEngrafiaDataConfig(locale);
     const themeConfig = data[0].value;
     const pseudoSidebarData = data[1].value;
-    const translations = data[2].value;
+    const translations = data[2].value ?? {};
 
     const versions = getFolderName(pseudoSidebarData, TEST_VERSION_FOLDER);
     const version = versions[versions.length - 1];

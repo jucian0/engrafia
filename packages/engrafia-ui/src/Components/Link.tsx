@@ -5,7 +5,7 @@ import { useEngrafiaConfig } from '../EngrafiaProvider';
 export function Link(props: React.PropsWithChildren<L.LinkProps>) {
   const { locale } = useRouter();
   const { themeConfig } = useEngrafiaConfig();
-  const href = props.href;
+  const href = props.href ?? '/';
 
   if (locale && href.toString().includes(themeConfig.rootDocs ?? 'docs')) {
     return <L.default {...props} href={href.toString().concat(`.${locale}`)} />;

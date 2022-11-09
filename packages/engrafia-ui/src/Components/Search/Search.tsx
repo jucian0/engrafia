@@ -7,7 +7,6 @@ import * as S from './styles';
 import { DocFile } from '../../get-sidebar';
 import { filterItems, getSearchableList } from './utils';
 import { search } from 'fast-fuzzy';
-import { getFolderContent } from '../../get-folders';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEngrafiaConfig } from '../../EngrafiaProvider';

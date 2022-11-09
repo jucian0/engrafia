@@ -30,11 +30,11 @@ export default {
     links: [
       {
         title: 'Docs',
-        url: '/docs',
+        href: '/docs',
       },
       {
         title: 'Github',
-        url: 'http://github.com/jucian0/engrafia',
+        href: 'http://github.com/jucian0/engrafia',
       },
     ],
     search_bar: 'Search',
