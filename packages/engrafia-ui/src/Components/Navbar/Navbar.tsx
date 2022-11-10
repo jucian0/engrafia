@@ -10,11 +10,12 @@ import { Search } from '../Search/Search';
 import { Sidebar } from '../Sidebar/Sidebar';
 import { VersionSelector } from '../VersionSelector/Selector';
 
-export default function MenuNav() {
+export default function NavBar() {
   const { theme, setTheme } = useTheme();
   const { versions, themeConfig } = useEngrafiaConfig();
   const t = useTranslation();
   const router = useRouter();
+  console.log(versions)
 
   return (
     <Navbar variant="sticky" isBordered={theme === 'dark'} maxWidth="fluid">
@@ -139,7 +140,7 @@ export default function MenuNav() {
           </Navbar.Collapse>
           <Navbar.Content activeColor={'primary'} hideIn="xs" variant="default">
             {router.locale && <LanguageSelector />}
-            {versions && <VersionSelector />}
+            {versions && versions?.length > 0 && <VersionSelector />}
           </Navbar.Content>
         </Grid.Container>
         <Navbar.Toggle showIn="xs" aria-label="toggle navigation" />
