@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.36](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.35...@engrafia/engrafia-ui@0.1.36) (2022-11-10)
+
+
+### Bug Fixes
+
+* **engrafia-ui:** fix table of content translation, and default label ([4f70e11](https://github.com/Jucian0/engrafia/commit/4f70e118e5fbf9dae133aa057fe0078528410fa6))
+
 ### [0.1.35](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.34...@engrafia/engrafia-ui@0.1.35) (2022-11-10)
 
 
