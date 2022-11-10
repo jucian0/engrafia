@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.35](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.34...@engrafia/engrafia-ui@0.1.35) (2022-11-10)
+
+
+### Bug Fixes
+
+* **engrafia-ui:** add condition to show version selector ([6c4c2d1](https://github.com/Jucian0/engrafia/commit/6c4c2d16dab213bd211037b50d41977f1795ce8d))
+
 ### [0.1.34](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia-ui@0.1.33...@engrafia/engrafia-ui@0.1.34) (2022-11-09)
 
 
