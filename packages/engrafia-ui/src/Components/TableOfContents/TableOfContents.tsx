@@ -4,9 +4,11 @@ import { useTranslation } from '../../useTranslation';
 import { ChildrenOfContent } from '../../EngrafiaContext';
 import React from 'react';
 import { useEngrafiaConfig } from '../../EngrafiaProvider';
+import { useRouter } from 'next/router';
 
 export function TableOfContent() {
   const { tableOfContent } = useEngrafiaConfig();
+  const {locale} = useRouter()
   const [activeId, setActiveId] = React.useState('');
   const t = useTranslation();
 
@@ -42,7 +44,7 @@ export function TableOfContent() {
   return (
     <S.TableOfContentWrapper hideIn="sm">
       <div>
-        <h3>{t('table.of.content') ?? 'Table of content'}</h3>
+        <h3>{locale?t('table.of.content') : 'Table of content'}</h3>
         <ul>
           {tableOfContent.children &&
             tableOfContent.children.map((item) => (
