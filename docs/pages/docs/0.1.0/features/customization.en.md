@@ -107,7 +107,7 @@ To apply a new theme you should open the `_app.js` file, and import the theme th
 import { AppProps } from 'next/app';
 import { NextUIProvider } from '@nextui-org/react';
 import { ThemeProvider } from 'next-themes';
-import { Provider, lightTheme } from '@engrafia/ui';
+import { Provider, lightTheme } from 'engrafia';
 import {darkTheme} from 'your-theme.js'
 
 function App({ Component, pageProps }: AppProps) {

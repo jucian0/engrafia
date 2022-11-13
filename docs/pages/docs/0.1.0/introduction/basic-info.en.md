@@ -39,7 +39,7 @@ As `_app.js`, `_document.js` does not have much customization, unless you need t
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { CssBaseline } from '@nextui-org/react';
-import { GlobalStyles } from '@engrafia/ui';
+import { GlobalStyles } from 'engrafia';
 
 export default class CustomDocument extends Document {
   static async getInitialProps(ctx) {

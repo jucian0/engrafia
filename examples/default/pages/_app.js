@@ -1,4 +1,4 @@
-import { Engrafia } from '@engrafia/ui';
+import { Engrafia } from 'engrafia';
 
 function App({ Component, pageProps }) {
   return (

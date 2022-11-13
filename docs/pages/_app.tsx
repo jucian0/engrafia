@@ -1,5 +1,5 @@
 import { AppProps } from 'next/app';
-import { Engrafia } from '@engrafia/ui';
+import { Engrafia } from 'engrafia';
 
 function App({ Component, pageProps }: AppProps) {
   return (

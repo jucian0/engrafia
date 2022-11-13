@@ -10,7 +10,7 @@ Code Highlight allows you to expose code examples, so your reader can have a bet
 
 ```jsx
 import { AppProps } from 'next/app';
-import { Engrafia } from '@engrafia/ui';
+import { Engrafia } from 'engrafia';
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -29,7 +29,7 @@ This feature is supported using `md`, and `mdx` files, to use it just add three 
 /```jsx
 
 import { AppProps } from 'next/app';
-import { Engrafia } from '@engrafia/ui';
+import { Engrafia } from 'engrafia';
 
 function App({ Component, pageProps }: AppProps) {
   return (

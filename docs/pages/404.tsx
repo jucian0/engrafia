@@ -1,4 +1,4 @@
-import { useTranslation } from '@engrafia/ui';
+import { useTranslation } from 'engrafia';
 import { Grid, Text } from '@nextui-org/react';
 import Head from 'next/head';
 import Link from 'next/link';

@@ -1,14 +1,6 @@
 {
   "name": "engrafia",
   "version": "0.1.35",
-  "main": "dist/index.js",
-  "module": "esm/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "src",
-    "esm"
-  ],
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.10",
     "@radix-ui/react-navigation-menu": "^1.0.0",
@@ -33,11 +25,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jucian0/engrafia",
-    "homepage": "https://engrafia.vercel.app",
-    "directory": "packages/engrafia"
+    "homepage": "https://engrafia.vercel.app"
   },
   "license": "MIT",
-  "scripts": {
-    "compile": "tsc --incremental --outDir ./../../dist/packages/engrafia/dist && tsc --module ESNext --outDir ./../../dist/packages/engrafia/esm --incremental"
-  }
+  "type": "commonjs"
 }
