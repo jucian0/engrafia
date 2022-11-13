@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import { CgPerformance } from 'react-icons/cg';
 import { IoRocketOutline } from 'react-icons/io5';
 import { BsHandThumbsUp } from 'react-icons/bs';
-import { useTranslation } from 'packages/engrafia-ui/src/useTranslation';
 
 export const getStaticProps = async () => {
   return {
