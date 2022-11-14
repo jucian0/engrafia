@@ -50,7 +50,7 @@
     "react-use-clipboard": "^1.0.8",
     "regenerator-runtime": "0.13.7",
     "rehype-autolink-headings": "^6.1.1",
-    "rehype-slug": "^5.0.1",
+    "rehype-slug": "^5.1.0",
     "remark-frontmatter": "^4.0.1",
     "remark-gfm": "^3.0.1",
     "strip-indent": "^4.0.0",
@@ -58,7 +58,8 @@
     "tslib": "^2.3.0",
     "update-check": "^1.5.4",
     "validate-npm-package-name": "^5.0.0",
-    "next-seo": "^5.14.0"
+    "next-seo": "^5.14.0",
+    "unist-util-visit": "^4.1.1"
   },
   "devDependencies": {
     "@vercel/ncc": "0.34.0",
