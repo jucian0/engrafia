@@ -1,5 +1,5 @@
 require('fix-esm').register();
-const { engrafia } = require('@engrafia/plugin');
+const { engrafia } = require('../dist/packages/engrafia/src/plugin');
 const compose = require('compose-function');
 const withImages = require('next-images');
 

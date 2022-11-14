@@ -9,8 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@engrafia/plugin": "latest",
-    "@engrafia/ui": "latest",
+    "engrafia": "latest",
     "@nextui-org/react": "^1.0.0-beta.10",
     "fix-esm": "^1.0.1",
     "next": "12.3.1",
