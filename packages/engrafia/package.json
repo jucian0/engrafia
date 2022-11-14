@@ -28,7 +28,9 @@
     "directory-tree": "3.3.2",
     "unist-util-visit": "4.1.1",
     "await-to-js": "3.0.0",
-    "chokidar": "3.5.3"
+    "chokidar": "3.5.3",
+    "lodash": "4.17.21",
+    "next-images": "1.8.4"
   },
   "peerDependencies": {
     "react": ">=18",
