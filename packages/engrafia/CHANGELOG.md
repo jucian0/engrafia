@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.1](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia@0.1.0...@engrafia/engrafia@0.1.1) (2022-11-14)
+
+
+### Bug Fixes
+
+* **engrafia:** fix esm modules build ([702ff4f](https://github.com/Jucian0/engrafia/commit/702ff4ffe00a8a84a0d8dd3c9ed8ed5b3e95cef2))
+* **engrafia:** fix esm modules build ([e03a1c4](https://github.com/Jucian0/engrafia/commit/e03a1c4c485abd3195d21fcae8593b97d86dfad1))
+
 ## 0.1.0 (2022-11-13)
 
 
