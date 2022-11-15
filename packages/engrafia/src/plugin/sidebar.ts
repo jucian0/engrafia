@@ -63,7 +63,6 @@ async function getMdxFilesIndex(dir: string) {
   }
   return tree;
 }
-// adicionar um anova key com nome do arquivo sem formatação, e usar ela como key de tradução, somente para casos com tranlate
 
 async function getPagesPath(dir: string) {
   const root = resolveRoot(dir);

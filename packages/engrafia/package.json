@@ -30,7 +30,8 @@
     "await-to-js": "3.0.0",
     "chokidar": "3.5.3",
     "lodash": "4.17.21",
-    "next-images": "1.8.4"
+    "next-images": "1.8.4",
+    "parse-github-url": "1.0.2"
   },
   "peerDependencies": {
     "react": ">=18",
