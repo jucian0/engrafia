@@ -45,6 +45,8 @@ export function EngrafiaProvider({ children }: React.PropsWithChildren<any>) {
   const { locale, route } = useRouter();
   const [config, setConfig] = React.useReducer(configReducer, INITIAL_STATE);
 
+  console.log(children);
+
   async function resolveAll() {
     const data: any = await resolveEngrafiaDataConfig(locale);
     const themeConfig = data[0].value;

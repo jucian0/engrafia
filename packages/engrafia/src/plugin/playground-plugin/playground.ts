@@ -1,70 +1,53 @@
 import flatten from 'lodash/flatten';
+import nodeToString from 'hast-util-to-string';
 import { getImportsVariables } from './utils/imports';
 import { getExportsVariables } from './utils/exports';
-import { mdxJsxFromMarkdown, mdxJsxToMarkdown } from 'mdast-util-mdx-jsx';
-import { toMarkdown } from 'mdast-util-to-markdown';
-import { fromMarkdown } from 'mdast-util-from-markdown';
-import { mdxJsx } from 'micromark-extension-mdx-jsx';
-import * as acorn from 'acorn';
+import { componentName, formatter, removeTags, sanitizeCode } from './utils';
+
+const isPlayground = (name: string) => {
+  return name === 'Playground';
+};
 
 const addComponentsProps = (scopes: string[]) => (node: any, idx: number) => {
+  const name = componentName(node.value);
+  const tagOpen = new RegExp(`^\\<${name}`);
+  const formatted = formatter(nodeToString(node));
+  const code = formatted.slice(1, Infinity);
   const scope = `{props, ${scopes.join(',')}}`;
+  const child = sanitizeCode(removeTags(code));
+  const newTag = `<${name} __position={${idx}} code={'${child}'} scope={${scope}}`;
 
-  const code = toMarkdown(node.children[0], {
-    extensions: [mdxJsxToMarkdown()],
-  });
-
-  const out = toMarkdown(node, {
-    extensions: [mdxJsxToMarkdown()],
-  });
-
-  const tree: any = fromMarkdown(
-    out.replace('<Playground', `<Playground scope={${scope}}`),
-    {
-      extensions: [mdxJsx({ acorn: acorn, addResult: true })],
-      mdastExtensions: [mdxJsxFromMarkdown()],
-    }
-  );
-
-  node.attributes = [
-    ...tree.children[0].attributes,
-    ...node.attributes,
-    {
-      type: 'mdxJsxAttribute',
-      name: 'code',
-      value: code.trim(),
-    },
-  ];
+  node.value = node.value.replace(tagOpen, newTag);
 };
 
 export interface PluginOpts {
   root: string;
 }
 
+export const playgroundRegex = /<Playground\b/;
+
 export const injectCodeToPlayground =
   () => (tree: any, file: { contents: string }) => {
+    if (file.contents.search(playgroundRegex) == -1) {
+      return tree;
+    }
+
     const playgroundComponents: Node[] = tree.children
-      .filter((node: any) => node.type === 'mdxJsxFlowElement')
+      .filter((node: any) => node.type === 'jsx')
       .filter((node) => {
-        return node.name === 'Playground';
+        const name = componentName(node.value);
+        return isPlayground(name);
       });
 
-    const importNodes = tree.children.filter((n: any) =>
-      n.value?.includes('import')
-    );
-
-    const exportNodes = tree.children.filter((n: any) =>
-      n.value?.includes('export')
-    );
-
+    const importNodes = tree.children.filter((n: any) => n.type === 'import');
+    const exportNodes = tree.children.filter((n: any) => n.type === 'export');
     const importedScopes = flatten<string>(
       importNodes.map(getImportsVariables)
     );
-
     const exportedScopes = flatten<string>(
       exportNodes.map(getExportsVariables)
-    );
-
+    ); // TODO exports not working, migrate to es lexer
+    // filter added to avoid throwing if an unexpected type is exported
     const scopes: string[] = [...importedScopes, ...exportedScopes].filter(
       Boolean
     );

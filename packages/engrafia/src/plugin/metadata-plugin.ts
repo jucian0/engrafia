@@ -23,14 +23,15 @@ export function remarkMetadataPlugin() {
       } as Options);
 
       return {
-        type: 'mdxjsEsm',
-        data: {
-          estree: {
-            type: 'Program',
-            sourceType: 'module',
-            body,
-          },
-        },
+        type: 'export',
+        value: renderedString,
+        // data: {
+        //   estree: {
+        //     type: 'Program',
+        //     sourceType: 'module',
+        //     body,
+        //   },
+        // },
       };
     });
   };

@@ -1,6 +1,6 @@
 import { selectAll } from 'hast-util-select';
-import { toc as makeToc } from 'mdast-util-toc';
-import { visit } from 'unist-util-visit';
+import makeToc from 'mdast-util-toc';
+import visit from 'unist-util-visit';
 import { Node } from 'unist';
 
 type TNode = {
@@ -22,7 +22,7 @@ function getItems(node: TNode, current: TNode): any {
   if (!node) {
     return {};
   } else if (node.type === `paragraph`) {
-    visit(node, (item) => {
+    visit(node, (item: any) => {
       if (item.type === `link`) {
         current.slug = item.url;
         current.id = item?.url?.replace('#', '');

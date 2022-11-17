@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { useRouter } from 'next/router';
 import { DefaultLayout } from './Layouts/Default';
 import { DocsLayout } from './Layouts/Docs';
@@ -7,12 +7,7 @@ import { EngrafiaProvider, useEngrafiaConfig } from './EngrafiaProvider';
 import { NextUIProvider } from '@nextui-org/react';
 import { ThemeProvider } from 'next-themes';
 import { lightTheme, darkTheme } from './Styles/theme';
-
-import dynamic from 'next/dynamic';
-
-const MDXProvider = dynamic(() =>
-  import('@mdx-js/react').then((mod) => mod.MDXProvider)
-);
+import { MDXProvider } from '@mdx-js/react';
 
 function RootLayout({ children }: React.PropsWithChildren<any>) {
   const { themeConfig, meta } = useEngrafiaConfig();
@@ -66,15 +61,13 @@ export function Engrafia({
           attribute="class"
           value={themes as any}
         >
-          <Suspense fallback={<h1>loading</h1>}>
-            <MDXProvider
-              components={{ ...mdxComponents, ...rest.mdxComponents } as any}
-            >
-              <EngrafiaProvider>
-                <RootLayout>{children}</RootLayout>
-              </EngrafiaProvider>
-            </MDXProvider>
-          </Suspense>
+          <MDXProvider
+            components={{ ...mdxComponents, ...rest.mdxComponents } as any}
+          >
+            <EngrafiaProvider>
+              <RootLayout>{children}</RootLayout>
+            </EngrafiaProvider>
+          </MDXProvider>
         </ThemeProvider>
       </NextUIProvider>
     );
