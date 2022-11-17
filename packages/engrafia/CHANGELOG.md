@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.3](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia@0.1.2...@engrafia/engrafia@0.1.3) (2022-11-15)
+
+
+### Bug Fixes
+
+* **engrafia:** fix dependencies parse-github-url ([505dca6](https://github.com/Jucian0/engrafia/commit/505dca604d175ddbe4122e088a5d343655cf3857))
+
 ### [0.1.2](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia@0.1.1...@engrafia/engrafia@0.1.2) (2022-11-14)
 
 
