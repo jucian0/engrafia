@@ -7,11 +7,7 @@ function MDXLink(
   props: React.PropsWithChildren<LinkProps>,
   ref: React.Ref<HTMLAnchorElement>
 ) {
-  return (
-    <Link {...props}>
-      <a ref={ref}>{props.children}</a>
-    </Link>
-  );
+  return <Link {...props}>{props.children}</Link>;
 }
 
 export const mdxComponents = {

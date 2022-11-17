@@ -48,9 +48,7 @@ export function Sidebar({ hide = true }) {
             <S.Tag
               css={isActive(menu.url) ? { background: '$accents8' } : {}}
             />
-            <Link href={menu.url}>
-              <a>{menu.meta.title.trim()}</a>
-            </Link>
+            <Link href={menu.url}>{menu.meta.title.trim()}</Link>
           </S.Link>
         ) : (
           <S.Category onClick={() => handleClick(menu.relativePath)}>
@@ -72,9 +70,7 @@ export function Sidebar({ hide = true }) {
                           isActive(item.url) ? { background: '$accents8' } : {}
                         }
                       />
-                      <Link href={item.url}>
-                        <a>{item.meta.title.trim()}</a>
-                      </Link>
+                      <Link href={item.url}>{item.meta.title.trim()}</Link>
                     </S.Link>
                   </S.Item>
                 );

@@ -33,16 +33,14 @@ export default function NavBar() {
       >
         <Navbar.Brand>
           <Link href="/">
-            <a style={{ display: 'flex', alignItems: 'center' }}>
-              {themeConfig.nav?.logo}
-            </a>
+            {/* <a style={{ display: 'flex', alignItems: 'center' }}> */}
+            {themeConfig.nav?.logo}
+            {/* </a> */}
           </Link>
           <Link href="/">
-            <a>
-              <Text b color="inherit" hideIn="xs">
-                {themeConfig.nav?.textLogo}
-              </Text>
-            </a>
+            <Text b color="inherit" hideIn="xs">
+              {themeConfig.nav?.textLogo}
+            </Text>
           </Link>
         </Navbar.Brand>
         <Grid.Container

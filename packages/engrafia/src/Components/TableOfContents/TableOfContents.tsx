@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 
 export function TableOfContent() {
   const { tableOfContent } = useEngrafiaConfig();
-  const {locale} = useRouter()
+  const { locale } = useRouter();
   const [activeId, setActiveId] = React.useState('');
   const t = useTranslation();
 
@@ -44,7 +44,7 @@ export function TableOfContent() {
   return (
     <S.TableOfContentWrapper hideIn="sm">
       <div>
-        <h3>{locale?t('table.of.content') : 'Table of content'}</h3>
+        <h3>{locale ? t('table.of.content') : 'Table of content'}</h3>
         <ul>
           {tableOfContent.children &&
             tableOfContent.children.map((item) => (
@@ -77,9 +77,7 @@ function TableOfContentItem({ item, activeId }: Props) {
         id={item.id}
         className={activeId === item.id ? S.active() : S.inactive()}
       >
-        <Link href={item.slug ?? '.'}>
-          <a>{item.title ?? '.'}</a>
-        </Link>
+        <Link href={item.slug ?? '.'}>{item.title ?? '.'}</Link>
       </S.ItemLink>
       <ul>
         {item.children &&
