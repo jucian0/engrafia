@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.1.5](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia@0.1.4...@engrafia/engrafia@0.1.5) (2022-11-18)
+
+
+### Bug Fixes
+
+* **engrafi:** fix playground filter contents ([ed1afb5](https://github.com/Jucian0/engrafia/commit/ed1afb56fb7e741ca234ebe0f47b650e470c4b0f))
+
 ### [0.1.4](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia@0.1.3...@engrafia/engrafia@0.1.4) (2022-11-17)
 
 
