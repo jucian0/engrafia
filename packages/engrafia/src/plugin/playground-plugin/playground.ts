@@ -28,7 +28,7 @@ export const playgroundRegex = /<Playground\b/;
 
 export const injectCodeToPlayground =
   () => (tree: any, file: { contents: string }) => {
-    if (file.contents.search(playgroundRegex) == -1) {
+    if (file?.contents?.search?.(playgroundRegex) == -1) {
       return tree;
     }
 
