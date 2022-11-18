@@ -17,7 +17,6 @@ export default function NavBar() {
   const { versions, themeConfig } = useEngrafiaConfig();
   const t = useTranslation();
   const router = useRouter();
-  console.log(versions);
 
   return (
     <Navbar variant="sticky" isBordered={theme === 'dark'} maxWidth="fluid">
