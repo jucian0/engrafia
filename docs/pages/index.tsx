@@ -63,7 +63,7 @@ export default function Index() {
         justify="center"
         direction="column"
         alignItems="center"
-        css={{ maxW: '90rem' }}
+        css={{ maxW: '90rem', mt: 100 }}
       >
         <Text
           h1
@@ -84,20 +84,16 @@ export default function Index() {
       <Grid.Container
         gap={2}
         justify="center"
-        css={{ zIndex: 1, maxW: '90px' }}
+        css={{ zIndex: 1, maxW: '90rem', mt: 50 }}
       >
-        <Grid>
-          <Button
-            css={{ fontSize: '$lg' }}
-            onClick={() =>
-              router.push(
-                `/docs/0.1.0/introduction/quick-start.${router.locale}`
-              )
-            }
-          >
-            {t('get.start')}
-          </Button>
-        </Grid>
+        <Button
+          css={{ fontSize: '$lg' }}
+          onClick={() =>
+            router.push(`/docs/0.1.0/introduction/quick-start.${router.locale}`)
+          }
+        >
+          {t('get.start')}
+        </Button>
       </Grid.Container>
       <Grid.Container
         justify="center"
