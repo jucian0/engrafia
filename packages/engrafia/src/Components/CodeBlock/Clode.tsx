@@ -9,9 +9,14 @@ import React from 'react';
 type Props = {
   className?: string;
   children: string;
+  boxShadow?: string;
 };
 
-export function Code({ children, className }: React.PropsWithChildren<Props>) {
+export function Code({
+  children,
+  className,
+  boxShadow,
+}: React.PropsWithChildren<Props>) {
   const language = className?.replace(/language-/, '');
   const theme = useTheme();
 
@@ -27,7 +32,9 @@ export function Code({ children, className }: React.PropsWithChildren<Props>) {
       language={language as Language}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <S.Container>
+        <S.Container
+          css={{ boxShadow: boxShadow ?? 'none', borderRadius: '$lg' }}
+        >
           <HeaderCode text={children.trim()} language={language} />
           <pre className={className} style={style}>
             {tokens.map((line, i) => (

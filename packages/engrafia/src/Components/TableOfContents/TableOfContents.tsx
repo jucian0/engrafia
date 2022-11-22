@@ -14,7 +14,7 @@ export function TableOfContent() {
 
   React.useEffect(() => {
     const onScroll = () => {
-      const ids = tableOfContent.children
+      const ids = tableOfContent?.children
         ?.map((item) => [
           item.id,
           ...(item.children?.map((child) => child.id) || []),
