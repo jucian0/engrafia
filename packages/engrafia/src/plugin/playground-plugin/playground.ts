@@ -15,8 +15,6 @@ const addComponentsProps = (scopes: string[]) => (node: any, idx: number) => {
   const child = sanitizeCode(removeTags(code));
   const newTag = `<Playground __position={${idx}} code={'${child}'} scope={${scope}}`;
 
-  console.log(node.value.toString());
-
   node.value = node.value.replace('<Playground', newTag);
 };
 
