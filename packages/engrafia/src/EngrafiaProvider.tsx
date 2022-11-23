@@ -53,7 +53,7 @@ export function EngrafiaProvider({ children }: React.PropsWithChildren<any>) {
 
     const versions = getFolderName(pseudoSidebarData, TEST_VERSION_FOLDER);
     const version = versions[versions.length - 1];
-    const paths = [themeConfig.rootDocs, version].filter((p) => p) as string[];
+    const paths = [themeConfig?.rootDocs, version].filter((p) => p) as string[];
     const sidebar = getFolderContent(pseudoSidebarData, paths);
 
     setConfig({
