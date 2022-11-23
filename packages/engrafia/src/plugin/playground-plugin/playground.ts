@@ -9,15 +9,15 @@ const isPlayground = (name: string) => {
 };
 
 const addComponentsProps = (scopes: string[]) => (node: any, idx: number) => {
-  const name = componentName(node.value);
-  const tagOpen = new RegExp(`^\\<${name}`);
   const formatted = formatter(nodeToString(node));
   const code = formatted.slice(1, Infinity);
   const scope = `{props, ${scopes.join(',')}}`;
   const child = sanitizeCode(removeTags(code));
-  const newTag = `<${name} __position={${idx}} code={'${child}'} scope={${scope}}`;
+  const newTag = `<Playground __position={${idx}} code={'${child}'} scope={${scope}}`;
 
-  node.value = node.value.replace(tagOpen, newTag);
+  console.log(node.value.toString());
+
+  node.value = node.value.replace('<Playground', newTag);
 };
 
 export interface PluginOpts {

@@ -2,7 +2,7 @@ import * as jsxUtils from 'jsx-ast-utils';
 import strip from 'strip-indent';
 import escapeJS from 'js-string-escape';
 
-import { valueFromTraverse, codeFromNode } from './ast';
+import { valueFromTraverse } from './ast';
 
 export const propFromElement = (prop: string) =>
   valueFromTraverse(
@@ -11,10 +11,7 @@ export const propFromElement = (prop: string) =>
   );
 
 export const removeTags = (code: string) => {
-  const open = codeFromNode((p) => p.isJSXOpeningElement());
-  const close = codeFromNode((p) => p.isJSXClosingElement());
-
-  return code.replace(open(code), '').replace(close(code), '');
+  return code.replace('<Playground>', '').replace('</Playground>', '');
 };
 
 export const sanitizeCode = (code: string) => {

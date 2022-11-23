@@ -25,13 +25,6 @@ export function remarkMetadataPlugin() {
       return {
         type: 'export',
         value: renderedString,
-        // data: {
-        //   estree: {
-        //     type: 'Program',
-        //     sourceType: 'module',
-        //     body,
-        //   },
-        // },
       };
     });
   };
@@ -48,8 +41,7 @@ function getValue(node: { [k: string]: any }) {
 }
 
 function renderer(data: Data, tableOfCOntents: {}) {
-  return `
-      export const getStaticProps = async () => {
+  return `export const getStaticProps = async () => {
         return { 
           props: {
             data: ${JSON.stringify(data)},        

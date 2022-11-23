@@ -61,9 +61,7 @@ export function Engrafia({
           attribute="class"
           value={themes as any}
         >
-          <MDXProvider
-            components={{ ...mdxComponents, ...rest.mdxComponents } as any}
-          >
+          <MDXProvider components={{ ...mdxComponents, ...rest.mdxComponents }}>
             <EngrafiaProvider>
               <RootLayout>{children}</RootLayout>
             </EngrafiaProvider>
