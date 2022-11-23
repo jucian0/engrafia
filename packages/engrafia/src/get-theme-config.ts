@@ -33,8 +33,10 @@ export type Meta = {
 
 export async function getThemeConfigModule(): Promise<ThemeConfig> {
   try {
-    const data = await import('root_folder/theme.config.js' as any);
-    return data.default;
+    const { default: themeConfig } = await import(
+      'root_folder/theme.config.js' as any
+    );
+    return themeConfig;
   } catch (err) {
     return Promise.resolve({});
   }

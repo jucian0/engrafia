@@ -27,8 +27,10 @@ export const sidebarFallback = {
 
 export async function getSidebarTree(): Promise<SidebarTree> {
   try {
-    const data = await import('root_folder/sidebar.json' as any);
-    return data.default;
+    const { default: sidebar } = await import(
+      'root_folder/sidebar.json' as any
+    );
+    return sidebar;
   } catch (err) {
     return Promise.resolve(sidebarFallback);
   }
