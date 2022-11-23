@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.7](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia@0.1.6...@engrafia/engrafia@0.1.7) (2022-11-23)
+
+
+### Bug Fixes
+
+* **engrafia:** fix static files import ([7aabc39](https://github.com/Jucian0/engrafia/commit/7aabc39c82612d39da46b131800a436fe0fc882f))
+
 ### [0.1.2](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia@0.1.1...@engrafia/engrafia@0.1.2) (2022-11-14)
 
 
