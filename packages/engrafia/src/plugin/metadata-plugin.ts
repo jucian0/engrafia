@@ -20,6 +20,7 @@ export function remarkMetadataPlugin() {
       const renderedString = renderer(data, tableOfCOntent);
       const { body }: any = parseAst(renderedString, {
         sourceType: 'module',
+        ecmaVersion: 'latest',
       } as Options);
 
       return {

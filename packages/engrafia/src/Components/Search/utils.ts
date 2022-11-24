@@ -1,6 +1,6 @@
 import { SidebarTree, DocFile } from '../../get-sidebar';
 
-export function getSearchableList(content: SidebarTree, locale: string) {
+export function getSearchableList(content: SidebarTree, locale?: string) {
   let contentList: DocFile[] = [];
   function evaluate(tree: SidebarTree): any {
     for (let index = 0; index < tree.children.length; index++) {
@@ -12,7 +12,9 @@ export function getSearchableList(content: SidebarTree, locale: string) {
     }
   }
   evaluate(content);
-  return contentList.filter((item) => item.name.includes(locale));
+  return contentList.filter((item) =>
+    locale ? item.name.includes(locale) : true
+  );
 }
 
 export function filterItems(list: DocFile[]) {

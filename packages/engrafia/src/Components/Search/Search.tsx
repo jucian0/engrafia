@@ -53,7 +53,7 @@ export const Search = () => {
   const { version, sidebar, themeConfig } = useEngrafiaConfig();
 
   const searchableContent = React.useMemo(() => {
-    return sidebar.name ? getSearchableList(sidebar, locale as '') : [];
+    return sidebar.name ? getSearchableList(sidebar, locale) : [];
   }, [sidebar, version, locale, themeConfig]);
 
   function handleSetList(e: React.ChangeEvent<FormElement>) {
@@ -136,7 +136,13 @@ export const Search = () => {
                 }}
               >
                 {input.length === 0 ? (
-                  <Text size="$3xl">Start to search by typing...</Text>
+                  <Text
+                    size="$3xl"
+                    color="$accents8"
+                    css={{ fontStyle: 'italic' }}
+                  >
+                    Start to search by typing...
+                  </Text>
                 ) : (
                   <Text size="$3xl">No results found for your search!</Text>
                 )}

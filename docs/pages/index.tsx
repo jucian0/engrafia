@@ -211,15 +211,16 @@ export default function Index() {
       >
         <Grid css={{ w: '50%' }} justify="flex-end">
           <Text h1 css={{ lineHeight: '$xs' }}>
-            Metadata,{' '}
+            {'Metadata, '}
             <Text color="primary" span css={{ lineHeight: '$xs' }}>
               SEO
             </Text>
-            , sidebar organization
+            {', sidebar organization'}
           </Text>
           <Text>
-            Organize your content, improve SEO, and search engine results, and
-            organize your content in the sidebar
+            {
+              'Organize your content, improve SEO, and search engine results, and organize your content in the sidebar'
+            }
             <Badge isSquared color="secondary" variant="flat">
               <Link href="/docs/0.1.0/features/seo">Read more</Link>
             </Badge>
@@ -244,8 +245,9 @@ export default function Index() {
             Code highlight{' '}
           </Text>
           <Text>
-            Powered by PrismJs, write, and show beautiful code highlight, and
-            organize it easily
+            {
+              'Powered by PrismJs, write, and show beautiful code highlight, and organize it easily'
+            }
             <Badge isSquared color="secondary" variant="flat">
               <Link href="/docs/0.1.0/features/code-highlight">Read more</Link>
             </Badge>
