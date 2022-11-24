@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.12](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia@0.1.11...@engrafia/engrafia@0.1.12) (2022-11-24)
+
+
+### Bug Fixes
+
+* **engrafia:** fix search to work without translations ([56c72be](https://github.com/Jucian0/engrafia/commit/56c72bee6cb45cfb7f3fdff91483ce1da48b9183))
+
 ## [0.1.11](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia@0.1.10...@engrafia/engrafia@0.1.11) (2022-11-23)
 
 ### [0.1.4](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia@0.1.3...@engrafia/engrafia@0.1.4) (2022-11-17)
