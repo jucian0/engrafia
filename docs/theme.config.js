@@ -11,6 +11,7 @@ export default {
     branch: 'main',
     author: 'Jucian0',
   },
+  loadSidebarIcons: true,
   nav: {
     logo: (
       <svg

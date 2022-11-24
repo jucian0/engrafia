@@ -36,7 +36,7 @@ export const Item = styled(`li`, {
   paddingLeft: `1rem`,
 });
 
-export const Category = styled(`span`, {
+export const Category = styled(`div`, {
   display: `flex`,
   alignItems: 'center',
   paddingBlock: `0.5rem`,

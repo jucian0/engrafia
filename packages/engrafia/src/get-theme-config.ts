@@ -2,6 +2,7 @@ export type ThemeConfig = {
   title?: string;
   description?: string;
   rootDocs?: string;
+  loadSidebarIcons?: boolean;
   repository?: {
     url: string;
     branch: string;

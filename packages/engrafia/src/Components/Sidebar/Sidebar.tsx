@@ -7,9 +7,11 @@ import { Category, DocFile } from '../../get-sidebar';
 import { filterSidebarContent } from './util';
 import { useTranslation } from '../../useTranslation';
 import { useEngrafiaConfig } from '../../EngrafiaProvider';
+import Image from 'next/image';
+import { theme } from '@nextui-org/react';
 
 export function Sidebar({ hide = true }) {
-  const { sidebar } = useEngrafiaConfig();
+  const { sidebar, themeConfig } = useEngrafiaConfig();
   const router = useRouter();
   const { locale } = router;
   const t = useTranslation();
@@ -40,6 +42,8 @@ export function Sidebar({ hide = true }) {
     setToggle(opened);
   }, [sidebar]);
 
+  console.log(sidebar);
+
   function recursiveMenu(menu: Category & DocFile) {
     return (
       <S.List key={menu.path}>
@@ -52,7 +56,16 @@ export function Sidebar({ hide = true }) {
           </S.Link>
         ) : (
           <S.Category onClick={() => handleClick(menu.relativePath)}>
-            {locale ? t(menu.name) : menu.title}
+            {themeConfig.loadSidebarIcons && (
+              <Image
+                style={{ marginInline: 5, borderRadius: 0 }}
+                alt={'icon'}
+                src={'/imgs/' + menu.name + '.svg'}
+                width={22}
+                height={22}
+              />
+            )}
+            <span>{locale ? t(menu.name) : menu.title}</span>
             {isOpened(menu) ? <MdExpandMore /> : <MdChevronRight />}
           </S.Category>
         )}
