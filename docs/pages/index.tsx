@@ -84,7 +84,7 @@ export default function Index() {
       <Grid.Container
         gap={2}
         justify="center"
-        css={{ zIndex: 1, maxW: '90px' }}
+        css={{ zIndex: 1, maxW: '90rem' }}
       >
         <Grid>
           <Button

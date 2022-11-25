@@ -3,17 +3,23 @@ import { Grid, Text } from '@nextui-org/react';
 import Head from 'next/head';
 import Link from 'next/link';
 
+export const getStaticProps = async () => {
+  return {
+    props: {
+      data: {
+        title: '404',
+        description:
+          'We could not find your content, try to navigate to home page.',
+        tags: 'docs, documentation, nextjs',
+      },
+    },
+  };
+};
+
 export default function NotFound() {
   const t = useTranslation();
   return (
     <>
-      <Head>
-        <title>Engrafia | 404</title>
-        <meta
-          name="description"
-          content="The most easiest way to write docs for your project."
-        />
-      </Head>
       <Grid.Container
         justify="center"
         direction="column"
@@ -28,12 +34,12 @@ export default function NotFound() {
           weight="bold"
           size="5rem"
         >
-          404
+          404, Page not found!
         </Text>
 
-        <Text>
-          Page not found!{'  '}
-          <Link href="/">Home page</Link>
+        <Text as="h2">
+          {'Sorry, we could not find your target content, try to navigate to '}
+          <Link href="/">home page.</Link>
         </Text>
       </Grid.Container>
     </>
