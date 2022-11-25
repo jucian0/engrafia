@@ -93,6 +93,17 @@
                                     "relativePath": "/docs/pages/docs/0.1.0/features/seo.en.md"
                                 },
                                 {
+                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/features/sidebar.en.md",
+                                    "name": "sidebar.en.md",
+                                    "meta": {
+                                        "title": "Sidebar",
+                                        "description": "Describes how the sidebar engine works, and some customizations.",
+                                        "tags": "docs, nextjs, code, search"
+                                    },
+                                    "url": "/docs/0.1.0/features/sidebar.en",
+                                    "relativePath": "/docs/pages/docs/0.1.0/features/sidebar.en.md"
+                                },
+                                {
                                     "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/features/versioning.en.md",
                                     "name": "versioning.en.md",
                                     "meta": {

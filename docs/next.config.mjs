@@ -1,4 +1,4 @@
-import { engrafia } from 'engrafia/src/plugin/engrafia-plugin.js';
+import { engrafia } from '../dist/packages/engrafia/src/plugin/engrafia-plugin.js';
 import withImages from 'next-images';
 import compose from 'compose-function';
 
