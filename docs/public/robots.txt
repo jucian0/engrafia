@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://engrafia.vercel.app
+
+# Sitemaps
+Sitemap: https://engrafia.vercel.app/sitemap.xml

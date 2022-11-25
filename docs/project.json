@@ -64,6 +64,16 @@
           "docs/**/*.{ts,tsx,js,jsx}"
         ]
       }
+    },
+    "sitemap": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "cd docs && next-sitemap"
+          }
+        ]
+      }
     }
   },
   "tags": []

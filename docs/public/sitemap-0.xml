@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://engrafia.vercel.app</loc><lastmod>2022-11-25T14:56:28.119Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://engrafia.vercel.app/docs/0.1.0/customization/customization.en</loc><lastmod>2022-11-25T14:56:28.119Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://engrafia.vercel.app/docs/0.1.0/customization/sidebar.en</loc><lastmod>2022-11-25T14:56:28.119Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://engrafia.vercel.app/docs/0.1.0/features/code-highlight.en</loc><lastmod>2022-11-25T14:56:28.119Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://engrafia.vercel.app/docs/0.1.0/features/i18n.en</loc><lastmod>2022-11-25T14:56:28.119Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://engrafia.vercel.app/docs/0.1.0/features/md-mdx.en</loc><lastmod>2022-11-25T14:56:28.119Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://engrafia.vercel.app/docs/0.1.0/features/playground.en</loc><lastmod>2022-11-25T14:56:28.119Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://engrafia.vercel.app/docs/0.1.0/features/search.en</loc><lastmod>2022-11-25T14:56:28.119Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://engrafia.vercel.app/docs/0.1.0/features/seo.en</loc><lastmod>2022-11-25T14:56:28.119Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://engrafia.vercel.app/docs/0.1.0/features/versioning.en</loc><lastmod>2022-11-25T14:56:28.119Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://engrafia.vercel.app/docs/0.1.0/introduction/basic-info.en</loc><lastmod>2022-11-25T14:56:28.119Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://engrafia.vercel.app/docs/0.1.0/introduction/quick-start.en</loc><lastmod>2022-11-25T14:56:28.119Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://engrafia.vercel.app/404</loc><lastmod>2022-11-25T14:56:28.119Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>
