@@ -26,3 +26,5 @@ Just add a number that represents the position of the item in the relative categ
 ## Sidebar icon
 
 Another customization that can be made is to add a custom icon for every sidebar category. to do that, just add an SVG icon with the same name as the category, and add the `loadSidebarIcons:true` property in `theme.config.js`.
+
+![sidebar-docs](/imgs/sidebar.png)

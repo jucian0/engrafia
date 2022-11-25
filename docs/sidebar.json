@@ -11,6 +11,36 @@
                     "name": "0.1.0",
                     "children": [
                         {
+                            "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/customization",
+                            "name": "customization",
+                            "children": [
+                                {
+                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/customization/customization.en.md",
+                                    "name": "customization.en.md",
+                                    "meta": {
+                                        "title": "Customization",
+                                        "description": "This doc will guide you through the Engrafia customization, like themes, colors, and pages.",
+                                        "tags": "react, docs, nextjs, theme, styles"
+                                    },
+                                    "url": "/docs/0.1.0/customization/customization.en",
+                                    "relativePath": "/docs/pages/docs/0.1.0/customization/customization.en.md"
+                                },
+                                {
+                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/customization/sidebar.en.md",
+                                    "name": "sidebar.en.md",
+                                    "meta": {
+                                        "title": "Sidebar",
+                                        "description": "Describes how the sidebar engine works, and some customizations.",
+                                        "tags": "docs, nextjs, code, search"
+                                    },
+                                    "url": "/docs/0.1.0/customization/sidebar.en",
+                                    "relativePath": "/docs/pages/docs/0.1.0/customization/sidebar.en.md"
+                                }
+                            ],
+                            "title": "Customization",
+                            "relativePath": "/docs/pages/docs/0.1.0/customization"
+                        },
+                        {
                             "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/features",
                             "name": "features",
                             "children": [
@@ -24,17 +54,6 @@
                                     },
                                     "url": "/docs/0.1.0/features/code-highlight.en",
                                     "relativePath": "/docs/pages/docs/0.1.0/features/code-highlight.en.md"
-                                },
-                                {
-                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/features/customization.en.md",
-                                    "name": "customization.en.md",
-                                    "meta": {
-                                        "title": "Customization",
-                                        "description": "This doc will guide you through the Engrafia customization, like themes, colors, and pages.",
-                                        "tags": "react, docs, nextjs, theme, styles"
-                                    },
-                                    "url": "/docs/0.1.0/features/customization.en",
-                                    "relativePath": "/docs/pages/docs/0.1.0/features/customization.en.md"
                                 },
                                 {
                                     "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/features/i18n.en.md",
@@ -91,17 +110,6 @@
                                     },
                                     "url": "/docs/0.1.0/features/seo.en",
                                     "relativePath": "/docs/pages/docs/0.1.0/features/seo.en.md"
-                                },
-                                {
-                                    "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/features/sidebar.en.md",
-                                    "name": "sidebar.en.md",
-                                    "meta": {
-                                        "title": "Sidebar",
-                                        "description": "Describes how the sidebar engine works, and some customizations.",
-                                        "tags": "docs, nextjs, code, search"
-                                    },
-                                    "url": "/docs/0.1.0/features/sidebar.en",
-                                    "relativePath": "/docs/pages/docs/0.1.0/features/sidebar.en.md"
                                 },
                                 {
                                     "path": "/home/barbosa/javascript/engrafia/docs/pages/docs/0.1.0/features/versioning.en.md",
