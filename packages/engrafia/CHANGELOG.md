@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia@0.1.12...@engrafia/engrafia@0.2.0) (2022-11-25)
+
+
+### Features
+
+* **sidebar:** add sidebarIcon feature ([53534bd](https://github.com/Jucian0/engrafia/commit/53534bd6f09d59939d791db49c2e7e5d362f63c6))
+
 ## [0.1.12](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia@0.1.11...@engrafia/engrafia@0.1.12) (2022-11-24)
 
 
