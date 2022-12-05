@@ -3,7 +3,7 @@ import { Grid, Text } from '@nextui-org/react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   return {
     props: {
       meta: {

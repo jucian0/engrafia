@@ -5,7 +5,7 @@ import { IoRocketOutline } from 'react-icons/io5';
 import { BsHandThumbsUp } from 'react-icons/bs';
 import { Code, Link, useTranslation } from 'engrafia';
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   return {
     props: {
       meta: {
@@ -23,10 +23,10 @@ description: 'This section will guide you through principals' ideas and how to s
 position: 0
 ---`;
 
-const jsCode = `export const getStaticProps = async () => {
+const jsCode = `export const getServerSideProps = async () => {
   return {
     props: {
-      data: {
+      meta: {
         title: 'Docs generator',
         description: 'The easiest way to write docs.',
       },

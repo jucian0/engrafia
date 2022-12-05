@@ -151,11 +151,11 @@ export default {
       <meta name="description" content={meta.description}/>
       <meta name="og:description" content={meta.description}/>
       <meta name="twitter:card" content="summary_large_image"/>
-      <meta name="twitter:image" content="/imgs/engrafia.jpg"/>
+      <meta name="twitter:image" content={meta.image ?? "https://engrafia.vercel.app/imgs/engrafia.jpg"}/>
       <meta name="twitter:site:domain" content="engrafia.vercel.app"/>
       <meta name="twitter:url" content="https://engrafia.vercel.app"/>
       <meta name="og:title" content="Engrafia"/>
-      <meta name="og:image" content="/imgs/engrafia.jpg"/>
+      <meta name="og:image" content={meta.image ?? "https://engrafia.vercel.app/imgs/engrafia.jpg"}/>
       <meta name="apple-mobile-web-app-title" content="Engrafia"/>
       <meta property="og:title" content={`${title} | ${meta.title}`}/>
       <meta name="apple-mobile-web-app-title" content="Engrafia"/>
