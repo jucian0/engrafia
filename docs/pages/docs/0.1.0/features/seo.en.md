@@ -35,7 +35,7 @@ Whenever you create anew page in Engrafia, you should add some metadata, you can
 export const getStaticProps = async () => {
   return {
     props: {
-      data: {
+      meta: {
         title: 'My custom page',
         description: 'This is a custom page example',
         tags: 'docs, documentation, nextjs',

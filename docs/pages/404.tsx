@@ -6,7 +6,7 @@ import Link from 'next/link';
 export const getStaticProps = async () => {
   return {
     props: {
-      data: {
+      meta: {
         title: '404',
         description:
           'We could not find your content, try to navigate to home page.',

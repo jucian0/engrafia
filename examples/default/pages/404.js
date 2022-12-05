@@ -1,7 +1,7 @@
 export const getStaticProps = async () => {
   return {
     props: {
-      data: {
+      meta: {
         title: 'Engrafia | 404',
         description: 'Page not found',
         tags: 'docs, documentation, nextjs',

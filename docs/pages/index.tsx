@@ -8,7 +8,7 @@ import { Code, Link, useTranslation } from 'engrafia';
 export const getStaticProps = async () => {
   return {
     props: {
-      data: {
+      meta: {
         title: 'Docs generator',
         description: 'The easiest way to write docs for your project.',
         tags: 'docs, documentation, nextjs',

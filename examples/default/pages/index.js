@@ -1,7 +1,7 @@
 export const getStaticProps = async () => {
   return {
     props: {
-      data: {
+      meta: {
         title: 'Engrafia | Docs generator',
         description: 'The easiest way to write docs for your project.',
         tags: 'docs, documentation, nextjs',

@@ -3,7 +3,7 @@ import { load as parseYaml } from 'js-yaml';
 import { parse as parseToml } from 'toml';
 import { generateTableOfContents } from './table-of-content';
 
-type Data = {
+type Meta = {
   title: string;
   description: string;
   position?: number;
@@ -41,11 +41,11 @@ function getValue(node: { [k: string]: any }) {
   }
 }
 
-function renderer(data: Data, tableOfCOntents: {}) {
-  return `export const getStaticProps = async () => {
+function renderer(meta: Meta, tableOfCOntents: {}) {
+  return `export const getServerSideProps = async () => {
         return { 
           props: {
-            data: ${JSON.stringify(data)},        
+            meta: ${JSON.stringify(meta)},        
             tableOfContents: ${JSON.stringify(tableOfCOntents)}
           }
         }

@@ -72,7 +72,7 @@ export function EngrafiaProvider({ children }: React.PropsWithChildren<any>) {
   React.useEffect(() => {
     if (children?.props?.children?.props) {
       setConfig({
-        meta: children.props.children.props.data,
+        meta: children.props.children.props.meta,
         tableOfContent: children.props.children.props.tableOfContents,
       });
     }

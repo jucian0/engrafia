@@ -23,7 +23,7 @@ In this example we are using Javascript, you can also use Typescript.
 export const getStaticProps = async () => {
   return {
     props: {
-      data: {
+      meta: {
         title: 'My custom page',
         description: 'This is a custom page example',
         tags: 'docs, documentation, nextjs',
