@@ -151,25 +151,29 @@ export default {
         description={meta.description}
         canonical="https://engrafia.vercel.app"
         openGraph={{
+          siteName: 'Engrafia',
+          type:"website",
           url: 'https://engrafia.vercel.app',
           title: `${title} | ${meta.title}`,
           description: meta.description,
           images: [
             {
               url:
-                meta.image ?? 'https://engrafia.vercel.app/imgs/engrafia.jpg',
+                meta.image ?? '/imgs/engrafia.jpg',
+                type:"image/jpg",
+                alt:"engrafia",
+                width:3750,
+                height:2109
             },
           ],
-          siteName: 'Engrafia',
         }}
         twitter={{
-          cardType: 'summary_large_image',
+          cardType: "summary_large_image"
         }}
       />
       <Head>
         <link rel="sitemap" href="/sitemap.xml" />
         <meta name="keywords" content={meta.tags} />
-        <meta property="og:type" content="website" />
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
         <link
           rel="apple-touch-icon"
