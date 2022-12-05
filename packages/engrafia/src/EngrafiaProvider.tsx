@@ -25,7 +25,6 @@ function configReducer(
 }
 
 const INITIAL_STATE: EngrafiaContextType = {
-  meta: {} as Meta,
   tableOfContent: { depth: 1, children: [] },
   version: undefined,
   sidebar: sidebarFallback,
@@ -72,7 +71,6 @@ export function EngrafiaProvider({ children }: React.PropsWithChildren<any>) {
   React.useEffect(() => {
     if (children?.props?.children?.props) {
       setConfig({
-        meta: children.props.children.props.meta,
         tableOfContent: children.props.children.props.tableOfContents,
       });
     }

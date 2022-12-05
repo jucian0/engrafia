@@ -1,7 +1,7 @@
 import React from 'react';
 import { I18nConfig } from './get-i18n';
 import { SidebarTree } from './get-sidebar';
-import { Meta, ThemeConfig } from './get-theme-config';
+import { ThemeConfig } from './get-theme-config';
 
 export type ChildrenOfContent = {
   title: string;
@@ -16,7 +16,6 @@ export type TableOfContentType = {
 };
 
 export type EngrafiaContextType = {
-  meta: Meta;
   tableOfContent: TableOfContentType;
   setSiteConfig?: React.Dispatch<React.SetStateAction<EngrafiaContextType>>;
   version?: string;

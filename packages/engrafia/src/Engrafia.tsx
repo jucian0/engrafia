@@ -9,9 +9,10 @@ import { ThemeProvider } from 'next-themes';
 import { lightTheme, darkTheme } from './Styles/theme';
 import { MDXProvider } from '@mdx-js/react';
 
-function RootLayout({ children }: React.PropsWithChildren<any>) {
-  const { themeConfig, meta } = useEngrafiaConfig();
+function RootLayout({ children, ...rest }: React.PropsWithChildren<any>) {
+  const { themeConfig } = useEngrafiaConfig();
   const { route } = useRouter();
+  const meta = children.props.meta
 
   if (route.includes(themeConfig.rootDocs ?? 'docs')) {
     return (
