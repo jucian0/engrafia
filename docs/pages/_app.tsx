@@ -10,21 +10,21 @@ function App({ Component, pageProps }: AppProps) {
      <Head>
       <meta charSet="utf-8"/>
       <meta name="robots" content="index,follow"/>
-      <title>{`Engrafia | ${meta?.title}`}</title>
-      <meta name="description" content={meta?.description}/>
-      <meta name="og:description" content={meta?.description}/>
+      <title>{`Engrafia | ${meta?.title??'Engrafia Docs'}`}</title>
+      <meta name="description" content={meta?.description??'Docs generator'}/>
+      <meta name="og:description" content={meta?.description ?? 'Docs generator'}/>
       <meta name="twitter:card" content="summary_large_image"/>
-      <meta name="twitter:image" content="/imgs/engrafia.jpg"/>
+      <meta name="twitter:image" content="https://engrafia.vercel.app/imgs/engrafia.jpg"/>
       <meta name="twitter:site:domain" content="engrafia.vercel.app"/>
       <meta name="twitter:url" content="https://engrafia.vercel.app"/>
       <meta name="og:title" content="Engrafia"/>
-      <meta name="og:image" content="/imgs/engrafia.jpg"/>
+      <meta name="og:image" content="https://engrafia.vercel.app/imgs/engrafia.jpg"/>
       <meta name="apple-mobile-web-app-title" content="Engrafia"/>
-      <meta property="og:title" content={`Engrafia | ${meta?.title}`}/>
+      <meta property="og:title" content={`Engrafia | ${meta?.title?? 'Docs generator'}`}/>
       <meta name="apple-mobile-web-app-title" content="Engrafia"/>
 
         <link rel="sitemap" href="/sitemap.xml" />
-        <meta name="keywords" content={meta?.tags} />
+        <meta name="keywords" content={meta?.tags??'engrafia react docs'} />
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
         <link
           rel="apple-touch-icon"
