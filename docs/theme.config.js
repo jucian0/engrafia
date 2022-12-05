@@ -1,4 +1,5 @@
 import { RiGithubFill } from 'react-icons/ri';
+import { NextSeo } from 'next-seo';
 import Head from 'next/head';
 
 export default {
@@ -144,22 +145,34 @@ export default {
     ),
   },
   head: ({ meta, title }) => (
+    <>
+      <NextSeo
+        title={`${title} | ${meta.title}`}
+        description={meta.description}
+        canonical="https://engrafia.vercel.app"
+        openGraph={{
+          siteName: 'Engrafia',
+          type:"website",
+          url: 'https://engrafia.vercel.app',
+          
+          title: `${title} | ${meta.title}`,
+          description: meta.description,
+          images: [
+            {
+              url:meta.image ?? "https://engrafia.vercel.app/imgs/engrafia.jpg",
+                type:"image/jpg",
+                alt:"engrafia",
+                width:3750,
+                height:2109
+            },
+          ],
+        }}
+        twitter={{
+          cardType: "summary_large_image",
+          site:''
+        }}
+      />
       <Head>
-      <meta charset="utf-8"/>
-      <meta name="robots" content="index,follow"/>
-      <title>{`${title} | ${meta.title}`}</title>
-      <meta name="description" content={meta.description}/>
-      <meta name="og:description" content={meta.description}/>
-      <meta name="twitter:card" content="summary_large_image"/>
-      <meta name="twitter:image" content={meta.image ?? "https://engrafia.vercel.app/imgs/engrafia.jpg"}/>
-      <meta name="twitter:site:domain" content="engrafia.vercel.app"/>
-      <meta name="twitter:url" content="https://engrafia.vercel.app"/>
-      <meta name="og:title" content="Engrafia"/>
-      <meta name="og:image" content={meta.image ?? "https://engrafia.vercel.app/imgs/engrafia.jpg"}/>
-      <meta name="apple-mobile-web-app-title" content="Engrafia"/>
-      <meta property="og:title" content={`${title} | ${meta.title}`}/>
-      <meta name="apple-mobile-web-app-title" content="Engrafia"/>
-
         <link rel="sitemap" href="/sitemap.xml" />
         <meta name="keywords" content={meta.tags} />
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
@@ -193,5 +206,6 @@ export default {
           href="/favicon/favicon-16x16.png"
         />
       </Head>
+    </>
   ),
 };
