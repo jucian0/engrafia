@@ -30,12 +30,6 @@ function RootLayout({ children }: React.PropsWithChildren<any>) {
   );
 }
 
-function useLoaded() {
-  const [loaded, setLoaded] = React.useState(false);
-  React.useEffect(() => setLoaded(true), []);
-  return loaded;
-}
-
 export type EngrafiaProps = {
   themes?: {
     [k: string]: { [k: string]: any };
@@ -47,13 +41,11 @@ export function Engrafia({
   children,
   ...rest
 }: React.PropsWithChildren<EngrafiaProps>) {
-  const loaded = useLoaded();
   const themes = rest.themes ?? {
     light: lightTheme,
     dark: darkTheme,
   };
 
-  if (loaded) {
     return (
       <NextUIProvider>
         <ThemeProvider
@@ -69,7 +61,5 @@ export function Engrafia({
         </ThemeProvider>
       </NextUIProvider>
     );
-  }
 
-  return null;
 }
