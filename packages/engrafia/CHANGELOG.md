@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.3](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia@0.2.2...@engrafia/engrafia@0.2.3) (2022-12-05)
+
+
+### Bug Fixes
+
+* **engrafia:** change metada injection ([6dea0e8](https://github.com/Jucian0/engrafia/commit/6dea0e8b182fde30d85946bdf3de6ec1cab440cb))
+
 ## [0.2.2](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia@0.2.1...@engrafia/engrafia@0.2.2) (2022-12-05)
 
 ## [0.2.1](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia@0.2.0...@engrafia/engrafia@0.2.1) (2022-11-25)
