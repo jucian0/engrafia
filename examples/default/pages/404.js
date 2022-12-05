@@ -1,4 +1,4 @@
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   return {
     props: {
       meta: {
