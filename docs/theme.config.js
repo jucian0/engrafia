@@ -148,7 +148,7 @@ export default {
     <>
       <NextSeo
         title={`${title} | ${meta.title}`}
-        description={meta.description}
+        description={`${meta.description}`}
         canonical="https://engrafia.vercel.app"
         openGraph={{
           siteName: 'Engrafia',
@@ -156,10 +156,10 @@ export default {
           url: 'https://engrafia.vercel.app',
           
           title: `${title} | ${meta.title}`,
-          description: meta.description,
+          description: `${meta.description}`,
           images: [
             {
-              url:meta.image ?? "https://engrafia.vercel.app/imgs/engrafia.jpg",
+              url:"https://engrafia.vercel.app/imgs/engrafia.jpg",
                 type:"image/jpg",
                 alt:"engrafia",
                 width:3750,
@@ -169,7 +169,6 @@ export default {
         }}
         twitter={{
           cardType: "summary_large_image",
-          site:''
         }}
       />
       <Head>
