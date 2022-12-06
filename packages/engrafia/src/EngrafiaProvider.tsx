@@ -69,9 +69,11 @@ export function EngrafiaProvider({ children }: React.PropsWithChildren<any>) {
   }, [locale, route]);
 
   React.useEffect(() => {
-    if (children?.props?.children?.props) {
+    const childrenList = React.Children.toArray(children?.props?.children);
+    const child: any = childrenList[childrenList.length - 1];
+    if (child.props) {
       setConfig({
-        tableOfContent: children.props.children.props.tableOfContents,
+        tableOfContent: child.props.tableOfContents,
       });
     }
   }, [children?.props?.children?.props]);
