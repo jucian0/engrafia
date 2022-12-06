@@ -42,7 +42,7 @@ function getValue(node: { [k: string]: any }) {
 }
 
 function renderer(meta: Meta, tableOfCOntents: {}) {
-  return `export const getServerSideProps = async () => {
+  return `export const getStaticProps = async () => {
         return { 
           props: {
             meta: ${JSON.stringify(meta)},        

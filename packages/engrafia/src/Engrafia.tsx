@@ -12,7 +12,7 @@ import { MDXProvider } from '@mdx-js/react';
 function RootLayout({ children, ...rest }: React.PropsWithChildren<any>) {
   const { themeConfig } = useEngrafiaConfig();
   const { route } = useRouter();
-  const meta = children.props.meta
+  const meta = children.props.meta;
 
   if (route.includes(themeConfig.rootDocs ?? 'docs')) {
     return (
@@ -47,20 +47,19 @@ export function Engrafia({
     dark: darkTheme,
   };
 
-    return (
-      <NextUIProvider>
-        <ThemeProvider
-          defaultTheme="light"
-          attribute="class"
-          value={themes as any}
-        >
-          <MDXProvider components={{ ...mdxComponents, ...rest.mdxComponents }}>
-            <EngrafiaProvider>
-              <RootLayout>{children}</RootLayout>
-            </EngrafiaProvider>
-          </MDXProvider>
-        </ThemeProvider>
-      </NextUIProvider>
-    );
-
+  return (
+    <NextUIProvider>
+      <ThemeProvider
+        defaultTheme="light"
+        attribute="class"
+        value={themes as any}
+      >
+        <MDXProvider components={{ ...mdxComponents, ...rest.mdxComponents }}>
+          <EngrafiaProvider>
+            <RootLayout>{children}</RootLayout>
+          </EngrafiaProvider>
+        </MDXProvider>
+      </ThemeProvider>
+    </NextUIProvider>
+  );
 }

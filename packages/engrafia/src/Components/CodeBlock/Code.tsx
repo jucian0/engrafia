@@ -33,7 +33,11 @@ export function Code({
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <S.Container
-          css={{ boxShadow: boxShadow ?? 'none', borderRadius: '$lg' }}
+          css={{
+            boxShadow: boxShadow ?? 'none',
+            borderRadius: '$lg',
+            w: '100%',
+          }}
         >
           <HeaderCode text={children.trim()} language={language} />
           <pre className={className} style={style}>

@@ -5,7 +5,7 @@ import { IoRocketOutline } from 'react-icons/io5';
 import { BsHandThumbsUp } from 'react-icons/bs';
 import { Code, Link, useTranslation } from 'engrafia';
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   return {
     props: {
       meta: {
@@ -23,7 +23,7 @@ description: 'This section will guide you through principals' ideas and how to s
 position: 0
 ---`;
 
-const jsCode = `export const getServerSideProps = async () => {
+const jsCode = `export const getStaticProps = async () => {
   return {
     props: {
       meta: {
@@ -61,10 +61,10 @@ export default function Index() {
       />
       <Grid css={{ maxW: '90rem' }}>
         <Grid.Container
+          css={{ p: 30 }}
           justify="center"
           direction="column"
           alignItems="center"
-          css={{ maxW: '100%' }}
         >
           <Text
             h1
@@ -82,11 +82,7 @@ export default function Index() {
           </Text>
         </Grid.Container>
 
-        <Grid.Container
-          gap={2}
-          justify="center"
-          css={{ zIndex: 1, maxW: '100%' }}
-        >
+        <Grid.Container gap={2} justify="center" css={{ zIndex: 1 }}>
           <Grid>
             <Button
               css={{ fontSize: '$lg' }}
@@ -105,10 +101,9 @@ export default function Index() {
           direction="column"
           alignItems="center"
           css={{
-            marginTop: '3rem',
-            marginBottom: '3rem',
+            p: 20,
+            py: 40,
             zIndex: 2,
-            maxW: '100%',
           }}
         >
           <Text size="$2xl" color="$accents8" css={{ zIndex: '$1' }}>
@@ -116,11 +111,7 @@ export default function Index() {
           </Text>
         </Grid.Container>
 
-        <Grid.Container
-          gap={2}
-          justify="center"
-          css={{ zIndex: 1, maxW: '100%' }}
-        >
+        <Grid.Container gap={2} justify="center" css={{ zIndex: 1 }}>
           <Grid>
             <Card
               css={{
@@ -203,14 +194,10 @@ export default function Index() {
           </Grid>
         </Grid.Container>
 
-        <Grid css={{ borderTop: '1px solid $border', w: '100%', my: '5rem' }} />
+        <Grid css={{ borderTop: '1px solid $border', my: '5rem' }} />
 
-        <Grid.Container
-          gap={2}
-          justify="center"
-          css={{ zIndex: 1, mb: 100, maxW: '100%' }}
-        >
-          <Grid css={{ w: '50%' }} justify="flex-end">
+        <Grid.Container gap={2} justify="center" css={{ zIndex: 1, mb: 100 }}>
+          <Grid justify="flex-end" md={6} sm={12}>
             <Text h1 css={{ lineHeight: '$xs' }}>
               {'Metadata, '}
               <Text color="primary" span css={{ lineHeight: '$xs' }}>
@@ -227,15 +214,15 @@ export default function Index() {
               </Badge>
             </Text>
           </Grid>
-          <Grid css={{ w: '50%' }}>
+          <Grid md={6} sm={12}>
             <Code className="markdown" boxShadow="$md">
               {code}
             </Code>
           </Grid>
         </Grid.Container>
 
-        <Grid.Container gap={2} css={{ zIndex: 1, maxW: '100%', mb: '8rem' }}>
-          <Grid css={{ w: '100%' }} justify="flex-end">
+        <Grid.Container gap={2} css={{ zIndex: 1 }}>
+          <Grid md={12} justify="flex-start" direction="column">
             <Text
               h1
               css={{
@@ -255,12 +242,12 @@ export default function Index() {
               </Badge>
             </Text>
           </Grid>
-          <Grid css={{ w: '50%' }}>
+          <Grid md={6} sm={12} justify="center">
             <Code className="javascript" boxShadow="$md">
               {jsCode}
             </Code>
           </Grid>
-          <Grid css={{ w: '50%' }}>
+          <Grid md={6} sm={12} justify="center">
             <Code className="python" boxShadow="$md">
               {pyCode}
             </Code>

@@ -25,11 +25,11 @@ engrafia-app
     - page-examples
 ```
 
-## \_app.js
+## app.js
 
 `_app.js` is the entry file of an Engrafia application, there are not many configurations to do in this file unless you want to use your theme, and customize the global style.
 
-## \_document.js
+## document.js
 
 As `_app.js`, `_document.js` does not have much customization, unless you need to customize styles.
 

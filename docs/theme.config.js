@@ -1,5 +1,4 @@
 import { RiGithubFill } from 'react-icons/ri';
-import { NextSeo } from 'next-seo';
 import Head from 'next/head';
 
 export default {
@@ -146,32 +145,25 @@ export default {
   },
   head: ({ meta, title }) => (
     <>
-      <NextSeo
-        title={`${title} | ${meta.title}`}
-        description={`${meta.description}`}
-        canonical="https://engrafia.vercel.app"
-        openGraph={{
-          siteName: 'Engrafia',
-          type:"website",
-          url: 'https://engrafia.vercel.app',
-          
-          title: `${title} | ${meta.title}`,
-          description: `${meta.description}`,
-          images: [
-            {
-              url:"https://engrafia.vercel.app/imgs/engrafia.jpg",
-                type:"image/jpg",
-                alt:"engrafia",
-                width:3750,
-                height:2109
-            },
-          ],
-        }}
-        twitter={{
-          cardType: "summary_large_image",
-        }}
-      />
       <Head>
+        <title>{`${title} | ${meta.title}`}</title>
+        <meta name="description" content={meta.description} />
+
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="https://engrafia.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`${title} | ${meta.title}`} />
+        <meta property="og:description" content="Teste" />
+        <meta property="og:image" content="Teste" />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="engrafia.vercel.app" />
+        <meta property="twitter:url" content="https://engrafia.vercel.app/" />
+        <meta name="twitter:title" content={`${title} | ${meta.title}`} />
+        <meta name="twitter:description" content="Teste" />
+        <meta name="twitter:image" content="Teste" />
+
         <link rel="sitemap" href="/sitemap.xml" />
         <meta name="keywords" content={meta.tags} />
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
