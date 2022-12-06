@@ -16,7 +16,10 @@ function App({ Component, pageProps }: AppProps) {
         <meta property="og:type" content="website" />
         <meta property="og:title" content={`Engrafia | ${meta?.title}`} />
         <meta property="og:description" content={meta?.description} />
-        <meta property="og:image" content="/imgs/engrafia.jpg" />
+        <meta
+          name="og:image"
+          content="https://engrafia.vercel.app/imgs/engrafia.jpg"
+        />
 
         {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -24,7 +27,10 @@ function App({ Component, pageProps }: AppProps) {
         <meta property="twitter:url" content="https://engrafia.vercel.app/" />
         <meta name="twitter:title" content={`Engrafia | ${meta?.title}`} />
         <meta name="twitter:description" content={meta?.description} />
-        <meta name="twitter:image" content="/imgs/engrafia.jpg" />
+        <meta
+          name="twitter:image"
+          content="https://engrafia.vercel.app/imgs/engrafia.jpg"
+        />
 
         <link rel="sitemap" href="/sitemap.xml" />
         <meta name="keywords" content={meta?.tags} />
