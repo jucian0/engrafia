@@ -10,6 +10,8 @@ function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>{`Engrafia | ${meta?.title}`}</title>
         <meta name="description" content={meta?.description} />
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href="https://engrafia.vercel.app" />
 
         {/* <!-- Facebook Meta Tags --> */}
         <meta property="og:url" content="https://engrafia.vercel.app/" />

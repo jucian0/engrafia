@@ -88,6 +88,7 @@ export default {
         <a href={'https://github.com/Jucian0'}> Juciano</a>
       </>
     ),
+    textLogo: '',
     logo: (
       <svg
         width="30"
@@ -142,58 +143,4 @@ export default {
       </svg>
     ),
   },
-  // head: ({ meta, title }) => (
-  //   <Head>
-  //     <title>{`${title} | ${meta.title}`}</title>
-  //     <meta name="description" content={meta.description} />
-
-  //     {/* <!-- Facebook Meta Tags --> */}
-  //     <meta property="og:url" content="https://engrafia.vercel.app/" />
-  //     <meta property="og:type" content="website" />
-  //     <meta property="og:title" content={`${title} | ${meta.title}`} />
-  //     <meta property="og:description" content={meta.description} />
-  //     <meta property="og:image" content="/imgs/engrafia.jpg" />
-
-  //     {/* <!-- Twitter Meta Tags --> */}
-  //     <meta name="twitter:card" content="summary_large_image" />
-  //     <meta property="twitter:domain" content="engrafia.vercel.app" />
-  //     <meta property="twitter:url" content="https://engrafia.vercel.app/" />
-  //     <meta name="twitter:title" content={`${title} | ${meta.title}`} />
-  //     <meta name="twitter:description" content={meta.description} />
-  //     <meta name="twitter:image" content="/imgs/engrafia.jpg" />
-
-  //     <link rel="sitemap" href="/sitemap.xml" />
-  //     <meta name="keywords" content={meta.tags} />
-  //     <link rel="shortcut icon" href="/favicon/favicon.ico" />
-  //     <link
-  //       rel="apple-touch-icon"
-  //       sizes="180x180"
-  //       href="/favicon/apple-icon-180x180.png"
-  //     />
-  //     <link
-  //       rel="icon"
-  //       type="image/png"
-  //       sizes="192x192"
-  //       href="/favicon/android-icon-192x192.png"
-  //     />
-  //     <link
-  //       rel="icon"
-  //       type="image/png"
-  //       sizes="32x32"
-  //       href="/favicon/favicon-32x32.png"
-  //     />
-  //     <link
-  //       rel="icon"
-  //       type="image/png"
-  //       sizes="96x96"
-  //       href="/favicon/favicon-96x96.png"
-  //     />
-  //     <link
-  //       rel="icon"
-  //       type="image/png"
-  //       sizes="16x16"
-  //       href="/favicon/favicon-16x16.png"
-  //     />
-  //   </Head>
-  // ),
 };
