@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.5](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia@0.2.4...@engrafia/engrafia@0.2.5) (2022-12-06)
+
+
+### Bug Fixes
+
+* **engrafia:** small change - code component, and add getStaticProps ([4921154](https://github.com/Jucian0/engrafia/commit/49211544d222319059ab1b8251d8a1fae4a13bfe))
+
 ## [0.2.4](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia@0.2.3...@engrafia/engrafia@0.2.4) (2022-12-05)
 
 
