@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.4](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia@0.2.3...@engrafia/engrafia@0.2.4) (2022-12-05)
+
+
+### Bug Fixes
+
+* **engrafia:** fix metatags  - remove from ConfigContext ([24f9f7c](https://github.com/Jucian0/engrafia/commit/24f9f7c1c48b166c1531915d310445df92049fc3))
+
 ## [0.2.3](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia@0.2.2...@engrafia/engrafia@0.2.3) (2022-12-05)
 
 
