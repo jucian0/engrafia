@@ -1,5 +1,4 @@
 import { Navbar, Button, Text, Grid } from '@nextui-org/react';
-import React from 'react';
 
 import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router';
@@ -115,6 +114,7 @@ export default function NavBar() {
 
             <Navbar.Item>
               <Button
+                name="theme-switch"
                 icon={
                   theme === 'dark' ? (
                     <RiSunFill fill="var(--nextui-colors-accents6)" size={16} />

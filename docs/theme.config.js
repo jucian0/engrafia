@@ -153,16 +153,16 @@ export default {
         <meta property="og:url" content="https://engrafia.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={`${title} | ${meta.title}`} />
-        <meta property="og:description" content="Teste" />
-        <meta property="og:image" content="Teste" />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:image" content="/imgs/engrafia.jpg" />
 
         {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="engrafia.vercel.app" />
         <meta property="twitter:url" content="https://engrafia.vercel.app/" />
         <meta name="twitter:title" content={`${title} | ${meta.title}`} />
-        <meta name="twitter:description" content="Teste" />
-        <meta name="twitter:image" content="Teste" />
+        <meta name="twitter:description" content={meta.description} />
+        <meta name="twitter:image" content="/imgs/engrafia.jpg" />
 
         <link rel="sitemap" href="/sitemap.xml" />
         <meta name="keywords" content={meta.tags} />
