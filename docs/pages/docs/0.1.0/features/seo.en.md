@@ -1,6 +1,6 @@
 ---
-title: 'SEO'
-description: 'This doc will guide you to improve the SEO of the website, and have better results in Google or another search engine.'
+title: SEO
+description: This doc will guide you to improve the SEO of the website, and have better results in Google or another search engine.
 tags: search, docs, nextjs, google, seo
 ---
 

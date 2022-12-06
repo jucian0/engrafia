@@ -1,6 +1,6 @@
 ---
-title: 'Code Highlight'
-description: 'This doc will help you to understand how to use  code highlight.'
+title: Code Highlight
+description: This doc will help you to understand how to use  code highlight.
 tags: docs, nextjs, code, codeblock, prism
 ---
 
@@ -25,30 +25,36 @@ export default App;
 
 This feature is supported using `md`, and `mdx` files, to use it just add three quotation marks, and the language syntax you want to use, like the example below:
 
-```md
+````md
 /```jsx
 
 import { AppProps } from 'next/app';
 import { Engrafia } from 'engrafia';
 
 function App({ Component, pageProps }: AppProps) {
-  return (
-    <Engrafia>
-      <Component {...pageProps} />
-    </Engrafia>
-  );
+return (
+<Engrafia>
+<Component {...pageProps} />
+</Engrafia>
+);
 }
 
 export default App;
-```/
-```
 
+```/
+
+```
+````
 
 ```javascript
-const values = [1,2,3,4,5]
+const values = [1, 2, 3, 4, 5];
 ```
-```md
+
+````md
 /```javascript
 const values = [1,2,3,4,5]
+
 ```/
+
 ```
+````

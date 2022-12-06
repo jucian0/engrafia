@@ -1,6 +1,6 @@
 ---
-title: 'Versioning'
-description: 'This doc will guide you through the versioning feature, and how to have versioned documentation.'
+title: Versioning
+description: This doc will guide you through the versioning feature, and how to have versioned documentation.
 tags: docs, nextjs, semantic-version, semver, version
 ---
 
@@ -12,7 +12,7 @@ Versioning is a high priority when talking about documentation, your readers sho
 
 Engrafia uses [SEMVER](https://semver.org/) (Semantic versioning) versioning model, but what does that mean, well the better way to explain is by a note of the documentation:
 
-> *Semantic Versioning is a standardized way to give meaning to your software releases. It's a way for software authors to communicate succinctly to the consumers of their software important info they should know about this release. Semver is represented by just three numbers separated by periods.*
+> _Semantic Versioning is a standardized way to give meaning to your software releases. It's a way for software authors to communicate succinctly to the consumers of their software important info they should know about this release. Semver is represented by just three numbers separated by periods._
 
 Documentation versioning should follow the product version, so, whenever your software has a new version that changes some feature or implements any new feature, it's necessary to write a new version of the documentation.
 
@@ -22,16 +22,17 @@ Engrafia uses file system to organize the versions of the documentation, which m
 
 ```mdx
 engrafia-app
-  - pages
-    - docs
-      - 0.0.0
-        - page-examples
+
+- pages
+  - docs
+    - 0.0.0
+      - page-examples
 ```
 
 > Remember to update the links to the last version of your documentation
 
 ## Switching versions
 
-To switch between versions, just use the version selector at the top of the right side. 
+To switch between versions, just use the version selector at the top of the right side.
 
 ![versioning-semantic-version-engrafia](/imgs/versioning.png)

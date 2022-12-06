@@ -1,6 +1,6 @@
 ---
-title: 'Search'
-description: 'Describes how the search feature works in Engrafia.'
+title: Search
+description: Describes how the search feature works in Engrafia.
 tags: docs, nextjs, code, search
 image: /imgs/search.gif
 ---

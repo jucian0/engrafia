@@ -1,6 +1,6 @@
 ---
-title: 'Sidebar'
-description: 'Describes how the sidebar engine works, and some customizations.'
+title: Sidebar
+description: Describes how the sidebar engine works, and some customizations.
 tags: docs, nextjs, code, search
 ---
 
