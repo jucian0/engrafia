@@ -76,7 +76,7 @@ export function EngrafiaProvider({ children }: React.PropsWithChildren<any>) {
         tableOfContent: child.props.tableOfContents,
       });
     }
-  }, [children?.props?.children?.props]);
+  }, [children?.props?.children]);
 
   return (
     <EngrafiaContext.Provider value={config}>
