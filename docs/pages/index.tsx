@@ -59,7 +59,7 @@ export default function Index() {
           right: 0,
         }}
       />
-      <Grid css={{ maxW: '90rem' }}>
+      <Grid css={{ maxW: '87rem' }}>
         <Grid.Container
           css={{ p: 30 }}
           justify="center"
