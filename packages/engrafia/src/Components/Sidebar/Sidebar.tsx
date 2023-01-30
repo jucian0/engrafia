@@ -4,7 +4,7 @@ import Link from 'next/link';
 import * as S from './styles';
 import { MdChevronRight, MdExpandMore } from 'react-icons/md';
 import { Category, DocFile } from '../../get-sidebar';
-import { filterSidebarContent } from './util';
+import { filterSidebarContent, orderCategories } from './util';
 import { useTranslation } from '../../useTranslation';
 import { useEngrafiaConfig } from '../../EngrafiaProvider';
 import Image from 'next/image';
@@ -93,12 +93,14 @@ export function Sidebar({ hide = true }) {
       </S.List>
     );
   }
+
   return (
     <S.SidebarWrapper hideIn={hide ? 'xs' : undefined}>
       <div className="wrapper">
-        {filterSidebarContent(sidebar?.children, router.locale)?.map?.(
-          (child) => recursiveMenu(child)
-        )}
+        {filterSidebarContent(
+          orderCategories(sidebar?.children, themeConfig?.sidebar?.order ?? []),
+          router.locale
+        )?.map?.((child) => recursiveMenu(child))}
       </div>
     </S.SidebarWrapper>
   );

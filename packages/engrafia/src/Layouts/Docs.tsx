@@ -22,7 +22,7 @@ const Container = styled(`div`, {
 const Content = styled(`div`, {
   display: `block`,
   height: `100%`,
-  padding: `$xs $md`,
+  padding: `3rem`,
   position: `relative`,
   margin: `1rem auto`,
 });

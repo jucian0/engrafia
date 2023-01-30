@@ -68,9 +68,6 @@ type Props = {
 function TableOfContentItem({ item, activeId }: Props) {
   return (
     <li>
-      {item.children && (
-        <S.Line className={activeId === item.id ? S.active() : S.inactive()} />
-      )}
       <S.Another className={activeId === item.id ? S.active() : S.inactive()} />
 
       <S.ItemLink

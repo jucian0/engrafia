@@ -13,11 +13,10 @@ export const TableOfContentWrapper = styled(
 
     ul: {
       margin: '1rem ',
-      position:'relative'
-
+      position: 'relative',
     },
-    li:{
-      position:'relative'
+    li: {
+      position: 'relative',
     },
 
     h3: {
@@ -34,27 +33,15 @@ export const TableOfContentWrapper = styled(
   cssHideShowIn
 );
 
-export const Line = styled('div',{
-  position:'absolute !important',
-  left:-5,
-  top:10,
-  height:'calc(100% - 20px)',
-  borderLeft: '1px solid  $gray200',
-  borderBottom: '1px solid  $gray200',
-
-  width:15,
-  borderEndStartRadius:5
-})
-
-export const Another = styled('div',{
-  position:'absolute !important',
-  top:10,
-  left:-7,
-  height:5,
-  width:5,
+export const Another = styled('div', {
+  position: 'absolute !important',
+  top: 8,
+  left: -7,
+  height: 5,
+  width: 5,
   background: '$gray200',
-  borderRadius:5
-})
+  borderRadius: 5,
+});
 
 export const ItemLink = styled(`span`, {
   display: `block`,
@@ -70,7 +57,6 @@ export const active = css({
   '& a': {
     color: `$text`,
   },
-  
 });
 
 export const inactive = css({

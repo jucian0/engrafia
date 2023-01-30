@@ -143,4 +143,7 @@ export default {
       </svg>
     ),
   },
+  sidebar: {
+    order: ['introduction', 'features', 'customization'],
+  },
 };

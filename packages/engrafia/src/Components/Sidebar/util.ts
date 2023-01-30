@@ -51,3 +51,10 @@ export function filterSidebarContent(
 ) {
   return order(filterByLocale(list, locale));
 }
+
+export function orderCategories(
+  list: (Category & DocFile)[],
+  order: string[]
+): (Category & DocFile)[] {
+  return list.sort((a, b) => order.indexOf(a.name) - order.indexOf(b.name));
+}
