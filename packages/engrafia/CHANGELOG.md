@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.0](https://github.com/jucian0/engrafia/compare/@engrafia/engrafia@0.2.8...@engrafia/engrafia@0.3.0) (2023-01-31)
+
+
+### Features
+
+* **engrafia:** add sidebar category order ([9c7c7fc](https://github.com/jucian0/engrafia/commit/9c7c7fc74b81e46ce842612500e456ef76865d2c))
+
+
+### Bug Fixes
+
+* **engrafia:** fix theme config types ([0d73ec7](https://github.com/jucian0/engrafia/commit/0d73ec7968ce14d69baab6df5ad68b1d98c07e5d))
+
 ## [0.2.8](https://github.com/Jucian0/engrafia/compare/@engrafia/engrafia@0.2.7...@engrafia/engrafia@0.2.8) (2022-12-07)
 
 
