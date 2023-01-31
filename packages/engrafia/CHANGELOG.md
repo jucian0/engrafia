@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.1](https://github.com/jucian0/engrafia/compare/@engrafia/engrafia@0.3.0...@engrafia/engrafia@0.3.1) (2023-01-31)
+
+
+### Bug Fixes
+
+* **engrafia:** fix logo image ([e04a085](https://github.com/jucian0/engrafia/commit/e04a085b0f55f1dd60655bcfc37965098c03ef22))
+
 ## [0.3.0](https://github.com/jucian0/engrafia/compare/@engrafia/engrafia@0.2.8...@engrafia/engrafia@0.3.0) (2023-01-31)
 
 
