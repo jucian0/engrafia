@@ -1,6 +1,7 @@
 import { Navbar, Button, Text, Grid } from '@nextui-org/react';
 
 import { useTheme } from 'next-themes';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { RiMoonFill, RiSunFill } from 'react-icons/ri';
 import { useEngrafiaConfig } from '../../EngrafiaProvider';
@@ -29,16 +30,9 @@ export default function NavBar() {
           margin: 'auto',
         }}
       >
-        <Navbar.Brand>
+        <Navbar.Brand css={{ marginInlineStart: '.8rem', minWidth: 85 }}>
           <Link href="/">
-            {/* <a style={{ display: 'flex', alignItems: 'center' }}> */}
-            {themeConfig.nav?.logo}
-            {/* </a> */}
-          </Link>
-          <Link href="/">
-            <Text b color="inherit" hideIn="xs">
-              {themeConfig.nav?.textLogo}
-            </Text>
+            <Image src={themeConfig.nav?.logo} alt="" width={200} height={60} />{' '}
           </Link>
         </Navbar.Brand>
         <Grid.Container

@@ -10,7 +10,6 @@ export type ThemeConfig = {
   };
   nav?: {
     logo?: string | any;
-    textLogo: string;
     links?: { title: string; href: string; external?: boolean }[];
     iconsLinks?: { icon: JSX.Element; href: string; external?: boolean }[];
     search_bar?: string;

@@ -19,9 +19,9 @@ export function Footer() {
           justifyContent: 'center',
           alignItems: 'center',
         }}
+        direction="column"
       >
-        {themeConfig.footer?.logo}
-        {themeConfig.footer?.textLogo}
+        <img src={themeConfig.footer?.logo} alt="" width={160} height={40} />
         {themeConfig.footer?.text}
       </Grid>
     </Grid.Container>
