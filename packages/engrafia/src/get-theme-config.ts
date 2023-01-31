@@ -21,7 +21,7 @@ export type ThemeConfig = {
     textLogo: string;
   };
   head?: (data: { meta: Meta; title: string }) => JSX.Element;
-  sidebar: {
+  sidebar?: {
     order?: string[];
   };
 };
