@@ -1,4 +1,4 @@
-# Engrafia
+# Engrafia (Deprecated, use Nextra)
 
 ## The easiest way to write docs for your project.
 
